@@ -111,7 +111,7 @@ api.loginPost(loginData, callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost/v1*
+All URIs are relative to *http://http:/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -127,6 +127,20 @@ Class | Method | HTTP request | Description
  - [Persona.Address](docs/Address.md)
  - [Persona.Campaign](docs/Campaign.md)
  - [Persona.DescriptionFrequency](docs/DescriptionFrequency.md)
+ - [Persona.InlineResponse400](docs/InlineResponse400.md)
+ - [Persona.InlineResponse400InvalidRequestBody](docs/InlineResponse400InvalidRequestBody.md)
+ - [Persona.InlineResponse403](docs/InlineResponse403.md)
+ - [Persona.InlineResponse4031](docs/InlineResponse4031.md)
+ - [Persona.InlineResponse4031AccessTokenExpired](docs/InlineResponse4031AccessTokenExpired.md)
+ - [Persona.InlineResponse4032](docs/InlineResponse4032.md)
+ - [Persona.InlineResponse4032EmailAddressInUse](docs/InlineResponse4032EmailAddressInUse.md)
+ - [Persona.InlineResponse4032EmailNotAuthorized](docs/InlineResponse4032EmailNotAuthorized.md)
+ - [Persona.InlineResponse4032OauthFailed](docs/InlineResponse4032OauthFailed.md)
+ - [Persona.InlineResponse403InvalidCredentials](docs/InlineResponse403InvalidCredentials.md)
+ - [Persona.InlineResponse415](docs/InlineResponse415.md)
+ - [Persona.InlineResponse415UnsupportedMediaType](docs/InlineResponse415UnsupportedMediaType.md)
+ - [Persona.InlineResponse500](docs/InlineResponse500.md)
+ - [Persona.InlineResponse500InternalServerError](docs/InlineResponse500InternalServerError.md)
  - [Persona.LoginData](docs/LoginData.md)
  - [Persona.LoginDataSSO](docs/LoginDataSSO.md)
  - [Persona.LoginDataSoMe](docs/LoginDataSoMe.md)
