@@ -25,7 +25,7 @@
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.LoginData = factory(root.Persona.ApiClient);
+    root.Persona.GdprConsent = factory(root.Persona.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -33,60 +33,53 @@
 
 
   /**
-   * The LoginData model module.
-   * @module model/LoginData
+   * The GdprConsent model module.
+   * @module model/GdprConsent
    * @version 1.2.0
    */
 
   /**
-   * Constructs a new <code>LoginData</code>.
-   * @alias module:model/LoginData
+   * Constructs a new <code>GdprConsent</code>.
+   * @alias module:model/GdprConsent
    * @class
-   * @param username {String} 
-   * @param password {String} 
+   * @param key {String} 
+   * @param val {Boolean} 
    */
-  var exports = function(username, password) {
+  var exports = function(key, val) {
     var _this = this;
 
-    _this['username'] = username;
-    _this['password'] = password;
+    _this['key'] = key;
+    _this['val'] = val;
   };
 
   /**
-   * Constructs a <code>LoginData</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>GdprConsent</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/LoginData} obj Optional instance to populate.
-   * @return {module:model/LoginData} The populated <code>LoginData</code> instance.
+   * @param {module:model/GdprConsent} obj Optional instance to populate.
+   * @return {module:model/GdprConsent} The populated <code>GdprConsent</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('username')) {
-        obj['username'] = ApiClient.convertToType(data['username'], 'String');
+      if (data.hasOwnProperty('key')) {
+        obj['key'] = ApiClient.convertToType(data['key'], 'String');
       }
-      if (data.hasOwnProperty('password')) {
-        obj['password'] = ApiClient.convertToType(data['password'], 'String');
-      }
-      if (data.hasOwnProperty('mergeToken')) {
-        obj['mergeToken'] = ApiClient.convertToType(data['mergeToken'], 'String');
+      if (data.hasOwnProperty('val')) {
+        obj['val'] = ApiClient.convertToType(data['val'], 'Boolean');
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} username
+   * @member {String} key
    */
-  exports.prototype['username'] = undefined;
+  exports.prototype['key'] = undefined;
   /**
-   * @member {String} password
+   * @member {Boolean} val
    */
-  exports.prototype['password'] = undefined;
-  /**
-   * @member {String} mergeToken
-   */
-  exports.prototype['mergeToken'] = undefined;
+  exports.prototype['val'] = undefined;
 
 
 

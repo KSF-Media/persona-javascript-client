@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.UsersApi();
+    instance = new Persona.GdprConsent();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,27 +49,25 @@
       object[property] = value;
   }
 
-  describe('UsersApi', function() {
-    describe('usersUuidGdprPut', function() {
-      it('should call usersUuidGdprPut successfully', function(done) {
-        //uncomment below and update the code to test usersUuidGdprPut
-        //instance.usersUuidGdprPut(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('GdprConsent', function() {
+    it('should create an instance of GdprConsent', function() {
+      // uncomment below and update the code to test GdprConsent
+      //var instance = new Persona.GdprConsent();
+      //expect(instance).to.be.a(Persona.GdprConsent);
     });
-    describe('usersUuidGet', function() {
-      it('should call usersUuidGet successfully', function(done) {
-        //uncomment below and update the code to test usersUuidGet
-        //instance.usersUuidGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property key (base name: "key")', function() {
+      // uncomment below and update the code to test the property key
+      //var instance = new Persona.GdprConsent();
+      //expect(instance).to.be();
     });
+
+    it('should have the property val (base name: "val")', function() {
+      // uncomment below and update the code to test the property val
+      //var instance = new Persona.GdprConsent();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
