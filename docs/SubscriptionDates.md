@@ -1,4 +1,4 @@
-# Persona.SubscriptionDates
+# PersonaClient.SubscriptionDates
 
 ## Properties
 Name | Type | Description | Notes

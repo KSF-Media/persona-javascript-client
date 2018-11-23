@@ -1,4 +1,4 @@
-# Persona.Subscription
+# PersonaClient.Subscription
 
 ## Properties
 Name | Type | Description | Notes

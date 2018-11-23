@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.Persona);
+    factory(root.expect, root.PersonaClient);
   }
-}(this, function(expect, Persona) {
+}(this, function(expect, PersonaClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.InlineResponse400InvalidRequestBody();
+    instance = new PersonaClient.InlineResponse400InvalidRequestBody();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('InlineResponse400InvalidRequestBody', function() {
     it('should create an instance of InlineResponse400InvalidRequestBody', function() {
       // uncomment below and update the code to test InlineResponse400InvalidRequestBody
-      //var instance = new Persona.InlineResponse400InvalidRequestBody();
-      //expect(instance).to.be.a(Persona.InlineResponse400InvalidRequestBody);
+      //var instance = new PersonaClient.InlineResponse400InvalidRequestBody();
+      //expect(instance).to.be.a(PersonaClient.InlineResponse400InvalidRequestBody);
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new Persona.InlineResponse400InvalidRequestBody();
+      //var instance = new PersonaClient.InlineResponse400InvalidRequestBody();
       //expect(instance).to.be();
     });
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
-      //var instance = new Persona.InlineResponse400InvalidRequestBody();
+      //var instance = new PersonaClient.InlineResponse400InvalidRequestBody();
       //expect(instance).to.be();
     });
 

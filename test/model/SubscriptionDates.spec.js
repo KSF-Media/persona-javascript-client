@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.Persona);
+    factory(root.expect, root.PersonaClient);
   }
-}(this, function(expect, Persona) {
+}(this, function(expect, PersonaClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.SubscriptionDates();
+    instance = new PersonaClient.SubscriptionDates();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,55 +52,55 @@
   describe('SubscriptionDates', function() {
     it('should create an instance of SubscriptionDates', function() {
       // uncomment below and update the code to test SubscriptionDates
-      //var instance = new Persona.SubscriptionDates();
-      //expect(instance).to.be.a(Persona.SubscriptionDates);
+      //var instance = new PersonaClient.SubscriptionDates();
+      //expect(instance).to.be.a(PersonaClient.SubscriptionDates);
     });
 
     it('should have the property lenMonths (base name: "lenMonths")', function() {
       // uncomment below and update the code to test the property lenMonths
-      //var instance = new Persona.SubscriptionDates();
+      //var instance = new PersonaClient.SubscriptionDates();
       //expect(instance).to.be();
     });
 
     it('should have the property lenDays (base name: "lenDays")', function() {
       // uncomment below and update the code to test the property lenDays
-      //var instance = new Persona.SubscriptionDates();
+      //var instance = new PersonaClient.SubscriptionDates();
       //expect(instance).to.be();
     });
 
     it('should have the property start (base name: "start")', function() {
       // uncomment below and update the code to test the property start
-      //var instance = new Persona.SubscriptionDates();
+      //var instance = new PersonaClient.SubscriptionDates();
       //expect(instance).to.be();
     });
 
     it('should have the property end (base name: "end")', function() {
       // uncomment below and update the code to test the property end
-      //var instance = new Persona.SubscriptionDates();
+      //var instance = new PersonaClient.SubscriptionDates();
       //expect(instance).to.be();
     });
 
     it('should have the property unpaidBreak (base name: "unpaidBreak")', function() {
       // uncomment below and update the code to test the property unpaidBreak
-      //var instance = new Persona.SubscriptionDates();
+      //var instance = new PersonaClient.SubscriptionDates();
       //expect(instance).to.be();
     });
 
     it('should have the property invoicingStart (base name: "invoicingStart")', function() {
       // uncomment below and update the code to test the property invoicingStart
-      //var instance = new Persona.SubscriptionDates();
+      //var instance = new PersonaClient.SubscriptionDates();
       //expect(instance).to.be();
     });
 
     it('should have the property paidUntil (base name: "paidUntil")', function() {
       // uncomment below and update the code to test the property paidUntil
-      //var instance = new Persona.SubscriptionDates();
+      //var instance = new PersonaClient.SubscriptionDates();
       //expect(instance).to.be();
     });
 
     it('should have the property suspend (base name: "suspend")', function() {
       // uncomment below and update the code to test the property suspend
-      //var instance = new Persona.SubscriptionDates();
+      //var instance = new PersonaClient.SubscriptionDates();
       //expect(instance).to.be();
     });
 

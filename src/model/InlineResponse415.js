@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./InlineResponse415UnsupportedMediaType'));
   } else {
     // Browser globals (root is window)
-    if (!root.Persona) {
-      root.Persona = {};
+    if (!root.PersonaClient) {
+      root.PersonaClient = {};
     }
-    root.Persona.InlineResponse415 = factory(root.Persona.ApiClient, root.Persona.InlineResponse415UnsupportedMediaType);
+    root.PersonaClient.InlineResponse415 = factory(root.PersonaClient.ApiClient, root.PersonaClient.InlineResponse415UnsupportedMediaType);
   }
 }(this, function(ApiClient, InlineResponse415UnsupportedMediaType) {
   'use strict';

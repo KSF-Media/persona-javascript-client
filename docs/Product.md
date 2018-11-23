@@ -1,4 +1,4 @@
-# Persona.Product
+# PersonaClient.Product
 
 ## Properties
 Name | Type | Description | Notes

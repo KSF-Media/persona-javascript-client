@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.Persona);
+    factory(root.expect, root.PersonaClient);
   }
-}(this, function(expect, Persona) {
+}(this, function(expect, PersonaClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.PackageDescription();
+    instance = new PersonaClient.PackageDescription();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,61 +52,61 @@
   describe('PackageDescription', function() {
     it('should create an instance of PackageDescription', function() {
       // uncomment below and update the code to test PackageDescription
-      //var instance = new Persona.PackageDescription();
-      //expect(instance).to.be.a(Persona.PackageDescription);
+      //var instance = new PersonaClient.PackageDescription();
+      //expect(instance).to.be.a(PersonaClient.PackageDescription);
     });
 
     it('should have the property brand (base name: "brand")', function() {
       // uncomment below and update the code to test the property brand
-      //var instance = new Persona.PackageDescription();
+      //var instance = new PersonaClient.PackageDescription();
       //expect(instance).to.be();
     });
 
     it('should have the property brandLong (base name: "brandLong")', function() {
       // uncomment below and update the code to test the property brandLong
-      //var instance = new Persona.PackageDescription();
+      //var instance = new PersonaClient.PackageDescription();
       //expect(instance).to.be();
     });
 
     it('should have the property descShort (base name: "descShort")', function() {
       // uncomment below and update the code to test the property descShort
-      //var instance = new Persona.PackageDescription();
+      //var instance = new PersonaClient.PackageDescription();
       //expect(instance).to.be();
     });
 
     it('should have the property descLong (base name: "descLong")', function() {
       // uncomment below and update the code to test the property descLong
-      //var instance = new Persona.PackageDescription();
+      //var instance = new PersonaClient.PackageDescription();
       //expect(instance).to.be();
     });
 
     it('should have the property url (base name: "url")', function() {
       // uncomment below and update the code to test the property url
-      //var instance = new Persona.PackageDescription();
+      //var instance = new PersonaClient.PackageDescription();
       //expect(instance).to.be();
     });
 
     it('should have the property days (base name: "days")', function() {
       // uncomment below and update the code to test the property days
-      //var instance = new Persona.PackageDescription();
+      //var instance = new PersonaClient.PackageDescription();
       //expect(instance).to.be();
     });
 
     it('should have the property weekdays (base name: "weekdays")', function() {
       // uncomment below and update the code to test the property weekdays
-      //var instance = new Persona.PackageDescription();
+      //var instance = new PersonaClient.PackageDescription();
       //expect(instance).to.be();
     });
 
     it('should have the property frequency (base name: "frequency")', function() {
       // uncomment below and update the code to test the property frequency
-      //var instance = new Persona.PackageDescription();
+      //var instance = new PersonaClient.PackageDescription();
       //expect(instance).to.be();
     });
 
     it('should have the property includes (base name: "includes")', function() {
       // uncomment below and update the code to test the property includes
-      //var instance = new Persona.PackageDescription();
+      //var instance = new PersonaClient.PackageDescription();
       //expect(instance).to.be();
     });
 

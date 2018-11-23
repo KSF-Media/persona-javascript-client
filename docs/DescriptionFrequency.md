@@ -1,4 +1,4 @@
-# Persona.DescriptionFrequency
+# PersonaClient.DescriptionFrequency
 
 ## Properties
 Name | Type | Description | Notes

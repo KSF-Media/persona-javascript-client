@@ -1,4 +1,4 @@
-# Persona.InlineResponse400InvalidRequestBody
+# PersonaClient.InlineResponse400InvalidRequestBody
 
 ## Properties
 Name | Type | Description | Notes

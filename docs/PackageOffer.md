@@ -1,4 +1,4 @@
-# Persona.PackageOffer
+# PersonaClient.PackageOffer
 
 ## Properties
 Name | Type | Description | Notes

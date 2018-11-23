@@ -1,4 +1,4 @@
-# Persona.ActiveDays
+# PersonaClient.ActiveDays
 
 ## Properties
 Name | Type | Description | Notes

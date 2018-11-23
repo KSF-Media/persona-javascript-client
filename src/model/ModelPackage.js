@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Campaign'), require('./PackageDescription'), require('./PackageOffer'), require('./Paper'), require('./Product'));
   } else {
     // Browser globals (root is window)
-    if (!root.Persona) {
-      root.Persona = {};
+    if (!root.PersonaClient) {
+      root.PersonaClient = {};
     }
-    root.Persona.ModelPackage = factory(root.Persona.ApiClient, root.Persona.Campaign, root.Persona.PackageDescription, root.Persona.PackageOffer, root.Persona.Paper, root.Persona.Product);
+    root.PersonaClient.ModelPackage = factory(root.PersonaClient.ApiClient, root.PersonaClient.Campaign, root.PersonaClient.PackageDescription, root.PersonaClient.PackageOffer, root.PersonaClient.Paper, root.PersonaClient.Product);
   }
 }(this, function(ApiClient, Campaign, PackageDescription, PackageOffer, Paper, Product) {
   'use strict';

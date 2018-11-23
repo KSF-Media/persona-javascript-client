@@ -1,4 +1,4 @@
-# Persona.GdprConsent
+# PersonaClient.GdprConsent
 
 ## Properties
 Name | Type | Description | Notes

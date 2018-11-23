@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.Persona);
+    factory(root.expect, root.PersonaClient);
   }
-}(this, function(expect, Persona) {
+}(this, function(expect, PersonaClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.Paper();
+    instance = new PersonaClient.Paper();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('Paper', function() {
     it('should create an instance of Paper', function() {
       // uncomment below and update the code to test Paper
-      //var instance = new Persona.Paper();
-      //expect(instance).to.be.a(Persona.Paper);
+      //var instance = new PersonaClient.Paper();
+      //expect(instance).to.be.a(PersonaClient.Paper);
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instance = new Persona.Paper();
+      //var instance = new PersonaClient.Paper();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new Persona.Paper();
+      //var instance = new PersonaClient.Paper();
       //expect(instance).to.be();
     });
 

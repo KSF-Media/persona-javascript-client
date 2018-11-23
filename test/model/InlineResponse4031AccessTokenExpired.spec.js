@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.Persona);
+    factory(root.expect, root.PersonaClient);
   }
-}(this, function(expect, Persona) {
+}(this, function(expect, PersonaClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.InlineResponse4031AccessTokenExpired();
+    instance = new PersonaClient.InlineResponse4031AccessTokenExpired();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,13 +52,13 @@
   describe('InlineResponse4031AccessTokenExpired', function() {
     it('should create an instance of InlineResponse4031AccessTokenExpired', function() {
       // uncomment below and update the code to test InlineResponse4031AccessTokenExpired
-      //var instance = new Persona.InlineResponse4031AccessTokenExpired();
-      //expect(instance).to.be.a(Persona.InlineResponse4031AccessTokenExpired);
+      //var instance = new PersonaClient.InlineResponse4031AccessTokenExpired();
+      //expect(instance).to.be.a(PersonaClient.InlineResponse4031AccessTokenExpired);
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new Persona.InlineResponse4031AccessTokenExpired();
+      //var instance = new PersonaClient.InlineResponse4031AccessTokenExpired();
       //expect(instance).to.be();
     });
 

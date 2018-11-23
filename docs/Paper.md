@@ -1,4 +1,4 @@
-# Persona.Paper
+# PersonaClient.Paper
 
 ## Properties
 Name | Type | Description | Notes

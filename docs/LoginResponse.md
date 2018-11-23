@@ -1,4 +1,4 @@
-# Persona.LoginResponse
+# PersonaClient.LoginResponse
 
 ## Properties
 Name | Type | Description | Notes

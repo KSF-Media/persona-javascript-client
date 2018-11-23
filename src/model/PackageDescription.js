@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./DescriptionFrequency'));
   } else {
     // Browser globals (root is window)
-    if (!root.Persona) {
-      root.Persona = {};
+    if (!root.PersonaClient) {
+      root.PersonaClient = {};
     }
-    root.Persona.PackageDescription = factory(root.Persona.ApiClient, root.Persona.DescriptionFrequency);
+    root.PersonaClient.PackageDescription = factory(root.PersonaClient.ApiClient, root.PersonaClient.DescriptionFrequency);
   }
 }(this, function(ApiClient, DescriptionFrequency) {
   'use strict';

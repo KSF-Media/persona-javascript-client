@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/GdprConsent'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/User'));
   } else {
     // Browser globals (root is window)
-    if (!root.Persona) {
-      root.Persona = {};
+    if (!root.PersonaClient) {
+      root.PersonaClient = {};
     }
-    root.Persona.UsersApi = factory(root.Persona.ApiClient, root.Persona.GdprConsent, root.Persona.InlineResponse400, root.Persona.InlineResponse415, root.Persona.User);
+    root.PersonaClient.UsersApi = factory(root.PersonaClient.ApiClient, root.PersonaClient.GdprConsent, root.PersonaClient.InlineResponse400, root.PersonaClient.InlineResponse415, root.PersonaClient.User);
   }
 }(this, function(ApiClient, GdprConsent, InlineResponse400, InlineResponse415, User) {
   'use strict';

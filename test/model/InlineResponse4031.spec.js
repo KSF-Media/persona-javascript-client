@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.Persona);
+    factory(root.expect, root.PersonaClient);
   }
-}(this, function(expect, Persona) {
+}(this, function(expect, PersonaClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.InlineResponse4031();
+    instance = new PersonaClient.InlineResponse4031();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('InlineResponse4031', function() {
     it('should create an instance of InlineResponse4031', function() {
       // uncomment below and update the code to test InlineResponse4031
-      //var instance = new Persona.InlineResponse4031();
-      //expect(instance).to.be.a(Persona.InlineResponse4031);
+      //var instance = new PersonaClient.InlineResponse4031();
+      //expect(instance).to.be.a(PersonaClient.InlineResponse4031);
     });
 
     it('should have the property httpCode (base name: "http_code")', function() {
       // uncomment below and update the code to test the property httpCode
-      //var instance = new Persona.InlineResponse4031();
+      //var instance = new PersonaClient.InlineResponse4031();
       //expect(instance).to.be();
     });
 
     it('should have the property accessTokenExpired (base name: "access_token_expired")', function() {
       // uncomment below and update the code to test the property accessTokenExpired
-      //var instance = new Persona.InlineResponse4031();
+      //var instance = new PersonaClient.InlineResponse4031();
       //expect(instance).to.be();
     });
 
     it('should have the property httpStatus (base name: "http_status")', function() {
       // uncomment below and update the code to test the property httpStatus
-      //var instance = new Persona.InlineResponse4031();
+      //var instance = new PersonaClient.InlineResponse4031();
       //expect(instance).to.be();
     });
 

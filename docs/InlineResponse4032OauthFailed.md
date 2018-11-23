@@ -1,4 +1,4 @@
-# Persona.InlineResponse4032OauthFailed
+# PersonaClient.InlineResponse4032OauthFailed
 
 ## Properties
 Name | Type | Description | Notes

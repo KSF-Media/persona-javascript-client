@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/InlineResponse400'), require('../model/InlineResponse403'), require('../model/InlineResponse4031'), require('../model/InlineResponse4032'), require('../model/InlineResponse415'), require('../model/InlineResponse500'), require('../model/LoginData'), require('../model/LoginDataSSO'), require('../model/LoginDataSoMe'), require('../model/LoginResponse'));
   } else {
     // Browser globals (root is window)
-    if (!root.Persona) {
-      root.Persona = {};
+    if (!root.PersonaClient) {
+      root.PersonaClient = {};
     }
-    root.Persona.LoginApi = factory(root.Persona.ApiClient, root.Persona.InlineResponse400, root.Persona.InlineResponse403, root.Persona.InlineResponse4031, root.Persona.InlineResponse4032, root.Persona.InlineResponse415, root.Persona.InlineResponse500, root.Persona.LoginData, root.Persona.LoginDataSSO, root.Persona.LoginDataSoMe, root.Persona.LoginResponse);
+    root.PersonaClient.LoginApi = factory(root.PersonaClient.ApiClient, root.PersonaClient.InlineResponse400, root.PersonaClient.InlineResponse403, root.PersonaClient.InlineResponse4031, root.PersonaClient.InlineResponse4032, root.PersonaClient.InlineResponse415, root.PersonaClient.InlineResponse500, root.PersonaClient.LoginData, root.PersonaClient.LoginDataSSO, root.PersonaClient.LoginDataSoMe, root.PersonaClient.LoginResponse);
   }
 }(this, function(ApiClient, InlineResponse400, InlineResponse403, InlineResponse4031, InlineResponse4032, InlineResponse415, InlineResponse500, LoginData, LoginDataSSO, LoginDataSoMe, LoginResponse) {
   'use strict';

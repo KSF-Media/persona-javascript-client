@@ -1,4 +1,4 @@
-# Persona.InlineResponse403InvalidCredentials
+# PersonaClient.InlineResponse403InvalidCredentials
 
 ## Properties
 Name | Type | Description | Notes

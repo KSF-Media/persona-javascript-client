@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.Persona);
+    factory(root.expect, root.PersonaClient);
   }
-}(this, function(expect, Persona) {
+}(this, function(expect, PersonaClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.InlineResponse4032();
+    instance = new PersonaClient.InlineResponse4032();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,37 +52,37 @@
   describe('InlineResponse4032', function() {
     it('should create an instance of InlineResponse4032', function() {
       // uncomment below and update the code to test InlineResponse4032
-      //var instance = new Persona.InlineResponse4032();
-      //expect(instance).to.be.a(Persona.InlineResponse4032);
+      //var instance = new PersonaClient.InlineResponse4032();
+      //expect(instance).to.be.a(PersonaClient.InlineResponse4032);
     });
 
     it('should have the property emailAddressInUse (base name: "email_address_in_use")', function() {
       // uncomment below and update the code to test the property emailAddressInUse
-      //var instance = new Persona.InlineResponse4032();
+      //var instance = new PersonaClient.InlineResponse4032();
       //expect(instance).to.be();
     });
 
     it('should have the property httpCode (base name: "http_code")', function() {
       // uncomment below and update the code to test the property httpCode
-      //var instance = new Persona.InlineResponse4032();
+      //var instance = new PersonaClient.InlineResponse4032();
       //expect(instance).to.be();
     });
 
     it('should have the property oauthFailed (base name: "oauth_failed")', function() {
       // uncomment below and update the code to test the property oauthFailed
-      //var instance = new Persona.InlineResponse4032();
+      //var instance = new PersonaClient.InlineResponse4032();
       //expect(instance).to.be();
     });
 
     it('should have the property httpStatus (base name: "http_status")', function() {
       // uncomment below and update the code to test the property httpStatus
-      //var instance = new Persona.InlineResponse4032();
+      //var instance = new PersonaClient.InlineResponse4032();
       //expect(instance).to.be();
     });
 
     it('should have the property emailNotAuthorized (base name: "email_not_authorized")', function() {
       // uncomment below and update the code to test the property emailNotAuthorized
-      //var instance = new Persona.InlineResponse4032();
+      //var instance = new PersonaClient.InlineResponse4032();
       //expect(instance).to.be();
     });
 

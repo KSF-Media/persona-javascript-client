@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.Persona) {
-      root.Persona = {};
+    if (!root.PersonaClient) {
+      root.PersonaClient = {};
     }
-    root.Persona.InlineResponse4032EmailNotAuthorized = factory(root.Persona.ApiClient);
+    root.PersonaClient.InlineResponse4032EmailNotAuthorized = factory(root.PersonaClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';

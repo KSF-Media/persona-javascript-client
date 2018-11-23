@@ -1,4 +1,4 @@
-# Persona.Campaign
+# PersonaClient.Campaign
 
 ## Properties
 Name | Type | Description | Notes

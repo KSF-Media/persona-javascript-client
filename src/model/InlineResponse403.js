@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./InlineResponse403InvalidCredentials'));
   } else {
     // Browser globals (root is window)
-    if (!root.Persona) {
-      root.Persona = {};
+    if (!root.PersonaClient) {
+      root.PersonaClient = {};
     }
-    root.Persona.InlineResponse403 = factory(root.Persona.ApiClient, root.Persona.InlineResponse403InvalidCredentials);
+    root.PersonaClient.InlineResponse403 = factory(root.PersonaClient.ApiClient, root.PersonaClient.InlineResponse403InvalidCredentials);
   }
 }(this, function(ApiClient, InlineResponse403InvalidCredentials) {
   'use strict';

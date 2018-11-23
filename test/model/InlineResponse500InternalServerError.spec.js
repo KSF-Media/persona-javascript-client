@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.Persona);
+    factory(root.expect, root.PersonaClient);
   }
-}(this, function(expect, Persona) {
+}(this, function(expect, PersonaClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.InlineResponse500InternalServerError();
+    instance = new PersonaClient.InlineResponse500InternalServerError();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,13 +52,13 @@
   describe('InlineResponse500InternalServerError', function() {
     it('should create an instance of InlineResponse500InternalServerError', function() {
       // uncomment below and update the code to test InlineResponse500InternalServerError
-      //var instance = new Persona.InlineResponse500InternalServerError();
-      //expect(instance).to.be.a(Persona.InlineResponse500InternalServerError);
+      //var instance = new PersonaClient.InlineResponse500InternalServerError();
+      //expect(instance).to.be.a(PersonaClient.InlineResponse500InternalServerError);
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new Persona.InlineResponse500InternalServerError();
+      //var instance = new PersonaClient.InlineResponse500InternalServerError();
       //expect(instance).to.be();
     });
 

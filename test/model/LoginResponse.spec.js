@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.Persona);
+    factory(root.expect, root.PersonaClient);
   }
-}(this, function(expect, Persona) {
+}(this, function(expect, PersonaClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.LoginResponse();
+    instance = new PersonaClient.LoginResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('LoginResponse', function() {
     it('should create an instance of LoginResponse', function() {
       // uncomment below and update the code to test LoginResponse
-      //var instance = new Persona.LoginResponse();
-      //expect(instance).to.be.a(Persona.LoginResponse);
+      //var instance = new PersonaClient.LoginResponse();
+      //expect(instance).to.be.a(PersonaClient.LoginResponse);
     });
 
     it('should have the property token (base name: "token")', function() {
       // uncomment below and update the code to test the property token
-      //var instance = new Persona.LoginResponse();
+      //var instance = new PersonaClient.LoginResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property ssoCode (base name: "ssoCode")', function() {
       // uncomment below and update the code to test the property ssoCode
-      //var instance = new Persona.LoginResponse();
+      //var instance = new PersonaClient.LoginResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property uuid (base name: "uuid")', function() {
       // uncomment below and update the code to test the property uuid
-      //var instance = new Persona.LoginResponse();
+      //var instance = new PersonaClient.LoginResponse();
       //expect(instance).to.be();
     });
 

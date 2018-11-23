@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.Persona);
+    factory(root.expect, root.PersonaClient);
   }
-}(this, function(expect, Persona) {
+}(this, function(expect, PersonaClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.User();
+    instance = new PersonaClient.User();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,49 +52,49 @@
   describe('User', function() {
     it('should create an instance of User', function() {
       // uncomment below and update the code to test User
-      //var instance = new Persona.User();
-      //expect(instance).to.be.a(Persona.User);
+      //var instance = new PersonaClient.User();
+      //expect(instance).to.be.a(PersonaClient.User);
     });
 
     it('should have the property uuid (base name: "uuid")', function() {
       // uncomment below and update the code to test the property uuid
-      //var instance = new Persona.User();
+      //var instance = new PersonaClient.User();
       //expect(instance).to.be();
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instance = new Persona.User();
+      //var instance = new PersonaClient.User();
       //expect(instance).to.be();
     });
 
     it('should have the property firstName (base name: "firstName")', function() {
       // uncomment below and update the code to test the property firstName
-      //var instance = new Persona.User();
+      //var instance = new PersonaClient.User();
       //expect(instance).to.be();
     });
 
     it('should have the property lastName (base name: "lastName")', function() {
       // uncomment below and update the code to test the property lastName
-      //var instance = new Persona.User();
+      //var instance = new PersonaClient.User();
       //expect(instance).to.be();
     });
 
     it('should have the property address (base name: "address")', function() {
       // uncomment below and update the code to test the property address
-      //var instance = new Persona.User();
+      //var instance = new PersonaClient.User();
       //expect(instance).to.be();
     });
 
     it('should have the property cusno (base name: "cusno")', function() {
       // uncomment below and update the code to test the property cusno
-      //var instance = new Persona.User();
+      //var instance = new PersonaClient.User();
       //expect(instance).to.be();
     });
 
     it('should have the property subs (base name: "subs")', function() {
       // uncomment below and update the code to test the property subs
-      //var instance = new Persona.User();
+      //var instance = new PersonaClient.User();
       //expect(instance).to.be();
     });
 
