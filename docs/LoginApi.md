@@ -1,4 +1,4 @@
-# PersonaClient.LoginApi
+# Persona.LoginApi
 
 All URIs are relative to *http://http:/v1*
 
@@ -17,10 +17,10 @@ Login with email and password
 
 ### Example
 ```javascript
-var PersonaClient = require('persona-client');
+var Persona = require('persona');
 
-var apiInstance = new PersonaClient.LoginApi();
-var loginData = new PersonaClient.LoginData(); // LoginData | 
+var apiInstance = new Persona.LoginApi();
+var loginData = new Persona.LoginData(); // LoginData | 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -58,10 +58,10 @@ Login with social media
 
 ### Example
 ```javascript
-var PersonaClient = require('persona-client');
+var Persona = require('persona');
 
-var apiInstance = new PersonaClient.LoginApi();
-var loginDataSoMe = new PersonaClient.LoginDataSoMe(); // LoginDataSoMe | 
+var apiInstance = new Persona.LoginApi();
+var loginDataSoMe = new Persona.LoginDataSoMe(); // LoginDataSoMe | 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -99,10 +99,10 @@ Login with the AccessToken given by the SSO auth
 
 ### Example
 ```javascript
-var PersonaClient = require('persona-client');
+var Persona = require('persona');
 
-var apiInstance = new PersonaClient.LoginApi();
-var loginDataSSO = new PersonaClient.LoginDataSSO(); // LoginDataSSO | 
+var apiInstance = new Persona.LoginApi();
+var loginDataSSO = new Persona.LoginDataSSO(); // LoginDataSSO | 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);

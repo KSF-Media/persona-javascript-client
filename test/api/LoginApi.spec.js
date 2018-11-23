@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.PersonaClient);
+    factory(root.expect, root.Persona);
   }
-}(this, function(expect, PersonaClient) {
+}(this, function(expect, Persona) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new PersonaClient.LoginApi();
+    instance = new Persona.LoginApi();
   });
 
   var getProperty = function(object, getter, property) {

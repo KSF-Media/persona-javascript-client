@@ -1,4 +1,4 @@
-# PersonaClient.InlineResponse4031AccessTokenExpired
+# Persona.InlineResponse4031AccessTokenExpired
 
 ## Properties
 Name | Type | Description | Notes

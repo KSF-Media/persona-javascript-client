@@ -1,4 +1,4 @@
-# PersonaClient.LoginDataSSO
+# Persona.LoginDataSSO
 
 ## Properties
 Name | Type | Description | Notes

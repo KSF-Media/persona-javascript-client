@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.PersonaClient);
+    factory(root.expect, root.Persona);
   }
-}(this, function(expect, PersonaClient) {
+}(this, function(expect, Persona) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new PersonaClient.ActiveDays();
+    instance = new Persona.ActiveDays();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,49 +52,49 @@
   describe('ActiveDays', function() {
     it('should create an instance of ActiveDays', function() {
       // uncomment below and update the code to test ActiveDays
-      //var instance = new PersonaClient.ActiveDays();
-      //expect(instance).to.be.a(PersonaClient.ActiveDays);
+      //var instance = new Persona.ActiveDays();
+      //expect(instance).to.be.a(Persona.ActiveDays);
     });
 
     it('should have the property mon (base name: "mon")', function() {
       // uncomment below and update the code to test the property mon
-      //var instance = new PersonaClient.ActiveDays();
+      //var instance = new Persona.ActiveDays();
       //expect(instance).to.be();
     });
 
     it('should have the property tue (base name: "tue")', function() {
       // uncomment below and update the code to test the property tue
-      //var instance = new PersonaClient.ActiveDays();
+      //var instance = new Persona.ActiveDays();
       //expect(instance).to.be();
     });
 
     it('should have the property wed (base name: "wed")', function() {
       // uncomment below and update the code to test the property wed
-      //var instance = new PersonaClient.ActiveDays();
+      //var instance = new Persona.ActiveDays();
       //expect(instance).to.be();
     });
 
     it('should have the property thu (base name: "thu")', function() {
       // uncomment below and update the code to test the property thu
-      //var instance = new PersonaClient.ActiveDays();
+      //var instance = new Persona.ActiveDays();
       //expect(instance).to.be();
     });
 
     it('should have the property fri (base name: "fri")', function() {
       // uncomment below and update the code to test the property fri
-      //var instance = new PersonaClient.ActiveDays();
+      //var instance = new Persona.ActiveDays();
       //expect(instance).to.be();
     });
 
     it('should have the property sat (base name: "sat")', function() {
       // uncomment below and update the code to test the property sat
-      //var instance = new PersonaClient.ActiveDays();
+      //var instance = new Persona.ActiveDays();
       //expect(instance).to.be();
     });
 
     it('should have the property sun (base name: "sun")', function() {
       // uncomment below and update the code to test the property sun
-      //var instance = new PersonaClient.ActiveDays();
+      //var instance = new Persona.ActiveDays();
       //expect(instance).to.be();
     });
 

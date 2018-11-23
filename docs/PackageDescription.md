@@ -1,4 +1,4 @@
-# PersonaClient.PackageDescription
+# Persona.PackageDescription
 
 ## Properties
 Name | Type | Description | Notes

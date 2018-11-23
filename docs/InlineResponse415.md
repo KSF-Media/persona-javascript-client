@@ -1,4 +1,4 @@
-# PersonaClient.InlineResponse415
+# Persona.InlineResponse415
 
 ## Properties
 Name | Type | Description | Notes

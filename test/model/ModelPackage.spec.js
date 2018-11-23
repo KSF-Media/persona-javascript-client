@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.PersonaClient);
+    factory(root.expect, root.Persona);
   }
-}(this, function(expect, PersonaClient) {
+}(this, function(expect, Persona) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new PersonaClient.ModelPackage();
+    instance = new Persona.ModelPackage();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,55 +52,55 @@
   describe('ModelPackage', function() {
     it('should create an instance of ModelPackage', function() {
       // uncomment below and update the code to test ModelPackage
-      //var instance = new PersonaClient.ModelPackage();
-      //expect(instance).to.be.a(PersonaClient.ModelPackage);
+      //var instance = new Persona.ModelPackage();
+      //expect(instance).to.be.a(Persona.ModelPackage);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new PersonaClient.ModelPackage();
+      //var instance = new Persona.ModelPackage();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new PersonaClient.ModelPackage();
+      //var instance = new Persona.ModelPackage();
       //expect(instance).to.be();
     });
 
     it('should have the property paper (base name: "paper")', function() {
       // uncomment below and update the code to test the property paper
-      //var instance = new PersonaClient.ModelPackage();
+      //var instance = new Persona.ModelPackage();
       //expect(instance).to.be();
     });
 
     it('should have the property products (base name: "products")', function() {
       // uncomment below and update the code to test the property products
-      //var instance = new PersonaClient.ModelPackage();
+      //var instance = new Persona.ModelPackage();
       //expect(instance).to.be();
     });
 
     it('should have the property offers (base name: "offers")', function() {
       // uncomment below and update the code to test the property offers
-      //var instance = new PersonaClient.ModelPackage();
+      //var instance = new Persona.ModelPackage();
       //expect(instance).to.be();
     });
 
     it('should have the property campaigns (base name: "campaigns")', function() {
       // uncomment below and update the code to test the property campaigns
-      //var instance = new PersonaClient.ModelPackage();
+      //var instance = new Persona.ModelPackage();
       //expect(instance).to.be();
     });
 
     it('should have the property nextDelivery (base name: "nextDelivery")', function() {
       // uncomment below and update the code to test the property nextDelivery
-      //var instance = new PersonaClient.ModelPackage();
+      //var instance = new Persona.ModelPackage();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new PersonaClient.ModelPackage();
+      //var instance = new Persona.ModelPackage();
       //expect(instance).to.be();
     });
 

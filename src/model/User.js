@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Address'), require('./Subscription'));
   } else {
     // Browser globals (root is window)
-    if (!root.PersonaClient) {
-      root.PersonaClient = {};
+    if (!root.Persona) {
+      root.Persona = {};
     }
-    root.PersonaClient.User = factory(root.PersonaClient.ApiClient, root.PersonaClient.Address, root.PersonaClient.Subscription);
+    root.Persona.User = factory(root.Persona.ApiClient, root.Persona.Address, root.Persona.Subscription);
   }
 }(this, function(ApiClient, Address, Subscription) {
   'use strict';

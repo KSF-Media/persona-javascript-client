@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.PersonaClient);
+    factory(root.expect, root.Persona);
   }
-}(this, function(expect, PersonaClient) {
+}(this, function(expect, Persona) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new PersonaClient.LoginDataSSO();
+    instance = new Persona.LoginDataSSO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('LoginDataSSO', function() {
     it('should create an instance of LoginDataSSO', function() {
       // uncomment below and update the code to test LoginDataSSO
-      //var instance = new PersonaClient.LoginDataSSO();
-      //expect(instance).to.be.a(PersonaClient.LoginDataSSO);
+      //var instance = new Persona.LoginDataSSO();
+      //expect(instance).to.be.a(Persona.LoginDataSSO);
     });
 
     it('should have the property uuid (base name: "uuid")', function() {
       // uncomment below and update the code to test the property uuid
-      //var instance = new PersonaClient.LoginDataSSO();
+      //var instance = new Persona.LoginDataSSO();
       //expect(instance).to.be();
     });
 
     it('should have the property accessToken (base name: "accessToken")', function() {
       // uncomment below and update the code to test the property accessToken
-      //var instance = new PersonaClient.LoginDataSSO();
+      //var instance = new Persona.LoginDataSSO();
       //expect(instance).to.be();
     });
 

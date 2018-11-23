@@ -1,4 +1,4 @@
-# PersonaClient.UsersApi
+# Persona.UsersApi
 
 All URIs are relative to *http://http:/v1*
 
@@ -18,11 +18,11 @@ Authorization header expects the following format ‘OAuth {token}’
 
 ### Example
 ```javascript
-var PersonaClient = require('persona-client');
+var Persona = require('persona');
 
-var apiInstance = new PersonaClient.UsersApi();
+var apiInstance = new Persona.UsersApi();
 var uuid = null; // String | 
-var gdprConsent = [new PersonaClient.GdprConsent()]; // [GdprConsent] | 
+var gdprConsent = [new Persona.GdprConsent()]; // [GdprConsent] | 
 var opts = {
   'authorization': "authorization_example" // String | 
 };
@@ -67,9 +67,9 @@ Authorization header expects the following format ‘OAuth {token}’
 
 ### Example
 ```javascript
-var PersonaClient = require('persona-client');
+var Persona = require('persona');
 
-var apiInstance = new PersonaClient.UsersApi();
+var apiInstance = new Persona.UsersApi();
 var uuid = null; // String | 
 var opts = {
   'authorization': "authorization_example" // String | 

@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.PersonaClient);
+    factory(root.expect, root.Persona);
   }
-}(this, function(expect, PersonaClient) {
+}(this, function(expect, Persona) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new PersonaClient.Subscription();
+    instance = new Persona.Subscription();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,73 +52,73 @@
   describe('Subscription', function() {
     it('should create an instance of Subscription', function() {
       // uncomment below and update the code to test Subscription
-      //var instance = new PersonaClient.Subscription();
-      //expect(instance).to.be.a(PersonaClient.Subscription);
+      //var instance = new Persona.Subscription();
+      //expect(instance).to.be.a(Persona.Subscription);
     });
 
     it('should have the property subsno (base name: "subsno")', function() {
       // uncomment below and update the code to test the property subsno
-      //var instance = new PersonaClient.Subscription();
+      //var instance = new Persona.Subscription();
       //expect(instance).to.be();
     });
 
     it('should have the property extno (base name: "extno")', function() {
       // uncomment below and update the code to test the property extno
-      //var instance = new PersonaClient.Subscription();
+      //var instance = new Persona.Subscription();
       //expect(instance).to.be();
     });
 
     it('should have the property cusno (base name: "cusno")', function() {
       // uncomment below and update the code to test the property cusno
-      //var instance = new PersonaClient.Subscription();
+      //var instance = new Persona.Subscription();
       //expect(instance).to.be();
     });
 
     it('should have the property paycusno (base name: "paycusno")', function() {
       // uncomment below and update the code to test the property paycusno
-      //var instance = new PersonaClient.Subscription();
+      //var instance = new Persona.Subscription();
       //expect(instance).to.be();
     });
 
     it('should have the property kind (base name: "kind")', function() {
       // uncomment below and update the code to test the property kind
-      //var instance = new PersonaClient.Subscription();
+      //var instance = new Persona.Subscription();
       //expect(instance).to.be();
     });
 
     it('should have the property state (base name: "state")', function() {
       // uncomment below and update the code to test the property state
-      //var instance = new PersonaClient.Subscription();
+      //var instance = new Persona.Subscription();
       //expect(instance).to.be();
     });
 
     it('should have the property pricegroup (base name: "pricegroup")', function() {
       // uncomment below and update the code to test the property pricegroup
-      //var instance = new PersonaClient.Subscription();
+      //var instance = new Persona.Subscription();
       //expect(instance).to.be();
     });
 
     it('should have the property _package (base name: "package")', function() {
       // uncomment below and update the code to test the property _package
-      //var instance = new PersonaClient.Subscription();
+      //var instance = new Persona.Subscription();
       //expect(instance).to.be();
     });
 
     it('should have the property dates (base name: "dates")', function() {
       // uncomment below and update the code to test the property dates
-      //var instance = new PersonaClient.Subscription();
+      //var instance = new Persona.Subscription();
       //expect(instance).to.be();
     });
 
     it('should have the property extsubsexists (base name: "extsubsexists")', function() {
       // uncomment below and update the code to test the property extsubsexists
-      //var instance = new PersonaClient.Subscription();
+      //var instance = new Persona.Subscription();
       //expect(instance).to.be();
     });
 
     it('should have the property campaign (base name: "campaign")', function() {
       // uncomment below and update the code to test the property campaign
-      //var instance = new PersonaClient.Subscription();
+      //var instance = new Persona.Subscription();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# PersonaClient.Address
+# Persona.Address
 
 ## Properties
 Name | Type | Description | Notes

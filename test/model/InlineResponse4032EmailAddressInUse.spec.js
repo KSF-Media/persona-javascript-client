@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.PersonaClient);
+    factory(root.expect, root.Persona);
   }
-}(this, function(expect, PersonaClient) {
+}(this, function(expect, Persona) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new PersonaClient.InlineResponse4032EmailAddressInUse();
+    instance = new Persona.InlineResponse4032EmailAddressInUse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('InlineResponse4032EmailAddressInUse', function() {
     it('should create an instance of InlineResponse4032EmailAddressInUse', function() {
       // uncomment below and update the code to test InlineResponse4032EmailAddressInUse
-      //var instance = new PersonaClient.InlineResponse4032EmailAddressInUse();
-      //expect(instance).to.be.a(PersonaClient.InlineResponse4032EmailAddressInUse);
+      //var instance = new Persona.InlineResponse4032EmailAddressInUse();
+      //expect(instance).to.be.a(Persona.InlineResponse4032EmailAddressInUse);
     });
 
     it('should have the property mergeToken (base name: "merge_token")', function() {
       // uncomment below and update the code to test the property mergeToken
-      //var instance = new PersonaClient.InlineResponse4032EmailAddressInUse();
+      //var instance = new Persona.InlineResponse4032EmailAddressInUse();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new PersonaClient.InlineResponse4032EmailAddressInUse();
+      //var instance = new Persona.InlineResponse4032EmailAddressInUse();
       //expect(instance).to.be();
     });
 
     it('should have the property existingProvider (base name: "existing_provider")', function() {
       // uncomment below and update the code to test the property existingProvider
-      //var instance = new PersonaClient.InlineResponse4032EmailAddressInUse();
+      //var instance = new Persona.InlineResponse4032EmailAddressInUse();
       //expect(instance).to.be();
     });
 

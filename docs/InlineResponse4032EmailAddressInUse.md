@@ -1,4 +1,4 @@
-# PersonaClient.InlineResponse4032EmailAddressInUse
+# Persona.InlineResponse4032EmailAddressInUse
 
 ## Properties
 Name | Type | Description | Notes

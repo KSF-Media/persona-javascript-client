@@ -1,4 +1,4 @@
-# PersonaClient.InlineResponse415UnsupportedMediaType
+# Persona.InlineResponse415UnsupportedMediaType
 
 ## Properties
 Name | Type | Description | Notes

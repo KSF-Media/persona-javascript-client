@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./InlineResponse4031AccessTokenExpired'));
   } else {
     // Browser globals (root is window)
-    if (!root.PersonaClient) {
-      root.PersonaClient = {};
+    if (!root.Persona) {
+      root.Persona = {};
     }
-    root.PersonaClient.InlineResponse4031 = factory(root.PersonaClient.ApiClient, root.PersonaClient.InlineResponse4031AccessTokenExpired);
+    root.Persona.InlineResponse4031 = factory(root.Persona.ApiClient, root.Persona.InlineResponse4031AccessTokenExpired);
   }
 }(this, function(ApiClient, InlineResponse4031AccessTokenExpired) {
   'use strict';

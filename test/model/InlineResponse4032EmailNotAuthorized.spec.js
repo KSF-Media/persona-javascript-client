@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.PersonaClient);
+    factory(root.expect, root.Persona);
   }
-}(this, function(expect, PersonaClient) {
+}(this, function(expect, Persona) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new PersonaClient.InlineResponse4032EmailNotAuthorized();
+    instance = new Persona.InlineResponse4032EmailNotAuthorized();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,13 +52,13 @@
   describe('InlineResponse4032EmailNotAuthorized', function() {
     it('should create an instance of InlineResponse4032EmailNotAuthorized', function() {
       // uncomment below and update the code to test InlineResponse4032EmailNotAuthorized
-      //var instance = new PersonaClient.InlineResponse4032EmailNotAuthorized();
-      //expect(instance).to.be.a(PersonaClient.InlineResponse4032EmailNotAuthorized);
+      //var instance = new Persona.InlineResponse4032EmailNotAuthorized();
+      //expect(instance).to.be.a(Persona.InlineResponse4032EmailNotAuthorized);
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new PersonaClient.InlineResponse4032EmailNotAuthorized();
+      //var instance = new Persona.InlineResponse4032EmailNotAuthorized();
       //expect(instance).to.be();
     });
 

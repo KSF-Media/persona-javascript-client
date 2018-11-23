@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.PersonaClient);
+    factory(root.expect, root.Persona);
   }
-}(this, function(expect, PersonaClient) {
+}(this, function(expect, Persona) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new PersonaClient.InlineResponse500();
+    instance = new Persona.InlineResponse500();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('InlineResponse500', function() {
     it('should create an instance of InlineResponse500', function() {
       // uncomment below and update the code to test InlineResponse500
-      //var instance = new PersonaClient.InlineResponse500();
-      //expect(instance).to.be.a(PersonaClient.InlineResponse500);
+      //var instance = new Persona.InlineResponse500();
+      //expect(instance).to.be.a(Persona.InlineResponse500);
     });
 
     it('should have the property httpCode (base name: "http_code")', function() {
       // uncomment below and update the code to test the property httpCode
-      //var instance = new PersonaClient.InlineResponse500();
+      //var instance = new Persona.InlineResponse500();
       //expect(instance).to.be();
     });
 
     it('should have the property httpStatus (base name: "http_status")', function() {
       // uncomment below and update the code to test the property httpStatus
-      //var instance = new PersonaClient.InlineResponse500();
+      //var instance = new Persona.InlineResponse500();
       //expect(instance).to.be();
     });
 
     it('should have the property internalServerError (base name: "internal_server_error")', function() {
       // uncomment below and update the code to test the property internalServerError
-      //var instance = new PersonaClient.InlineResponse500();
+      //var instance = new Persona.InlineResponse500();
       //expect(instance).to.be();
     });
 

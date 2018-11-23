@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./InlineResponse400InvalidRequestBody'));
   } else {
     // Browser globals (root is window)
-    if (!root.PersonaClient) {
-      root.PersonaClient = {};
+    if (!root.Persona) {
+      root.Persona = {};
     }
-    root.PersonaClient.InlineResponse400 = factory(root.PersonaClient.ApiClient, root.PersonaClient.InlineResponse400InvalidRequestBody);
+    root.Persona.InlineResponse400 = factory(root.Persona.ApiClient, root.Persona.InlineResponse400InvalidRequestBody);
   }
 }(this, function(ApiClient, InlineResponse400InvalidRequestBody) {
   'use strict';

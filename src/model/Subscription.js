@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Campaign'), require('./ModelPackage'), require('./SubscriptionDates'));
   } else {
     // Browser globals (root is window)
-    if (!root.PersonaClient) {
-      root.PersonaClient = {};
+    if (!root.Persona) {
+      root.Persona = {};
     }
-    root.PersonaClient.Subscription = factory(root.PersonaClient.ApiClient, root.PersonaClient.Campaign, root.PersonaClient.ModelPackage, root.PersonaClient.SubscriptionDates);
+    root.Persona.Subscription = factory(root.Persona.ApiClient, root.Persona.Campaign, root.Persona.ModelPackage, root.Persona.SubscriptionDates);
   }
 }(this, function(ApiClient, Campaign, ModelPackage, SubscriptionDates) {
   'use strict';

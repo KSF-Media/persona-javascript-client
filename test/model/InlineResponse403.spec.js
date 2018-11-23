@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.PersonaClient);
+    factory(root.expect, root.Persona);
   }
-}(this, function(expect, PersonaClient) {
+}(this, function(expect, Persona) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new PersonaClient.InlineResponse403();
+    instance = new Persona.InlineResponse403();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('InlineResponse403', function() {
     it('should create an instance of InlineResponse403', function() {
       // uncomment below and update the code to test InlineResponse403
-      //var instance = new PersonaClient.InlineResponse403();
-      //expect(instance).to.be.a(PersonaClient.InlineResponse403);
+      //var instance = new Persona.InlineResponse403();
+      //expect(instance).to.be.a(Persona.InlineResponse403);
     });
 
     it('should have the property httpCode (base name: "http_code")', function() {
       // uncomment below and update the code to test the property httpCode
-      //var instance = new PersonaClient.InlineResponse403();
+      //var instance = new Persona.InlineResponse403();
       //expect(instance).to.be();
     });
 
     it('should have the property httpStatus (base name: "http_status")', function() {
       // uncomment below and update the code to test the property httpStatus
-      //var instance = new PersonaClient.InlineResponse403();
+      //var instance = new Persona.InlineResponse403();
       //expect(instance).to.be();
     });
 
     it('should have the property invalidCredentials (base name: "invalid_credentials")', function() {
       // uncomment below and update the code to test the property invalidCredentials
-      //var instance = new PersonaClient.InlineResponse403();
+      //var instance = new Persona.InlineResponse403();
       //expect(instance).to.be();
     });
 

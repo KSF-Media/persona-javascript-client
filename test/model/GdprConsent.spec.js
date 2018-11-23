@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.PersonaClient);
+    factory(root.expect, root.Persona);
   }
-}(this, function(expect, PersonaClient) {
+}(this, function(expect, Persona) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new PersonaClient.GdprConsent();
+    instance = new Persona.GdprConsent();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('GdprConsent', function() {
     it('should create an instance of GdprConsent', function() {
       // uncomment below and update the code to test GdprConsent
-      //var instance = new PersonaClient.GdprConsent();
-      //expect(instance).to.be.a(PersonaClient.GdprConsent);
+      //var instance = new Persona.GdprConsent();
+      //expect(instance).to.be.a(Persona.GdprConsent);
     });
 
     it('should have the property key (base name: "key")', function() {
       // uncomment below and update the code to test the property key
-      //var instance = new PersonaClient.GdprConsent();
+      //var instance = new Persona.GdprConsent();
       //expect(instance).to.be();
     });
 
     it('should have the property val (base name: "val")', function() {
       // uncomment below and update the code to test the property val
-      //var instance = new PersonaClient.GdprConsent();
+      //var instance = new Persona.GdprConsent();
       //expect(instance).to.be();
     });
 

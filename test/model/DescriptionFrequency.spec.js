@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.PersonaClient);
+    factory(root.expect, root.Persona);
   }
-}(this, function(expect, PersonaClient) {
+}(this, function(expect, Persona) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new PersonaClient.DescriptionFrequency();
+    instance = new Persona.DescriptionFrequency();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('DescriptionFrequency', function() {
     it('should create an instance of DescriptionFrequency', function() {
       // uncomment below and update the code to test DescriptionFrequency
-      //var instance = new PersonaClient.DescriptionFrequency();
-      //expect(instance).to.be.a(PersonaClient.DescriptionFrequency);
+      //var instance = new Persona.DescriptionFrequency();
+      //expect(instance).to.be.a(Persona.DescriptionFrequency);
     });
 
     it('should have the property amount (base name: "amount")', function() {
       // uncomment below and update the code to test the property amount
-      //var instance = new PersonaClient.DescriptionFrequency();
+      //var instance = new Persona.DescriptionFrequency();
       //expect(instance).to.be();
     });
 
     it('should have the property unit (base name: "unit")', function() {
       // uncomment below and update the code to test the property unit
-      //var instance = new PersonaClient.DescriptionFrequency();
+      //var instance = new Persona.DescriptionFrequency();
       //expect(instance).to.be();
     });
 

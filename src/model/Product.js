@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./ActiveDays'));
   } else {
     // Browser globals (root is window)
-    if (!root.PersonaClient) {
-      root.PersonaClient = {};
+    if (!root.Persona) {
+      root.Persona = {};
     }
-    root.PersonaClient.Product = factory(root.PersonaClient.ApiClient, root.PersonaClient.ActiveDays);
+    root.Persona.Product = factory(root.Persona.ApiClient, root.Persona.ActiveDays);
   }
 }(this, function(ApiClient, ActiveDays) {
   'use strict';

@@ -1,4 +1,4 @@
-# PersonaClient.InlineResponse4032EmailNotAuthorized
+# Persona.InlineResponse4032EmailNotAuthorized
 
 ## Properties
 Name | Type | Description | Notes

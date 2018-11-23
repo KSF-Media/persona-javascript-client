@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.PersonaClient);
+    factory(root.expect, root.Persona);
   }
-}(this, function(expect, PersonaClient) {
+}(this, function(expect, Persona) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new PersonaClient.LoginDataSoMe();
+    instance = new Persona.LoginDataSoMe();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('LoginDataSoMe', function() {
     it('should create an instance of LoginDataSoMe', function() {
       // uncomment below and update the code to test LoginDataSoMe
-      //var instance = new PersonaClient.LoginDataSoMe();
-      //expect(instance).to.be.a(PersonaClient.LoginDataSoMe);
+      //var instance = new Persona.LoginDataSoMe();
+      //expect(instance).to.be.a(Persona.LoginDataSoMe);
     });
 
     it('should have the property provider (base name: "provider")', function() {
       // uncomment below and update the code to test the property provider
-      //var instance = new PersonaClient.LoginDataSoMe();
+      //var instance = new Persona.LoginDataSoMe();
       //expect(instance).to.be();
     });
 
     it('should have the property someToken (base name: "someToken")', function() {
       // uncomment below and update the code to test the property someToken
-      //var instance = new PersonaClient.LoginDataSoMe();
+      //var instance = new Persona.LoginDataSoMe();
       //expect(instance).to.be();
     });
 
     it('should have the property mergeToken (base name: "mergeToken")', function() {
       // uncomment below and update the code to test the property mergeToken
-      //var instance = new PersonaClient.LoginDataSoMe();
+      //var instance = new Persona.LoginDataSoMe();
       //expect(instance).to.be();
     });
 

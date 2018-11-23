@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.PersonaClient);
+    factory(root.expect, root.Persona);
   }
-}(this, function(expect, PersonaClient) {
+}(this, function(expect, Persona) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new PersonaClient.Product();
+    instance = new Persona.Product();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,31 +52,31 @@
   describe('Product', function() {
     it('should create an instance of Product', function() {
       // uncomment below and update the code to test Product
-      //var instance = new PersonaClient.Product();
-      //expect(instance).to.be.a(PersonaClient.Product);
+      //var instance = new Persona.Product();
+      //expect(instance).to.be.a(Persona.Product);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new PersonaClient.Product();
+      //var instance = new Persona.Product();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new PersonaClient.Product();
+      //var instance = new Persona.Product();
       //expect(instance).to.be();
     });
 
     it('should have the property active (base name: "active")', function() {
       // uncomment below and update the code to test the property active
-      //var instance = new PersonaClient.Product();
+      //var instance = new Persona.Product();
       //expect(instance).to.be();
     });
 
     it('should have the property nextDelivery (base name: "nextDelivery")', function() {
       // uncomment below and update the code to test the property nextDelivery
-      //var instance = new PersonaClient.Product();
+      //var instance = new Persona.Product();
       //expect(instance).to.be();
     });
 

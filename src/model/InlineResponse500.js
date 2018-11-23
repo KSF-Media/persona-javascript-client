@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./InlineResponse500InternalServerError'));
   } else {
     // Browser globals (root is window)
-    if (!root.PersonaClient) {
-      root.PersonaClient = {};
+    if (!root.Persona) {
+      root.Persona = {};
     }
-    root.PersonaClient.InlineResponse500 = factory(root.PersonaClient.ApiClient, root.PersonaClient.InlineResponse500InternalServerError);
+    root.Persona.InlineResponse500 = factory(root.Persona.ApiClient, root.Persona.InlineResponse500InternalServerError);
   }
 }(this, function(ApiClient, InlineResponse500InternalServerError) {
   'use strict';

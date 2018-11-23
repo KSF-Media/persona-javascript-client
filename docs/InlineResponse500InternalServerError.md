@@ -1,4 +1,4 @@
-# PersonaClient.InlineResponse500InternalServerError
+# Persona.InlineResponse500InternalServerError
 
 ## Properties
 Name | Type | Description | Notes

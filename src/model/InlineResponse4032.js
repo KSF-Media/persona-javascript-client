@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./InlineResponse4032EmailAddressInUse'), require('./InlineResponse4032EmailNotAuthorized'), require('./InlineResponse4032OauthFailed'));
   } else {
     // Browser globals (root is window)
-    if (!root.PersonaClient) {
-      root.PersonaClient = {};
+    if (!root.Persona) {
+      root.Persona = {};
     }
-    root.PersonaClient.InlineResponse4032 = factory(root.PersonaClient.ApiClient, root.PersonaClient.InlineResponse4032EmailAddressInUse, root.PersonaClient.InlineResponse4032EmailNotAuthorized, root.PersonaClient.InlineResponse4032OauthFailed);
+    root.Persona.InlineResponse4032 = factory(root.Persona.ApiClient, root.Persona.InlineResponse4032EmailAddressInUse, root.Persona.InlineResponse4032EmailNotAuthorized, root.Persona.InlineResponse4032OauthFailed);
   }
 }(this, function(ApiClient, InlineResponse4032EmailAddressInUse, InlineResponse4032EmailNotAuthorized, InlineResponse4032OauthFailed) {
   'use strict';

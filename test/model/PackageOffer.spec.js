@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.PersonaClient);
+    factory(root.expect, root.Persona);
   }
-}(this, function(expect, PersonaClient) {
+}(this, function(expect, Persona) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new PersonaClient.PackageOffer();
+    instance = new Persona.PackageOffer();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('PackageOffer', function() {
     it('should create an instance of PackageOffer', function() {
       // uncomment below and update the code to test PackageOffer
-      //var instance = new PersonaClient.PackageOffer();
-      //expect(instance).to.be.a(PersonaClient.PackageOffer);
+      //var instance = new Persona.PackageOffer();
+      //expect(instance).to.be.a(Persona.PackageOffer);
     });
 
     it('should have the property months (base name: "months")', function() {
       // uncomment below and update the code to test the property months
-      //var instance = new PersonaClient.PackageOffer();
+      //var instance = new Persona.PackageOffer();
       //expect(instance).to.be();
     });
 
     it('should have the property totalPrice (base name: "totalPrice")', function() {
       // uncomment below and update the code to test the property totalPrice
-      //var instance = new PersonaClient.PackageOffer();
+      //var instance = new Persona.PackageOffer();
       //expect(instance).to.be();
     });
 
     it('should have the property monthlyPrice (base name: "monthlyPrice")', function() {
       // uncomment below and update the code to test the property monthlyPrice
-      //var instance = new PersonaClient.PackageOffer();
+      //var instance = new Persona.PackageOffer();
       //expect(instance).to.be();
     });
 
