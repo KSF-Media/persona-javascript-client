@@ -119,6 +119,7 @@
      * @param {String} uuid 
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization 
+     * @param {String} opts.cacheControl 
      * @param {module:api/UsersApi~usersUuidGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/User}
      */
@@ -140,7 +141,8 @@
       var collectionQueryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization']
+        'Authorization': opts['authorization'],
+        'Cache-Control': opts['cacheControl']
       };
       var formParams = {
       };
