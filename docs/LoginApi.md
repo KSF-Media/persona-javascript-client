@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**loginPost**](LoginApi.md#loginPost) | **POST** /login | Login with email and password
 [**loginSomePost**](LoginApi.md#loginSomePost) | **POST** /login/some | Login with social media
 [**loginSsoPost**](LoginApi.md#loginSsoPost) | **POST** /login/sso | Login with the AccessToken given by the SSO auth
+[**loginUuidDelete**](LoginApi.md#loginUuidDelete) | **DELETE** /login/{uuid} | Logout
 
 
 <a name="loginPost"></a>
@@ -130,5 +131,52 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json;charset=utf-8
+ - **Accept**: application/json;charset=utf-8
+
+<a name="loginUuidDelete"></a>
+# **loginUuidDelete**
+> [Object] loginUuidDelete(uuid, opts)
+
+Logout
+
+Authorization header expects the following format ‘OAuth {token}’
+
+### Example
+```javascript
+var Persona = require('persona');
+
+var apiInstance = new Persona.LoginApi();
+var uuid = null; // String | 
+var opts = {
+  'authorization': "authorization_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.loginUuidDelete(uuid, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**String**](.md)|  | 
+ **authorization** | **String**|  | [optional] 
+
+### Return type
+
+**[Object]**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json;charset=utf-8
 

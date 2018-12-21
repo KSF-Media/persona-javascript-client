@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **active** | [**ActiveDays**](ActiveDays.md) |  | 
 **nextDelivery** | **Date** |  | [optional] 
+**paper** | [**Paper**](Paper.md) |  | 
 
 

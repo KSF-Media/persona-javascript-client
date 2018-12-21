@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ActiveDays'], factory);
+    define(['ApiClient', 'model/ActiveDays', 'model/Paper'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ActiveDays'));
+    module.exports = factory(require('../ApiClient'), require('./ActiveDays'), require('./Paper'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.Product = factory(root.Persona.ApiClient, root.Persona.ActiveDays);
+    root.Persona.Product = factory(root.Persona.ApiClient, root.Persona.ActiveDays, root.Persona.Paper);
   }
-}(this, function(ApiClient, ActiveDays) {
+}(this, function(ApiClient, ActiveDays, Paper) {
   'use strict';
 
 
@@ -45,13 +45,15 @@
    * @param id {String} 
    * @param name {String} 
    * @param active {module:model/ActiveDays} 
+   * @param paper {module:model/Paper} 
    */
-  var exports = function(id, name, active) {
+  var exports = function(id, name, active, paper) {
     var _this = this;
 
     _this['id'] = id;
     _this['name'] = name;
     _this['active'] = active;
+    _this['paper'] = paper;
   };
 
   /**
@@ -76,6 +78,9 @@
       if (data.hasOwnProperty('nextDelivery')) {
         obj['nextDelivery'] = ApiClient.convertToType(data['nextDelivery'], 'Date');
       }
+      if (data.hasOwnProperty('paper')) {
+        obj['paper'] = Paper.constructFromObject(data['paper']);
+      }
     }
     return obj;
   }
@@ -96,6 +101,10 @@
    * @member {Date} nextDelivery
    */
   exports.prototype['nextDelivery'] = undefined;
+  /**
+   * @member {module:model/Paper} paper
+   */
+  exports.prototype['paper'] = undefined;
 
 
 

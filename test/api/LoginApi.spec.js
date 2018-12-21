@@ -80,6 +80,16 @@
         done();
       });
     });
+    describe('loginUuidDelete', function() {
+      it('should call loginUuidDelete successfully', function(done) {
+        //uncomment below and update the code to test loginUuidDelete
+        //instance.loginUuidDelete(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

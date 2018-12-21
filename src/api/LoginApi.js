@@ -184,6 +184,58 @@
         authNames, contentTypes, accepts, returnType, callback
       );
     }
+
+    /**
+     * Callback function to receive the result of the loginUuidDelete operation.
+     * @callback module:api/LoginApi~loginUuidDeleteCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Logout
+     * Authorization header expects the following format ‘OAuth {token}’
+     * @param {String} uuid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
+     * @param {module:api/LoginApi~loginUuidDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<Object>}
+     */
+    this.loginUuidDelete = function(uuid, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'uuid' is set
+      if (uuid === undefined || uuid === null) {
+        throw new Error("Missing the required parameter 'uuid' when calling loginUuidDelete");
+      }
+
+
+      var pathParams = {
+        'uuid': uuid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'Authorization': opts['authorization']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = [Object];
+
+      return this.apiClient.callApi(
+        '/login/{uuid}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
   };
 
   return exports;

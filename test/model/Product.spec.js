@@ -80,6 +80,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property paper (base name: "paper")', function() {
+      // uncomment below and update the code to test the property paper
+      //var instance = new Persona.Product();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
