@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Address', 'model/Subscription'], factory);
+    define(['ApiClient', 'model/Address', 'model/GdprConsent', 'model/Subscription'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Address'), require('./Subscription'));
+    module.exports = factory(require('../ApiClient'), require('./Address'), require('./GdprConsent'), require('./Subscription'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.User = factory(root.Persona.ApiClient, root.Persona.Address, root.Persona.Subscription);
+    root.Persona.User = factory(root.Persona.ApiClient, root.Persona.Address, root.Persona.GdprConsent, root.Persona.Subscription);
   }
-}(this, function(ApiClient, Address, Subscription) {
+}(this, function(ApiClient, Address, GdprConsent, Subscription) {
   'use strict';
 
 
@@ -46,14 +46,16 @@
    * @param email {String} 
    * @param cusno {String} 
    * @param subs {Array.<module:model/Subscription>} 
+   * @param consent {Array.<module:model/GdprConsent>} 
    */
-  var exports = function(uuid, email, cusno, subs) {
+  var exports = function(uuid, email, cusno, subs, consent) {
     var _this = this;
 
     _this['uuid'] = uuid;
     _this['email'] = email;
     _this['cusno'] = cusno;
     _this['subs'] = subs;
+    _this['consent'] = consent;
   };
 
   /**
@@ -87,6 +89,9 @@
       if (data.hasOwnProperty('subs')) {
         obj['subs'] = ApiClient.convertToType(data['subs'], [Subscription]);
       }
+      if (data.hasOwnProperty('consent')) {
+        obj['consent'] = ApiClient.convertToType(data['consent'], [GdprConsent]);
+      }
     }
     return obj;
   }
@@ -119,6 +124,10 @@
    * @member {Array.<module:model/Subscription>} subs
    */
   exports.prototype['subs'] = undefined;
+  /**
+   * @member {Array.<module:model/GdprConsent>} consent
+   */
+  exports.prototype['consent'] = undefined;
 
 
 

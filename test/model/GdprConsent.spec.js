@@ -56,6 +56,12 @@
       //expect(instance).to.be.a(Persona.GdprConsent);
     });
 
+    it('should have the property brand (base name: "brand")', function() {
+      // uncomment below and update the code to test the property brand
+      //var instance = new Persona.GdprConsent();
+      //expect(instance).to.be();
+    });
+
     it('should have the property key (base name: "key")', function() {
       // uncomment below and update the code to test the property key
       //var instance = new Persona.GdprConsent();

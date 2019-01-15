@@ -42,12 +42,14 @@
    * Constructs a new <code>GdprConsent</code>.
    * @alias module:model/GdprConsent
    * @class
+   * @param brand {String} 
    * @param key {String} 
    * @param val {Boolean} 
    */
-  var exports = function(key, val) {
+  var exports = function(brand, key, val) {
     var _this = this;
 
+    _this['brand'] = brand;
     _this['key'] = key;
     _this['val'] = val;
   };
@@ -62,6 +64,9 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('brand')) {
+        obj['brand'] = ApiClient.convertToType(data['brand'], 'String');
+      }
       if (data.hasOwnProperty('key')) {
         obj['key'] = ApiClient.convertToType(data['key'], 'String');
       }
@@ -72,6 +77,10 @@
     return obj;
   }
 
+  /**
+   * @member {String} brand
+   */
+  exports.prototype['brand'] = undefined;
   /**
    * @member {String} key
    */

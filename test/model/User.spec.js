@@ -98,6 +98,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property consent (base name: "consent")', function() {
+      // uncomment below and update the code to test the property consent
+      //var instance = new Persona.User();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

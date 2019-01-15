@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **address** | [**Address**](Address.md) |  | [optional] 
 **cusno** | **String** |  | 
 **subs** | [**[Subscription]**](Subscription.md) |  | 
+**consent** | [**[GdprConsent]**](GdprConsent.md) |  | 
 
 
