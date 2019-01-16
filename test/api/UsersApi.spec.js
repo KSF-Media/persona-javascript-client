@@ -50,6 +50,16 @@
   }
 
   describe('UsersApi', function() {
+    describe('usersPost', function() {
+      it('should call usersPost successfully', function(done) {
+        //uncomment below and update the code to test usersPost
+        //instance.usersPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('usersUuidGdprPut', function() {
       it('should call usersUuidGdprPut successfully', function(done) {
         //uncomment below and update the code to test usersUuidGdprPut

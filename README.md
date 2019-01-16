@@ -119,6 +119,7 @@ Class | Method | HTTP request | Description
 *Persona.LoginApi* | [**loginSomePost**](docs/LoginApi.md#loginSomePost) | **POST** /login/some | Login with social media
 *Persona.LoginApi* | [**loginSsoPost**](docs/LoginApi.md#loginSsoPost) | **POST** /login/sso | Login with the AccessToken given by the SSO auth
 *Persona.LoginApi* | [**loginUuidDelete**](docs/LoginApi.md#loginUuidDelete) | **DELETE** /login/{uuid} | Logout
+*Persona.UsersApi* | [**usersPost**](docs/UsersApi.md#usersPost) | **POST** /users | Create a new user.
 *Persona.UsersApi* | [**usersUuidGdprPut**](docs/UsersApi.md#usersUuidGdprPut) | **PUT** /users/{uuid}/gdpr | Updates the GDPR consent settings for a given user.
 *Persona.UsersApi* | [**usersUuidGet**](docs/UsersApi.md#usersUuidGet) | **GET** /users/{uuid} | Get user by UUID.
 
@@ -149,6 +150,7 @@ Class | Method | HTTP request | Description
  - [Persona.LoginDataSoMe](docs/LoginDataSoMe.md)
  - [Persona.LoginResponse](docs/LoginResponse.md)
  - [Persona.ModelPackage](docs/ModelPackage.md)
+ - [Persona.NewUser](docs/NewUser.md)
  - [Persona.PackageDescription](docs/PackageDescription.md)
  - [Persona.PackageOffer](docs/PackageOffer.md)
  - [Persona.Paper](docs/Paper.md)

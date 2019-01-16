@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GdprConsent', 'model/InlineResponse400', 'model/InlineResponse415', 'model/User'], factory);
+    define(['ApiClient', 'model/GdprConsent', 'model/InlineResponse400', 'model/InlineResponse415', 'model/LoginResponse', 'model/NewUser', 'model/User'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/GdprConsent'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/User'));
+    module.exports = factory(require('../ApiClient'), require('../model/GdprConsent'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/LoginResponse'), require('../model/NewUser'), require('../model/User'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.UsersApi = factory(root.Persona.ApiClient, root.Persona.GdprConsent, root.Persona.InlineResponse400, root.Persona.InlineResponse415, root.Persona.User);
+    root.Persona.UsersApi = factory(root.Persona.ApiClient, root.Persona.GdprConsent, root.Persona.InlineResponse400, root.Persona.InlineResponse415, root.Persona.LoginResponse, root.Persona.NewUser, root.Persona.User);
   }
-}(this, function(ApiClient, GdprConsent, InlineResponse400, InlineResponse415, User) {
+}(this, function(ApiClient, GdprConsent, InlineResponse400, InlineResponse415, LoginResponse, NewUser, User) {
   'use strict';
 
   /**
@@ -46,6 +46,52 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+    /**
+     * Callback function to receive the result of the usersPost operation.
+     * @callback module:api/UsersApi~usersPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/LoginResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a new user.
+     * @param {module:model/NewUser} newUser 
+     * @param {module:api/UsersApi~usersPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/LoginResponse}
+     */
+    this.usersPost = function(newUser, callback) {
+      var postBody = newUser;
+
+      // verify the required parameter 'newUser' is set
+      if (newUser === undefined || newUser === null) {
+        throw new Error("Missing the required parameter 'newUser' when calling usersPost");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json;charset=utf-8'];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = LoginResponse;
+
+      return this.apiClient.callApi(
+        '/users', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the usersUuidGdprPut operation.
