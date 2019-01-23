@@ -43,15 +43,15 @@
    * @alias module:model/GdprConsent
    * @class
    * @param brand {String} 
-   * @param key {String} 
-   * @param val {Boolean} 
+   * @param consentKey {String} 
+   * @param value {Boolean} 
    */
-  var exports = function(brand, key, val) {
+  var exports = function(brand, consentKey, value) {
     var _this = this;
 
     _this['brand'] = brand;
-    _this['key'] = key;
-    _this['val'] = val;
+    _this['consentKey'] = consentKey;
+    _this['value'] = value;
   };
 
   /**
@@ -67,11 +67,11 @@
       if (data.hasOwnProperty('brand')) {
         obj['brand'] = ApiClient.convertToType(data['brand'], 'String');
       }
-      if (data.hasOwnProperty('key')) {
-        obj['key'] = ApiClient.convertToType(data['key'], 'String');
+      if (data.hasOwnProperty('consentKey')) {
+        obj['consentKey'] = ApiClient.convertToType(data['consentKey'], 'String');
       }
-      if (data.hasOwnProperty('val')) {
-        obj['val'] = ApiClient.convertToType(data['val'], 'Boolean');
+      if (data.hasOwnProperty('value')) {
+        obj['value'] = ApiClient.convertToType(data['value'], 'Boolean');
       }
     }
     return obj;
@@ -82,13 +82,13 @@
    */
   exports.prototype['brand'] = undefined;
   /**
-   * @member {String} key
+   * @member {String} consentKey
    */
-  exports.prototype['key'] = undefined;
+  exports.prototype['consentKey'] = undefined;
   /**
-   * @member {Boolean} val
+   * @member {Boolean} value
    */
-  exports.prototype['val'] = undefined;
+  exports.prototype['value'] = undefined;
 
 
 

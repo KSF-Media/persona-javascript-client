@@ -62,14 +62,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property key (base name: "key")', function() {
-      // uncomment below and update the code to test the property key
+    it('should have the property consentKey (base name: "consentKey")', function() {
+      // uncomment below and update the code to test the property consentKey
       //var instance = new Persona.GdprConsent();
       //expect(instance).to.be();
     });
 
-    it('should have the property val (base name: "val")', function() {
-      // uncomment below and update the code to test the property val
+    it('should have the property value (base name: "value")', function() {
+      // uncomment below and update the code to test the property value
       //var instance = new Persona.GdprConsent();
       //expect(instance).to.be();
     });
