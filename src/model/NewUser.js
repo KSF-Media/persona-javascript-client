@@ -46,14 +46,16 @@
    * @param lastName {String} 
    * @param emailAddress {String} 
    * @param password {String} 
+   * @param confirmPassword {String} 
    */
-  var exports = function(firstName, lastName, emailAddress, password) {
+  var exports = function(firstName, lastName, emailAddress, password, confirmPassword) {
     var _this = this;
 
     _this['firstName'] = firstName;
     _this['lastName'] = lastName;
     _this['emailAddress'] = emailAddress;
     _this['password'] = password;
+    _this['confirmPassword'] = confirmPassword;
   };
 
   /**
@@ -77,6 +79,9 @@
       }
       if (data.hasOwnProperty('password')) {
         obj['password'] = ApiClient.convertToType(data['password'], 'String');
+      }
+      if (data.hasOwnProperty('confirmPassword')) {
+        obj['confirmPassword'] = ApiClient.convertToType(data['confirmPassword'], 'String');
       }
       if (data.hasOwnProperty('streetAddress')) {
         obj['streetAddress'] = ApiClient.convertToType(data['streetAddress'], 'String');
@@ -113,6 +118,10 @@
    * @member {String} password
    */
   exports.prototype['password'] = undefined;
+  /**
+   * @member {String} confirmPassword
+   */
+  exports.prototype['confirmPassword'] = undefined;
   /**
    * @member {String} streetAddress
    */

@@ -80,6 +80,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property confirmPassword (base name: "confirmPassword")', function() {
+      // uncomment below and update the code to test the property confirmPassword
+      //var instance = new Persona.NewUser();
+      //expect(instance).to.be();
+    });
+
     it('should have the property streetAddress (base name: "streetAddress")', function() {
       // uncomment below and update the code to test the property streetAddress
       //var instance = new Persona.NewUser();
