@@ -52,7 +52,7 @@ No authorization required
 
 <a name="usersUuidGdprPut"></a>
 # **usersUuidGdprPut**
-> [Object] usersUuidGdprPut(uuid, gdprConsent, opts)
+> User usersUuidGdprPut(uuid, gdprConsent, opts)
 
 Updates the GDPR consent settings for a given user.
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[Object]**
+[**User**](User.md)
 
 ### Authorization
 
