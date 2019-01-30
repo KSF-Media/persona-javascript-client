@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**usersPost**](UsersApi.md#usersPost) | **POST** /users | Create a new user.
 [**usersUuidGdprPut**](UsersApi.md#usersUuidGdprPut) | **PUT** /users/{uuid}/gdpr | Updates the GDPR consent settings for a given user.
 [**usersUuidGet**](UsersApi.md#usersUuidGet) | **GET** /users/{uuid} | Get user by UUID.
+[**usersUuidPatch**](UsersApi.md#usersUuidPatch) | **PATCH** /users/{uuid} | Update a user
 
 
 <a name="usersPost"></a>
@@ -146,5 +147,54 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json;charset=utf-8
+
+<a name="usersUuidPatch"></a>
+# **usersUuidPatch**
+> User usersUuidPatch(uuid, userUpdate, opts)
+
+Update a user
+
+Authorization header expects the following format ‘OAuth {token}’
+
+### Example
+```javascript
+var Persona = require('persona');
+
+var apiInstance = new Persona.UsersApi();
+var uuid = null; // String | 
+var userUpdate = new Persona.UserUpdate(); // UserUpdate | 
+var opts = {
+  'authorization': "authorization_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.usersUuidPatch(uuid, userUpdate, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**String**](.md)|  | 
+ **userUpdate** | [**UserUpdate**](UserUpdate.md)|  | 
+ **authorization** | **String**|  | [optional] 
+
+### Return type
+
+[**User**](User.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
  - **Accept**: application/json;charset=utf-8
 

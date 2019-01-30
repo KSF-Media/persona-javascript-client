@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.UsersApi();
+    instance = new Persona.UserUpdateAddress();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,47 +49,31 @@
       object[property] = value;
   }
 
-  describe('UsersApi', function() {
-    describe('usersPost', function() {
-      it('should call usersPost successfully', function(done) {
-        //uncomment below and update the code to test usersPost
-        //instance.usersPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('UserUpdateAddress', function() {
+    it('should create an instance of UserUpdateAddress', function() {
+      // uncomment below and update the code to test UserUpdateAddress
+      //var instance = new Persona.UserUpdateAddress();
+      //expect(instance).to.be.a(Persona.UserUpdateAddress);
     });
-    describe('usersUuidGdprPut', function() {
-      it('should call usersUuidGdprPut successfully', function(done) {
-        //uncomment below and update the code to test usersUuidGdprPut
-        //instance.usersUuidGdprPut(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property countryCode (base name: "countryCode")', function() {
+      // uncomment below and update the code to test the property countryCode
+      //var instance = new Persona.UserUpdateAddress();
+      //expect(instance).to.be();
     });
-    describe('usersUuidGet', function() {
-      it('should call usersUuidGet successfully', function(done) {
-        //uncomment below and update the code to test usersUuidGet
-        //instance.usersUuidGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property zipCode (base name: "zipCode")', function() {
+      // uncomment below and update the code to test the property zipCode
+      //var instance = new Persona.UserUpdateAddress();
+      //expect(instance).to.be();
     });
-    describe('usersUuidPatch', function() {
-      it('should call usersUuidPatch successfully', function(done) {
-        //uncomment below and update the code to test usersUuidPatch
-        //instance.usersUuidPatch(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property streetAddress (base name: "streetAddress")', function() {
+      // uncomment below and update the code to test the property streetAddress
+      //var instance = new Persona.UserUpdateAddress();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

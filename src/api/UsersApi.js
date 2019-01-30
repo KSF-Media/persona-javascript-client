@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GdprConsent', 'model/InlineResponse400', 'model/InlineResponse415', 'model/LoginResponse', 'model/NewUser', 'model/User'], factory);
+    define(['ApiClient', 'model/GdprConsent', 'model/InlineResponse400', 'model/InlineResponse415', 'model/LoginResponse', 'model/NewUser', 'model/User', 'model/UserUpdate'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/GdprConsent'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/LoginResponse'), require('../model/NewUser'), require('../model/User'));
+    module.exports = factory(require('../ApiClient'), require('../model/GdprConsent'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/LoginResponse'), require('../model/NewUser'), require('../model/User'), require('../model/UserUpdate'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.UsersApi = factory(root.Persona.ApiClient, root.Persona.GdprConsent, root.Persona.InlineResponse400, root.Persona.InlineResponse415, root.Persona.LoginResponse, root.Persona.NewUser, root.Persona.User);
+    root.Persona.UsersApi = factory(root.Persona.ApiClient, root.Persona.GdprConsent, root.Persona.InlineResponse400, root.Persona.InlineResponse415, root.Persona.LoginResponse, root.Persona.NewUser, root.Persona.User, root.Persona.UserUpdate);
   }
-}(this, function(ApiClient, GdprConsent, InlineResponse400, InlineResponse415, LoginResponse, NewUser, User) {
+}(this, function(ApiClient, GdprConsent, InlineResponse400, InlineResponse415, LoginResponse, NewUser, User, UserUpdate) {
   'use strict';
 
   /**
@@ -200,6 +200,64 @@
 
       return this.apiClient.callApi(
         '/users/{uuid}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the usersUuidPatch operation.
+     * @callback module:api/UsersApi~usersUuidPatchCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/User} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update a user
+     * Authorization header expects the following format ‘OAuth {token}’
+     * @param {String} uuid 
+     * @param {module:model/UserUpdate} userUpdate 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
+     * @param {module:api/UsersApi~usersUuidPatchCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/User}
+     */
+    this.usersUuidPatch = function(uuid, userUpdate, opts, callback) {
+      opts = opts || {};
+      var postBody = userUpdate;
+
+      // verify the required parameter 'uuid' is set
+      if (uuid === undefined || uuid === null) {
+        throw new Error("Missing the required parameter 'uuid' when calling usersUuidPatch");
+      }
+
+      // verify the required parameter 'userUpdate' is set
+      if (userUpdate === undefined || userUpdate === null) {
+        throw new Error("Missing the required parameter 'userUpdate' when calling usersUuidPatch");
+      }
+
+
+      var pathParams = {
+        'uuid': uuid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'Authorization': opts['authorization']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json;charset=utf-8'];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = User;
+
+      return this.apiClient.callApi(
+        '/users/{uuid}', 'PATCH',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

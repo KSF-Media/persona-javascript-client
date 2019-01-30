@@ -122,6 +122,7 @@ Class | Method | HTTP request | Description
 *Persona.UsersApi* | [**usersPost**](docs/UsersApi.md#usersPost) | **POST** /users | Create a new user.
 *Persona.UsersApi* | [**usersUuidGdprPut**](docs/UsersApi.md#usersUuidGdprPut) | **PUT** /users/{uuid}/gdpr | Updates the GDPR consent settings for a given user.
 *Persona.UsersApi* | [**usersUuidGet**](docs/UsersApi.md#usersUuidGet) | **GET** /users/{uuid} | Get user by UUID.
+*Persona.UsersApi* | [**usersUuidPatch**](docs/UsersApi.md#usersUuidPatch) | **PATCH** /users/{uuid} | Update a user
 
 
 ## Documentation for Models
@@ -158,6 +159,8 @@ Class | Method | HTTP request | Description
  - [Persona.Subscription](docs/Subscription.md)
  - [Persona.SubscriptionDates](docs/SubscriptionDates.md)
  - [Persona.User](docs/User.md)
+ - [Persona.UserUpdate](docs/UserUpdate.md)
+ - [Persona.UserUpdateAddress](docs/UserUpdateAddress.md)
 
 
 ## Documentation for Authorization
