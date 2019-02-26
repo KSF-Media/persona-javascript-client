@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.InlineResponse500();
+    instance = new Persona.EntitlementsApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,31 +49,17 @@
       object[property] = value;
   }
 
-  describe('InlineResponse500', function() {
-    it('should create an instance of InlineResponse500', function() {
-      // uncomment below and update the code to test InlineResponse500
-      //var instance = new Persona.InlineResponse500();
-      //expect(instance).to.be.a(Persona.InlineResponse500);
+  describe('EntitlementsApi', function() {
+    describe('entitlementsGet', function() {
+      it('should call entitlementsGet successfully', function(done) {
+        //uncomment below and update the code to test entitlementsGet
+        //instance.entitlementsGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
     });
-
-    it('should have the property httpCode (base name: "http_code")', function() {
-      // uncomment below and update the code to test the property httpCode
-      //var instance = new Persona.InlineResponse500();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property httpStatus (base name: "http_status")', function() {
-      // uncomment below and update the code to test the property httpStatus
-      //var instance = new Persona.InlineResponse500();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property internalServerError (base name: "internal_server_error")', function() {
-      // uncomment below and update the code to test the property internalServerError
-      //var instance = new Persona.InlineResponse500();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));
