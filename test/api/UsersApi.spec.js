@@ -90,6 +90,16 @@
         done();
       });
     });
+    describe('usersUuidLegalPut', function() {
+      it('should call usersUuidLegalPut successfully', function(done) {
+        //uncomment below and update the code to test usersUuidLegalPut
+        //instance.usersUuidLegalPut(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('usersUuidPatch', function() {
       it('should call usersUuidPatch successfully', function(done) {
         //uncomment below and update the code to test usersUuidPatch

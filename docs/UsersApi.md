@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**usersUuidEntitlementGet**](UsersApi.md#usersUuidEntitlementGet) | **GET** /users/{uuid}/entitlement | Get users entitlements.
 [**usersUuidGdprPut**](UsersApi.md#usersUuidGdprPut) | **PUT** /users/{uuid}/gdpr | Updates the GDPR consent settings for a given user.
 [**usersUuidGet**](UsersApi.md#usersUuidGet) | **GET** /users/{uuid} | Get user by UUID.
+[**usersUuidLegalPut**](UsersApi.md#usersUuidLegalPut) | **PUT** /users/{uuid}/legal | Updates the legal consent settings for a given user.
 [**usersUuidPatch**](UsersApi.md#usersUuidPatch) | **PATCH** /users/{uuid} | Update a user
 
 
@@ -195,6 +196,55 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json;charset=utf-8
+
+<a name="usersUuidLegalPut"></a>
+# **usersUuidLegalPut**
+> User usersUuidLegalPut(uuid, legalConsent, opts)
+
+Updates the legal consent settings for a given user.
+
+Authorization header expects the following format ‘OAuth {token}’
+
+### Example
+```javascript
+var Persona = require('persona');
+
+var apiInstance = new Persona.UsersApi();
+var uuid = null; // String | 
+var legalConsent = [new Persona.LegalConsent()]; // [LegalConsent] | 
+var opts = {
+  'authorization': "authorization_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.usersUuidLegalPut(uuid, legalConsent, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**String**](.md)|  | 
+ **legalConsent** | [**[LegalConsent]**](Array.md)|  | 
+ **authorization** | **String**|  | [optional] 
+
+### Return type
+
+[**User**](User.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=utf-8
  - **Accept**: application/json;charset=utf-8
 
 <a name="usersUuidPatch"></a>

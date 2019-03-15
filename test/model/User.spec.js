@@ -104,6 +104,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property legal (base name: "legal")', function() {
+      // uncomment below and update the code to test the property legal
+      //var instance = new Persona.User();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

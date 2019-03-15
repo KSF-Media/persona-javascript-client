@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Address', 'model/GdprConsent', 'model/Subscription'], factory);
+    define(['ApiClient', 'model/Address', 'model/GdprConsent', 'model/LegalConsent', 'model/Subscription'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Address'), require('./GdprConsent'), require('./Subscription'));
+    module.exports = factory(require('../ApiClient'), require('./Address'), require('./GdprConsent'), require('./LegalConsent'), require('./Subscription'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.User = factory(root.Persona.ApiClient, root.Persona.Address, root.Persona.GdprConsent, root.Persona.Subscription);
+    root.Persona.User = factory(root.Persona.ApiClient, root.Persona.Address, root.Persona.GdprConsent, root.Persona.LegalConsent, root.Persona.Subscription);
   }
-}(this, function(ApiClient, Address, GdprConsent, Subscription) {
+}(this, function(ApiClient, Address, GdprConsent, LegalConsent, Subscription) {
   'use strict';
 
 
@@ -47,8 +47,9 @@
    * @param cusno {String} 
    * @param subs {Array.<module:model/Subscription>} 
    * @param consent {Array.<module:model/GdprConsent>} 
+   * @param legal {Array.<module:model/LegalConsent>} 
    */
-  var exports = function(uuid, email, cusno, subs, consent) {
+  var exports = function(uuid, email, cusno, subs, consent, legal) {
     var _this = this;
 
     _this['uuid'] = uuid;
@@ -56,6 +57,7 @@
     _this['cusno'] = cusno;
     _this['subs'] = subs;
     _this['consent'] = consent;
+    _this['legal'] = legal;
   };
 
   /**
@@ -91,6 +93,9 @@
       }
       if (data.hasOwnProperty('consent')) {
         obj['consent'] = ApiClient.convertToType(data['consent'], [GdprConsent]);
+      }
+      if (data.hasOwnProperty('legal')) {
+        obj['legal'] = ApiClient.convertToType(data['legal'], [LegalConsent]);
       }
     }
     return obj;
@@ -128,6 +133,10 @@
    * @member {Array.<module:model/GdprConsent>} consent
    */
   exports.prototype['consent'] = undefined;
+  /**
+   * @member {Array.<module:model/LegalConsent>} legal
+   */
+  exports.prototype['legal'] = undefined;
 
 
 

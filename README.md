@@ -123,6 +123,7 @@ Class | Method | HTTP request | Description
 *Persona.UsersApi* | [**usersUuidEntitlementGet**](docs/UsersApi.md#usersUuidEntitlementGet) | **GET** /users/{uuid}/entitlement | Get users entitlements.
 *Persona.UsersApi* | [**usersUuidGdprPut**](docs/UsersApi.md#usersUuidGdprPut) | **PUT** /users/{uuid}/gdpr | Updates the GDPR consent settings for a given user.
 *Persona.UsersApi* | [**usersUuidGet**](docs/UsersApi.md#usersUuidGet) | **GET** /users/{uuid} | Get user by UUID.
+*Persona.UsersApi* | [**usersUuidLegalPut**](docs/UsersApi.md#usersUuidLegalPut) | **PUT** /users/{uuid}/legal | Updates the legal consent settings for a given user.
 *Persona.UsersApi* | [**usersUuidPatch**](docs/UsersApi.md#usersUuidPatch) | **PATCH** /users/{uuid} | Update a user
 
 
@@ -147,6 +148,7 @@ Class | Method | HTTP request | Description
  - [Persona.InlineResponse415UnsupportedMediaType](docs/InlineResponse415UnsupportedMediaType.md)
  - [Persona.InlineResponse500](docs/InlineResponse500.md)
  - [Persona.InlineResponse500InternalServerError](docs/InlineResponse500InternalServerError.md)
+ - [Persona.LegalConsent](docs/LegalConsent.md)
  - [Persona.LoginData](docs/LoginData.md)
  - [Persona.LoginDataSSO](docs/LoginDataSSO.md)
  - [Persona.LoginDataSoMe](docs/LoginDataSoMe.md)
