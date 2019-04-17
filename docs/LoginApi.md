@@ -10,33 +10,35 @@ Method | HTTP request | Description
 [**loginUuidDelete**](LoginApi.md#loginUuidDelete) | **DELETE** /login/{uuid} | Logout
 
 
-<a name="loginPost"></a>
-# **loginPost**
-> LoginResponse loginPost(loginData)
+
+## loginPost
+
+> LoginResponse loginPost(body)
 
 Login with email and password
 
 ### Example
-```javascript
-var Persona = require('persona');
 
-var apiInstance = new Persona.LoginApi();
-var loginData = new Persona.LoginData(); // LoginData | 
-var callback = function(error, data, response) {
+```javascript
+import Persona from 'persona';
+
+let apiInstance = new Persona.LoginApi();
+let body = new Persona.LoginData(); // LoginData | 
+apiInstance.loginPost(body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.loginPost(loginData, callback);
+});
 ```
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **loginData** | [**LoginData**](LoginData.md)|  | 
+ **body** | [**LoginData**](LoginData.md)|  | 
 
 ### Return type
 
@@ -48,36 +50,38 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/json;charset=utf-8
+- **Content-Type**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8
 
-<a name="loginSomePost"></a>
-# **loginSomePost**
-> LoginResponse loginSomePost(loginDataSoMe)
+
+## loginSomePost
+
+> LoginResponse loginSomePost(body)
 
 Login with social media
 
 ### Example
-```javascript
-var Persona = require('persona');
 
-var apiInstance = new Persona.LoginApi();
-var loginDataSoMe = new Persona.LoginDataSoMe(); // LoginDataSoMe | 
-var callback = function(error, data, response) {
+```javascript
+import Persona from 'persona';
+
+let apiInstance = new Persona.LoginApi();
+let body = new Persona.LoginDataSoMe(); // LoginDataSoMe | 
+apiInstance.loginSomePost(body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.loginSomePost(loginDataSoMe, callback);
+});
 ```
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **loginDataSoMe** | [**LoginDataSoMe**](LoginDataSoMe.md)|  | 
+ **body** | [**LoginDataSoMe**](LoginDataSoMe.md)|  | 
 
 ### Return type
 
@@ -89,36 +93,38 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/json;charset=utf-8
+- **Content-Type**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8
 
-<a name="loginSsoPost"></a>
-# **loginSsoPost**
-> LoginResponse loginSsoPost(loginDataSSO)
+
+## loginSsoPost
+
+> LoginResponse loginSsoPost(body)
 
 Login with the AccessToken given by the SSO auth
 
 ### Example
-```javascript
-var Persona = require('persona');
 
-var apiInstance = new Persona.LoginApi();
-var loginDataSSO = new Persona.LoginDataSSO(); // LoginDataSSO | 
-var callback = function(error, data, response) {
+```javascript
+import Persona from 'persona';
+
+let apiInstance = new Persona.LoginApi();
+let body = new Persona.LoginDataSSO(); // LoginDataSSO | 
+apiInstance.loginSsoPost(body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.loginSsoPost(loginDataSSO, callback);
+});
 ```
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **loginDataSSO** | [**LoginDataSSO**](LoginDataSSO.md)|  | 
+ **body** | [**LoginDataSSO**](LoginDataSSO.md)|  | 
 
 ### Return type
 
@@ -130,11 +136,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/json;charset=utf-8
+- **Content-Type**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8
 
-<a name="loginUuidDelete"></a>
-# **loginUuidDelete**
+
+## loginUuidDelete
+
 > [Object] loginUuidDelete(uuid, opts)
 
 Logout
@@ -142,25 +149,26 @@ Logout
 Authorization header expects the following format ‘OAuth {token}’
 
 ### Example
-```javascript
-var Persona = require('persona');
 
-var apiInstance = new Persona.LoginApi();
-var uuid = null; // String | 
-var opts = {
+```javascript
+import Persona from 'persona';
+
+let apiInstance = new Persona.LoginApi();
+let uuid = null; // String | 
+let opts = {
   'authorization': "authorization_example" // String | 
 };
-var callback = function(error, data, response) {
+apiInstance.loginUuidDelete(uuid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.loginUuidDelete(uuid, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -177,6 +185,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json;charset=utf-8
+- **Content-Type**: Not defined
+- **Accept**: application/json;charset=utf-8
 

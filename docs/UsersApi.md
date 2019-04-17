@@ -10,35 +10,38 @@ Method | HTTP request | Description
 [**usersUuidGet**](UsersApi.md#usersUuidGet) | **GET** /users/{uuid} | Get user by UUID.
 [**usersUuidLegalPut**](UsersApi.md#usersUuidLegalPut) | **PUT** /users/{uuid}/legal | Updates the legal consent settings for a given user.
 [**usersUuidPatch**](UsersApi.md#usersUuidPatch) | **PATCH** /users/{uuid} | Update a user
+[**usersUuidSubscriptionsSubsnoPausePost**](UsersApi.md#usersUuidSubscriptionsSubsnoPausePost) | **POST** /users/{uuid}/subscriptions/{subsno}/pause | Pause users subscription
 
 
-<a name="usersPost"></a>
-# **usersPost**
-> LoginResponse usersPost(newUser)
+
+## usersPost
+
+> LoginResponse usersPost(body)
 
 Create a new user.
 
 ### Example
-```javascript
-var Persona = require('persona');
 
-var apiInstance = new Persona.UsersApi();
-var newUser = new Persona.NewUser(); // NewUser | 
-var callback = function(error, data, response) {
+```javascript
+import Persona from 'persona';
+
+let apiInstance = new Persona.UsersApi();
+let body = new Persona.NewUser(); // NewUser | 
+apiInstance.usersPost(body, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.usersPost(newUser, callback);
+});
 ```
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **newUser** | [**NewUser**](NewUser.md)|  | 
+ **body** | [**NewUser**](NewUser.md)|  | 
 
 ### Return type
 
@@ -50,36 +53,38 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/json;charset=utf-8
+- **Content-Type**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8
 
-<a name="usersUuidEntitlementGet"></a>
-# **usersUuidEntitlementGet**
+
+## usersUuidEntitlementGet
+
 > [String] usersUuidEntitlementGet(uuid, opts)
 
 Get users entitlements.
 
 ### Example
-```javascript
-var Persona = require('persona');
 
-var apiInstance = new Persona.UsersApi();
-var uuid = null; // String | 
-var opts = {
+```javascript
+import Persona from 'persona';
+
+let apiInstance = new Persona.UsersApi();
+let uuid = null; // String | 
+let opts = {
   'authorization': "authorization_example", // String | 
   'cacheControl': "cacheControl_example" // String | 
 };
-var callback = function(error, data, response) {
+apiInstance.usersUuidEntitlementGet(uuid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.usersUuidEntitlementGet(uuid, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -97,43 +102,45 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json;charset=utf-8
+- **Content-Type**: Not defined
+- **Accept**: application/json;charset=utf-8
 
-<a name="usersUuidGdprPut"></a>
-# **usersUuidGdprPut**
-> User usersUuidGdprPut(uuid, gdprConsent, opts)
+
+## usersUuidGdprPut
+
+> User usersUuidGdprPut(uuid, body, opts)
 
 Updates the GDPR consent settings for a given user.
 
 Authorization header expects the following format ‘OAuth {token}’
 
 ### Example
-```javascript
-var Persona = require('persona');
 
-var apiInstance = new Persona.UsersApi();
-var uuid = null; // String | 
-var gdprConsent = [new Persona.GdprConsent()]; // [GdprConsent] | 
-var opts = {
+```javascript
+import Persona from 'persona';
+
+let apiInstance = new Persona.UsersApi();
+let uuid = null; // String | 
+let body = [new Persona.GdprConsent()]; // [GdprConsent] | 
+let opts = {
   'authorization': "authorization_example" // String | 
 };
-var callback = function(error, data, response) {
+apiInstance.usersUuidGdprPut(uuid, body, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.usersUuidGdprPut(uuid, gdprConsent, opts, callback);
+});
 ```
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**String**](.md)|  | 
- **gdprConsent** | [**[GdprConsent]**](Array.md)|  | 
+ **body** | [**[GdprConsent]**](Array.md)|  | 
  **authorization** | **String**|  | [optional] 
 
 ### Return type
@@ -146,11 +153,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/json;charset=utf-8
+- **Content-Type**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8
 
-<a name="usersUuidGet"></a>
-# **usersUuidGet**
+
+## usersUuidGet
+
 > User usersUuidGet(uuid, opts)
 
 Get user by UUID.
@@ -158,26 +166,27 @@ Get user by UUID.
 Authorization header expects the following format ‘OAuth {token}’
 
 ### Example
-```javascript
-var Persona = require('persona');
 
-var apiInstance = new Persona.UsersApi();
-var uuid = null; // String | 
-var opts = {
+```javascript
+import Persona from 'persona';
+
+let apiInstance = new Persona.UsersApi();
+let uuid = null; // String | 
+let opts = {
   'authorization': "authorization_example", // String | 
   'cacheControl': "cacheControl_example" // String | 
 };
-var callback = function(error, data, response) {
+apiInstance.usersUuidGet(uuid, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.usersUuidGet(uuid, opts, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -195,43 +204,45 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json;charset=utf-8
+- **Content-Type**: Not defined
+- **Accept**: application/json;charset=utf-8
 
-<a name="usersUuidLegalPut"></a>
-# **usersUuidLegalPut**
-> User usersUuidLegalPut(uuid, legalConsent, opts)
+
+## usersUuidLegalPut
+
+> User usersUuidLegalPut(uuid, body, opts)
 
 Updates the legal consent settings for a given user.
 
 Authorization header expects the following format ‘OAuth {token}’
 
 ### Example
-```javascript
-var Persona = require('persona');
 
-var apiInstance = new Persona.UsersApi();
-var uuid = null; // String | 
-var legalConsent = [new Persona.LegalConsent()]; // [LegalConsent] | 
-var opts = {
+```javascript
+import Persona from 'persona';
+
+let apiInstance = new Persona.UsersApi();
+let uuid = null; // String | 
+let body = [new Persona.LegalConsent()]; // [LegalConsent] | 
+let opts = {
   'authorization': "authorization_example" // String | 
 };
-var callback = function(error, data, response) {
+apiInstance.usersUuidLegalPut(uuid, body, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.usersUuidLegalPut(uuid, legalConsent, opts, callback);
+});
 ```
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**String**](.md)|  | 
- **legalConsent** | [**[LegalConsent]**](Array.md)|  | 
+ **body** | [**[LegalConsent]**](Array.md)|  | 
  **authorization** | **String**|  | [optional] 
 
 ### Return type
@@ -244,43 +255,45 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/json;charset=utf-8
+- **Content-Type**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8
 
-<a name="usersUuidPatch"></a>
-# **usersUuidPatch**
-> User usersUuidPatch(uuid, userUpdate, opts)
+
+## usersUuidPatch
+
+> User usersUuidPatch(uuid, body, opts)
 
 Update a user
 
 Authorization header expects the following format ‘OAuth {token}’
 
 ### Example
-```javascript
-var Persona = require('persona');
 
-var apiInstance = new Persona.UsersApi();
-var uuid = null; // String | 
-var userUpdate = new Persona.UserUpdate(); // UserUpdate | 
-var opts = {
+```javascript
+import Persona from 'persona';
+
+let apiInstance = new Persona.UsersApi();
+let uuid = null; // String | 
+let body = new Persona.UserUpdate(); // UserUpdate | 
+let opts = {
   'authorization': "authorization_example" // String | 
 };
-var callback = function(error, data, response) {
+apiInstance.usersUuidPatch(uuid, body, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.usersUuidPatch(uuid, userUpdate, opts, callback);
+});
 ```
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**String**](.md)|  | 
- **userUpdate** | [**UserUpdate**](UserUpdate.md)|  | 
+ **body** | [**UserUpdate**](UserUpdate.md)|  | 
  **authorization** | **String**|  | [optional] 
 
 ### Return type
@@ -293,6 +306,57 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json;charset=utf-8
- - **Accept**: application/json;charset=utf-8
+- **Content-Type**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8
+
+
+## usersUuidSubscriptionsSubsnoPausePost
+
+> [PausedSubscription] usersUuidSubscriptionsSubsnoPausePost(uuid, subsno, body, opts)
+
+Pause users subscription
+
+### Example
+
+```javascript
+import Persona from 'persona';
+
+let apiInstance = new Persona.UsersApi();
+let uuid = null; // String | 
+let subsno = 56; // Number | 
+let body = new Persona.SubscriptionPauseDates(); // SubscriptionPauseDates | 
+let opts = {
+  'authorization': "authorization_example" // String | 
+};
+apiInstance.usersUuidSubscriptionsSubsnoPausePost(uuid, subsno, body, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**String**](.md)|  | 
+ **subsno** | **Number**|  | 
+ **body** | [**SubscriptionPauseDates**](SubscriptionPauseDates.md)|  | 
+ **authorization** | **String**|  | [optional] 
+
+### Return type
+
+[**[PausedSubscription]**](PausedSubscription.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8
 

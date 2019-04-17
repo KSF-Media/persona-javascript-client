@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.GdprConsent();
+    instance = new Persona.SubscriptionPauseDates();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,22 @@
       object[property] = value;
   }
 
-  describe('GdprConsent', function() {
-    it('should create an instance of GdprConsent', function() {
-      // uncomment below and update the code to test GdprConsent
-      //var instane = new Persona.GdprConsent();
-      //expect(instance).to.be.a(Persona.GdprConsent);
+  describe('SubscriptionPauseDates', function() {
+    it('should create an instance of SubscriptionPauseDates', function() {
+      // uncomment below and update the code to test SubscriptionPauseDates
+      //var instane = new Persona.SubscriptionPauseDates();
+      //expect(instance).to.be.a(Persona.SubscriptionPauseDates);
     });
 
-    it('should have the property brand (base name: "brand")', function() {
-      // uncomment below and update the code to test the property brand
-      //var instane = new Persona.GdprConsent();
+    it('should have the property startDate (base name: "startDate")', function() {
+      // uncomment below and update the code to test the property startDate
+      //var instane = new Persona.SubscriptionPauseDates();
       //expect(instance).to.be();
     });
 
-    it('should have the property consentKey (base name: "consentKey")', function() {
-      // uncomment below and update the code to test the property consentKey
-      //var instane = new Persona.GdprConsent();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property value (base name: "value")', function() {
-      // uncomment below and update the code to test the property value
-      //var instane = new Persona.GdprConsent();
+    it('should have the property endDate (base name: "endDate")', function() {
+      // uncomment below and update the code to test the property endDate
+      //var instane = new Persona.SubscriptionPauseDates();
       //expect(instance).to.be();
     });
 

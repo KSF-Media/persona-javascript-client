@@ -1,6 +1,7 @@
 # Persona.InlineResponse4032EmailAddressInUse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **mergeToken** | **String** |  | [optional] 
@@ -8,7 +9,7 @@ Name | Type | Description | Notes
 **existingProvider** | **String** |  | [optional] 
 
 
-<a name="DescriptionEnum"></a>
+
 ## Enum: DescriptionEnum
 
 

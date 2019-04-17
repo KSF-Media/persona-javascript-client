@@ -1,6 +1,7 @@
 # Persona.InlineResponse400
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **httpCode** | **Number** |  | [optional] 
@@ -8,7 +9,7 @@ Name | Type | Description | Notes
 **httpStatus** | **String** |  | [optional] 
 
 
-<a name="HttpStatusEnum"></a>
+
 ## Enum: HttpStatusEnum
 
 

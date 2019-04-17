@@ -1,6 +1,7 @@
 # Persona.InlineResponse403
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **httpCode** | **Number** |  | [optional] 
@@ -8,7 +9,7 @@ Name | Type | Description | Notes
 **invalidCredentials** | [**InlineResponse403InvalidCredentials**](InlineResponse403InvalidCredentials.md) |  | [optional] 
 
 
-<a name="HttpStatusEnum"></a>
+
 ## Enum: HttpStatusEnum
 
 

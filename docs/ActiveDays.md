@@ -1,6 +1,7 @@
 # Persona.ActiveDays
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **mon** | **Boolean** |  | 

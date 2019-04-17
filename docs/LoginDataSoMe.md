@@ -1,6 +1,7 @@
 # Persona.LoginDataSoMe
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **provider** | **String** |  | 

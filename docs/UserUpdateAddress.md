@@ -1,6 +1,7 @@
 # Persona.UserUpdateAddress
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **countryCode** | **String** |  | 

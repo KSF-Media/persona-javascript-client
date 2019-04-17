@@ -1,10 +1,10 @@
-# Persona.LoginDataSSO
+# Persona.SubscriptionPauseDates
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**uuid** | **String** |  | 
-**accessToken** | **String** |  | 
+**startDate** | **Date** |  | 
+**endDate** | **Date** |  | 
 
 

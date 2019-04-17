@@ -1,6 +1,7 @@
 # Persona.Address
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **countryCode** | **String** |  | 

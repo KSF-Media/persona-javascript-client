@@ -1,6 +1,7 @@
 # Persona.LegalConsent
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **screenName** | **String** |  | 

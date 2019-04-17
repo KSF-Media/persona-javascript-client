@@ -1,6 +1,7 @@
 # Persona.InlineResponse4032
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **emailAddressInUse** | [**InlineResponse4032EmailAddressInUse**](InlineResponse4032EmailAddressInUse.md) |  | [optional] 
@@ -10,7 +11,7 @@ Name | Type | Description | Notes
 **emailNotAuthorized** | [**InlineResponse4032EmailNotAuthorized**](InlineResponse4032EmailNotAuthorized.md) |  | [optional] 
 
 
-<a name="HttpStatusEnum"></a>
+
 ## Enum: HttpStatusEnum
 
 

@@ -1,12 +1,13 @@
 # Persona.InlineResponse403InvalidCredentials
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **String** |  | [optional] 
 
 
-<a name="DescriptionEnum"></a>
+
 ## Enum: DescriptionEnum
 
 

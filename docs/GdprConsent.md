@@ -1,6 +1,7 @@
 # Persona.GdprConsent
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **brand** | **String** |  | 

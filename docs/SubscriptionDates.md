@@ -1,6 +1,7 @@
 # Persona.SubscriptionDates
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **lenMonths** | **Number** |  | [optional] 

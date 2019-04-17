@@ -1,6 +1,7 @@
 # Persona.PackageOffer
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **months** | **Number** |  | 

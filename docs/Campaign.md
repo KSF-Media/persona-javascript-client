@@ -1,6 +1,7 @@
 # Persona.Campaign
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **no** | **Number** |  | 

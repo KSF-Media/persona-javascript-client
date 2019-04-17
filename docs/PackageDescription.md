@@ -1,6 +1,7 @@
 # Persona.PackageDescription
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **brand** | **String** |  | 

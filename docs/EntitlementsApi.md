@@ -7,28 +7,30 @@ Method | HTTP request | Description
 [**entitlementsGet**](EntitlementsApi.md#entitlementsGet) | **GET** /entitlements | List all entitlements
 
 
-<a name="entitlementsGet"></a>
-# **entitlementsGet**
+
+## entitlementsGet
+
 > {String: [String]} entitlementsGet()
 
 List all entitlements
 
 ### Example
-```javascript
-var Persona = require('persona');
 
-var apiInstance = new Persona.EntitlementsApi();
-var callback = function(error, data, response) {
+```javascript
+import Persona from 'persona';
+
+let apiInstance = new Persona.EntitlementsApi();
+apiInstance.entitlementsGet((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.entitlementsGet(callback);
+});
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -41,6 +43,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json;charset=utf-8
+- **Content-Type**: Not defined
+- **Accept**: application/json;charset=utf-8
 
