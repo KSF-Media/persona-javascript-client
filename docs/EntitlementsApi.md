@@ -17,16 +17,17 @@ List all entitlements
 ### Example
 
 ```javascript
-import Persona from 'persona';
+var Persona = require('persona');
 
-let apiInstance = new Persona.EntitlementsApi();
-apiInstance.entitlementsGet((error, data, response) => {
+var apiInstance = new Persona.EntitlementsApi();
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.entitlementsGet(callback);
 ```
 
 ### Parameters

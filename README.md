@@ -22,9 +22,31 @@ Then install it via:
 npm install persona --save
 ```
 
-#### git
+##### Local development
 
-If the library is hosted at a git repository, e.g.https://github.com/KSF-Media/persona-javascript-client
+To use the library locally without publishing to a remote npm registry, first install the dependencies by changing into the directory containing `package.json` (and this README). Let's call this `JAVASCRIPT_CLIENT_DIR`. Then run:
+
+```shell
+npm install
+```
+
+Next, [link](https://docs.npmjs.com/cli/link) it globally in npm with the following, also from `JAVASCRIPT_CLIENT_DIR`:
+
+```shell
+npm link
+```
+
+Finally, switch to the directory you want to use your persona from, and run:
+
+```shell
+npm link /path/to/<JAVASCRIPT_CLIENT_DIR>
+```
+
+You should now be able to `require('persona')` in javascript files from the directory you ran the last command above from.
+
+### git
+
+If the library is hosted at a git repository, e.g. https://github.com/KSF-Media/persona-javascript-client
 then install it via:
 
 ```shell
@@ -33,9 +55,7 @@ then install it via:
 
 ### For browser
 
-The library also works in the browser environment via npm and [browserify](http://browserify.org/). After following
-the above steps with Node.js and installing browserify with `npm install -g browserify`,
-perform the following (assuming *main.js* is your entry file):
+The library also works in the browser environment via npm and [browserify](http://browserify.org/). After following the above steps with Node.js and installing browserify with `npm install -g browserify`, perform the following (assuming *main.js* is your entry file, that's to say your javascript file where you actually use this library):
 
 ```shell
 browserify main.js > bundle.js
@@ -70,6 +90,7 @@ var Persona = require('persona');
 
 
 var api = new Persona.EntitlementsApi()
+
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);

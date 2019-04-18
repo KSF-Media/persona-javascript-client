@@ -20,20 +20,22 @@ Login with email and password
 ### Example
 
 ```javascript
-import Persona from 'persona';
+var Persona = require('persona');
 
-let apiInstance = new Persona.LoginApi();
-let body = new Persona.LoginData(); // LoginData | 
-apiInstance.loginPost(body, (error, data, response) => {
+var apiInstance = new Persona.LoginApi();
+var body = new Persona.LoginData(); // LoginData | 
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.loginPost(body, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
@@ -63,20 +65,22 @@ Login with social media
 ### Example
 
 ```javascript
-import Persona from 'persona';
+var Persona = require('persona');
 
-let apiInstance = new Persona.LoginApi();
-let body = new Persona.LoginDataSoMe(); // LoginDataSoMe | 
-apiInstance.loginSomePost(body, (error, data, response) => {
+var apiInstance = new Persona.LoginApi();
+var body = new Persona.LoginDataSoMe(); // LoginDataSoMe | 
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.loginSomePost(body, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
@@ -106,20 +110,22 @@ Login with the AccessToken given by the SSO auth
 ### Example
 
 ```javascript
-import Persona from 'persona';
+var Persona = require('persona');
 
-let apiInstance = new Persona.LoginApi();
-let body = new Persona.LoginDataSSO(); // LoginDataSSO | 
-apiInstance.loginSsoPost(body, (error, data, response) => {
+var apiInstance = new Persona.LoginApi();
+var body = new Persona.LoginDataSSO(); // LoginDataSSO | 
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.loginSsoPost(body, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
@@ -151,23 +157,25 @@ Authorization header expects the following format ‘OAuth {token}’
 ### Example
 
 ```javascript
-import Persona from 'persona';
+var Persona = require('persona');
 
-let apiInstance = new Persona.LoginApi();
-let uuid = null; // String | 
-let opts = {
+var apiInstance = new Persona.LoginApi();
+var uuid = null; // String | 
+var opts = {
   'authorization': "authorization_example" // String | 
 };
-apiInstance.loginUuidDelete(uuid, opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.loginUuidDelete(uuid, opts, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes

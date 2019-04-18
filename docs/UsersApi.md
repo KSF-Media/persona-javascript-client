@@ -23,20 +23,22 @@ Create a new user.
 ### Example
 
 ```javascript
-import Persona from 'persona';
+var Persona = require('persona');
 
-let apiInstance = new Persona.UsersApi();
-let body = new Persona.NewUser(); // NewUser | 
-apiInstance.usersPost(body, (error, data, response) => {
+var apiInstance = new Persona.UsersApi();
+var body = new Persona.NewUser(); // NewUser | 
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.usersPost(body, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
@@ -66,24 +68,26 @@ Get users entitlements.
 ### Example
 
 ```javascript
-import Persona from 'persona';
+var Persona = require('persona');
 
-let apiInstance = new Persona.UsersApi();
-let uuid = null; // String | 
-let opts = {
+var apiInstance = new Persona.UsersApi();
+var uuid = null; // String | 
+var opts = {
   'authorization': "authorization_example", // String | 
   'cacheControl': "cacheControl_example" // String | 
 };
-apiInstance.usersUuidEntitlementGet(uuid, opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.usersUuidEntitlementGet(uuid, opts, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
@@ -117,24 +121,26 @@ Authorization header expects the following format ‘OAuth {token}’
 ### Example
 
 ```javascript
-import Persona from 'persona';
+var Persona = require('persona');
 
-let apiInstance = new Persona.UsersApi();
-let uuid = null; // String | 
-let body = [new Persona.GdprConsent()]; // [GdprConsent] | 
-let opts = {
+var apiInstance = new Persona.UsersApi();
+var uuid = null; // String | 
+var body = [new Persona.GdprConsent()]; // [GdprConsent] | 
+var opts = {
   'authorization': "authorization_example" // String | 
 };
-apiInstance.usersUuidGdprPut(uuid, body, opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.usersUuidGdprPut(uuid, body, opts, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
@@ -168,24 +174,26 @@ Authorization header expects the following format ‘OAuth {token}’
 ### Example
 
 ```javascript
-import Persona from 'persona';
+var Persona = require('persona');
 
-let apiInstance = new Persona.UsersApi();
-let uuid = null; // String | 
-let opts = {
+var apiInstance = new Persona.UsersApi();
+var uuid = null; // String | 
+var opts = {
   'authorization': "authorization_example", // String | 
   'cacheControl': "cacheControl_example" // String | 
 };
-apiInstance.usersUuidGet(uuid, opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.usersUuidGet(uuid, opts, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
@@ -219,24 +227,26 @@ Authorization header expects the following format ‘OAuth {token}’
 ### Example
 
 ```javascript
-import Persona from 'persona';
+var Persona = require('persona');
 
-let apiInstance = new Persona.UsersApi();
-let uuid = null; // String | 
-let body = [new Persona.LegalConsent()]; // [LegalConsent] | 
-let opts = {
+var apiInstance = new Persona.UsersApi();
+var uuid = null; // String | 
+var body = [new Persona.LegalConsent()]; // [LegalConsent] | 
+var opts = {
   'authorization': "authorization_example" // String | 
 };
-apiInstance.usersUuidLegalPut(uuid, body, opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.usersUuidLegalPut(uuid, body, opts, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
@@ -270,24 +280,26 @@ Authorization header expects the following format ‘OAuth {token}’
 ### Example
 
 ```javascript
-import Persona from 'persona';
+var Persona = require('persona');
 
-let apiInstance = new Persona.UsersApi();
-let uuid = null; // String | 
-let body = new Persona.UserUpdate(); // UserUpdate | 
-let opts = {
+var apiInstance = new Persona.UsersApi();
+var uuid = null; // String | 
+var body = new Persona.UserUpdate(); // UserUpdate | 
+var opts = {
   'authorization': "authorization_example" // String | 
 };
-apiInstance.usersUuidPatch(uuid, body, opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.usersUuidPatch(uuid, body, opts, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
@@ -319,25 +331,27 @@ Pause users subscription
 ### Example
 
 ```javascript
-import Persona from 'persona';
+var Persona = require('persona');
 
-let apiInstance = new Persona.UsersApi();
-let uuid = null; // String | 
-let subsno = 56; // Number | 
-let body = new Persona.SubscriptionPauseDates(); // SubscriptionPauseDates | 
-let opts = {
+var apiInstance = new Persona.UsersApi();
+var uuid = null; // String | 
+var subsno = 56; // Number | 
+var body = new Persona.SubscriptionPauseDates(); // SubscriptionPauseDates | 
+var opts = {
   'authorization': "authorization_example" // String | 
 };
-apiInstance.usersUuidSubscriptionsSubsnoPausePost(uuid, subsno, body, opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.usersUuidSubscriptionsSubsnoPausePost(uuid, subsno, body, opts, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
