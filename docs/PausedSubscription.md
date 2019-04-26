@@ -4,18 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**pausedSubscriptionSubsno** | **Number** |  | 
-**pausedSubscriptionSleepStartDate** | **Date** |  | 
-**pausedSubscriptionSleepEndDate** | **Date** |  | 
-**pausedSubscriptionCreditType** | **String** |  | 
-**pausedSubscriptionCreditAmount** | **Number** |  | 
-**pausedSubscriptionSleepType** | **String** |  | 
-**pausedSubscriptionCredited** | **Boolean** |  | 
-**pausedSubscriptionCreditInvno** | **Number** |  | 
-**pausedSubscriptionBookingDate** | **String** |  | 
-**pausedSubscriptionAllowWebpaper** | **Boolean** |  | 
-**pausedSubscriptionReceiveType** | **String** |  | 
-**pausedSubscriptionConfirmStatus** | **String** |  | 
-**pausedSubscriptionStampUser** | **String** |  | 
+**subsno** | **Number** |  | 
+**sleepStartdate** | **Date** |  | 
+**sleepEndDate** | **Date** |  | 
+**creditType** | **String** |  | 
+**creditAmount** | **Number** |  | 
+**sleepType** | **String** |  | 
+**credited** | **Boolean** |  | 
+**creditInvno** | **Number** |  | 
+**bookingDate** | **String** |  | 
+**allowWebpaper** | **Boolean** |  | 
+**receiveType** | **String** |  | 
+**confirmStatus** | **String** |  | 
+**stampUser** | **String** |  | 
 
 

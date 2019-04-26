@@ -56,80 +56,80 @@
       //expect(instance).to.be.a(Persona.PausedSubscription);
     });
 
-    it('should have the property pausedSubscriptionSubsno (base name: "pausedSubscriptionSubsno")', function() {
-      // uncomment below and update the code to test the property pausedSubscriptionSubsno
+    it('should have the property subsno (base name: "subsno")', function() {
+      // uncomment below and update the code to test the property subsno
       //var instance = new Persona.PausedSubscription();
       //expect(instance).to.be();
     });
 
-    it('should have the property pausedSubscriptionSleepStartDate (base name: "pausedSubscriptionSleepStartDate")', function() {
-      // uncomment below and update the code to test the property pausedSubscriptionSleepStartDate
+    it('should have the property sleepStartdate (base name: "sleepStartdate")', function() {
+      // uncomment below and update the code to test the property sleepStartdate
       //var instance = new Persona.PausedSubscription();
       //expect(instance).to.be();
     });
 
-    it('should have the property pausedSubscriptionSleepEndDate (base name: "pausedSubscriptionSleepEndDate")', function() {
-      // uncomment below and update the code to test the property pausedSubscriptionSleepEndDate
+    it('should have the property sleepEndDate (base name: "sleepEndDate")', function() {
+      // uncomment below and update the code to test the property sleepEndDate
       //var instance = new Persona.PausedSubscription();
       //expect(instance).to.be();
     });
 
-    it('should have the property pausedSubscriptionCreditType (base name: "pausedSubscriptionCreditType")', function() {
-      // uncomment below and update the code to test the property pausedSubscriptionCreditType
+    it('should have the property creditType (base name: "creditType")', function() {
+      // uncomment below and update the code to test the property creditType
       //var instance = new Persona.PausedSubscription();
       //expect(instance).to.be();
     });
 
-    it('should have the property pausedSubscriptionCreditAmount (base name: "pausedSubscriptionCreditAmount")', function() {
-      // uncomment below and update the code to test the property pausedSubscriptionCreditAmount
+    it('should have the property creditAmount (base name: "creditAmount")', function() {
+      // uncomment below and update the code to test the property creditAmount
       //var instance = new Persona.PausedSubscription();
       //expect(instance).to.be();
     });
 
-    it('should have the property pausedSubscriptionSleepType (base name: "pausedSubscriptionSleepType")', function() {
-      // uncomment below and update the code to test the property pausedSubscriptionSleepType
+    it('should have the property sleepType (base name: "sleepType")', function() {
+      // uncomment below and update the code to test the property sleepType
       //var instance = new Persona.PausedSubscription();
       //expect(instance).to.be();
     });
 
-    it('should have the property pausedSubscriptionCredited (base name: "pausedSubscriptionCredited")', function() {
-      // uncomment below and update the code to test the property pausedSubscriptionCredited
+    it('should have the property credited (base name: "credited")', function() {
+      // uncomment below and update the code to test the property credited
       //var instance = new Persona.PausedSubscription();
       //expect(instance).to.be();
     });
 
-    it('should have the property pausedSubscriptionCreditInvno (base name: "pausedSubscriptionCreditInvno")', function() {
-      // uncomment below and update the code to test the property pausedSubscriptionCreditInvno
+    it('should have the property creditInvno (base name: "creditInvno")', function() {
+      // uncomment below and update the code to test the property creditInvno
       //var instance = new Persona.PausedSubscription();
       //expect(instance).to.be();
     });
 
-    it('should have the property pausedSubscriptionBookingDate (base name: "pausedSubscriptionBookingDate")', function() {
-      // uncomment below and update the code to test the property pausedSubscriptionBookingDate
+    it('should have the property bookingDate (base name: "bookingDate")', function() {
+      // uncomment below and update the code to test the property bookingDate
       //var instance = new Persona.PausedSubscription();
       //expect(instance).to.be();
     });
 
-    it('should have the property pausedSubscriptionAllowWebpaper (base name: "pausedSubscriptionAllowWebpaper")', function() {
-      // uncomment below and update the code to test the property pausedSubscriptionAllowWebpaper
+    it('should have the property allowWebpaper (base name: "allowWebpaper")', function() {
+      // uncomment below and update the code to test the property allowWebpaper
       //var instance = new Persona.PausedSubscription();
       //expect(instance).to.be();
     });
 
-    it('should have the property pausedSubscriptionReceiveType (base name: "pausedSubscriptionReceiveType")', function() {
-      // uncomment below and update the code to test the property pausedSubscriptionReceiveType
+    it('should have the property receiveType (base name: "receiveType")', function() {
+      // uncomment below and update the code to test the property receiveType
       //var instance = new Persona.PausedSubscription();
       //expect(instance).to.be();
     });
 
-    it('should have the property pausedSubscriptionConfirmStatus (base name: "pausedSubscriptionConfirmStatus")', function() {
-      // uncomment below and update the code to test the property pausedSubscriptionConfirmStatus
+    it('should have the property confirmStatus (base name: "confirmStatus")', function() {
+      // uncomment below and update the code to test the property confirmStatus
       //var instance = new Persona.PausedSubscription();
       //expect(instance).to.be();
     });
 
-    it('should have the property pausedSubscriptionStampUser (base name: "pausedSubscriptionStampUser")', function() {
-      // uncomment below and update the code to test the property pausedSubscriptionStampUser
+    it('should have the property stampUser (base name: "stampUser")', function() {
+      // uncomment below and update the code to test the property stampUser
       //var instance = new Persona.PausedSubscription();
       //expect(instance).to.be();
     });

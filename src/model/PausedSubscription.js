@@ -42,36 +42,36 @@
    * Constructs a new <code>PausedSubscription</code>.
    * @alias module:model/PausedSubscription
    * @class
-   * @param pausedSubscriptionSubsno {Number} 
-   * @param pausedSubscriptionSleepStartDate {Date} 
-   * @param pausedSubscriptionSleepEndDate {Date} 
-   * @param pausedSubscriptionCreditType {String} 
-   * @param pausedSubscriptionCreditAmount {Number} 
-   * @param pausedSubscriptionSleepType {String} 
-   * @param pausedSubscriptionCredited {Boolean} 
-   * @param pausedSubscriptionCreditInvno {Number} 
-   * @param pausedSubscriptionBookingDate {String} 
-   * @param pausedSubscriptionAllowWebpaper {Boolean} 
-   * @param pausedSubscriptionReceiveType {String} 
-   * @param pausedSubscriptionConfirmStatus {String} 
-   * @param pausedSubscriptionStampUser {String} 
+   * @param subsno {Number} 
+   * @param sleepStartdate {Date} 
+   * @param sleepEndDate {Date} 
+   * @param creditType {String} 
+   * @param creditAmount {Number} 
+   * @param sleepType {String} 
+   * @param credited {Boolean} 
+   * @param creditInvno {Number} 
+   * @param bookingDate {String} 
+   * @param allowWebpaper {Boolean} 
+   * @param receiveType {String} 
+   * @param confirmStatus {String} 
+   * @param stampUser {String} 
    */
-  var exports = function(pausedSubscriptionSubsno, pausedSubscriptionSleepStartDate, pausedSubscriptionSleepEndDate, pausedSubscriptionCreditType, pausedSubscriptionCreditAmount, pausedSubscriptionSleepType, pausedSubscriptionCredited, pausedSubscriptionCreditInvno, pausedSubscriptionBookingDate, pausedSubscriptionAllowWebpaper, pausedSubscriptionReceiveType, pausedSubscriptionConfirmStatus, pausedSubscriptionStampUser) {
+  var exports = function(subsno, sleepStartdate, sleepEndDate, creditType, creditAmount, sleepType, credited, creditInvno, bookingDate, allowWebpaper, receiveType, confirmStatus, stampUser) {
     var _this = this;
 
-    _this['pausedSubscriptionSubsno'] = pausedSubscriptionSubsno;
-    _this['pausedSubscriptionSleepStartDate'] = pausedSubscriptionSleepStartDate;
-    _this['pausedSubscriptionSleepEndDate'] = pausedSubscriptionSleepEndDate;
-    _this['pausedSubscriptionCreditType'] = pausedSubscriptionCreditType;
-    _this['pausedSubscriptionCreditAmount'] = pausedSubscriptionCreditAmount;
-    _this['pausedSubscriptionSleepType'] = pausedSubscriptionSleepType;
-    _this['pausedSubscriptionCredited'] = pausedSubscriptionCredited;
-    _this['pausedSubscriptionCreditInvno'] = pausedSubscriptionCreditInvno;
-    _this['pausedSubscriptionBookingDate'] = pausedSubscriptionBookingDate;
-    _this['pausedSubscriptionAllowWebpaper'] = pausedSubscriptionAllowWebpaper;
-    _this['pausedSubscriptionReceiveType'] = pausedSubscriptionReceiveType;
-    _this['pausedSubscriptionConfirmStatus'] = pausedSubscriptionConfirmStatus;
-    _this['pausedSubscriptionStampUser'] = pausedSubscriptionStampUser;
+    _this['subsno'] = subsno;
+    _this['sleepStartdate'] = sleepStartdate;
+    _this['sleepEndDate'] = sleepEndDate;
+    _this['creditType'] = creditType;
+    _this['creditAmount'] = creditAmount;
+    _this['sleepType'] = sleepType;
+    _this['credited'] = credited;
+    _this['creditInvno'] = creditInvno;
+    _this['bookingDate'] = bookingDate;
+    _this['allowWebpaper'] = allowWebpaper;
+    _this['receiveType'] = receiveType;
+    _this['confirmStatus'] = confirmStatus;
+    _this['stampUser'] = stampUser;
   };
 
   /**
@@ -84,101 +84,101 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('pausedSubscriptionSubsno')) {
-        obj['pausedSubscriptionSubsno'] = ApiClient.convertToType(data['pausedSubscriptionSubsno'], 'Number');
+      if (data.hasOwnProperty('subsno')) {
+        obj['subsno'] = ApiClient.convertToType(data['subsno'], 'Number');
       }
-      if (data.hasOwnProperty('pausedSubscriptionSleepStartDate')) {
-        obj['pausedSubscriptionSleepStartDate'] = ApiClient.convertToType(data['pausedSubscriptionSleepStartDate'], 'Date');
+      if (data.hasOwnProperty('sleepStartdate')) {
+        obj['sleepStartdate'] = ApiClient.convertToType(data['sleepStartdate'], 'Date');
       }
-      if (data.hasOwnProperty('pausedSubscriptionSleepEndDate')) {
-        obj['pausedSubscriptionSleepEndDate'] = ApiClient.convertToType(data['pausedSubscriptionSleepEndDate'], 'Date');
+      if (data.hasOwnProperty('sleepEndDate')) {
+        obj['sleepEndDate'] = ApiClient.convertToType(data['sleepEndDate'], 'Date');
       }
-      if (data.hasOwnProperty('pausedSubscriptionCreditType')) {
-        obj['pausedSubscriptionCreditType'] = ApiClient.convertToType(data['pausedSubscriptionCreditType'], 'String');
+      if (data.hasOwnProperty('creditType')) {
+        obj['creditType'] = ApiClient.convertToType(data['creditType'], 'String');
       }
-      if (data.hasOwnProperty('pausedSubscriptionCreditAmount')) {
-        obj['pausedSubscriptionCreditAmount'] = ApiClient.convertToType(data['pausedSubscriptionCreditAmount'], 'Number');
+      if (data.hasOwnProperty('creditAmount')) {
+        obj['creditAmount'] = ApiClient.convertToType(data['creditAmount'], 'Number');
       }
-      if (data.hasOwnProperty('pausedSubscriptionSleepType')) {
-        obj['pausedSubscriptionSleepType'] = ApiClient.convertToType(data['pausedSubscriptionSleepType'], 'String');
+      if (data.hasOwnProperty('sleepType')) {
+        obj['sleepType'] = ApiClient.convertToType(data['sleepType'], 'String');
       }
-      if (data.hasOwnProperty('pausedSubscriptionCredited')) {
-        obj['pausedSubscriptionCredited'] = ApiClient.convertToType(data['pausedSubscriptionCredited'], 'Boolean');
+      if (data.hasOwnProperty('credited')) {
+        obj['credited'] = ApiClient.convertToType(data['credited'], 'Boolean');
       }
-      if (data.hasOwnProperty('pausedSubscriptionCreditInvno')) {
-        obj['pausedSubscriptionCreditInvno'] = ApiClient.convertToType(data['pausedSubscriptionCreditInvno'], 'Number');
+      if (data.hasOwnProperty('creditInvno')) {
+        obj['creditInvno'] = ApiClient.convertToType(data['creditInvno'], 'Number');
       }
-      if (data.hasOwnProperty('pausedSubscriptionBookingDate')) {
-        obj['pausedSubscriptionBookingDate'] = ApiClient.convertToType(data['pausedSubscriptionBookingDate'], 'String');
+      if (data.hasOwnProperty('bookingDate')) {
+        obj['bookingDate'] = ApiClient.convertToType(data['bookingDate'], 'String');
       }
-      if (data.hasOwnProperty('pausedSubscriptionAllowWebpaper')) {
-        obj['pausedSubscriptionAllowWebpaper'] = ApiClient.convertToType(data['pausedSubscriptionAllowWebpaper'], 'Boolean');
+      if (data.hasOwnProperty('allowWebpaper')) {
+        obj['allowWebpaper'] = ApiClient.convertToType(data['allowWebpaper'], 'Boolean');
       }
-      if (data.hasOwnProperty('pausedSubscriptionReceiveType')) {
-        obj['pausedSubscriptionReceiveType'] = ApiClient.convertToType(data['pausedSubscriptionReceiveType'], 'String');
+      if (data.hasOwnProperty('receiveType')) {
+        obj['receiveType'] = ApiClient.convertToType(data['receiveType'], 'String');
       }
-      if (data.hasOwnProperty('pausedSubscriptionConfirmStatus')) {
-        obj['pausedSubscriptionConfirmStatus'] = ApiClient.convertToType(data['pausedSubscriptionConfirmStatus'], 'String');
+      if (data.hasOwnProperty('confirmStatus')) {
+        obj['confirmStatus'] = ApiClient.convertToType(data['confirmStatus'], 'String');
       }
-      if (data.hasOwnProperty('pausedSubscriptionStampUser')) {
-        obj['pausedSubscriptionStampUser'] = ApiClient.convertToType(data['pausedSubscriptionStampUser'], 'String');
+      if (data.hasOwnProperty('stampUser')) {
+        obj['stampUser'] = ApiClient.convertToType(data['stampUser'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {Number} pausedSubscriptionSubsno
+   * @member {Number} subsno
    */
-  exports.prototype['pausedSubscriptionSubsno'] = undefined;
+  exports.prototype['subsno'] = undefined;
   /**
-   * @member {Date} pausedSubscriptionSleepStartDate
+   * @member {Date} sleepStartdate
    */
-  exports.prototype['pausedSubscriptionSleepStartDate'] = undefined;
+  exports.prototype['sleepStartdate'] = undefined;
   /**
-   * @member {Date} pausedSubscriptionSleepEndDate
+   * @member {Date} sleepEndDate
    */
-  exports.prototype['pausedSubscriptionSleepEndDate'] = undefined;
+  exports.prototype['sleepEndDate'] = undefined;
   /**
-   * @member {String} pausedSubscriptionCreditType
+   * @member {String} creditType
    */
-  exports.prototype['pausedSubscriptionCreditType'] = undefined;
+  exports.prototype['creditType'] = undefined;
   /**
-   * @member {Number} pausedSubscriptionCreditAmount
+   * @member {Number} creditAmount
    */
-  exports.prototype['pausedSubscriptionCreditAmount'] = undefined;
+  exports.prototype['creditAmount'] = undefined;
   /**
-   * @member {String} pausedSubscriptionSleepType
+   * @member {String} sleepType
    */
-  exports.prototype['pausedSubscriptionSleepType'] = undefined;
+  exports.prototype['sleepType'] = undefined;
   /**
-   * @member {Boolean} pausedSubscriptionCredited
+   * @member {Boolean} credited
    */
-  exports.prototype['pausedSubscriptionCredited'] = undefined;
+  exports.prototype['credited'] = undefined;
   /**
-   * @member {Number} pausedSubscriptionCreditInvno
+   * @member {Number} creditInvno
    */
-  exports.prototype['pausedSubscriptionCreditInvno'] = undefined;
+  exports.prototype['creditInvno'] = undefined;
   /**
-   * @member {String} pausedSubscriptionBookingDate
+   * @member {String} bookingDate
    */
-  exports.prototype['pausedSubscriptionBookingDate'] = undefined;
+  exports.prototype['bookingDate'] = undefined;
   /**
-   * @member {Boolean} pausedSubscriptionAllowWebpaper
+   * @member {Boolean} allowWebpaper
    */
-  exports.prototype['pausedSubscriptionAllowWebpaper'] = undefined;
+  exports.prototype['allowWebpaper'] = undefined;
   /**
-   * @member {String} pausedSubscriptionReceiveType
+   * @member {String} receiveType
    */
-  exports.prototype['pausedSubscriptionReceiveType'] = undefined;
+  exports.prototype['receiveType'] = undefined;
   /**
-   * @member {String} pausedSubscriptionConfirmStatus
+   * @member {String} confirmStatus
    */
-  exports.prototype['pausedSubscriptionConfirmStatus'] = undefined;
+  exports.prototype['confirmStatus'] = undefined;
   /**
-   * @member {String} pausedSubscriptionStampUser
+   * @member {String} stampUser
    */
-  exports.prototype['pausedSubscriptionStampUser'] = undefined;
+  exports.prototype['stampUser'] = undefined;
 
 
 
