@@ -324,7 +324,7 @@ No authorization required
 
 ## usersUuidSubscriptionsSubsnoPausePost
 
-> [PausedSubscription] usersUuidSubscriptionsSubsnoPausePost(uuid, subsno, body, opts)
+> Subscription usersUuidSubscriptionsSubsnoPausePost(uuid, subsno, body, opts)
 
 Pause users subscription
 
@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[PausedSubscription]**](PausedSubscription.md)
+[**Subscription**](Subscription.md)
 
 ### Authorization
 

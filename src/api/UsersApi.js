@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GdprConsent', 'model/InlineResponse400', 'model/InlineResponse415', 'model/LegalConsent', 'model/LoginResponse', 'model/NewUser', 'model/PausedSubscription', 'model/SubscriptionPauseDates', 'model/User', 'model/UserUpdate'], factory);
+    define(['ApiClient', 'model/GdprConsent', 'model/InlineResponse400', 'model/InlineResponse415', 'model/LegalConsent', 'model/LoginResponse', 'model/NewUser', 'model/Subscription', 'model/SubscriptionPauseDates', 'model/User', 'model/UserUpdate'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/GdprConsent'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/LegalConsent'), require('../model/LoginResponse'), require('../model/NewUser'), require('../model/PausedSubscription'), require('../model/SubscriptionPauseDates'), require('../model/User'), require('../model/UserUpdate'));
+    module.exports = factory(require('../ApiClient'), require('../model/GdprConsent'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/LegalConsent'), require('../model/LoginResponse'), require('../model/NewUser'), require('../model/Subscription'), require('../model/SubscriptionPauseDates'), require('../model/User'), require('../model/UserUpdate'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.UsersApi = factory(root.Persona.ApiClient, root.Persona.GdprConsent, root.Persona.InlineResponse400, root.Persona.InlineResponse415, root.Persona.LegalConsent, root.Persona.LoginResponse, root.Persona.NewUser, root.Persona.PausedSubscription, root.Persona.SubscriptionPauseDates, root.Persona.User, root.Persona.UserUpdate);
+    root.Persona.UsersApi = factory(root.Persona.ApiClient, root.Persona.GdprConsent, root.Persona.InlineResponse400, root.Persona.InlineResponse415, root.Persona.LegalConsent, root.Persona.LoginResponse, root.Persona.NewUser, root.Persona.Subscription, root.Persona.SubscriptionPauseDates, root.Persona.User, root.Persona.UserUpdate);
   }
-}(this, function(ApiClient, GdprConsent, InlineResponse400, InlineResponse415, LegalConsent, LoginResponse, NewUser, PausedSubscription, SubscriptionPauseDates, User, UserUpdate) {
+}(this, function(ApiClient, GdprConsent, InlineResponse400, InlineResponse415, LegalConsent, LoginResponse, NewUser, Subscription, SubscriptionPauseDates, User, UserUpdate) {
   'use strict';
 
   /**
@@ -357,7 +357,7 @@
      * Callback function to receive the result of the usersUuidSubscriptionsSubsnoPausePost operation.
      * @callback module:api/UsersApi~usersUuidSubscriptionsSubsnoPausePostCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/PausedSubscription>} data The data returned by the service call.
+     * @param {module:model/Subscription} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -369,7 +369,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization 
      * @param {module:api/UsersApi~usersUuidSubscriptionsSubsnoPausePostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/PausedSubscription>}
+     * data is of type: {@link module:model/Subscription}
      */
     this.usersUuidSubscriptionsSubsnoPausePost = function(uuid, subsno, body, opts, callback) {
       opts = opts || {};
@@ -404,7 +404,7 @@
       var authNames = [];
       var contentTypes = ['application/json;charset=utf-8'];
       var accepts = ['application/json;charset=utf-8'];
-      var returnType = [PausedSubscription];
+      var returnType = Subscription;
       return this.apiClient.callApi(
         '/users/{uuid}/subscriptions/{subsno}/pause', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
