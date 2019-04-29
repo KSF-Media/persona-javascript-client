@@ -86,6 +86,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property digital (base name: "digital")', function() {
+      // uncomment below and update the code to test the property digital
+      //var instance = new Persona.Product();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

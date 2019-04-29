@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **active** | [**ActiveDays**](ActiveDays.md) |  | 
 **nextDelivery** | **Date** |  | [optional] 
 **paper** | [**Paper**](Paper.md) |  | 
+**digital** | **Boolean** |  | 
 
 

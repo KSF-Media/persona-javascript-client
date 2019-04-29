@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Campaign', 'model/ModelPackage', 'model/SubscriptionDates'], factory);
+    define(['ApiClient', 'model/Campaign', 'model/ModelPackage', 'model/PausedSubscription', 'model/SubscriptionDates'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Campaign'), require('./ModelPackage'), require('./SubscriptionDates'));
+    module.exports = factory(require('../ApiClient'), require('./Campaign'), require('./ModelPackage'), require('./PausedSubscription'), require('./SubscriptionDates'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.Subscription = factory(root.Persona.ApiClient, root.Persona.Campaign, root.Persona.ModelPackage, root.Persona.SubscriptionDates);
+    root.Persona.Subscription = factory(root.Persona.ApiClient, root.Persona.Campaign, root.Persona.ModelPackage, root.Persona.PausedSubscription, root.Persona.SubscriptionDates);
   }
-}(this, function(ApiClient, Campaign, ModelPackage, SubscriptionDates) {
+}(this, function(ApiClient, Campaign, ModelPackage, PausedSubscription, SubscriptionDates) {
   'use strict';
 
 
@@ -109,6 +109,9 @@
       if (data.hasOwnProperty('campaign')) {
         obj['campaign'] = Campaign.constructFromObject(data['campaign']);
       }
+      if (data.hasOwnProperty('paused')) {
+        obj['paused'] = ApiClient.convertToType(data['paused'], [PausedSubscription]);
+      }
     }
     return obj;
   }
@@ -157,6 +160,10 @@
    * @member {module:model/Campaign} campaign
    */
   exports.prototype['campaign'] = undefined;
+  /**
+   * @member {Array.<module:model/PausedSubscription>} paused
+   */
+  exports.prototype['paused'] = undefined;
 
 
 

@@ -46,14 +46,16 @@
    * @param name {String} 
    * @param active {module:model/ActiveDays} 
    * @param paper {module:model/Paper} 
+   * @param digital {Boolean} 
    */
-  var exports = function(id, name, active, paper) {
+  var exports = function(id, name, active, paper, digital) {
     var _this = this;
 
     _this['id'] = id;
     _this['name'] = name;
     _this['active'] = active;
     _this['paper'] = paper;
+    _this['digital'] = digital;
   };
 
   /**
@@ -81,6 +83,9 @@
       if (data.hasOwnProperty('paper')) {
         obj['paper'] = Paper.constructFromObject(data['paper']);
       }
+      if (data.hasOwnProperty('digital')) {
+        obj['digital'] = ApiClient.convertToType(data['digital'], 'Boolean');
+      }
     }
     return obj;
   }
@@ -105,6 +110,10 @@
    * @member {module:model/Paper} paper
    */
   exports.prototype['paper'] = undefined;
+  /**
+   * @member {Boolean} digital
+   */
+  exports.prototype['digital'] = undefined;
 
 
 

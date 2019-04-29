@@ -45,16 +45,18 @@
    * @param id {String} 
    * @param name {String} 
    * @param paper {module:model/Paper} 
+   * @param digitalOnly {Boolean} 
    * @param products {Array.<module:model/Product>} 
    * @param offers {Array.<module:model/PackageOffer>} 
    * @param campaigns {Array.<module:model/Campaign>} 
    */
-  var exports = function(id, name, paper, products, offers, campaigns) {
+  var exports = function(id, name, paper, digitalOnly, products, offers, campaigns) {
     var _this = this;
 
     _this['id'] = id;
     _this['name'] = name;
     _this['paper'] = paper;
+    _this['digitalOnly'] = digitalOnly;
     _this['products'] = products;
     _this['offers'] = offers;
     _this['campaigns'] = campaigns;
@@ -78,6 +80,9 @@
       }
       if (data.hasOwnProperty('paper')) {
         obj['paper'] = Paper.constructFromObject(data['paper']);
+      }
+      if (data.hasOwnProperty('digitalOnly')) {
+        obj['digitalOnly'] = ApiClient.convertToType(data['digitalOnly'], 'Boolean');
       }
       if (data.hasOwnProperty('products')) {
         obj['products'] = ApiClient.convertToType(data['products'], [Product]);
@@ -110,6 +115,10 @@
    * @member {module:model/Paper} paper
    */
   exports.prototype['paper'] = undefined;
+  /**
+   * @member {Boolean} digitalOnly
+   */
+  exports.prototype['digitalOnly'] = undefined;
   /**
    * @member {Array.<module:model/Product>} products
    */

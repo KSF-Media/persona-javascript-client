@@ -42,36 +42,14 @@
    * Constructs a new <code>PausedSubscription</code>.
    * @alias module:model/PausedSubscription
    * @class
-   * @param subsno {Number} 
-   * @param sleepStartdate {Date} 
-   * @param sleepEndDate {Date} 
-   * @param creditType {String} 
-   * @param creditAmount {Number} 
-   * @param sleepType {String} 
-   * @param credited {Boolean} 
-   * @param creditInvno {Number} 
-   * @param bookingDate {String} 
-   * @param allowWebpaper {Boolean} 
-   * @param receiveType {String} 
-   * @param confirmStatus {String} 
-   * @param stampUser {String} 
+   * @param startDate {Date} 
+   * @param endDate {Date} 
    */
-  var exports = function(subsno, sleepStartdate, sleepEndDate, creditType, creditAmount, sleepType, credited, creditInvno, bookingDate, allowWebpaper, receiveType, confirmStatus, stampUser) {
+  var exports = function(startDate, endDate) {
     var _this = this;
 
-    _this['subsno'] = subsno;
-    _this['sleepStartdate'] = sleepStartdate;
-    _this['sleepEndDate'] = sleepEndDate;
-    _this['creditType'] = creditType;
-    _this['creditAmount'] = creditAmount;
-    _this['sleepType'] = sleepType;
-    _this['credited'] = credited;
-    _this['creditInvno'] = creditInvno;
-    _this['bookingDate'] = bookingDate;
-    _this['allowWebpaper'] = allowWebpaper;
-    _this['receiveType'] = receiveType;
-    _this['confirmStatus'] = confirmStatus;
-    _this['stampUser'] = stampUser;
+    _this['startDate'] = startDate;
+    _this['endDate'] = endDate;
   };
 
   /**
@@ -84,101 +62,24 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('subsno')) {
-        obj['subsno'] = ApiClient.convertToType(data['subsno'], 'Number');
+      if (data.hasOwnProperty('startDate')) {
+        obj['startDate'] = ApiClient.convertToType(data['startDate'], 'Date');
       }
-      if (data.hasOwnProperty('sleepStartdate')) {
-        obj['sleepStartdate'] = ApiClient.convertToType(data['sleepStartdate'], 'Date');
-      }
-      if (data.hasOwnProperty('sleepEndDate')) {
-        obj['sleepEndDate'] = ApiClient.convertToType(data['sleepEndDate'], 'Date');
-      }
-      if (data.hasOwnProperty('creditType')) {
-        obj['creditType'] = ApiClient.convertToType(data['creditType'], 'String');
-      }
-      if (data.hasOwnProperty('creditAmount')) {
-        obj['creditAmount'] = ApiClient.convertToType(data['creditAmount'], 'Number');
-      }
-      if (data.hasOwnProperty('sleepType')) {
-        obj['sleepType'] = ApiClient.convertToType(data['sleepType'], 'String');
-      }
-      if (data.hasOwnProperty('credited')) {
-        obj['credited'] = ApiClient.convertToType(data['credited'], 'Boolean');
-      }
-      if (data.hasOwnProperty('creditInvno')) {
-        obj['creditInvno'] = ApiClient.convertToType(data['creditInvno'], 'Number');
-      }
-      if (data.hasOwnProperty('bookingDate')) {
-        obj['bookingDate'] = ApiClient.convertToType(data['bookingDate'], 'String');
-      }
-      if (data.hasOwnProperty('allowWebpaper')) {
-        obj['allowWebpaper'] = ApiClient.convertToType(data['allowWebpaper'], 'Boolean');
-      }
-      if (data.hasOwnProperty('receiveType')) {
-        obj['receiveType'] = ApiClient.convertToType(data['receiveType'], 'String');
-      }
-      if (data.hasOwnProperty('confirmStatus')) {
-        obj['confirmStatus'] = ApiClient.convertToType(data['confirmStatus'], 'String');
-      }
-      if (data.hasOwnProperty('stampUser')) {
-        obj['stampUser'] = ApiClient.convertToType(data['stampUser'], 'String');
+      if (data.hasOwnProperty('endDate')) {
+        obj['endDate'] = ApiClient.convertToType(data['endDate'], 'Date');
       }
     }
     return obj;
   }
 
   /**
-   * @member {Number} subsno
+   * @member {Date} startDate
    */
-  exports.prototype['subsno'] = undefined;
+  exports.prototype['startDate'] = undefined;
   /**
-   * @member {Date} sleepStartdate
+   * @member {Date} endDate
    */
-  exports.prototype['sleepStartdate'] = undefined;
-  /**
-   * @member {Date} sleepEndDate
-   */
-  exports.prototype['sleepEndDate'] = undefined;
-  /**
-   * @member {String} creditType
-   */
-  exports.prototype['creditType'] = undefined;
-  /**
-   * @member {Number} creditAmount
-   */
-  exports.prototype['creditAmount'] = undefined;
-  /**
-   * @member {String} sleepType
-   */
-  exports.prototype['sleepType'] = undefined;
-  /**
-   * @member {Boolean} credited
-   */
-  exports.prototype['credited'] = undefined;
-  /**
-   * @member {Number} creditInvno
-   */
-  exports.prototype['creditInvno'] = undefined;
-  /**
-   * @member {String} bookingDate
-   */
-  exports.prototype['bookingDate'] = undefined;
-  /**
-   * @member {Boolean} allowWebpaper
-   */
-  exports.prototype['allowWebpaper'] = undefined;
-  /**
-   * @member {String} receiveType
-   */
-  exports.prototype['receiveType'] = undefined;
-  /**
-   * @member {String} confirmStatus
-   */
-  exports.prototype['confirmStatus'] = undefined;
-  /**
-   * @member {String} stampUser
-   */
-  exports.prototype['stampUser'] = undefined;
+  exports.prototype['endDate'] = undefined;
 
 
 

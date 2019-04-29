@@ -74,6 +74,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property digitalOnly (base name: "digitalOnly")', function() {
+      // uncomment below and update the code to test the property digitalOnly
+      //var instance = new Persona.ModelPackage();
+      //expect(instance).to.be();
+    });
+
     it('should have the property products (base name: "products")', function() {
       // uncomment below and update the code to test the property products
       //var instance = new Persona.ModelPackage();

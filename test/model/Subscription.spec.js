@@ -122,6 +122,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property paused (base name: "paused")', function() {
+      // uncomment below and update the code to test the property paused
+      //var instance = new Persona.Subscription();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
