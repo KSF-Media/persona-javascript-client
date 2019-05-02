@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **startDate** | **Date** |  | 
-**endDate** | **Date** |  | 
+**endDate** | **Date** |  | [optional] 
 
 
