@@ -604,8 +604,7 @@
       ];
     };
 
-    exports.getBasePathFromSettings = function(index, variables) {
-        var variables = variables || {};
+    exports.getBasePathFromSettings = function(index, variables={}) {
         var servers = this.hostSettings();
 
         // check array index out of bound
