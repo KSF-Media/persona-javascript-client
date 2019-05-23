@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Campaign', 'model/ModelPackage', 'model/PausedSubscription', 'model/SubscriptionDates'], factory);
+    define(['ApiClient', 'model/Campaign', 'model/DeliveryAddress', 'model/ModelPackage', 'model/PausedSubscription', 'model/PendingAddressChange', 'model/SubscriptionDates'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Campaign'), require('./ModelPackage'), require('./PausedSubscription'), require('./SubscriptionDates'));
+    module.exports = factory(require('../ApiClient'), require('./Campaign'), require('./DeliveryAddress'), require('./ModelPackage'), require('./PausedSubscription'), require('./PendingAddressChange'), require('./SubscriptionDates'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.Subscription = factory(root.Persona.ApiClient, root.Persona.Campaign, root.Persona.ModelPackage, root.Persona.PausedSubscription, root.Persona.SubscriptionDates);
+    root.Persona.Subscription = factory(root.Persona.ApiClient, root.Persona.Campaign, root.Persona.DeliveryAddress, root.Persona.ModelPackage, root.Persona.PausedSubscription, root.Persona.PendingAddressChange, root.Persona.SubscriptionDates);
   }
-}(this, function(ApiClient, Campaign, ModelPackage, PausedSubscription, SubscriptionDates) {
+}(this, function(ApiClient, Campaign, DeliveryAddress, ModelPackage, PausedSubscription, PendingAddressChange, SubscriptionDates) {
   'use strict';
 
 
@@ -112,6 +112,12 @@
       if (data.hasOwnProperty('paused')) {
         obj['paused'] = ApiClient.convertToType(data['paused'], [PausedSubscription]);
       }
+      if (data.hasOwnProperty('deliveryAddress')) {
+        obj['deliveryAddress'] = DeliveryAddress.constructFromObject(data['deliveryAddress']);
+      }
+      if (data.hasOwnProperty('pendingAddressChanges')) {
+        obj['pendingAddressChanges'] = ApiClient.convertToType(data['pendingAddressChanges'], [PendingAddressChange]);
+      }
     }
     return obj;
   }
@@ -164,6 +170,14 @@
    * @member {Array.<module:model/PausedSubscription>} paused
    */
   exports.prototype['paused'] = undefined;
+  /**
+   * @member {module:model/DeliveryAddress} deliveryAddress
+   */
+  exports.prototype['deliveryAddress'] = undefined;
+  /**
+   * @member {Array.<module:model/PendingAddressChange>} pendingAddressChanges
+   */
+  exports.prototype['pendingAddressChanges'] = undefined;
 
 
 

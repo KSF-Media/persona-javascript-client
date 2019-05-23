@@ -119,6 +119,7 @@ Class | Method | HTTP request | Description
 *Persona.UsersApi* | [**usersUuidGet**](docs/UsersApi.md#usersUuidGet) | **GET** /users/{uuid} | Get user by UUID.
 *Persona.UsersApi* | [**usersUuidLegalPut**](docs/UsersApi.md#usersUuidLegalPut) | **PUT** /users/{uuid}/legal | Updates the legal consent settings for a given user.
 *Persona.UsersApi* | [**usersUuidPatch**](docs/UsersApi.md#usersUuidPatch) | **PATCH** /users/{uuid} | Update a user
+*Persona.UsersApi* | [**usersUuidSubscriptionsSubsnoAddressChangePost**](docs/UsersApi.md#usersUuidSubscriptionsSubsnoAddressChangePost) | **POST** /users/{uuid}/subscriptions/{subsno}/addressChange | Make a temporary address change for a subscription
 *Persona.UsersApi* | [**usersUuidSubscriptionsSubsnoPausePost**](docs/UsersApi.md#usersUuidSubscriptionsSubsnoPausePost) | **POST** /users/{uuid}/subscriptions/{subsno}/pause | Pause users subscription
 
 
@@ -127,6 +128,7 @@ Class | Method | HTTP request | Description
  - [Persona.ActiveDays](docs/ActiveDays.md)
  - [Persona.Address](docs/Address.md)
  - [Persona.Campaign](docs/Campaign.md)
+ - [Persona.DeliveryAddress](docs/DeliveryAddress.md)
  - [Persona.DescriptionFrequency](docs/DescriptionFrequency.md)
  - [Persona.GdprConsent](docs/GdprConsent.md)
  - [Persona.InlineResponse400](docs/InlineResponse400.md)
@@ -154,10 +156,12 @@ Class | Method | HTTP request | Description
  - [Persona.PackageOffer](docs/PackageOffer.md)
  - [Persona.Paper](docs/Paper.md)
  - [Persona.PausedSubscription](docs/PausedSubscription.md)
+ - [Persona.PendingAddressChange](docs/PendingAddressChange.md)
  - [Persona.Product](docs/Product.md)
  - [Persona.Subscription](docs/Subscription.md)
  - [Persona.SubscriptionDates](docs/SubscriptionDates.md)
  - [Persona.SubscriptionPauseDates](docs/SubscriptionPauseDates.md)
+ - [Persona.TemporaryAddressChange](docs/TemporaryAddressChange.md)
  - [Persona.User](docs/User.md)
  - [Persona.UserUpdate](docs/UserUpdate.md)
  - [Persona.UserUpdateAddress](docs/UserUpdateAddress.md)
