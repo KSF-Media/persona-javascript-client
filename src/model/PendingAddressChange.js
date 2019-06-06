@@ -45,13 +45,15 @@
    * @param address {module:model/DeliveryAddress} 
    * @param startDate {Date} 
    * @param endDate {Date} 
+   * @param type {String} 
    */
-  var exports = function(address, startDate, endDate) {
+  var exports = function(address, startDate, endDate, type) {
     var _this = this;
 
     _this['address'] = address;
     _this['startDate'] = startDate;
     _this['endDate'] = endDate;
+    _this['type'] = type;
   };
 
   /**
@@ -73,6 +75,9 @@
       if (data.hasOwnProperty('endDate')) {
         obj['endDate'] = ApiClient.convertToType(data['endDate'], 'Date');
       }
+      if (data.hasOwnProperty('type')) {
+        obj['type'] = ApiClient.convertToType(data['type'], 'String');
+      }
     }
     return obj;
   }
@@ -89,6 +94,10 @@
    * @member {Date} endDate
    */
   exports.prototype['endDate'] = undefined;
+  /**
+   * @member {String} type
+   */
+  exports.prototype['type'] = undefined;
 
 
 

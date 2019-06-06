@@ -44,14 +44,12 @@
    * @class
    * @param streetAddress {String} 
    * @param zipcode {String} 
-   * @param city {String} 
    */
-  var exports = function(streetAddress, zipcode, city) {
+  var exports = function(streetAddress, zipcode) {
     var _this = this;
 
     _this['streetAddress'] = streetAddress;
     _this['zipcode'] = zipcode;
-    _this['city'] = city;
   };
 
   /**
