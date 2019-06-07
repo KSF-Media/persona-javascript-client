@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Address', 'model/GdprConsent', 'model/LegalConsent', 'model/Subscription'], factory);
+    define(['ApiClient', 'model/Address', 'model/GdprConsent', 'model/LegalConsent', 'model/PendingAddressChange', 'model/Subscription'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Address'), require('./GdprConsent'), require('./LegalConsent'), require('./Subscription'));
+    module.exports = factory(require('../ApiClient'), require('./Address'), require('./GdprConsent'), require('./LegalConsent'), require('./PendingAddressChange'), require('./Subscription'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.User = factory(root.Persona.ApiClient, root.Persona.Address, root.Persona.GdprConsent, root.Persona.LegalConsent, root.Persona.Subscription);
+    root.Persona.User = factory(root.Persona.ApiClient, root.Persona.Address, root.Persona.GdprConsent, root.Persona.LegalConsent, root.Persona.PendingAddressChange, root.Persona.Subscription);
   }
-}(this, function(ApiClient, Address, GdprConsent, LegalConsent, Subscription) {
+}(this, function(ApiClient, Address, GdprConsent, LegalConsent, PendingAddressChange, Subscription) {
   'use strict';
 
 
@@ -97,6 +97,9 @@
       if (data.hasOwnProperty('legal')) {
         obj['legal'] = ApiClient.convertToType(data['legal'], [LegalConsent]);
       }
+      if (data.hasOwnProperty('pendingAddressChanges')) {
+        obj['pendingAddressChanges'] = ApiClient.convertToType(data['pendingAddressChanges'], [PendingAddressChange]);
+      }
     }
     return obj;
   }
@@ -137,6 +140,10 @@
    * @member {Array.<module:model/LegalConsent>} legal
    */
   exports.prototype['legal'] = undefined;
+  /**
+   * @member {Array.<module:model/PendingAddressChange>} pendingAddressChanges
+   */
+  exports.prototype['pendingAddressChanges'] = undefined;
 
 
 
