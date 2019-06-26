@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**streetAddress** | **String** |  | 
+**streetAddress** | **String** |  | [optional] 
 **zipcode** | **String** |  | 
 **city** | **String** |  | [optional] 
 

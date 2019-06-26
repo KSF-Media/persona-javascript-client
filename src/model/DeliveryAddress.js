@@ -42,13 +42,11 @@
    * Constructs a new <code>DeliveryAddress</code>.
    * @alias module:model/DeliveryAddress
    * @class
-   * @param streetAddress {String} 
    * @param zipcode {String} 
    */
-  var exports = function(streetAddress, zipcode) {
+  var exports = function(zipcode) {
     var _this = this;
 
-    _this['streetAddress'] = streetAddress;
     _this['zipcode'] = zipcode;
   };
 
