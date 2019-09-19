@@ -78,6 +78,9 @@
       if (data.hasOwnProperty('endDate')) {
         obj['endDate'] = ApiClient.convertToType(data['endDate'], 'Date');
       }
+      if (data.hasOwnProperty('temporaryName')) {
+        obj['temporaryName'] = ApiClient.convertToType(data['temporaryName'], 'String');
+      }
     }
     return obj;
   }
@@ -98,6 +101,10 @@
    * @member {Date} endDate
    */
   exports.prototype['endDate'] = undefined;
+  /**
+   * @member {String} temporaryName
+   */
+  exports.prototype['temporaryName'] = undefined;
 
 
 

@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **startDate** | **Date** |  | 
 **endDate** | **Date** |  | 
 **type** | **String** |  | 
+**temporaryName** | **String** |  | [optional] 
 
 

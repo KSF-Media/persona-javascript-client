@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **streetAddress** | **String** |  | 
 **startDate** | **Date** |  | 
 **endDate** | **Date** |  | 
+**temporaryName** | **String** |  | [optional] 
 
 
