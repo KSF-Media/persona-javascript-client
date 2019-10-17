@@ -118,6 +118,12 @@
       if (data.hasOwnProperty('pendingAddressChanges')) {
         obj['pendingAddressChanges'] = ApiClient.convertToType(data['pendingAddressChanges'], [PendingAddressChange]);
       }
+      if (data.hasOwnProperty('orderNumber')) {
+        obj['orderNumber'] = ApiClient.convertToType(data['orderNumber'], 'String');
+      }
+      if (data.hasOwnProperty('paymentMethod')) {
+        obj['paymentMethod'] = ApiClient.convertToType(data['paymentMethod'], 'String');
+      }
     }
     return obj;
   }
@@ -178,6 +184,14 @@
    * @member {Array.<module:model/PendingAddressChange>} pendingAddressChanges
    */
   exports.prototype['pendingAddressChanges'] = undefined;
+  /**
+   * @member {String} orderNumber
+   */
+  exports.prototype['orderNumber'] = undefined;
+  /**
+   * @member {String} paymentMethod
+   */
+  exports.prototype['paymentMethod'] = undefined;
 
 
 

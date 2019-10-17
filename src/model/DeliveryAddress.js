@@ -69,6 +69,9 @@
       if (data.hasOwnProperty('city')) {
         obj['city'] = ApiClient.convertToType(data['city'], 'String');
       }
+      if (data.hasOwnProperty('temporaryName')) {
+        obj['temporaryName'] = ApiClient.convertToType(data['temporaryName'], 'String');
+      }
     }
     return obj;
   }
@@ -85,6 +88,10 @@
    * @member {String} city
    */
   exports.prototype['city'] = undefined;
+  /**
+   * @member {String} temporaryName
+   */
+  exports.prototype['temporaryName'] = undefined;
 
 
 

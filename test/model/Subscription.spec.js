@@ -140,6 +140,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property orderNumber (base name: "orderNumber")', function() {
+      // uncomment below and update the code to test the property orderNumber
+      //var instance = new Persona.Subscription();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property paymentMethod (base name: "paymentMethod")', function() {
+      // uncomment below and update the code to test the property paymentMethod
+      //var instance = new Persona.Subscription();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

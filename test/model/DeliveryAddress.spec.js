@@ -74,6 +74,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property temporaryName (base name: "temporaryName")', function() {
+      // uncomment below and update the code to test the property temporaryName
+      //var instance = new Persona.DeliveryAddress();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

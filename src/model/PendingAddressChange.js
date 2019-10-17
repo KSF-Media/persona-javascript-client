@@ -78,9 +78,6 @@
       if (data.hasOwnProperty('type')) {
         obj['type'] = ApiClient.convertToType(data['type'], 'String');
       }
-      if (data.hasOwnProperty('temporaryName')) {
-        obj['temporaryName'] = ApiClient.convertToType(data['temporaryName'], 'String');
-      }
     }
     return obj;
   }
@@ -101,10 +98,6 @@
    * @member {String} type
    */
   exports.prototype['type'] = undefined;
-  /**
-   * @member {String} temporaryName
-   */
-  exports.prototype['temporaryName'] = undefined;
 
 
 

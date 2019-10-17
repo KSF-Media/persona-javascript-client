@@ -18,5 +18,7 @@ Name | Type | Description | Notes
 **paused** | [**[PausedSubscription]**](PausedSubscription.md) |  | [optional] 
 **deliveryAddress** | [**DeliveryAddress**](DeliveryAddress.md) |  | [optional] 
 **pendingAddressChanges** | [**[PendingAddressChange]**](PendingAddressChange.md) |  | [optional] 
+**orderNumber** | **String** |  | [optional] 
+**paymentMethod** | **String** |  | [optional] 
 
 
