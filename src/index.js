@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ActiveDays', 'model/Address', 'model/Campaign', 'model/DeliveryAddress', 'model/DescriptionFrequency', 'model/GdprConsent', 'model/InlineResponse400', 'model/InlineResponse400InvalidRequestBody', 'model/InlineResponse403', 'model/InlineResponse4031', 'model/InlineResponse4031AccessTokenExpired', 'model/InlineResponse4032', 'model/InlineResponse4032EmailAddressInUse', 'model/InlineResponse4032EmailNotAuthorized', 'model/InlineResponse4032OauthFailed', 'model/InlineResponse403InvalidCredentials', 'model/InlineResponse415', 'model/InlineResponse415UnsupportedMediaType', 'model/InlineResponse500', 'model/InlineResponse500InternalServerError', 'model/LegalConsent', 'model/LoginData', 'model/LoginDataSSO', 'model/LoginDataSoMe', 'model/LoginResponse', 'model/ModelPackage', 'model/NewUser', 'model/PackageDescription', 'model/PackageOffer', 'model/Paper', 'model/PausedSubscription', 'model/PendingAddressChange', 'model/Product', 'model/Subscription', 'model/SubscriptionDates', 'model/SubscriptionPauseDates', 'model/TemporaryAddressChange', 'model/User', 'model/UserUpdate', 'model/UserUpdateAddress', 'api/EntitlementsApi', 'api/LoginApi', 'api/UsersApi'], factory);
+    define(['ApiClient', 'model/ActiveDays', 'model/Address', 'model/Campaign', 'model/CodeForTokenData', 'model/DeliveryAddress', 'model/DescriptionFrequency', 'model/ForgotPasswordData', 'model/ForgotPasswordResponse', 'model/GdprConsent', 'model/InlineResponse400', 'model/InlineResponse400InvalidRequestBody', 'model/InlineResponse403', 'model/InlineResponse4031', 'model/InlineResponse4031AccessTokenExpired', 'model/InlineResponse4032', 'model/InlineResponse4032EmailAddressInUse', 'model/InlineResponse4032EmailNotAuthorized', 'model/InlineResponse4032OauthFailed', 'model/InlineResponse403InvalidCredentials', 'model/InlineResponse415', 'model/InlineResponse415UnsupportedMediaType', 'model/InlineResponse500', 'model/InlineResponse500InternalServerError', 'model/LegalConsent', 'model/LoginData', 'model/LoginDataSSO', 'model/LoginDataSoMe', 'model/LoginResponse', 'model/ModelPackage', 'model/NewUser', 'model/PackageDescription', 'model/PackageOffer', 'model/Paper', 'model/PausedSubscription', 'model/PendingAddressChange', 'model/Product', 'model/Subscription', 'model/SubscriptionDates', 'model/SubscriptionPauseDates', 'model/TemporaryAddressChange', 'model/TokenResponse', 'model/UpdatePasswordData', 'model/User', 'model/UserUpdate', 'model/UserUpdateAddress', 'api/AccountApi', 'api/EntitlementsApi', 'api/LoginApi', 'api/UsersApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/ActiveDays'), require('./model/Address'), require('./model/Campaign'), require('./model/DeliveryAddress'), require('./model/DescriptionFrequency'), require('./model/GdprConsent'), require('./model/InlineResponse400'), require('./model/InlineResponse400InvalidRequestBody'), require('./model/InlineResponse403'), require('./model/InlineResponse4031'), require('./model/InlineResponse4031AccessTokenExpired'), require('./model/InlineResponse4032'), require('./model/InlineResponse4032EmailAddressInUse'), require('./model/InlineResponse4032EmailNotAuthorized'), require('./model/InlineResponse4032OauthFailed'), require('./model/InlineResponse403InvalidCredentials'), require('./model/InlineResponse415'), require('./model/InlineResponse415UnsupportedMediaType'), require('./model/InlineResponse500'), require('./model/InlineResponse500InternalServerError'), require('./model/LegalConsent'), require('./model/LoginData'), require('./model/LoginDataSSO'), require('./model/LoginDataSoMe'), require('./model/LoginResponse'), require('./model/ModelPackage'), require('./model/NewUser'), require('./model/PackageDescription'), require('./model/PackageOffer'), require('./model/Paper'), require('./model/PausedSubscription'), require('./model/PendingAddressChange'), require('./model/Product'), require('./model/Subscription'), require('./model/SubscriptionDates'), require('./model/SubscriptionPauseDates'), require('./model/TemporaryAddressChange'), require('./model/User'), require('./model/UserUpdate'), require('./model/UserUpdateAddress'), require('./api/EntitlementsApi'), require('./api/LoginApi'), require('./api/UsersApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/ActiveDays'), require('./model/Address'), require('./model/Campaign'), require('./model/CodeForTokenData'), require('./model/DeliveryAddress'), require('./model/DescriptionFrequency'), require('./model/ForgotPasswordData'), require('./model/ForgotPasswordResponse'), require('./model/GdprConsent'), require('./model/InlineResponse400'), require('./model/InlineResponse400InvalidRequestBody'), require('./model/InlineResponse403'), require('./model/InlineResponse4031'), require('./model/InlineResponse4031AccessTokenExpired'), require('./model/InlineResponse4032'), require('./model/InlineResponse4032EmailAddressInUse'), require('./model/InlineResponse4032EmailNotAuthorized'), require('./model/InlineResponse4032OauthFailed'), require('./model/InlineResponse403InvalidCredentials'), require('./model/InlineResponse415'), require('./model/InlineResponse415UnsupportedMediaType'), require('./model/InlineResponse500'), require('./model/InlineResponse500InternalServerError'), require('./model/LegalConsent'), require('./model/LoginData'), require('./model/LoginDataSSO'), require('./model/LoginDataSoMe'), require('./model/LoginResponse'), require('./model/ModelPackage'), require('./model/NewUser'), require('./model/PackageDescription'), require('./model/PackageOffer'), require('./model/Paper'), require('./model/PausedSubscription'), require('./model/PendingAddressChange'), require('./model/Product'), require('./model/Subscription'), require('./model/SubscriptionDates'), require('./model/SubscriptionPauseDates'), require('./model/TemporaryAddressChange'), require('./model/TokenResponse'), require('./model/UpdatePasswordData'), require('./model/User'), require('./model/UserUpdate'), require('./model/UserUpdateAddress'), require('./api/AccountApi'), require('./api/EntitlementsApi'), require('./api/LoginApi'), require('./api/UsersApi'));
   }
-}(function(ApiClient, ActiveDays, Address, Campaign, DeliveryAddress, DescriptionFrequency, GdprConsent, InlineResponse400, InlineResponse400InvalidRequestBody, InlineResponse403, InlineResponse4031, InlineResponse4031AccessTokenExpired, InlineResponse4032, InlineResponse4032EmailAddressInUse, InlineResponse4032EmailNotAuthorized, InlineResponse4032OauthFailed, InlineResponse403InvalidCredentials, InlineResponse415, InlineResponse415UnsupportedMediaType, InlineResponse500, InlineResponse500InternalServerError, LegalConsent, LoginData, LoginDataSSO, LoginDataSoMe, LoginResponse, ModelPackage, NewUser, PackageDescription, PackageOffer, Paper, PausedSubscription, PendingAddressChange, Product, Subscription, SubscriptionDates, SubscriptionPauseDates, TemporaryAddressChange, User, UserUpdate, UserUpdateAddress, EntitlementsApi, LoginApi, UsersApi) {
+}(function(ApiClient, ActiveDays, Address, Campaign, CodeForTokenData, DeliveryAddress, DescriptionFrequency, ForgotPasswordData, ForgotPasswordResponse, GdprConsent, InlineResponse400, InlineResponse400InvalidRequestBody, InlineResponse403, InlineResponse4031, InlineResponse4031AccessTokenExpired, InlineResponse4032, InlineResponse4032EmailAddressInUse, InlineResponse4032EmailNotAuthorized, InlineResponse4032OauthFailed, InlineResponse403InvalidCredentials, InlineResponse415, InlineResponse415UnsupportedMediaType, InlineResponse500, InlineResponse500InternalServerError, LegalConsent, LoginData, LoginDataSSO, LoginDataSoMe, LoginResponse, ModelPackage, NewUser, PackageDescription, PackageOffer, Paper, PausedSubscription, PendingAddressChange, Product, Subscription, SubscriptionDates, SubscriptionPauseDates, TemporaryAddressChange, TokenResponse, UpdatePasswordData, User, UserUpdate, UserUpdateAddress, AccountApi, EntitlementsApi, LoginApi, UsersApi) {
   'use strict';
 
   /**
@@ -77,6 +77,11 @@
      */
     Campaign: Campaign,
     /**
+     * The CodeForTokenData model constructor.
+     * @property {module:model/CodeForTokenData}
+     */
+    CodeForTokenData: CodeForTokenData,
+    /**
      * The DeliveryAddress model constructor.
      * @property {module:model/DeliveryAddress}
      */
@@ -86,6 +91,16 @@
      * @property {module:model/DescriptionFrequency}
      */
     DescriptionFrequency: DescriptionFrequency,
+    /**
+     * The ForgotPasswordData model constructor.
+     * @property {module:model/ForgotPasswordData}
+     */
+    ForgotPasswordData: ForgotPasswordData,
+    /**
+     * The ForgotPasswordResponse model constructor.
+     * @property {module:model/ForgotPasswordResponse}
+     */
+    ForgotPasswordResponse: ForgotPasswordResponse,
     /**
      * The GdprConsent model constructor.
      * @property {module:model/GdprConsent}
@@ -247,6 +262,16 @@
      */
     TemporaryAddressChange: TemporaryAddressChange,
     /**
+     * The TokenResponse model constructor.
+     * @property {module:model/TokenResponse}
+     */
+    TokenResponse: TokenResponse,
+    /**
+     * The UpdatePasswordData model constructor.
+     * @property {module:model/UpdatePasswordData}
+     */
+    UpdatePasswordData: UpdatePasswordData,
+    /**
      * The User model constructor.
      * @property {module:model/User}
      */
@@ -261,6 +286,11 @@
      * @property {module:model/UserUpdateAddress}
      */
     UserUpdateAddress: UserUpdateAddress,
+    /**
+     * The AccountApi service constructor.
+     * @property {module:api/AccountApi}
+     */
+    AccountApi: AccountApi,
     /**
      * The EntitlementsApi service constructor.
      * @property {module:api/EntitlementsApi}

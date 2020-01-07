@@ -89,7 +89,8 @@ Please follow the [installation](#installation) instruction and execute the foll
 var Persona = require('persona');
 
 
-var api = new Persona.EntitlementsApi()
+var api = new Persona.AccountApi()
+var body = new Persona.CodeForTokenData(); // {CodeForTokenData} 
 
 var callback = function(error, data, response) {
   if (error) {
@@ -98,7 +99,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.entitlementsGet(callback);
+api.accountCodeForTokenPost(body, callback);
 
 ```
 
@@ -108,6 +109,9 @@ All URIs are relative to *http://http:/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*Persona.AccountApi* | [**accountCodeForTokenPost**](docs/AccountApi.md#accountCodeForTokenPost) | **POST** /account/codeForToken | Get a password reset token
+*Persona.AccountApi* | [**accountForgotPassPost**](docs/AccountApi.md#accountForgotPassPost) | **POST** /account/forgotPass | Forgot Password
+*Persona.AccountApi* | [**accountResetForgottenPasswordPost**](docs/AccountApi.md#accountResetForgottenPasswordPost) | **POST** /account/resetForgottenPassword | Reset a forgotten password with a token
 *Persona.EntitlementsApi* | [**entitlementsGet**](docs/EntitlementsApi.md#entitlementsGet) | **GET** /entitlements | List all entitlements
 *Persona.LoginApi* | [**loginPost**](docs/LoginApi.md#loginPost) | **POST** /login | Login with email and password
 *Persona.LoginApi* | [**loginSomePost**](docs/LoginApi.md#loginSomePost) | **POST** /login/some | Login with social media
@@ -128,8 +132,11 @@ Class | Method | HTTP request | Description
  - [Persona.ActiveDays](docs/ActiveDays.md)
  - [Persona.Address](docs/Address.md)
  - [Persona.Campaign](docs/Campaign.md)
+ - [Persona.CodeForTokenData](docs/CodeForTokenData.md)
  - [Persona.DeliveryAddress](docs/DeliveryAddress.md)
  - [Persona.DescriptionFrequency](docs/DescriptionFrequency.md)
+ - [Persona.ForgotPasswordData](docs/ForgotPasswordData.md)
+ - [Persona.ForgotPasswordResponse](docs/ForgotPasswordResponse.md)
  - [Persona.GdprConsent](docs/GdprConsent.md)
  - [Persona.InlineResponse400](docs/InlineResponse400.md)
  - [Persona.InlineResponse400InvalidRequestBody](docs/InlineResponse400InvalidRequestBody.md)
@@ -162,6 +169,8 @@ Class | Method | HTTP request | Description
  - [Persona.SubscriptionDates](docs/SubscriptionDates.md)
  - [Persona.SubscriptionPauseDates](docs/SubscriptionPauseDates.md)
  - [Persona.TemporaryAddressChange](docs/TemporaryAddressChange.md)
+ - [Persona.TokenResponse](docs/TokenResponse.md)
+ - [Persona.UpdatePasswordData](docs/UpdatePasswordData.md)
  - [Persona.User](docs/User.md)
  - [Persona.UserUpdate](docs/UserUpdate.md)
  - [Persona.UserUpdateAddress](docs/UserUpdateAddress.md)
