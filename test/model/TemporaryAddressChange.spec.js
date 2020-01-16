@@ -68,6 +68,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property countryCode (base name: "countryCode")', function() {
+      // uncomment below and update the code to test the property countryCode
+      //var instance = new Persona.TemporaryAddressChange();
+      //expect(instance).to.be();
+    });
+
     it('should have the property startDate (base name: "startDate")', function() {
       // uncomment below and update the code to test the property startDate
       //var instance = new Persona.TemporaryAddressChange();

@@ -44,14 +44,16 @@
    * @class
    * @param zipCode {String} 
    * @param streetAddress {String} 
+   * @param countryCode {String} 
    * @param startDate {Date} 
    * @param endDate {Date} 
    */
-  var exports = function(zipCode, streetAddress, startDate, endDate) {
+  var exports = function(zipCode, streetAddress, countryCode, startDate, endDate) {
     var _this = this;
 
     _this['zipCode'] = zipCode;
     _this['streetAddress'] = streetAddress;
+    _this['countryCode'] = countryCode;
     _this['startDate'] = startDate;
     _this['endDate'] = endDate;
   };
@@ -71,6 +73,9 @@
       }
       if (data.hasOwnProperty('streetAddress')) {
         obj['streetAddress'] = ApiClient.convertToType(data['streetAddress'], 'String');
+      }
+      if (data.hasOwnProperty('countryCode')) {
+        obj['countryCode'] = ApiClient.convertToType(data['countryCode'], 'String');
       }
       if (data.hasOwnProperty('startDate')) {
         obj['startDate'] = ApiClient.convertToType(data['startDate'], 'Date');
@@ -93,6 +98,10 @@
    * @member {String} streetAddress
    */
   exports.prototype['streetAddress'] = undefined;
+  /**
+   * @member {String} countryCode
+   */
+  exports.prototype['countryCode'] = undefined;
   /**
    * @member {Date} startDate
    */
