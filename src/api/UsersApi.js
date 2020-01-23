@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GdprConsent', 'model/InlineResponse400', 'model/InlineResponse415', 'model/LegalConsent', 'model/LoginResponse', 'model/NewUser', 'model/Subscription', 'model/SubscriptionPauseDates', 'model/TemporaryAddressChange', 'model/User', 'model/UserUpdate'], factory);
+    define(['ApiClient', 'model/DeliveryReclamation', 'model/GdprConsent', 'model/InlineResponse400', 'model/InlineResponse415', 'model/LegalConsent', 'model/LoginResponse', 'model/NewDeliveryReclamation', 'model/NewUser', 'model/Subscription', 'model/SubscriptionPauseDates', 'model/TemporaryAddressChange', 'model/User', 'model/UserUpdate'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/GdprConsent'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/LegalConsent'), require('../model/LoginResponse'), require('../model/NewUser'), require('../model/Subscription'), require('../model/SubscriptionPauseDates'), require('../model/TemporaryAddressChange'), require('../model/User'), require('../model/UserUpdate'));
+    module.exports = factory(require('../ApiClient'), require('../model/DeliveryReclamation'), require('../model/GdprConsent'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/LegalConsent'), require('../model/LoginResponse'), require('../model/NewDeliveryReclamation'), require('../model/NewUser'), require('../model/Subscription'), require('../model/SubscriptionPauseDates'), require('../model/TemporaryAddressChange'), require('../model/User'), require('../model/UserUpdate'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.UsersApi = factory(root.Persona.ApiClient, root.Persona.GdprConsent, root.Persona.InlineResponse400, root.Persona.InlineResponse415, root.Persona.LegalConsent, root.Persona.LoginResponse, root.Persona.NewUser, root.Persona.Subscription, root.Persona.SubscriptionPauseDates, root.Persona.TemporaryAddressChange, root.Persona.User, root.Persona.UserUpdate);
+    root.Persona.UsersApi = factory(root.Persona.ApiClient, root.Persona.DeliveryReclamation, root.Persona.GdprConsent, root.Persona.InlineResponse400, root.Persona.InlineResponse415, root.Persona.LegalConsent, root.Persona.LoginResponse, root.Persona.NewDeliveryReclamation, root.Persona.NewUser, root.Persona.Subscription, root.Persona.SubscriptionPauseDates, root.Persona.TemporaryAddressChange, root.Persona.User, root.Persona.UserUpdate);
   }
-}(this, function(ApiClient, GdprConsent, InlineResponse400, InlineResponse415, LegalConsent, LoginResponse, NewUser, Subscription, SubscriptionPauseDates, TemporaryAddressChange, User, UserUpdate) {
+}(this, function(ApiClient, DeliveryReclamation, GdprConsent, InlineResponse400, InlineResponse415, LegalConsent, LoginResponse, NewDeliveryReclamation, NewUser, Subscription, SubscriptionPauseDates, TemporaryAddressChange, User, UserUpdate) {
   'use strict';
 
   /**
@@ -466,6 +466,65 @@
       var returnType = Subscription;
       return this.apiClient.callApi(
         '/users/{uuid}/subscriptions/{subsno}/pause', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the usersUuidSubscriptionsSubsnoReclamationPost operation.
+     * @callback module:api/UsersApi~usersUuidSubscriptionsSubsnoReclamationPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DeliveryReclamation} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a new delivery reclamation for a subscription
+     * @param {String} uuid 
+     * @param {Number} subsno 
+     * @param {module:model/NewDeliveryReclamation} body 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
+     * @param {module:api/UsersApi~usersUuidSubscriptionsSubsnoReclamationPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DeliveryReclamation}
+     */
+    this.usersUuidSubscriptionsSubsnoReclamationPost = function(uuid, subsno, body, opts, callback) {
+      opts = opts || {};
+      var postBody = body;
+      // verify the required parameter 'uuid' is set
+      if (uuid === undefined || uuid === null) {
+        throw new Error("Missing the required parameter 'uuid' when calling usersUuidSubscriptionsSubsnoReclamationPost");
+      }
+      // verify the required parameter 'subsno' is set
+      if (subsno === undefined || subsno === null) {
+        throw new Error("Missing the required parameter 'subsno' when calling usersUuidSubscriptionsSubsnoReclamationPost");
+      }
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling usersUuidSubscriptionsSubsnoReclamationPost");
+      }
+
+      var pathParams = {
+        'uuid': uuid,
+        'subsno': subsno
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'Authorization': opts['authorization']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json;charset=utf-8'];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = DeliveryReclamation;
+      return this.apiClient.callApi(
+        '/users/{uuid}/subscriptions/{subsno}/reclamation', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

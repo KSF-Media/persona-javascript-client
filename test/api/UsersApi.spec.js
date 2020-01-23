@@ -130,6 +130,16 @@
         done();
       });
     });
+    describe('usersUuidSubscriptionsSubsnoReclamationPost', function() {
+      it('should call usersUuidSubscriptionsSubsnoReclamationPost successfully', function(done) {
+        //uncomment below and update the code to test usersUuidSubscriptionsSubsnoReclamationPost
+        //instance.usersUuidSubscriptionsSubsnoReclamationPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

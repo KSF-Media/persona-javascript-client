@@ -126,6 +126,7 @@ Class | Method | HTTP request | Description
 *Persona.UsersApi* | [**usersUuidPatch**](docs/UsersApi.md#usersUuidPatch) | **PATCH** /users/{uuid} | Update a user
 *Persona.UsersApi* | [**usersUuidSubscriptionsSubsnoAddressChangePost**](docs/UsersApi.md#usersUuidSubscriptionsSubsnoAddressChangePost) | **POST** /users/{uuid}/subscriptions/{subsno}/addressChange | Make a temporary address change for a subscription
 *Persona.UsersApi* | [**usersUuidSubscriptionsSubsnoPausePost**](docs/UsersApi.md#usersUuidSubscriptionsSubsnoPausePost) | **POST** /users/{uuid}/subscriptions/{subsno}/pause | Pause users subscription
+*Persona.UsersApi* | [**usersUuidSubscriptionsSubsnoReclamationPost**](docs/UsersApi.md#usersUuidSubscriptionsSubsnoReclamationPost) | **POST** /users/{uuid}/subscriptions/{subsno}/reclamation | Create a new delivery reclamation for a subscription
 
 
 ## Documentation for Models
@@ -135,6 +136,7 @@ Class | Method | HTTP request | Description
  - [Persona.Campaign](docs/Campaign.md)
  - [Persona.CodeForTokenData](docs/CodeForTokenData.md)
  - [Persona.DeliveryAddress](docs/DeliveryAddress.md)
+ - [Persona.DeliveryReclamation](docs/DeliveryReclamation.md)
  - [Persona.DescriptionFrequency](docs/DescriptionFrequency.md)
  - [Persona.ForgotPasswordData](docs/ForgotPasswordData.md)
  - [Persona.ForgotPasswordResponse](docs/ForgotPasswordResponse.md)
@@ -160,6 +162,7 @@ Class | Method | HTTP request | Description
  - [Persona.LoginDataSoMe](docs/LoginDataSoMe.md)
  - [Persona.LoginResponse](docs/LoginResponse.md)
  - [Persona.ModelPackage](docs/ModelPackage.md)
+ - [Persona.NewDeliveryReclamation](docs/NewDeliveryReclamation.md)
  - [Persona.NewUser](docs/NewUser.md)
  - [Persona.PackageDescription](docs/PackageDescription.md)
  - [Persona.PackageOffer](docs/PackageOffer.md)
