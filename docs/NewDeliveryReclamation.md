@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **publicationDate** | **Date** |  | 
-**claim** | **String** |  | 
+**claim** | [**DeliveryReclamationClaim**](DeliveryReclamationClaim.md) |  | 
 
 

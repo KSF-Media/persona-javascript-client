@@ -139,6 +139,7 @@ Class | Method | HTTP request | Description
  - [Persona.CodeForTokenData](docs/CodeForTokenData.md)
  - [Persona.DeliveryAddress](docs/DeliveryAddress.md)
  - [Persona.DeliveryReclamation](docs/DeliveryReclamation.md)
+ - [Persona.DeliveryReclamationClaim](docs/DeliveryReclamationClaim.md)
  - [Persona.DeliveryReclamationUpdate](docs/DeliveryReclamationUpdate.md)
  - [Persona.DescriptionFrequency](docs/DescriptionFrequency.md)
  - [Persona.ForgotPasswordData](docs/ForgotPasswordData.md)
