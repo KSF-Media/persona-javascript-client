@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**usersUuidSubscriptionsSubsnoAddressChangePost**](UsersApi.md#usersUuidSubscriptionsSubsnoAddressChangePost) | **POST** /users/{uuid}/subscriptions/{subsno}/addressChange | Make a temporary address change for a subscription
 [**usersUuidSubscriptionsSubsnoPausePost**](UsersApi.md#usersUuidSubscriptionsSubsnoPausePost) | **POST** /users/{uuid}/subscriptions/{subsno}/pause | Pause users subscription
 [**usersUuidSubscriptionsSubsnoReclamationPost**](UsersApi.md#usersUuidSubscriptionsSubsnoReclamationPost) | **POST** /users/{uuid}/subscriptions/{subsno}/reclamation | Create a new delivery reclamation for a subscription
+[**usersUuidSubscriptionsSubsnoReclamationReclaimnoGet**](UsersApi.md#usersUuidSubscriptionsSubsnoReclamationReclaimnoGet) | **GET** /users/{uuid}/subscriptions/{subsno}/reclamation/{reclaimno} | Get a delivery reclamation
 
 
 
@@ -480,5 +481,58 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8
+
+
+## usersUuidSubscriptionsSubsnoReclamationReclaimnoGet
+
+> DeliveryReclamation usersUuidSubscriptionsSubsnoReclamationReclaimnoGet(uuid, subsno, reclaimno, opts)
+
+Get a delivery reclamation
+
+### Example
+
+```javascript
+var Persona = require('persona');
+
+var apiInstance = new Persona.UsersApi();
+var uuid = null; // String | 
+var subsno = 56; // Number | 
+var reclaimno = 56; // Number | 
+var opts = {
+  'authorization': "authorization_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.usersUuidSubscriptionsSubsnoReclamationReclaimnoGet(uuid, subsno, reclaimno, opts, callback);
+```
+
+### Parameters
+
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**String**](.md)|  | 
+ **subsno** | **Number**|  | 
+ **reclaimno** | **Number**|  | 
+ **authorization** | **String**|  | [optional] 
+
+### Return type
+
+[**DeliveryReclamation**](DeliveryReclamation.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json;charset=utf-8
 

@@ -529,6 +529,66 @@
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
+
+    /**
+     * Callback function to receive the result of the usersUuidSubscriptionsSubsnoReclamationReclaimnoGet operation.
+     * @callback module:api/UsersApi~usersUuidSubscriptionsSubsnoReclamationReclaimnoGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DeliveryReclamation} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a delivery reclamation
+     * @param {String} uuid 
+     * @param {Number} subsno 
+     * @param {Number} reclaimno 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
+     * @param {module:api/UsersApi~usersUuidSubscriptionsSubsnoReclamationReclaimnoGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DeliveryReclamation}
+     */
+    this.usersUuidSubscriptionsSubsnoReclamationReclaimnoGet = function(uuid, subsno, reclaimno, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'uuid' is set
+      if (uuid === undefined || uuid === null) {
+        throw new Error("Missing the required parameter 'uuid' when calling usersUuidSubscriptionsSubsnoReclamationReclaimnoGet");
+      }
+      // verify the required parameter 'subsno' is set
+      if (subsno === undefined || subsno === null) {
+        throw new Error("Missing the required parameter 'subsno' when calling usersUuidSubscriptionsSubsnoReclamationReclaimnoGet");
+      }
+      // verify the required parameter 'reclaimno' is set
+      if (reclaimno === undefined || reclaimno === null) {
+        throw new Error("Missing the required parameter 'reclaimno' when calling usersUuidSubscriptionsSubsnoReclamationReclaimnoGet");
+      }
+
+      var pathParams = {
+        'uuid': uuid,
+        'subsno': subsno,
+        'reclaimno': reclaimno
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'Authorization': opts['authorization']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = DeliveryReclamation;
+      return this.apiClient.callApi(
+        '/users/{uuid}/subscriptions/{subsno}/reclamation/{reclaimno}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
   };
 
   return exports;

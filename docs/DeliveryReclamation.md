@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_number** | **String** |  | 
+**_number** | **Number** |  | 
 **customerNumber** | **Number** |  | 
 **subscriptionNumber** | **Number** |  | 
 **_date** | **Date** |  | 

@@ -140,6 +140,16 @@
         done();
       });
     });
+    describe('usersUuidSubscriptionsSubsnoReclamationReclaimnoGet', function() {
+      it('should call usersUuidSubscriptionsSubsnoReclamationReclaimnoGet successfully', function(done) {
+        //uncomment below and update the code to test usersUuidSubscriptionsSubsnoReclamationReclaimnoGet
+        //instance.usersUuidSubscriptionsSubsnoReclamationReclaimnoGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

@@ -42,7 +42,7 @@
    * Constructs a new <code>DeliveryReclamation</code>.
    * @alias module:model/DeliveryReclamation
    * @class
-   * @param _number {String} 
+   * @param _number {Number} 
    * @param customerNumber {Number} 
    * @param subscriptionNumber {Number} 
    * @param _date {Date} 
@@ -73,7 +73,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('number')) {
-        obj['number'] = ApiClient.convertToType(data['number'], 'String');
+        obj['number'] = ApiClient.convertToType(data['number'], 'Number');
       }
       if (data.hasOwnProperty('customerNumber')) {
         obj['customerNumber'] = ApiClient.convertToType(data['customerNumber'], 'Number');
@@ -98,7 +98,7 @@
   }
 
   /**
-   * @member {String} number
+   * @member {Number} number
    */
   exports.prototype['number'] = undefined;
   /**
