@@ -140,10 +140,20 @@
         done();
       });
     });
-    describe('usersUuidSubscriptionsSubsnoReclamationReclaimnoGet', function() {
-      it('should call usersUuidSubscriptionsSubsnoReclamationReclaimnoGet successfully', function(done) {
-        //uncomment below and update the code to test usersUuidSubscriptionsSubsnoReclamationReclaimnoGet
-        //instance.usersUuidSubscriptionsSubsnoReclamationReclaimnoGet(function(error) {
+    describe('usersUuidSubscriptionsSubsnoReclamationsReclaimnoGet', function() {
+      it('should call usersUuidSubscriptionsSubsnoReclamationsReclaimnoGet successfully', function(done) {
+        //uncomment below and update the code to test usersUuidSubscriptionsSubsnoReclamationsReclaimnoGet
+        //instance.usersUuidSubscriptionsSubsnoReclamationsReclaimnoGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('usersUuidSubscriptionsSubsnoReclamationsReclaimnoPatch', function() {
+      it('should call usersUuidSubscriptionsSubsnoReclamationsReclaimnoPatch successfully', function(done) {
+        //uncomment below and update the code to test usersUuidSubscriptionsSubsnoReclamationsReclaimnoPatch
+        //instance.usersUuidSubscriptionsSubsnoReclamationsReclaimnoPatch(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
