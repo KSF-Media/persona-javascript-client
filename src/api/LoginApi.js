@@ -190,6 +190,7 @@
      * @param {String} uuid 
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization 
+     * @param {Boolean} opts.everywhere  (default to false)
      * @param {module:api/LoginApi~loginUuidDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<Object>}
      */
@@ -205,6 +206,7 @@
         'uuid': uuid
       };
       var queryParams = {
+        'everywhere': opts['everywhere'],
       };
       var collectionQueryParams = {
       };

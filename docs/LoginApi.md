@@ -162,7 +162,8 @@ var Persona = require('persona');
 var apiInstance = new Persona.LoginApi();
 var uuid = null; // String | 
 var opts = {
-  'authorization': "authorization_example" // String | 
+  'authorization': "authorization_example", // String | 
+  'everywhere': false // Boolean | 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -182,6 +183,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**String**](.md)|  | 
  **authorization** | **String**|  | [optional] 
+ **everywhere** | **Boolean**|  | [optional] [default to false]
 
 ### Return type
 
