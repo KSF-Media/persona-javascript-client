@@ -5,6 +5,7 @@ All URIs are relative to *http://http:/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**entitlementsAllowPost**](EntitlementsApi.md#entitlementsAllowPost) | **POST** /entitlements/allow | 
+[**entitlementsAllowUuidPost**](EntitlementsApi.md#entitlementsAllowUuidPost) | **POST** /entitlements/allow/{uuid} | Grant product access to a customer
 [**entitlementsGet**](EntitlementsApi.md#entitlementsGet) | **GET** /entitlements | List all entitlements
 
 
@@ -21,7 +22,7 @@ Method | HTTP request | Description
 var Persona = require('persona');
 
 var apiInstance = new Persona.EntitlementsApi();
-var body = new Persona.GlobalEntitlementAccess(); // GlobalEntitlementAccess | 
+var body = new Persona.EntitlementAccess(); // EntitlementAccess | 
 var opts = {
   'authorization': "authorization_example" // String | 
 };
@@ -41,7 +42,58 @@ apiInstance.entitlementsAllowPost(body, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**GlobalEntitlementAccess**](GlobalEntitlementAccess.md)|  | 
+ **body** | [**EntitlementAccess**](EntitlementAccess.md)|  | 
+ **authorization** | **String**|  | [optional] 
+
+### Return type
+
+**[Object]**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8
+
+
+## entitlementsAllowUuidPost
+
+> [Object] entitlementsAllowUuidPost(uuid, body, opts)
+
+Grant product access to a customer
+
+### Example
+
+```javascript
+var Persona = require('persona');
+
+var apiInstance = new Persona.EntitlementsApi();
+var uuid = null; // String | 
+var body = new Persona.EntitlementAccess(); // EntitlementAccess | 
+var opts = {
+  'authorization': "authorization_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.entitlementsAllowUuidPost(uuid, body, opts, callback);
+```
+
+### Parameters
+
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**String**](.md)|  | 
+ **body** | [**EntitlementAccess**](EntitlementAccess.md)|  | 
  **authorization** | **String**|  | [optional] 
 
 ### Return type

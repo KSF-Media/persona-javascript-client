@@ -25,7 +25,7 @@
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.GlobalEntitlementAccess = factory(root.Persona.ApiClient);
+    root.Persona.EntitlementAccess = factory(root.Persona.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -33,14 +33,14 @@
 
 
   /**
-   * The GlobalEntitlementAccess model module.
-   * @module model/GlobalEntitlementAccess
+   * The EntitlementAccess model module.
+   * @module model/EntitlementAccess
    * @version 1.3.0
    */
 
   /**
-   * Constructs a new <code>GlobalEntitlementAccess</code>.
-   * @alias module:model/GlobalEntitlementAccess
+   * Constructs a new <code>EntitlementAccess</code>.
+   * @alias module:model/EntitlementAccess
    * @class
    * @param userUuid {String} 
    * @param startAt {String} 
@@ -55,11 +55,11 @@
   };
 
   /**
-   * Constructs a <code>GlobalEntitlementAccess</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>EntitlementAccess</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GlobalEntitlementAccess} obj Optional instance to populate.
-   * @return {module:model/GlobalEntitlementAccess} The populated <code>GlobalEntitlementAccess</code> instance.
+   * @param {module:model/EntitlementAccess} obj Optional instance to populate.
+   * @return {module:model/EntitlementAccess} The populated <code>EntitlementAccess</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {

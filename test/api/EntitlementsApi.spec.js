@@ -60,6 +60,16 @@
         done();
       });
     });
+    describe('entitlementsAllowUuidPost', function() {
+      it('should call entitlementsAllowUuidPost successfully', function(done) {
+        //uncomment below and update the code to test entitlementsAllowUuidPost
+        //instance.entitlementsAllowUuidPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('entitlementsGet', function() {
       it('should call entitlementsGet successfully', function(done) {
         //uncomment below and update the code to test entitlementsGet

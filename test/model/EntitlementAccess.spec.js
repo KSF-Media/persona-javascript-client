@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.GlobalEntitlementAccess();
+    instance = new Persona.EntitlementAccess();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,28 +49,28 @@
       object[property] = value;
   }
 
-  describe('GlobalEntitlementAccess', function() {
-    it('should create an instance of GlobalEntitlementAccess', function() {
-      // uncomment below and update the code to test GlobalEntitlementAccess
-      //var instance = new Persona.GlobalEntitlementAccess();
-      //expect(instance).to.be.a(Persona.GlobalEntitlementAccess);
+  describe('EntitlementAccess', function() {
+    it('should create an instance of EntitlementAccess', function() {
+      // uncomment below and update the code to test EntitlementAccess
+      //var instance = new Persona.EntitlementAccess();
+      //expect(instance).to.be.a(Persona.EntitlementAccess);
     });
 
     it('should have the property userUuid (base name: "userUuid")', function() {
       // uncomment below and update the code to test the property userUuid
-      //var instance = new Persona.GlobalEntitlementAccess();
+      //var instance = new Persona.EntitlementAccess();
       //expect(instance).to.be();
     });
 
     it('should have the property startAt (base name: "startAt")', function() {
       // uncomment below and update the code to test the property startAt
-      //var instance = new Persona.GlobalEntitlementAccess();
+      //var instance = new Persona.EntitlementAccess();
       //expect(instance).to.be();
     });
 
     it('should have the property endAt (base name: "endAt")', function() {
       // uncomment below and update the code to test the property endAt
-      //var instance = new Persona.GlobalEntitlementAccess();
+      //var instance = new Persona.EntitlementAccess();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# Persona.GlobalEntitlementAccess
+# Persona.EntitlementAccess
 
 ## Properties
 

@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GlobalEntitlementAccess', 'model/InlineResponse400', 'model/InlineResponse415'], factory);
+    define(['ApiClient', 'model/EntitlementAccess', 'model/InlineResponse400', 'model/InlineResponse415'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/GlobalEntitlementAccess'), require('../model/InlineResponse400'), require('../model/InlineResponse415'));
+    module.exports = factory(require('../ApiClient'), require('../model/EntitlementAccess'), require('../model/InlineResponse400'), require('../model/InlineResponse415'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.EntitlementsApi = factory(root.Persona.ApiClient, root.Persona.GlobalEntitlementAccess, root.Persona.InlineResponse400, root.Persona.InlineResponse415);
+    root.Persona.EntitlementsApi = factory(root.Persona.ApiClient, root.Persona.EntitlementAccess, root.Persona.InlineResponse400, root.Persona.InlineResponse415);
   }
-}(this, function(ApiClient, GlobalEntitlementAccess, InlineResponse400, InlineResponse415) {
+}(this, function(ApiClient, EntitlementAccess, InlineResponse400, InlineResponse415) {
   'use strict';
 
   /**
@@ -56,7 +56,7 @@
      */
 
     /**
-     * @param {module:model/GlobalEntitlementAccess} body 
+     * @param {module:model/EntitlementAccess} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization 
      * @param {module:api/EntitlementsApi~entitlementsAllowPostCallback} callback The callback function, accepting three arguments: error, data, response
@@ -88,6 +88,59 @@
       var returnType = [Object];
       return this.apiClient.callApi(
         '/entitlements/allow', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the entitlementsAllowUuidPost operation.
+     * @callback module:api/EntitlementsApi~entitlementsAllowUuidPostCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Grant product access to a customer
+     * @param {String} uuid 
+     * @param {module:model/EntitlementAccess} body 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
+     * @param {module:api/EntitlementsApi~entitlementsAllowUuidPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<Object>}
+     */
+    this.entitlementsAllowUuidPost = function(uuid, body, opts, callback) {
+      opts = opts || {};
+      var postBody = body;
+      // verify the required parameter 'uuid' is set
+      if (uuid === undefined || uuid === null) {
+        throw new Error("Missing the required parameter 'uuid' when calling entitlementsAllowUuidPost");
+      }
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling entitlementsAllowUuidPost");
+      }
+
+      var pathParams = {
+        'uuid': uuid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'Authorization': opts['authorization']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json;charset=utf-8'];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = [Object];
+      return this.apiClient.callApi(
+        '/entitlements/allow/{uuid}', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

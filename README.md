@@ -113,6 +113,7 @@ Class | Method | HTTP request | Description
 *Persona.AccountApi* | [**accountForgotPassPost**](docs/AccountApi.md#accountForgotPassPost) | **POST** /account/forgotPass | Forgot Password
 *Persona.AccountApi* | [**accountResetForgottenPasswordPost**](docs/AccountApi.md#accountResetForgottenPasswordPost) | **POST** /account/resetForgottenPassword | Reset a forgotten password with a token
 *Persona.EntitlementsApi* | [**entitlementsAllowPost**](docs/EntitlementsApi.md#entitlementsAllowPost) | **POST** /entitlements/allow | 
+*Persona.EntitlementsApi* | [**entitlementsAllowUuidPost**](docs/EntitlementsApi.md#entitlementsAllowUuidPost) | **POST** /entitlements/allow/{uuid} | Grant product access to a customer
 *Persona.EntitlementsApi* | [**entitlementsGet**](docs/EntitlementsApi.md#entitlementsGet) | **GET** /entitlements | List all entitlements
 *Persona.LoginApi* | [**loginPost**](docs/LoginApi.md#loginPost) | **POST** /login | Login with email and password
 *Persona.LoginApi* | [**loginSomePost**](docs/LoginApi.md#loginSomePost) | **POST** /login/some | Login with social media
@@ -143,10 +144,10 @@ Class | Method | HTTP request | Description
  - [Persona.DeliveryReclamationClaim](docs/DeliveryReclamationClaim.md)
  - [Persona.DeliveryReclamationUpdate](docs/DeliveryReclamationUpdate.md)
  - [Persona.DescriptionFrequency](docs/DescriptionFrequency.md)
+ - [Persona.EntitlementAccess](docs/EntitlementAccess.md)
  - [Persona.ForgotPasswordData](docs/ForgotPasswordData.md)
  - [Persona.ForgotPasswordResponse](docs/ForgotPasswordResponse.md)
  - [Persona.GdprConsent](docs/GdprConsent.md)
- - [Persona.GlobalEntitlementAccess](docs/GlobalEntitlementAccess.md)
  - [Persona.InlineResponse400](docs/InlineResponse400.md)
  - [Persona.InlineResponse400InvalidRequestBody](docs/InlineResponse400InvalidRequestBody.md)
  - [Persona.InlineResponse403](docs/InlineResponse403.md)
