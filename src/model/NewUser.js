@@ -42,16 +42,16 @@
    * Constructs a new <code>NewUser</code>.
    * @alias module:model/NewUser
    * @class
-   * @param newUserEmailAddress {String} 
-   * @param newUserPassword {String} 
-   * @param newUserConfirmPassword {String} 
+   * @param emailAddress {String} 
+   * @param password {String} 
+   * @param confirmPassword {String} 
    */
-  var exports = function(newUserEmailAddress, newUserPassword, newUserConfirmPassword) {
+  var exports = function(emailAddress, password, confirmPassword) {
     var _this = this;
 
-    _this['newUserEmailAddress'] = newUserEmailAddress;
-    _this['newUserPassword'] = newUserPassword;
-    _this['newUserConfirmPassword'] = newUserConfirmPassword;
+    _this['emailAddress'] = emailAddress;
+    _this['password'] = password;
+    _this['confirmPassword'] = confirmPassword;
   };
 
   /**
@@ -64,80 +64,80 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('newUserFirstName')) {
-        obj['newUserFirstName'] = ApiClient.convertToType(data['newUserFirstName'], 'String');
+      if (data.hasOwnProperty('firstName')) {
+        obj['firstName'] = ApiClient.convertToType(data['firstName'], 'String');
       }
-      if (data.hasOwnProperty('newUserLastName')) {
-        obj['newUserLastName'] = ApiClient.convertToType(data['newUserLastName'], 'String');
+      if (data.hasOwnProperty('lastName')) {
+        obj['lastName'] = ApiClient.convertToType(data['lastName'], 'String');
       }
-      if (data.hasOwnProperty('newUserEmailAddress')) {
-        obj['newUserEmailAddress'] = ApiClient.convertToType(data['newUserEmailAddress'], 'String');
+      if (data.hasOwnProperty('emailAddress')) {
+        obj['emailAddress'] = ApiClient.convertToType(data['emailAddress'], 'String');
       }
-      if (data.hasOwnProperty('newUserPassword')) {
-        obj['newUserPassword'] = ApiClient.convertToType(data['newUserPassword'], 'String');
+      if (data.hasOwnProperty('password')) {
+        obj['password'] = ApiClient.convertToType(data['password'], 'String');
       }
-      if (data.hasOwnProperty('newUserConfirmPassword')) {
-        obj['newUserConfirmPassword'] = ApiClient.convertToType(data['newUserConfirmPassword'], 'String');
+      if (data.hasOwnProperty('confirmPassword')) {
+        obj['confirmPassword'] = ApiClient.convertToType(data['confirmPassword'], 'String');
       }
-      if (data.hasOwnProperty('newUserStreetAddress')) {
-        obj['newUserStreetAddress'] = ApiClient.convertToType(data['newUserStreetAddress'], 'String');
+      if (data.hasOwnProperty('streetAddress')) {
+        obj['streetAddress'] = ApiClient.convertToType(data['streetAddress'], 'String');
       }
-      if (data.hasOwnProperty('newUserZipCode')) {
-        obj['newUserZipCode'] = ApiClient.convertToType(data['newUserZipCode'], 'String');
+      if (data.hasOwnProperty('zipCode')) {
+        obj['zipCode'] = ApiClient.convertToType(data['zipCode'], 'String');
       }
-      if (data.hasOwnProperty('newUserCity')) {
-        obj['newUserCity'] = ApiClient.convertToType(data['newUserCity'], 'String');
+      if (data.hasOwnProperty('city')) {
+        obj['city'] = ApiClient.convertToType(data['city'], 'String');
       }
-      if (data.hasOwnProperty('newUserCountry')) {
-        obj['newUserCountry'] = ApiClient.convertToType(data['newUserCountry'], 'String');
+      if (data.hasOwnProperty('country')) {
+        obj['country'] = ApiClient.convertToType(data['country'], 'String');
       }
-      if (data.hasOwnProperty('newUserPhone')) {
-        obj['newUserPhone'] = ApiClient.convertToType(data['newUserPhone'], 'String');
+      if (data.hasOwnProperty('phone')) {
+        obj['phone'] = ApiClient.convertToType(data['phone'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} newUserFirstName
+   * @member {String} firstName
    */
-  exports.prototype['newUserFirstName'] = undefined;
+  exports.prototype['firstName'] = undefined;
   /**
-   * @member {String} newUserLastName
+   * @member {String} lastName
    */
-  exports.prototype['newUserLastName'] = undefined;
+  exports.prototype['lastName'] = undefined;
   /**
-   * @member {String} newUserEmailAddress
+   * @member {String} emailAddress
    */
-  exports.prototype['newUserEmailAddress'] = undefined;
+  exports.prototype['emailAddress'] = undefined;
   /**
-   * @member {String} newUserPassword
+   * @member {String} password
    */
-  exports.prototype['newUserPassword'] = undefined;
+  exports.prototype['password'] = undefined;
   /**
-   * @member {String} newUserConfirmPassword
+   * @member {String} confirmPassword
    */
-  exports.prototype['newUserConfirmPassword'] = undefined;
+  exports.prototype['confirmPassword'] = undefined;
   /**
-   * @member {String} newUserStreetAddress
+   * @member {String} streetAddress
    */
-  exports.prototype['newUserStreetAddress'] = undefined;
+  exports.prototype['streetAddress'] = undefined;
   /**
-   * @member {String} newUserZipCode
+   * @member {String} zipCode
    */
-  exports.prototype['newUserZipCode'] = undefined;
+  exports.prototype['zipCode'] = undefined;
   /**
-   * @member {String} newUserCity
+   * @member {String} city
    */
-  exports.prototype['newUserCity'] = undefined;
+  exports.prototype['city'] = undefined;
   /**
-   * @member {String} newUserCountry
+   * @member {String} country
    */
-  exports.prototype['newUserCountry'] = undefined;
+  exports.prototype['country'] = undefined;
   /**
-   * @member {String} newUserPhone
+   * @member {String} phone
    */
-  exports.prototype['newUserPhone'] = undefined;
+  exports.prototype['phone'] = undefined;
 
 
 

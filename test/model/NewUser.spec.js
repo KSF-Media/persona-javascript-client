@@ -56,62 +56,62 @@
       //expect(instance).to.be.a(Persona.NewUser);
     });
 
-    it('should have the property newUserFirstName (base name: "newUserFirstName")', function() {
-      // uncomment below and update the code to test the property newUserFirstName
+    it('should have the property firstName (base name: "firstName")', function() {
+      // uncomment below and update the code to test the property firstName
       //var instance = new Persona.NewUser();
       //expect(instance).to.be();
     });
 
-    it('should have the property newUserLastName (base name: "newUserLastName")', function() {
-      // uncomment below and update the code to test the property newUserLastName
+    it('should have the property lastName (base name: "lastName")', function() {
+      // uncomment below and update the code to test the property lastName
       //var instance = new Persona.NewUser();
       //expect(instance).to.be();
     });
 
-    it('should have the property newUserEmailAddress (base name: "newUserEmailAddress")', function() {
-      // uncomment below and update the code to test the property newUserEmailAddress
+    it('should have the property emailAddress (base name: "emailAddress")', function() {
+      // uncomment below and update the code to test the property emailAddress
       //var instance = new Persona.NewUser();
       //expect(instance).to.be();
     });
 
-    it('should have the property newUserPassword (base name: "newUserPassword")', function() {
-      // uncomment below and update the code to test the property newUserPassword
+    it('should have the property password (base name: "password")', function() {
+      // uncomment below and update the code to test the property password
       //var instance = new Persona.NewUser();
       //expect(instance).to.be();
     });
 
-    it('should have the property newUserConfirmPassword (base name: "newUserConfirmPassword")', function() {
-      // uncomment below and update the code to test the property newUserConfirmPassword
+    it('should have the property confirmPassword (base name: "confirmPassword")', function() {
+      // uncomment below and update the code to test the property confirmPassword
       //var instance = new Persona.NewUser();
       //expect(instance).to.be();
     });
 
-    it('should have the property newUserStreetAddress (base name: "newUserStreetAddress")', function() {
-      // uncomment below and update the code to test the property newUserStreetAddress
+    it('should have the property streetAddress (base name: "streetAddress")', function() {
+      // uncomment below and update the code to test the property streetAddress
       //var instance = new Persona.NewUser();
       //expect(instance).to.be();
     });
 
-    it('should have the property newUserZipCode (base name: "newUserZipCode")', function() {
-      // uncomment below and update the code to test the property newUserZipCode
+    it('should have the property zipCode (base name: "zipCode")', function() {
+      // uncomment below and update the code to test the property zipCode
       //var instance = new Persona.NewUser();
       //expect(instance).to.be();
     });
 
-    it('should have the property newUserCity (base name: "newUserCity")', function() {
-      // uncomment below and update the code to test the property newUserCity
+    it('should have the property city (base name: "city")', function() {
+      // uncomment below and update the code to test the property city
       //var instance = new Persona.NewUser();
       //expect(instance).to.be();
     });
 
-    it('should have the property newUserCountry (base name: "newUserCountry")', function() {
-      // uncomment below and update the code to test the property newUserCountry
+    it('should have the property country (base name: "country")', function() {
+      // uncomment below and update the code to test the property country
       //var instance = new Persona.NewUser();
       //expect(instance).to.be();
     });
 
-    it('should have the property newUserPhone (base name: "newUserPhone")', function() {
-      // uncomment below and update the code to test the property newUserPhone
+    it('should have the property phone (base name: "phone")', function() {
+      // uncomment below and update the code to test the property phone
       //var instance = new Persona.NewUser();
       //expect(instance).to.be();
     });
