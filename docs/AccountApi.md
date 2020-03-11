@@ -57,7 +57,7 @@ No authorization required
 
 ## accountForgotPassPost
 
-> ForgotPasswordResponse accountForgotPassPost(body)
+> [Object] accountForgotPassPost(body)
 
 Forgot Password
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ForgotPasswordResponse**](ForgotPasswordResponse.md)
+**[Object]**
 
 ### Authorization
 
@@ -102,7 +102,7 @@ No authorization required
 
 ## accountResetForgottenPasswordPost
 
-> ForgotPasswordResponse accountResetForgottenPasswordPost(body)
+> [Object] accountResetForgottenPasswordPost(body)
 
 Reset a forgotten password with a token
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ForgotPasswordResponse**](ForgotPasswordResponse.md)
+**[Object]**
 
 ### Authorization
 

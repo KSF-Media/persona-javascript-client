@@ -125,6 +125,7 @@ Class | Method | HTTP request | Description
 *Persona.UsersApi* | [**usersUuidGdprPut**](docs/UsersApi.md#usersUuidGdprPut) | **PUT** /users/{uuid}/gdpr | Updates the GDPR consent settings for a given user.
 *Persona.UsersApi* | [**usersUuidGet**](docs/UsersApi.md#usersUuidGet) | **GET** /users/{uuid} | Get user by UUID.
 *Persona.UsersApi* | [**usersUuidLegalPut**](docs/UsersApi.md#usersUuidLegalPut) | **PUT** /users/{uuid}/legal | Updates the legal consent settings for a given user.
+*Persona.UsersApi* | [**usersUuidPasswordPut**](docs/UsersApi.md#usersUuidPasswordPut) | **PUT** /users/{uuid}/password | Set / Change user password
 *Persona.UsersApi* | [**usersUuidPatch**](docs/UsersApi.md#usersUuidPatch) | **PATCH** /users/{uuid} | Update a user
 *Persona.UsersApi* | [**usersUuidSubscriptionsSubsnoAddressChangePost**](docs/UsersApi.md#usersUuidSubscriptionsSubsnoAddressChangePost) | **POST** /users/{uuid}/subscriptions/{subsno}/addressChange | Make a temporary address change for a subscription
 *Persona.UsersApi* | [**usersUuidSubscriptionsSubsnoPausePost**](docs/UsersApi.md#usersUuidSubscriptionsSubsnoPausePost) | **POST** /users/{uuid}/subscriptions/{subsno}/pause | Pause users subscription
@@ -146,7 +147,6 @@ Class | Method | HTTP request | Description
  - [Persona.DescriptionFrequency](docs/DescriptionFrequency.md)
  - [Persona.EntitlementAccess](docs/EntitlementAccess.md)
  - [Persona.ForgotPasswordData](docs/ForgotPasswordData.md)
- - [Persona.ForgotPasswordResponse](docs/ForgotPasswordResponse.md)
  - [Persona.GdprConsent](docs/GdprConsent.md)
  - [Persona.InlineResponse400](docs/InlineResponse400.md)
  - [Persona.InlineResponse400InvalidRequestBody](docs/InlineResponse400InvalidRequestBody.md)
@@ -186,6 +186,7 @@ Class | Method | HTTP request | Description
  - [Persona.User](docs/User.md)
  - [Persona.UserUpdate](docs/UserUpdate.md)
  - [Persona.UserUpdateAddress](docs/UserUpdateAddress.md)
+ - [Persona.UserUpdatePassword](docs/UserUpdatePassword.md)
 
 
 ## Documentation for Authorization

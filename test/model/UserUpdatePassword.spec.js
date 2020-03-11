@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.ForgotPasswordResponse();
+    instance = new Persona.UserUpdatePassword();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,16 +49,22 @@
       object[property] = value;
   }
 
-  describe('ForgotPasswordResponse', function() {
-    it('should create an instance of ForgotPasswordResponse', function() {
-      // uncomment below and update the code to test ForgotPasswordResponse
-      //var instance = new Persona.ForgotPasswordResponse();
-      //expect(instance).to.be.a(Persona.ForgotPasswordResponse);
+  describe('UserUpdatePassword', function() {
+    it('should create an instance of UserUpdatePassword', function() {
+      // uncomment below and update the code to test UserUpdatePassword
+      //var instance = new Persona.UserUpdatePassword();
+      //expect(instance).to.be.a(Persona.UserUpdatePassword);
     });
 
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
-      //var instance = new Persona.ForgotPasswordResponse();
+    it('should have the property password (base name: "password")', function() {
+      // uncomment below and update the code to test the property password
+      //var instance = new Persona.UserUpdatePassword();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property confirmPassword (base name: "confirmPassword")', function() {
+      // uncomment below and update the code to test the property confirmPassword
+      //var instance = new Persona.UserUpdatePassword();
       //expect(instance).to.be();
     });
 

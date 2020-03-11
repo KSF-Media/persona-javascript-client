@@ -1,9 +1,10 @@
-# Persona.ForgotPasswordResponse
+# Persona.UserUpdatePassword
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | **String** |  | 
+**password** | **String** |  | 
+**confirmPassword** | **String** |  | 
 
 

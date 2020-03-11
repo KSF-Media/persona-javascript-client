@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**usersUuidGdprPut**](UsersApi.md#usersUuidGdprPut) | **PUT** /users/{uuid}/gdpr | Updates the GDPR consent settings for a given user.
 [**usersUuidGet**](UsersApi.md#usersUuidGet) | **GET** /users/{uuid} | Get user by UUID.
 [**usersUuidLegalPut**](UsersApi.md#usersUuidLegalPut) | **PUT** /users/{uuid}/legal | Updates the legal consent settings for a given user.
+[**usersUuidPasswordPut**](UsersApi.md#usersUuidPasswordPut) | **PUT** /users/{uuid}/password | Set / Change user password
 [**usersUuidPatch**](UsersApi.md#usersUuidPatch) | **PATCH** /users/{uuid} | Update a user
 [**usersUuidSubscriptionsSubsnoAddressChangePost**](UsersApi.md#usersUuidSubscriptionsSubsnoAddressChangePost) | **POST** /users/{uuid}/subscriptions/{subsno}/addressChange | Make a temporary address change for a subscription
 [**usersUuidSubscriptionsSubsnoPausePost**](UsersApi.md#usersUuidSubscriptionsSubsnoPausePost) | **POST** /users/{uuid}/subscriptions/{subsno}/pause | Pause users subscription
@@ -308,6 +309,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**User**](User.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8
+
+
+## usersUuidPasswordPut
+
+> [Object] usersUuidPasswordPut(uuid, body, opts)
+
+Set / Change user password
+
+Authorization header expects the following format ‘OAuth {token}’
+
+### Example
+
+```javascript
+var Persona = require('persona');
+
+var apiInstance = new Persona.UsersApi();
+var uuid = null; // String | 
+var body = new Persona.UserUpdatePassword(); // UserUpdatePassword | 
+var opts = {
+  'authorization': "authorization_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.usersUuidPasswordPut(uuid, body, opts, callback);
+```
+
+### Parameters
+
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**String**](.md)|  | 
+ **body** | [**UserUpdatePassword**](UserUpdatePassword.md)|  | 
+ **authorization** | **String**|  | [optional] 
+
+### Return type
+
+**[Object]**
 
 ### Authorization
 

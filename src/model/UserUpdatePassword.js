@@ -25,7 +25,7 @@
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.ForgotPasswordResponse = factory(root.Persona.ApiClient);
+    root.Persona.UserUpdatePassword = factory(root.Persona.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -33,44 +33,53 @@
 
 
   /**
-   * The ForgotPasswordResponse model module.
-   * @module model/ForgotPasswordResponse
+   * The UserUpdatePassword model module.
+   * @module model/UserUpdatePassword
    * @version 1.3.0
    */
 
   /**
-   * Constructs a new <code>ForgotPasswordResponse</code>.
-   * @alias module:model/ForgotPasswordResponse
+   * Constructs a new <code>UserUpdatePassword</code>.
+   * @alias module:model/UserUpdatePassword
    * @class
-   * @param status {String} 
+   * @param password {String} 
+   * @param confirmPassword {String} 
    */
-  var exports = function(status) {
+  var exports = function(password, confirmPassword) {
     var _this = this;
 
-    _this['status'] = status;
+    _this['password'] = password;
+    _this['confirmPassword'] = confirmPassword;
   };
 
   /**
-   * Constructs a <code>ForgotPasswordResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>UserUpdatePassword</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ForgotPasswordResponse} obj Optional instance to populate.
-   * @return {module:model/ForgotPasswordResponse} The populated <code>ForgotPasswordResponse</code> instance.
+   * @param {module:model/UserUpdatePassword} obj Optional instance to populate.
+   * @return {module:model/UserUpdatePassword} The populated <code>UserUpdatePassword</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('status')) {
-        obj['status'] = ApiClient.convertToType(data['status'], 'String');
+      if (data.hasOwnProperty('password')) {
+        obj['password'] = ApiClient.convertToType(data['password'], 'String');
+      }
+      if (data.hasOwnProperty('confirmPassword')) {
+        obj['confirmPassword'] = ApiClient.convertToType(data['confirmPassword'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} status
+   * @member {String} password
    */
-  exports.prototype['status'] = undefined;
+  exports.prototype['password'] = undefined;
+  /**
+   * @member {String} confirmPassword
+   */
+  exports.prototype['confirmPassword'] = undefined;
 
 
 
