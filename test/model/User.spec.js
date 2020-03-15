@@ -116,6 +116,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property hasCompletedRegistration (base name: "hasCompletedRegistration")', function() {
+      // uncomment below and update the code to test the property hasCompletedRegistration
+      //var instance = new Persona.User();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

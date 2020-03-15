@@ -48,8 +48,9 @@
    * @param subs {Array.<module:model/Subscription>} 
    * @param consent {Array.<module:model/GdprConsent>} 
    * @param legal {Array.<module:model/LegalConsent>} 
+   * @param hasCompletedRegistration {Boolean} 
    */
-  var exports = function(uuid, email, cusno, subs, consent, legal) {
+  var exports = function(uuid, email, cusno, subs, consent, legal, hasCompletedRegistration) {
     var _this = this;
 
     _this['uuid'] = uuid;
@@ -58,6 +59,7 @@
     _this['subs'] = subs;
     _this['consent'] = consent;
     _this['legal'] = legal;
+    _this['hasCompletedRegistration'] = hasCompletedRegistration;
   };
 
   /**
@@ -99,6 +101,9 @@
       }
       if (data.hasOwnProperty('pendingAddressChanges')) {
         obj['pendingAddressChanges'] = ApiClient.convertToType(data['pendingAddressChanges'], [PendingAddressChange]);
+      }
+      if (data.hasOwnProperty('hasCompletedRegistration')) {
+        obj['hasCompletedRegistration'] = ApiClient.convertToType(data['hasCompletedRegistration'], 'Boolean');
       }
     }
     return obj;
@@ -144,6 +149,10 @@
    * @member {Array.<module:model/PendingAddressChange>} pendingAddressChanges
    */
   exports.prototype['pendingAddressChanges'] = undefined;
+  /**
+   * @member {Boolean} hasCompletedRegistration
+   */
+  exports.prototype['hasCompletedRegistration'] = undefined;
 
 
 
