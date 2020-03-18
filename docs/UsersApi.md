@@ -322,7 +322,7 @@ No authorization required
 
 ## usersUuidPasswordPut
 
-> [Object] usersUuidPasswordPut(uuid, body, opts)
+> User usersUuidPasswordPut(uuid, body, opts)
 
 Set / Change user password
 
@@ -361,7 +361,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[Object]**
+[**User**](User.md)
 
 ### Authorization
 

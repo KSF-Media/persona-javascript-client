@@ -346,7 +346,7 @@
      * Callback function to receive the result of the usersUuidPasswordPut operation.
      * @callback module:api/UsersApi~usersUuidPasswordPutCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {module:model/User} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -358,7 +358,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization 
      * @param {module:api/UsersApi~usersUuidPasswordPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<Object>}
+     * data is of type: {@link module:model/User}
      */
     this.usersUuidPasswordPut = function(uuid, body, opts, callback) {
       opts = opts || {};
@@ -388,7 +388,7 @@
       var authNames = [];
       var contentTypes = ['application/json;charset=utf-8'];
       var accepts = ['application/json;charset=utf-8'];
-      var returnType = [Object];
+      var returnType = User;
       return this.apiClient.callApi(
         '/users/{uuid}/password', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
