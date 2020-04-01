@@ -14,5 +14,6 @@ Name | Type | Description | Notes
 **city** | **String** |  | [optional] 
 **country** | **String** |  | [optional] 
 **phone** | **String** |  | [optional] 
+**legalConsents** | [**[LegalConsent]**](LegalConsent.md) |  | 
 
 

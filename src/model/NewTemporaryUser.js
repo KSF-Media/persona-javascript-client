@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/LegalConsent'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./LegalConsent'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.NewTemporaryUser = factory(root.Persona.ApiClient);
+    root.Persona.NewTemporaryUser = factory(root.Persona.ApiClient, root.Persona.LegalConsent);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, LegalConsent) {
   'use strict';
 
 
@@ -43,11 +43,13 @@
    * @alias module:model/NewTemporaryUser
    * @class
    * @param emailAddress {String} 
+   * @param legalConsents {Array.<module:model/LegalConsent>} 
    */
-  var exports = function(emailAddress) {
+  var exports = function(emailAddress, legalConsents) {
     var _this = this;
 
     _this['emailAddress'] = emailAddress;
+    _this['legalConsents'] = legalConsents;
   };
 
   /**
@@ -63,6 +65,9 @@
       if (data.hasOwnProperty('emailAddress')) {
         obj['emailAddress'] = ApiClient.convertToType(data['emailAddress'], 'String');
       }
+      if (data.hasOwnProperty('legalConsents')) {
+        obj['legalConsents'] = ApiClient.convertToType(data['legalConsents'], [LegalConsent]);
+      }
     }
     return obj;
   }
@@ -71,6 +76,10 @@
    * @member {String} emailAddress
    */
   exports.prototype['emailAddress'] = undefined;
+  /**
+   * @member {Array.<module:model/LegalConsent>} legalConsents
+   */
+  exports.prototype['legalConsents'] = undefined;
 
 
 

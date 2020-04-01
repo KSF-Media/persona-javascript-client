@@ -116,6 +116,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property legalConsents (base name: "legalConsents")', function() {
+      // uncomment below and update the code to test the property legalConsents
+      //var instance = new Persona.NewUser();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
