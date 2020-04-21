@@ -112,6 +112,7 @@ Class | Method | HTTP request | Description
 *Persona.AccountApi* | [**accountCodeForTokenPost**](docs/AccountApi.md#accountCodeForTokenPost) | **POST** /account/codeForToken | Get a password reset token
 *Persona.AccountApi* | [**accountForgotPassPost**](docs/AccountApi.md#accountForgotPassPost) | **POST** /account/forgotPass | Forgot Password
 *Persona.AccountApi* | [**accountResetForgottenPasswordPost**](docs/AccountApi.md#accountResetForgottenPasswordPost) | **POST** /account/resetForgottenPassword | Reset a forgotten password with a token
+*Persona.AdminApi* | [**adminUuidGet**](docs/AdminApi.md#adminUuidGet) | **GET** /admin/{uuid} | Get user by admin credentials.
 *Persona.EntitlementsApi* | [**entitlementsAllowPost**](docs/EntitlementsApi.md#entitlementsAllowPost) | **POST** /entitlements/allow | 
 *Persona.EntitlementsApi* | [**entitlementsAllowUuidPost**](docs/EntitlementsApi.md#entitlementsAllowUuidPost) | **POST** /entitlements/allow/{uuid} | Grant product access to a customer
 *Persona.EntitlementsApi* | [**entitlementsGet**](docs/EntitlementsApi.md#entitlementsGet) | **GET** /entitlements | List all entitlements
