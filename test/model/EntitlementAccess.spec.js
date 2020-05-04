@@ -56,12 +56,6 @@
       //expect(instance).to.be.a(Persona.EntitlementAccess);
     });
 
-    it('should have the property userUuid (base name: "userUuid")', function() {
-      // uncomment below and update the code to test the property userUuid
-      //var instance = new Persona.EntitlementAccess();
-      //expect(instance).to.be();
-    });
-
     it('should have the property startAt (base name: "startAt")', function() {
       // uncomment below and update the code to test the property startAt
       //var instance = new Persona.EntitlementAccess();

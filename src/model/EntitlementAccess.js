@@ -42,14 +42,12 @@
    * Constructs a new <code>EntitlementAccess</code>.
    * @alias module:model/EntitlementAccess
    * @class
-   * @param userUuid {String} 
    * @param startAt {String} 
    * @param endAt {String} 
    */
-  var exports = function(userUuid, startAt, endAt) {
+  var exports = function(startAt, endAt) {
     var _this = this;
 
-    _this['userUuid'] = userUuid;
     _this['startAt'] = startAt;
     _this['endAt'] = endAt;
   };
@@ -64,9 +62,6 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('userUuid')) {
-        obj['userUuid'] = ApiClient.convertToType(data['userUuid'], 'String');
-      }
       if (data.hasOwnProperty('startAt')) {
         obj['startAt'] = ApiClient.convertToType(data['startAt'], 'String');
       }
@@ -77,10 +72,6 @@
     return obj;
   }
 
-  /**
-   * @member {String} userUuid
-   */
-  exports.prototype['userUuid'] = undefined;
   /**
    * @member {String} startAt
    */

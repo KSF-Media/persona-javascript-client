@@ -58,6 +58,7 @@
     /**
      * @param {module:model/EntitlementAccess} body 
      * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
      * @param {String} opts.authorization 
      * @param {module:api/EntitlementsApi~entitlementsAllowPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<Object>}
@@ -77,6 +78,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'AuthUser': opts['authUser'],
         'Authorization': opts['authorization']
       };
       var formParams = {
@@ -106,6 +108,7 @@
      * @param {String} uuid 
      * @param {module:model/EntitlementAccess} body 
      * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
      * @param {String} opts.authorization 
      * @param {module:api/EntitlementsApi~entitlementsAllowUuidPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<Object>}
@@ -130,6 +133,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'AuthUser': opts['authUser'],
         'Authorization': opts['authorization']
       };
       var formParams = {

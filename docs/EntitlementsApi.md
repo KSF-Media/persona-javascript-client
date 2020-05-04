@@ -24,6 +24,7 @@ var Persona = require('persona');
 var apiInstance = new Persona.EntitlementsApi();
 var body = new Persona.EntitlementAccess(); // EntitlementAccess | 
 var opts = {
+  'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
 };
 var callback = function(error, data, response) {
@@ -43,6 +44,7 @@ apiInstance.entitlementsAllowPost(body, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**EntitlementAccess**](EntitlementAccess.md)|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
 
 ### Return type
@@ -74,6 +76,7 @@ var apiInstance = new Persona.EntitlementsApi();
 var uuid = null; // String | 
 var body = new Persona.EntitlementAccess(); // EntitlementAccess | 
 var opts = {
+  'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
 };
 var callback = function(error, data, response) {
@@ -94,6 +97,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**String**](.md)|  | 
  **body** | [**EntitlementAccess**](EntitlementAccess.md)|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
 
 ### Return type
