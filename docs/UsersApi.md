@@ -16,7 +16,6 @@ Method | HTTP request | Description
 [**usersUuidSubscriptionsSubsnoPausePost**](UsersApi.md#usersUuidSubscriptionsSubsnoPausePost) | **POST** /users/{uuid}/subscriptions/{subsno}/pause | Pause users subscription
 [**usersUuidSubscriptionsSubsnoReclamationPost**](UsersApi.md#usersUuidSubscriptionsSubsnoReclamationPost) | **POST** /users/{uuid}/subscriptions/{subsno}/reclamation | Create a new delivery reclamation for a subscription
 [**usersUuidSubscriptionsSubsnoReclamationsReclaimnoGet**](UsersApi.md#usersUuidSubscriptionsSubsnoReclamationsReclaimnoGet) | **GET** /users/{uuid}/subscriptions/{subsno}/reclamations/{reclaimno} | Get a delivery reclamation
-[**usersUuidSubscriptionsSubsnoReclamationsReclaimnoPatch**](UsersApi.md#usersUuidSubscriptionsSubsnoReclamationsReclaimnoPatch) | **PATCH** /users/{uuid}/subscriptions/{subsno}/reclamations/{reclaimno} | Update a delivery reclamation
 
 
 
@@ -635,60 +634,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json;charset=utf-8
-
-
-## usersUuidSubscriptionsSubsnoReclamationsReclaimnoPatch
-
-> DeliveryReclamation usersUuidSubscriptionsSubsnoReclamationsReclaimnoPatch(uuid, subsno, reclaimno, body, opts)
-
-Update a delivery reclamation
-
-### Example
-
-```javascript
-var Persona = require('persona');
-
-var apiInstance = new Persona.UsersApi();
-var uuid = null; // String | 
-var subsno = 56; // Number | 
-var reclaimno = 56; // Number | 
-var body = new Persona.DeliveryReclamationUpdate(); // DeliveryReclamationUpdate | 
-var opts = {
-  'authorization': "authorization_example" // String | 
-};
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.usersUuidSubscriptionsSubsnoReclamationsReclaimnoPatch(uuid, subsno, reclaimno, body, opts, callback);
-```
-
-### Parameters
-
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **uuid** | [**String**](.md)|  | 
- **subsno** | **Number**|  | 
- **reclaimno** | **Number**|  | 
- **body** | [**DeliveryReclamationUpdate**](DeliveryReclamationUpdate.md)|  | 
- **authorization** | **String**|  | [optional] 
-
-### Return type
-
-[**DeliveryReclamation**](DeliveryReclamation.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json;charset=utf-8
 - **Accept**: application/json;charset=utf-8
 

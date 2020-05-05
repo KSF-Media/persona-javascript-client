@@ -10,6 +10,5 @@ Name | Type | Description | Notes
 **_date** | **Date** |  | 
 **publicationDate** | **Date** |  | 
 **claim** | **String** |  | 
-**status** | **String** |  | 
 
 

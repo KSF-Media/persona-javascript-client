@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/DeliveryReclamation', 'model/DeliveryReclamationUpdate', 'model/GdprConsent', 'model/InlineResponse400', 'model/InlineResponse415', 'model/LegalConsent', 'model/LoginResponse', 'model/NewDeliveryReclamation', 'model/NewTemporaryUser', 'model/NewUser', 'model/Subscription', 'model/SubscriptionPauseDates', 'model/TemporaryAddressChange', 'model/User', 'model/UserUpdate', 'model/UserUpdatePassword'], factory);
+    define(['ApiClient', 'model/DeliveryReclamation', 'model/GdprConsent', 'model/InlineResponse400', 'model/InlineResponse415', 'model/LegalConsent', 'model/LoginResponse', 'model/NewDeliveryReclamation', 'model/NewTemporaryUser', 'model/NewUser', 'model/Subscription', 'model/SubscriptionPauseDates', 'model/TemporaryAddressChange', 'model/User', 'model/UserUpdate', 'model/UserUpdatePassword'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/DeliveryReclamation'), require('../model/DeliveryReclamationUpdate'), require('../model/GdprConsent'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/LegalConsent'), require('../model/LoginResponse'), require('../model/NewDeliveryReclamation'), require('../model/NewTemporaryUser'), require('../model/NewUser'), require('../model/Subscription'), require('../model/SubscriptionPauseDates'), require('../model/TemporaryAddressChange'), require('../model/User'), require('../model/UserUpdate'), require('../model/UserUpdatePassword'));
+    module.exports = factory(require('../ApiClient'), require('../model/DeliveryReclamation'), require('../model/GdprConsent'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/LegalConsent'), require('../model/LoginResponse'), require('../model/NewDeliveryReclamation'), require('../model/NewTemporaryUser'), require('../model/NewUser'), require('../model/Subscription'), require('../model/SubscriptionPauseDates'), require('../model/TemporaryAddressChange'), require('../model/User'), require('../model/UserUpdate'), require('../model/UserUpdatePassword'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.UsersApi = factory(root.Persona.ApiClient, root.Persona.DeliveryReclamation, root.Persona.DeliveryReclamationUpdate, root.Persona.GdprConsent, root.Persona.InlineResponse400, root.Persona.InlineResponse415, root.Persona.LegalConsent, root.Persona.LoginResponse, root.Persona.NewDeliveryReclamation, root.Persona.NewTemporaryUser, root.Persona.NewUser, root.Persona.Subscription, root.Persona.SubscriptionPauseDates, root.Persona.TemporaryAddressChange, root.Persona.User, root.Persona.UserUpdate, root.Persona.UserUpdatePassword);
+    root.Persona.UsersApi = factory(root.Persona.ApiClient, root.Persona.DeliveryReclamation, root.Persona.GdprConsent, root.Persona.InlineResponse400, root.Persona.InlineResponse415, root.Persona.LegalConsent, root.Persona.LoginResponse, root.Persona.NewDeliveryReclamation, root.Persona.NewTemporaryUser, root.Persona.NewUser, root.Persona.Subscription, root.Persona.SubscriptionPauseDates, root.Persona.TemporaryAddressChange, root.Persona.User, root.Persona.UserUpdate, root.Persona.UserUpdatePassword);
   }
-}(this, function(ApiClient, DeliveryReclamation, DeliveryReclamationUpdate, GdprConsent, InlineResponse400, InlineResponse415, LegalConsent, LoginResponse, NewDeliveryReclamation, NewTemporaryUser, NewUser, Subscription, SubscriptionPauseDates, TemporaryAddressChange, User, UserUpdate, UserUpdatePassword) {
+}(this, function(ApiClient, DeliveryReclamation, GdprConsent, InlineResponse400, InlineResponse415, LegalConsent, LoginResponse, NewDeliveryReclamation, NewTemporaryUser, NewUser, Subscription, SubscriptionPauseDates, TemporaryAddressChange, User, UserUpdate, UserUpdatePassword) {
   'use strict';
 
   /**
@@ -682,71 +682,6 @@
       var returnType = DeliveryReclamation;
       return this.apiClient.callApi(
         '/users/{uuid}/subscriptions/{subsno}/reclamations/{reclaimno}', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the usersUuidSubscriptionsSubsnoReclamationsReclaimnoPatch operation.
-     * @callback module:api/UsersApi~usersUuidSubscriptionsSubsnoReclamationsReclaimnoPatchCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/DeliveryReclamation} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Update a delivery reclamation
-     * @param {String} uuid 
-     * @param {Number} subsno 
-     * @param {Number} reclaimno 
-     * @param {module:model/DeliveryReclamationUpdate} body 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization 
-     * @param {module:api/UsersApi~usersUuidSubscriptionsSubsnoReclamationsReclaimnoPatchCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DeliveryReclamation}
-     */
-    this.usersUuidSubscriptionsSubsnoReclamationsReclaimnoPatch = function(uuid, subsno, reclaimno, body, opts, callback) {
-      opts = opts || {};
-      var postBody = body;
-      // verify the required parameter 'uuid' is set
-      if (uuid === undefined || uuid === null) {
-        throw new Error("Missing the required parameter 'uuid' when calling usersUuidSubscriptionsSubsnoReclamationsReclaimnoPatch");
-      }
-      // verify the required parameter 'subsno' is set
-      if (subsno === undefined || subsno === null) {
-        throw new Error("Missing the required parameter 'subsno' when calling usersUuidSubscriptionsSubsnoReclamationsReclaimnoPatch");
-      }
-      // verify the required parameter 'reclaimno' is set
-      if (reclaimno === undefined || reclaimno === null) {
-        throw new Error("Missing the required parameter 'reclaimno' when calling usersUuidSubscriptionsSubsnoReclamationsReclaimnoPatch");
-      }
-      // verify the required parameter 'body' is set
-      if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling usersUuidSubscriptionsSubsnoReclamationsReclaimnoPatch");
-      }
-
-      var pathParams = {
-        'uuid': uuid,
-        'subsno': subsno,
-        'reclaimno': reclaimno
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-        'Authorization': opts['authorization']
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json;charset=utf-8'];
-      var accepts = ['application/json;charset=utf-8'];
-      var returnType = DeliveryReclamation;
-      return this.apiClient.callApi(
-        '/users/{uuid}/subscriptions/{subsno}/reclamations/{reclaimno}', 'PATCH',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

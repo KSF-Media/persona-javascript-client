@@ -48,9 +48,8 @@
    * @param _date {Date} 
    * @param publicationDate {Date} 
    * @param claim {String} 
-   * @param status {String} 
    */
-  var exports = function(_number, customerNumber, subscriptionNumber, _date, publicationDate, claim, status) {
+  var exports = function(_number, customerNumber, subscriptionNumber, _date, publicationDate, claim) {
     var _this = this;
 
     _this['number'] = _number;
@@ -59,7 +58,6 @@
     _this['date'] = _date;
     _this['publicationDate'] = publicationDate;
     _this['claim'] = claim;
-    _this['status'] = status;
   };
 
   /**
@@ -90,9 +88,6 @@
       if (data.hasOwnProperty('claim')) {
         obj['claim'] = ApiClient.convertToType(data['claim'], 'String');
       }
-      if (data.hasOwnProperty('status')) {
-        obj['status'] = ApiClient.convertToType(data['status'], 'String');
-      }
     }
     return obj;
   }
@@ -121,10 +116,6 @@
    * @member {String} claim
    */
   exports.prototype['claim'] = undefined;
-  /**
-   * @member {String} status
-   */
-  exports.prototype['status'] = undefined;
 
 
 
