@@ -686,6 +686,60 @@
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
+
+    /**
+     * Callback function to receive the result of the usersUuidSubscriptionsSubsnoUnpausePost operation.
+     * @callback module:api/UsersApi~usersUuidSubscriptionsSubsnoUnpausePostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Subscription} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Pause users subscription
+     * @param {String} uuid 
+     * @param {Number} subsno 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
+     * @param {module:api/UsersApi~usersUuidSubscriptionsSubsnoUnpausePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Subscription}
+     */
+    this.usersUuidSubscriptionsSubsnoUnpausePost = function(uuid, subsno, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'uuid' is set
+      if (uuid === undefined || uuid === null) {
+        throw new Error("Missing the required parameter 'uuid' when calling usersUuidSubscriptionsSubsnoUnpausePost");
+      }
+      // verify the required parameter 'subsno' is set
+      if (subsno === undefined || subsno === null) {
+        throw new Error("Missing the required parameter 'subsno' when calling usersUuidSubscriptionsSubsnoUnpausePost");
+      }
+
+      var pathParams = {
+        'uuid': uuid,
+        'subsno': subsno
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'Authorization': opts['authorization']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = Subscription;
+      return this.apiClient.callApi(
+        '/users/{uuid}/subscriptions/{subsno}/unpause', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
   };
 
   return exports;

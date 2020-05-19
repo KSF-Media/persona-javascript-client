@@ -170,6 +170,16 @@
         done();
       });
     });
+    describe('usersUuidSubscriptionsSubsnoUnpausePost', function() {
+      it('should call usersUuidSubscriptionsSubsnoUnpausePost successfully', function(done) {
+        //uncomment below and update the code to test usersUuidSubscriptionsSubsnoUnpausePost
+        //instance.usersUuidSubscriptionsSubsnoUnpausePost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));
