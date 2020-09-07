@@ -152,6 +152,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property paymentMethodId (base name: "paymentMethodId")', function() {
+      // uncomment below and update the code to test the property paymentMethodId
+      //var instance = new Persona.Subscription();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

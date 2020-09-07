@@ -46,16 +46,14 @@
    * @param streetAddress {String} 
    * @param countryCode {String} 
    * @param startDate {Date} 
-   * @param endDate {Date} 
    */
-  var exports = function(zipCode, streetAddress, countryCode, startDate, endDate) {
+  var exports = function(zipCode, streetAddress, countryCode, startDate) {
     var _this = this;
 
     _this['zipCode'] = zipCode;
     _this['streetAddress'] = streetAddress;
     _this['countryCode'] = countryCode;
     _this['startDate'] = startDate;
-    _this['endDate'] = endDate;
   };
 
   /**

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **streetAddress** | **String** |  | 
 **countryCode** | **String** |  | 
 **startDate** | **Date** |  | 
-**endDate** | **Date** |  | 
+**endDate** | **Date** |  | [optional] 
 **temporaryName** | **String** |  | [optional] 
 
 
