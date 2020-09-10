@@ -130,6 +130,16 @@
         done();
       });
     });
+    describe('usersUuidSubscriptionsSubsnoAddressChangeDelete', function() {
+      it('should call usersUuidSubscriptionsSubsnoAddressChangeDelete successfully', function(done) {
+        //uncomment below and update the code to test usersUuidSubscriptionsSubsnoAddressChangeDelete
+        //instance.usersUuidSubscriptionsSubsnoAddressChangeDelete(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('usersUuidSubscriptionsSubsnoAddressChangePost', function() {
       it('should call usersUuidSubscriptionsSubsnoAddressChangePost successfully', function(done) {
         //uncomment below and update the code to test usersUuidSubscriptionsSubsnoAddressChangePost

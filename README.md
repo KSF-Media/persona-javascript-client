@@ -128,6 +128,7 @@ Class | Method | HTTP request | Description
 *Persona.UsersApi* | [**usersUuidLegalPut**](docs/UsersApi.md#usersUuidLegalPut) | **PUT** /users/{uuid}/legal | Updates the legal consent settings for a given user.
 *Persona.UsersApi* | [**usersUuidPasswordPut**](docs/UsersApi.md#usersUuidPasswordPut) | **PUT** /users/{uuid}/password | Set / Change user password
 *Persona.UsersApi* | [**usersUuidPatch**](docs/UsersApi.md#usersUuidPatch) | **PATCH** /users/{uuid} | Update a user
+*Persona.UsersApi* | [**usersUuidSubscriptionsSubsnoAddressChangeDelete**](docs/UsersApi.md#usersUuidSubscriptionsSubsnoAddressChangeDelete) | **DELETE** /users/{uuid}/subscriptions/{subsno}/addressChange | Delete temporary address change for subscription
 *Persona.UsersApi* | [**usersUuidSubscriptionsSubsnoAddressChangePost**](docs/UsersApi.md#usersUuidSubscriptionsSubsnoAddressChangePost) | **POST** /users/{uuid}/subscriptions/{subsno}/addressChange | Make a temporary address change for a subscription
 *Persona.UsersApi* | [**usersUuidSubscriptionsSubsnoPausePost**](docs/UsersApi.md#usersUuidSubscriptionsSubsnoPausePost) | **POST** /users/{uuid}/subscriptions/{subsno}/pause | Pause users subscription
 *Persona.UsersApi* | [**usersUuidSubscriptionsSubsnoReclamationPost**](docs/UsersApi.md#usersUuidSubscriptionsSubsnoReclamationPost) | **POST** /users/{uuid}/subscriptions/{subsno}/reclamation | Create a new delivery reclamation for a subscription
@@ -141,6 +142,7 @@ Class | Method | HTTP request | Description
  - [Persona.Address](docs/Address.md)
  - [Persona.Campaign](docs/Campaign.md)
  - [Persona.CodeForTokenData](docs/CodeForTokenData.md)
+ - [Persona.DeleteTempAddressChangeDates](docs/DeleteTempAddressChangeDates.md)
  - [Persona.DeliveryAddress](docs/DeliveryAddress.md)
  - [Persona.DeliveryReclamation](docs/DeliveryReclamation.md)
  - [Persona.DeliveryReclamationClaim](docs/DeliveryReclamationClaim.md)

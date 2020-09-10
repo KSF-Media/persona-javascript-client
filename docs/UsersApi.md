@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**usersUuidLegalPut**](UsersApi.md#usersUuidLegalPut) | **PUT** /users/{uuid}/legal | Updates the legal consent settings for a given user.
 [**usersUuidPasswordPut**](UsersApi.md#usersUuidPasswordPut) | **PUT** /users/{uuid}/password | Set / Change user password
 [**usersUuidPatch**](UsersApi.md#usersUuidPatch) | **PATCH** /users/{uuid} | Update a user
+[**usersUuidSubscriptionsSubsnoAddressChangeDelete**](UsersApi.md#usersUuidSubscriptionsSubsnoAddressChangeDelete) | **DELETE** /users/{uuid}/subscriptions/{subsno}/addressChange | Delete temporary address change for subscription
 [**usersUuidSubscriptionsSubsnoAddressChangePost**](UsersApi.md#usersUuidSubscriptionsSubsnoAddressChangePost) | **POST** /users/{uuid}/subscriptions/{subsno}/addressChange | Make a temporary address change for a subscription
 [**usersUuidSubscriptionsSubsnoPausePost**](UsersApi.md#usersUuidSubscriptionsSubsnoPausePost) | **POST** /users/{uuid}/subscriptions/{subsno}/pause | Pause users subscription
 [**usersUuidSubscriptionsSubsnoReclamationPost**](UsersApi.md#usersUuidSubscriptionsSubsnoReclamationPost) | **POST** /users/{uuid}/subscriptions/{subsno}/reclamation | Create a new delivery reclamation for a subscription
@@ -415,6 +416,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**User**](User.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8
+
+
+## usersUuidSubscriptionsSubsnoAddressChangeDelete
+
+> Subscription usersUuidSubscriptionsSubsnoAddressChangeDelete(uuid, subsno, body, opts)
+
+Delete temporary address change for subscription
+
+### Example
+
+```javascript
+var Persona = require('persona');
+
+var apiInstance = new Persona.UsersApi();
+var uuid = null; // String | 
+var subsno = 56; // Number | 
+var body = new Persona.DeleteTempAddressChangeDates(); // DeleteTempAddressChangeDates | 
+var opts = {
+  'authorization': "authorization_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.usersUuidSubscriptionsSubsnoAddressChangeDelete(uuid, subsno, body, opts, callback);
+```
+
+### Parameters
+
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**String**](.md)|  | 
+ **subsno** | **Number**|  | 
+ **body** | [**DeleteTempAddressChangeDates**](DeleteTempAddressChangeDates.md)|  | 
+ **authorization** | **String**|  | [optional] 
+
+### Return type
+
+[**Subscription**](Subscription.md)
 
 ### Authorization
 
