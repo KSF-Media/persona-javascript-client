@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **firstName** | **String** |  | [optional] 
 **lastName** | **String** |  | [optional] 
 **address** | [**Address**](Address.md) |  | [optional] 
-**cusno** | **String** |  | 
+**cusno** | **Number** |  | 
 **subs** | [**[Subscription]**](Subscription.md) |  | 
 **consent** | [**[GdprConsent]**](GdprConsent.md) |  | 
 **legal** | [**[LegalConsent]**](LegalConsent.md) |  | 

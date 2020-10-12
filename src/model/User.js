@@ -44,7 +44,7 @@
    * @class
    * @param uuid {String} 
    * @param email {String} 
-   * @param cusno {String} 
+   * @param cusno {Number} 
    * @param subs {Array.<module:model/Subscription>} 
    * @param consent {Array.<module:model/GdprConsent>} 
    * @param legal {Array.<module:model/LegalConsent>} 
@@ -88,7 +88,7 @@
         obj['address'] = Address.constructFromObject(data['address']);
       }
       if (data.hasOwnProperty('cusno')) {
-        obj['cusno'] = ApiClient.convertToType(data['cusno'], 'String');
+        obj['cusno'] = ApiClient.convertToType(data['cusno'], 'Number');
       }
       if (data.hasOwnProperty('subs')) {
         obj['subs'] = ApiClient.convertToType(data['subs'], [Subscription]);
@@ -130,7 +130,7 @@
    */
   exports.prototype['address'] = undefined;
   /**
-   * @member {String} cusno
+   * @member {Number} cusno
    */
   exports.prototype['cusno'] = undefined;
   /**
