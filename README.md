@@ -128,6 +128,7 @@ Class | Method | HTTP request | Description
 *Persona.UsersApi* | [**usersUuidLegalPut**](docs/UsersApi.md#usersUuidLegalPut) | **PUT** /users/{uuid}/legal | Updates the legal consent settings for a given user.
 *Persona.UsersApi* | [**usersUuidPasswordPut**](docs/UsersApi.md#usersUuidPasswordPut) | **PUT** /users/{uuid}/password | Set / Change user password
 *Persona.UsersApi* | [**usersUuidPatch**](docs/UsersApi.md#usersUuidPatch) | **PATCH** /users/{uuid} | Update a user
+*Persona.UsersApi* | [**usersUuidPaymentsGet**](docs/UsersApi.md#usersUuidPaymentsGet) | **GET** /users/{uuid}/payments | Get user&#39;s subscriptions and payment events
 *Persona.UsersApi* | [**usersUuidSubscriptionsSubsnoAddressChangeDelete**](docs/UsersApi.md#usersUuidSubscriptionsSubsnoAddressChangeDelete) | **DELETE** /users/{uuid}/subscriptions/{subsno}/addressChange | Delete temporary address change for subscription
 *Persona.UsersApi* | [**usersUuidSubscriptionsSubsnoAddressChangePost**](docs/UsersApi.md#usersUuidSubscriptionsSubsnoAddressChangePost) | **POST** /users/{uuid}/subscriptions/{subsno}/addressChange | Make a temporary address change for a subscription
 *Persona.UsersApi* | [**usersUuidSubscriptionsSubsnoPausePost**](docs/UsersApi.md#usersUuidSubscriptionsSubsnoPausePost) | **POST** /users/{uuid}/subscriptions/{subsno}/pause | Pause users subscription
@@ -177,11 +178,13 @@ Class | Method | HTTP request | Description
  - [Persona.PackageOffer](docs/PackageOffer.md)
  - [Persona.Paper](docs/Paper.md)
  - [Persona.PausedSubscription](docs/PausedSubscription.md)
+ - [Persona.Payment](docs/Payment.md)
  - [Persona.PendingAddressChange](docs/PendingAddressChange.md)
  - [Persona.Product](docs/Product.md)
  - [Persona.Subscription](docs/Subscription.md)
  - [Persona.SubscriptionDates](docs/SubscriptionDates.md)
  - [Persona.SubscriptionPauseDates](docs/SubscriptionPauseDates.md)
+ - [Persona.SubscriptionPayments](docs/SubscriptionPayments.md)
  - [Persona.TemporaryAddressChange](docs/TemporaryAddressChange.md)
  - [Persona.TokenResponse](docs/TokenResponse.md)
  - [Persona.UpdatePasswordData](docs/UpdatePasswordData.md)

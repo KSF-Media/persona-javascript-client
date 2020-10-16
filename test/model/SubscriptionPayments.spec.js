@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.Campaign();
+    instance = new Persona.SubscriptionPayments();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,46 +49,40 @@
       object[property] = value;
   }
 
-  describe('Campaign', function() {
-    it('should create an instance of Campaign', function() {
-      // uncomment below and update the code to test Campaign
-      //var instance = new Persona.Campaign();
-      //expect(instance).to.be.a(Persona.Campaign);
+  describe('SubscriptionPayments', function() {
+    it('should create an instance of SubscriptionPayments', function() {
+      // uncomment below and update the code to test SubscriptionPayments
+      //var instance = new Persona.SubscriptionPayments();
+      //expect(instance).to.be.a(Persona.SubscriptionPayments);
     });
 
-    it('should have the property no (base name: "no")', function() {
-      // uncomment below and update the code to test the property no
-      //var instance = new Persona.Campaign();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new Persona.Campaign();
+    it('should have the property subsno (base name: "subsno")', function() {
+      // uncomment below and update the code to test the property subsno
+      //var instance = new Persona.SubscriptionPayments();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new Persona.Campaign();
+      //var instance = new Persona.SubscriptionPayments();
       //expect(instance).to.be();
     });
 
-    it('should have the property priceEur (base name: "priceEur")', function() {
-      // uncomment below and update the code to test the property priceEur
-      //var instance = new Persona.Campaign();
+    it('should have the property startDate (base name: "startDate")', function() {
+      // uncomment below and update the code to test the property startDate
+      //var instance = new Persona.SubscriptionPayments();
       //expect(instance).to.be();
     });
 
-    it('should have the property length (base name: "length")', function() {
-      // uncomment below and update the code to test the property length
-      //var instance = new Persona.Campaign();
+    it('should have the property lastDate (base name: "lastDate")', function() {
+      // uncomment below and update the code to test the property lastDate
+      //var instance = new Persona.SubscriptionPayments();
       //expect(instance).to.be();
     });
 
-    it('should have the property lengthUnit (base name: "lengthUnit")', function() {
-      // uncomment below and update the code to test the property lengthUnit
-      //var instance = new Persona.Campaign();
+    it('should have the property payments (base name: "payments")', function() {
+      // uncomment below and update the code to test the property payments
+      //var instance = new Persona.SubscriptionPayments();
       //expect(instance).to.be();
     });
 
