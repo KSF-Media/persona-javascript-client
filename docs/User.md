@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **consent** | [**[GdprConsent]**](GdprConsent.md) |  | 
 **legal** | [**[LegalConsent]**](LegalConsent.md) |  | 
 **pendingAddressChanges** | [**[PendingAddressChange]**](PendingAddressChange.md) |  | [optional] 
+**pastTemporaryAddresses** | [**[PastTemporaryAddress]**](PastTemporaryAddress.md) |  | 
 **hasCompletedRegistration** | **Boolean** |  | 
 
 

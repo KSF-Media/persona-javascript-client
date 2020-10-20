@@ -177,6 +177,7 @@ Class | Method | HTTP request | Description
  - [Persona.PackageDescription](docs/PackageDescription.md)
  - [Persona.PackageOffer](docs/PackageOffer.md)
  - [Persona.Paper](docs/Paper.md)
+ - [Persona.PastTemporaryAddress](docs/PastTemporaryAddress.md)
  - [Persona.PausedSubscription](docs/PausedSubscription.md)
  - [Persona.Payment](docs/Payment.md)
  - [Persona.PendingAddressChange](docs/PendingAddressChange.md)

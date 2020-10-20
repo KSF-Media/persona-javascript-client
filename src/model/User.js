@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Address', 'model/GdprConsent', 'model/LegalConsent', 'model/PendingAddressChange', 'model/Subscription'], factory);
+    define(['ApiClient', 'model/Address', 'model/GdprConsent', 'model/LegalConsent', 'model/PastTemporaryAddress', 'model/PendingAddressChange', 'model/Subscription'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Address'), require('./GdprConsent'), require('./LegalConsent'), require('./PendingAddressChange'), require('./Subscription'));
+    module.exports = factory(require('../ApiClient'), require('./Address'), require('./GdprConsent'), require('./LegalConsent'), require('./PastTemporaryAddress'), require('./PendingAddressChange'), require('./Subscription'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.User = factory(root.Persona.ApiClient, root.Persona.Address, root.Persona.GdprConsent, root.Persona.LegalConsent, root.Persona.PendingAddressChange, root.Persona.Subscription);
+    root.Persona.User = factory(root.Persona.ApiClient, root.Persona.Address, root.Persona.GdprConsent, root.Persona.LegalConsent, root.Persona.PastTemporaryAddress, root.Persona.PendingAddressChange, root.Persona.Subscription);
   }
-}(this, function(ApiClient, Address, GdprConsent, LegalConsent, PendingAddressChange, Subscription) {
+}(this, function(ApiClient, Address, GdprConsent, LegalConsent, PastTemporaryAddress, PendingAddressChange, Subscription) {
   'use strict';
 
 
@@ -48,9 +48,10 @@
    * @param subs {Array.<module:model/Subscription>} 
    * @param consent {Array.<module:model/GdprConsent>} 
    * @param legal {Array.<module:model/LegalConsent>} 
+   * @param pastTemporaryAddresses {Array.<module:model/PastTemporaryAddress>} 
    * @param hasCompletedRegistration {Boolean} 
    */
-  var exports = function(uuid, email, cusno, subs, consent, legal, hasCompletedRegistration) {
+  var exports = function(uuid, email, cusno, subs, consent, legal, pastTemporaryAddresses, hasCompletedRegistration) {
     var _this = this;
 
     _this['uuid'] = uuid;
@@ -59,6 +60,7 @@
     _this['subs'] = subs;
     _this['consent'] = consent;
     _this['legal'] = legal;
+    _this['pastTemporaryAddresses'] = pastTemporaryAddresses;
     _this['hasCompletedRegistration'] = hasCompletedRegistration;
   };
 
@@ -101,6 +103,9 @@
       }
       if (data.hasOwnProperty('pendingAddressChanges')) {
         obj['pendingAddressChanges'] = ApiClient.convertToType(data['pendingAddressChanges'], [PendingAddressChange]);
+      }
+      if (data.hasOwnProperty('pastTemporaryAddresses')) {
+        obj['pastTemporaryAddresses'] = ApiClient.convertToType(data['pastTemporaryAddresses'], [PastTemporaryAddress]);
       }
       if (data.hasOwnProperty('hasCompletedRegistration')) {
         obj['hasCompletedRegistration'] = ApiClient.convertToType(data['hasCompletedRegistration'], 'Boolean');
@@ -149,6 +154,10 @@
    * @member {Array.<module:model/PendingAddressChange>} pendingAddressChanges
    */
   exports.prototype['pendingAddressChanges'] = undefined;
+  /**
+   * @member {Array.<module:model/PastTemporaryAddress>} pastTemporaryAddresses
+   */
+  exports.prototype['pastTemporaryAddresses'] = undefined;
   /**
    * @member {Boolean} hasCompletedRegistration
    */
