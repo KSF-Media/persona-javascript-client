@@ -118,6 +118,8 @@ No authorization required
 
 Get users entitlements.
 
+Authorization header expects the following format ‘OAuth {token}’
+
 ### Example
 
 ```javascript
@@ -126,6 +128,7 @@ var Persona = require('persona');
 var apiInstance = new Persona.UsersApi();
 var uuid = null; // String | 
 var opts = {
+  'authUser': null, // String | 
   'authorization': "authorization_example", // String | 
   'cacheControl': "cacheControl_example" // String | 
 };
@@ -146,6 +149,7 @@ apiInstance.usersUuidEntitlementGet(uuid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**String**](.md)|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
  **cacheControl** | **String**|  | [optional] 
 
@@ -180,6 +184,7 @@ var apiInstance = new Persona.UsersApi();
 var uuid = null; // String | 
 var body = [new Persona.GdprConsent()]; // [GdprConsent] | 
 var opts = {
+  'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
 };
 var callback = function(error, data, response) {
@@ -200,6 +205,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**String**](.md)|  | 
  **body** | [**[GdprConsent]**](Array.md)|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
 
 ### Return type
@@ -232,6 +238,7 @@ var Persona = require('persona');
 var apiInstance = new Persona.UsersApi();
 var uuid = null; // String | 
 var opts = {
+  'authUser': null, // String | 
   'authorization': "authorization_example", // String | 
   'cacheControl': "cacheControl_example" // String | 
 };
@@ -252,6 +259,7 @@ apiInstance.usersUuidGet(uuid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**String**](.md)|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
  **cacheControl** | **String**|  | [optional] 
 
@@ -286,6 +294,7 @@ var apiInstance = new Persona.UsersApi();
 var uuid = null; // String | 
 var body = [new Persona.LegalConsent()]; // [LegalConsent] | 
 var opts = {
+  'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
 };
 var callback = function(error, data, response) {
@@ -306,6 +315,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**String**](.md)|  | 
  **body** | [**[LegalConsent]**](Array.md)|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
 
 ### Return type
@@ -339,6 +349,7 @@ var apiInstance = new Persona.UsersApi();
 var uuid = null; // String | 
 var body = new Persona.UserUpdatePassword(); // UserUpdatePassword | 
 var opts = {
+  'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
 };
 var callback = function(error, data, response) {
@@ -359,6 +370,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**String**](.md)|  | 
  **body** | [**UserUpdatePassword**](UserUpdatePassword.md)|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
 
 ### Return type
@@ -392,6 +404,7 @@ var apiInstance = new Persona.UsersApi();
 var uuid = null; // String | 
 var body = new Persona.UserUpdate(); // UserUpdate | 
 var opts = {
+  'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
 };
 var callback = function(error, data, response) {
@@ -412,6 +425,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**String**](.md)|  | 
  **body** | [**UserUpdate**](UserUpdate.md)|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
 
 ### Return type
@@ -434,6 +448,8 @@ No authorization required
 
 Get user&#39;s subscriptions and payment events
 
+Authorization header expects the following format ‘OAuth {token}’
+
 ### Example
 
 ```javascript
@@ -442,6 +458,7 @@ var Persona = require('persona');
 var apiInstance = new Persona.UsersApi();
 var uuid = null; // String | 
 var opts = {
+  'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
 };
 var callback = function(error, data, response) {
@@ -461,6 +478,7 @@ apiInstance.usersUuidPaymentsGet(uuid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**String**](.md)|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
 
 ### Return type
@@ -483,6 +501,8 @@ No authorization required
 
 Delete temporary address change for subscription
 
+Authorization header expects the following format ‘OAuth {token}’
+
 ### Example
 
 ```javascript
@@ -493,6 +513,7 @@ var uuid = null; // String |
 var subsno = 56; // Number | 
 var body = new Persona.DeleteTempAddressChangeDates(); // DeleteTempAddressChangeDates | 
 var opts = {
+  'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
 };
 var callback = function(error, data, response) {
@@ -514,6 +535,7 @@ Name | Type | Description  | Notes
  **uuid** | [**String**](.md)|  | 
  **subsno** | **Number**|  | 
  **body** | [**DeleteTempAddressChangeDates**](DeleteTempAddressChangeDates.md)|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
 
 ### Return type
@@ -536,6 +558,8 @@ No authorization required
 
 Make a temporary address change for a subscription
 
+Authorization header expects the following format ‘OAuth {token}’
+
 ### Example
 
 ```javascript
@@ -546,6 +570,7 @@ var uuid = null; // String |
 var subsno = 56; // Number | 
 var body = new Persona.TemporaryAddressChange(); // TemporaryAddressChange | 
 var opts = {
+  'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
 };
 var callback = function(error, data, response) {
@@ -567,6 +592,7 @@ Name | Type | Description  | Notes
  **uuid** | [**String**](.md)|  | 
  **subsno** | **Number**|  | 
  **body** | [**TemporaryAddressChange**](TemporaryAddressChange.md)|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
 
 ### Return type
@@ -589,6 +615,8 @@ No authorization required
 
 Pause users subscription
 
+Authorization header expects the following format ‘OAuth {token}’
+
 ### Example
 
 ```javascript
@@ -599,6 +627,7 @@ var uuid = null; // String |
 var subsno = 56; // Number | 
 var body = new Persona.SubscriptionPauseDates(); // SubscriptionPauseDates | 
 var opts = {
+  'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
 };
 var callback = function(error, data, response) {
@@ -620,6 +649,7 @@ Name | Type | Description  | Notes
  **uuid** | [**String**](.md)|  | 
  **subsno** | **Number**|  | 
  **body** | [**SubscriptionPauseDates**](SubscriptionPauseDates.md)|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
 
 ### Return type
@@ -642,6 +672,8 @@ No authorization required
 
 Create a new delivery reclamation for a subscription
 
+Authorization header expects the following format ‘OAuth {token}’
+
 ### Example
 
 ```javascript
@@ -652,6 +684,7 @@ var uuid = null; // String |
 var subsno = 56; // Number | 
 var body = new Persona.NewDeliveryReclamation(); // NewDeliveryReclamation | 
 var opts = {
+  'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
 };
 var callback = function(error, data, response) {
@@ -673,6 +706,7 @@ Name | Type | Description  | Notes
  **uuid** | [**String**](.md)|  | 
  **subsno** | **Number**|  | 
  **body** | [**NewDeliveryReclamation**](NewDeliveryReclamation.md)|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
 
 ### Return type
@@ -695,6 +729,8 @@ No authorization required
 
 Get a delivery reclamation
 
+Authorization header expects the following format ‘OAuth {token}’
+
 ### Example
 
 ```javascript
@@ -705,6 +741,7 @@ var uuid = null; // String |
 var subsno = 56; // Number | 
 var reclaimno = 56; // Number | 
 var opts = {
+  'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
 };
 var callback = function(error, data, response) {
@@ -726,6 +763,7 @@ Name | Type | Description  | Notes
  **uuid** | [**String**](.md)|  | 
  **subsno** | **Number**|  | 
  **reclaimno** | **Number**|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
 
 ### Return type
@@ -748,6 +786,8 @@ No authorization required
 
 Pause users subscription
 
+Authorization header expects the following format ‘OAuth {token}’
+
 ### Example
 
 ```javascript
@@ -757,6 +797,7 @@ var apiInstance = new Persona.UsersApi();
 var uuid = null; // String | 
 var subsno = 56; // Number | 
 var opts = {
+  'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
 };
 var callback = function(error, data, response) {
@@ -777,6 +818,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**String**](.md)|  | 
  **subsno** | **Number**|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
 
 ### Return type

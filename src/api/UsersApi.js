@@ -143,8 +143,10 @@
 
     /**
      * Get users entitlements.
+     * Authorization header expects the following format ‘OAuth {token}’
      * @param {String} uuid 
      * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
      * @param {String} opts.authorization 
      * @param {String} opts.cacheControl 
      * @param {module:api/UsersApi~usersUuidEntitlementGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -166,6 +168,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'AuthUser': opts['authUser'],
         'Authorization': opts['authorization'],
         'Cache-Control': opts['cacheControl']
       };
@@ -197,6 +200,7 @@
      * @param {String} uuid 
      * @param {Array.<GdprConsent>} body 
      * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
      * @param {String} opts.authorization 
      * @param {module:api/UsersApi~usersUuidGdprPutCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/User}
@@ -221,6 +225,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'AuthUser': opts['authUser'],
         'Authorization': opts['authorization']
       };
       var formParams = {
@@ -250,6 +255,7 @@
      * Authorization header expects the following format ‘OAuth {token}’
      * @param {String} uuid 
      * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
      * @param {String} opts.authorization 
      * @param {String} opts.cacheControl 
      * @param {module:api/UsersApi~usersUuidGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -271,6 +277,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'AuthUser': opts['authUser'],
         'Authorization': opts['authorization'],
         'Cache-Control': opts['cacheControl']
       };
@@ -302,6 +309,7 @@
      * @param {String} uuid 
      * @param {Array.<LegalConsent>} body 
      * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
      * @param {String} opts.authorization 
      * @param {module:api/UsersApi~usersUuidLegalPutCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/User}
@@ -326,6 +334,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'AuthUser': opts['authUser'],
         'Authorization': opts['authorization']
       };
       var formParams = {
@@ -356,6 +365,7 @@
      * @param {String} uuid 
      * @param {module:model/UserUpdatePassword} body 
      * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
      * @param {String} opts.authorization 
      * @param {module:api/UsersApi~usersUuidPasswordPutCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/User}
@@ -380,6 +390,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'AuthUser': opts['authUser'],
         'Authorization': opts['authorization']
       };
       var formParams = {
@@ -410,6 +421,7 @@
      * @param {String} uuid 
      * @param {module:model/UserUpdate} body 
      * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
      * @param {String} opts.authorization 
      * @param {module:api/UsersApi~usersUuidPatchCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/User}
@@ -434,6 +446,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'AuthUser': opts['authUser'],
         'Authorization': opts['authorization']
       };
       var formParams = {
@@ -460,8 +473,10 @@
 
     /**
      * Get user's subscriptions and payment events
+     * Authorization header expects the following format ‘OAuth {token}’
      * @param {String} uuid 
      * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
      * @param {String} opts.authorization 
      * @param {module:api/UsersApi~usersUuidPaymentsGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/SubscriptionPayments>}
@@ -482,6 +497,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'AuthUser': opts['authUser'],
         'Authorization': opts['authorization']
       };
       var formParams = {
@@ -508,10 +524,12 @@
 
     /**
      * Delete temporary address change for subscription
+     * Authorization header expects the following format ‘OAuth {token}’
      * @param {String} uuid 
      * @param {Number} subsno 
      * @param {module:model/DeleteTempAddressChangeDates} body 
      * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
      * @param {String} opts.authorization 
      * @param {module:api/UsersApi~usersUuidSubscriptionsSubsnoAddressChangeDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Subscription}
@@ -541,6 +559,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'AuthUser': opts['authUser'],
         'Authorization': opts['authorization']
       };
       var formParams = {
@@ -567,10 +586,12 @@
 
     /**
      * Make a temporary address change for a subscription
+     * Authorization header expects the following format ‘OAuth {token}’
      * @param {String} uuid 
      * @param {Number} subsno 
      * @param {module:model/TemporaryAddressChange} body 
      * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
      * @param {String} opts.authorization 
      * @param {module:api/UsersApi~usersUuidSubscriptionsSubsnoAddressChangePostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Subscription}
@@ -600,6 +621,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'AuthUser': opts['authUser'],
         'Authorization': opts['authorization']
       };
       var formParams = {
@@ -626,10 +648,12 @@
 
     /**
      * Pause users subscription
+     * Authorization header expects the following format ‘OAuth {token}’
      * @param {String} uuid 
      * @param {Number} subsno 
      * @param {module:model/SubscriptionPauseDates} body 
      * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
      * @param {String} opts.authorization 
      * @param {module:api/UsersApi~usersUuidSubscriptionsSubsnoPausePostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Subscription}
@@ -659,6 +683,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'AuthUser': opts['authUser'],
         'Authorization': opts['authorization']
       };
       var formParams = {
@@ -685,10 +710,12 @@
 
     /**
      * Create a new delivery reclamation for a subscription
+     * Authorization header expects the following format ‘OAuth {token}’
      * @param {String} uuid 
      * @param {Number} subsno 
      * @param {module:model/NewDeliveryReclamation} body 
      * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
      * @param {String} opts.authorization 
      * @param {module:api/UsersApi~usersUuidSubscriptionsSubsnoReclamationPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DeliveryReclamation}
@@ -718,6 +745,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'AuthUser': opts['authUser'],
         'Authorization': opts['authorization']
       };
       var formParams = {
@@ -744,10 +772,12 @@
 
     /**
      * Get a delivery reclamation
+     * Authorization header expects the following format ‘OAuth {token}’
      * @param {String} uuid 
      * @param {Number} subsno 
      * @param {Number} reclaimno 
      * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
      * @param {String} opts.authorization 
      * @param {module:api/UsersApi~usersUuidSubscriptionsSubsnoReclamationsReclaimnoGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DeliveryReclamation}
@@ -778,6 +808,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'AuthUser': opts['authUser'],
         'Authorization': opts['authorization']
       };
       var formParams = {
@@ -804,9 +835,11 @@
 
     /**
      * Pause users subscription
+     * Authorization header expects the following format ‘OAuth {token}’
      * @param {String} uuid 
      * @param {Number} subsno 
      * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
      * @param {String} opts.authorization 
      * @param {module:api/UsersApi~usersUuidSubscriptionsSubsnoUnpausePostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Subscription}
@@ -832,6 +865,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'AuthUser': opts['authUser'],
         'Authorization': opts['authorization']
       };
       var formParams = {
