@@ -48,6 +48,56 @@
 
 
     /**
+     * Callback function to receive the result of the adminSearchGet operation.
+     * @callback module:api/AdminApi~adminSearchGetCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/User>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Search for users
+     * @param {String} query 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
+     * @param {String} opts.authorization 
+     * @param {module:api/AdminApi~adminSearchGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/User>}
+     */
+    this.adminSearchGet = function(query, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'query' is set
+      if (query === undefined || query === null) {
+        throw new Error("Missing the required parameter 'query' when calling adminSearchGet");
+      }
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'query': query,
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'AuthUser': opts['authUser'],
+        'Authorization': opts['authorization']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = [User];
+      return this.apiClient.callApi(
+        '/admin/search', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the adminUuidGet operation.
      * @callback module:api/AdminApi~adminUuidGetCallback
      * @param {String} error Error message, if any.
@@ -60,8 +110,8 @@
      * Authorization header expects the following format ‘OAuth {token}’
      * @param {String} uuid 
      * @param {Object} opts Optional parameters
-     * @param {String} opts.authorization 
      * @param {String} opts.authUser 
+     * @param {String} opts.authorization 
      * @param {String} opts.cacheControl 
      * @param {module:api/AdminApi~adminUuidGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/User}
@@ -82,8 +132,8 @@
       var collectionQueryParams = {
       };
       var headerParams = {
-        'Authorization': opts['authorization'],
         'AuthUser': opts['authUser'],
+        'Authorization': opts['authorization'],
         'Cache-Control': opts['cacheControl']
       };
       var formParams = {

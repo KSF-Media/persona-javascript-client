@@ -43,11 +43,13 @@
    * @alias module:model/PausedSubscription
    * @class
    * @param startDate {Date} 
+   * @param endDate {Date} 
    */
-  var exports = function(startDate) {
+  var exports = function(startDate, endDate) {
     var _this = this;
 
     _this['startDate'] = startDate;
+    _this['endDate'] = endDate;
   };
 
   /**

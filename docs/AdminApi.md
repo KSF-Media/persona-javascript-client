@@ -4,8 +4,60 @@ All URIs are relative to *http://http:/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**adminSearchGet**](AdminApi.md#adminSearchGet) | **GET** /admin/search | Search for users
 [**adminUuidGet**](AdminApi.md#adminUuidGet) | **GET** /admin/{uuid} | Get user by admin credentials.
 
+
+
+## adminSearchGet
+
+> [User] adminSearchGet(query, opts)
+
+Search for users
+
+### Example
+
+```javascript
+var Persona = require('persona');
+
+var apiInstance = new Persona.AdminApi();
+var query = "query_example"; // String | 
+var opts = {
+  'authUser': null, // String | 
+  'authorization': "authorization_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.adminSearchGet(query, opts, callback);
+```
+
+### Parameters
+
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **query** | **String**|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
+ **authorization** | **String**|  | [optional] 
+
+### Return type
+
+[**[User]**](User.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json;charset=utf-8
 
 
 ## adminUuidGet
@@ -24,8 +76,8 @@ var Persona = require('persona');
 var apiInstance = new Persona.AdminApi();
 var uuid = null; // String | 
 var opts = {
-  'authorization': "authorization_example", // String | 
   'authUser': null, // String | 
+  'authorization': "authorization_example", // String | 
   'cacheControl': "cacheControl_example" // String | 
 };
 var callback = function(error, data, response) {
@@ -45,8 +97,8 @@ apiInstance.adminUuidGet(uuid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**String**](.md)|  | 
- **authorization** | **String**|  | [optional] 
  **authUser** | [**String**](.md)|  | [optional] 
+ **authorization** | **String**|  | [optional] 
  **cacheControl** | **String**|  | [optional] 
 
 ### Return type
