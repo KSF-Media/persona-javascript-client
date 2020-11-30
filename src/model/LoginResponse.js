@@ -44,12 +44,14 @@
    * @class
    * @param token {String} 
    * @param uuid {String} 
+   * @param isAdmin {Boolean} 
    */
-  var exports = function(token, uuid) {
+  var exports = function(token, uuid, isAdmin) {
     var _this = this;
 
     _this['token'] = token;
     _this['uuid'] = uuid;
+    _this['isAdmin'] = isAdmin;
   };
 
   /**
@@ -71,6 +73,9 @@
       if (data.hasOwnProperty('uuid')) {
         obj['uuid'] = ApiClient.convertToType(data['uuid'], 'String');
       }
+      if (data.hasOwnProperty('isAdmin')) {
+        obj['isAdmin'] = ApiClient.convertToType(data['isAdmin'], 'Boolean');
+      }
     }
     return obj;
   }
@@ -87,6 +92,10 @@
    * @member {String} uuid
    */
   exports.prototype['uuid'] = undefined;
+  /**
+   * @member {Boolean} isAdmin
+   */
+  exports.prototype['isAdmin'] = undefined;
 
 
 

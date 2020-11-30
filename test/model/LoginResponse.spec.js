@@ -74,6 +74,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property isAdmin (base name: "isAdmin")', function() {
+      // uncomment below and update the code to test the property isAdmin
+      //var instance = new Persona.LoginResponse();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
