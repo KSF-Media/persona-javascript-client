@@ -50,16 +50,6 @@
   }
 
   describe('AdminApi', function() {
-    describe('adminSearchGet', function() {
-      it('should call adminSearchGet successfully', function(done) {
-        //uncomment below and update the code to test adminSearchGet
-        //instance.adminSearchGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('adminUuidGet', function() {
       it('should call adminUuidGet successfully', function(done) {
         //uncomment below and update the code to test adminUuidGet
