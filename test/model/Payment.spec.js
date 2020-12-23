@@ -128,6 +128,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property reference (base name: "reference")', function() {
+      // uncomment below and update the code to test the property reference
+      //var instance = new Persona.Payment();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

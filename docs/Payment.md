@@ -16,5 +16,6 @@ Name | Type | Description | Notes
 **state** | **String** |  | 
 **discPercent** | **Number** |  | [optional] 
 **discAmount** | **Number** |  | [optional] 
+**reference** | **String** |  | [optional] 
 
 

@@ -114,6 +114,9 @@
       if (data.hasOwnProperty('discAmount')) {
         obj['discAmount'] = ApiClient.convertToType(data['discAmount'], 'Number');
       }
+      if (data.hasOwnProperty('reference')) {
+        obj['reference'] = ApiClient.convertToType(data['reference'], 'String');
+      }
     }
     return obj;
   }
@@ -166,6 +169,10 @@
    * @member {Number} discAmount
    */
   exports.prototype['discAmount'] = undefined;
+  /**
+   * @member {String} reference
+   */
+  exports.prototype['reference'] = undefined;
 
 
 
