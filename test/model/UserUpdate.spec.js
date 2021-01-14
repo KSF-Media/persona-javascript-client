@@ -74,6 +74,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property pendingAddressChanges (base name: "pendingAddressChanges")', function() {
+      // uncomment below and update the code to test the property pendingAddressChanges
+      //var instance = new Persona.UserUpdate();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

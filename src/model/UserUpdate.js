@@ -67,6 +67,9 @@
       if (data.hasOwnProperty('address')) {
         obj['address'] = UserUpdateAddress.constructFromObject(data['address']);
       }
+      if (data.hasOwnProperty('pendingAddressChanges')) {
+        obj['pendingAddressChanges'] = ApiClient.convertToType(data['pendingAddressChanges'], [Object]);
+      }
     }
     return obj;
   }
@@ -83,6 +86,10 @@
    * @member {module:model/UserUpdateAddress} address
    */
   exports.prototype['address'] = undefined;
+  /**
+   * @member {Array.<Object>} pendingAddressChanges
+   */
+  exports.prototype['pendingAddressChanges'] = undefined;
 
 
 
