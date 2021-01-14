@@ -73,6 +73,9 @@
       if (data.hasOwnProperty('streetAddress')) {
         obj['streetAddress'] = ApiClient.convertToType(data['streetAddress'], 'String');
       }
+      if (data.hasOwnProperty('validFrom')) {
+        obj['validFrom'] = ApiClient.convertToType(data['validFrom'], 'Date');
+      }
     }
     return obj;
   }
@@ -89,6 +92,10 @@
    * @member {String} streetAddress
    */
   exports.prototype['streetAddress'] = undefined;
+  /**
+   * @member {Date} validFrom
+   */
+  exports.prototype['validFrom'] = undefined;
 
 
 

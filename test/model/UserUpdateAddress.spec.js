@@ -74,6 +74,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property validFrom (base name: "validFrom")', function() {
+      // uncomment below and update the code to test the property validFrom
+      //var instance = new Persona.UserUpdateAddress();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
