@@ -112,6 +112,9 @@
       if (data.hasOwnProperty('paused')) {
         obj['paused'] = ApiClient.convertToType(data['paused'], [PausedSubscription]);
       }
+      if (data.hasOwnProperty('receiver')) {
+        obj['receiver'] = ApiClient.convertToType(data['receiver'], 'String');
+      }
       if (data.hasOwnProperty('deliveryAddress')) {
         obj['deliveryAddress'] = DeliveryAddress.constructFromObject(data['deliveryAddress']);
       }
@@ -179,6 +182,10 @@
    * @member {Array.<module:model/PausedSubscription>} paused
    */
   exports.prototype['paused'] = undefined;
+  /**
+   * @member {String} receiver
+   */
+  exports.prototype['receiver'] = undefined;
   /**
    * @member {module:model/DeliveryAddress} deliveryAddress
    */

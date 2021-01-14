@@ -128,6 +128,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property receiver (base name: "receiver")', function() {
+      // uncomment below and update the code to test the property receiver
+      //var instance = new Persona.Subscription();
+      //expect(instance).to.be();
+    });
+
     it('should have the property deliveryAddress (base name: "deliveryAddress")', function() {
       // uncomment below and update the code to test the property deliveryAddress
       //var instance = new Persona.Subscription();

@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **extsubsexists** | **Boolean** |  | 
 **campaign** | [**Campaign**](Campaign.md) |  | [optional] 
 **paused** | [**[PausedSubscription]**](PausedSubscription.md) |  | [optional] 
+**receiver** | **String** |  | [optional] 
 **deliveryAddress** | [**DeliveryAddress**](DeliveryAddress.md) |  | [optional] 
 **pendingAddressChanges** | [**[PendingAddressChange]**](PendingAddressChange.md) |  | [optional] 
 **orderNumber** | **String** |  | [optional] 
