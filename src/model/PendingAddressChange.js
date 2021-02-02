@@ -44,15 +44,13 @@
    * @class
    * @param address {module:model/DeliveryAddress} 
    * @param startDate {Date} 
-   * @param endDate {Date} 
    * @param type {String} 
    */
-  var exports = function(address, startDate, endDate, type) {
+  var exports = function(address, startDate, type) {
     var _this = this;
 
     _this['address'] = address;
     _this['startDate'] = startDate;
-    _this['endDate'] = endDate;
     _this['type'] = type;
   };
 

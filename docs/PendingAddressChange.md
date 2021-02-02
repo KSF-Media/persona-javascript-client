@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address** | [**DeliveryAddress**](DeliveryAddress.md) |  | 
 **startDate** | **Date** |  | 
-**endDate** | **Date** |  | 
+**endDate** | **Date** |  | [optional] 
 **type** | **String** |  | 
 
 
