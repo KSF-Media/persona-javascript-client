@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**usersUuidSubscriptionsSubsnoAddressChangeDelete**](UsersApi.md#usersUuidSubscriptionsSubsnoAddressChangeDelete) | **DELETE** /users/{uuid}/subscriptions/{subsno}/addressChange | Delete temporary address change for subscription
 [**usersUuidSubscriptionsSubsnoAddressChangePost**](UsersApi.md#usersUuidSubscriptionsSubsnoAddressChangePost) | **POST** /users/{uuid}/subscriptions/{subsno}/addressChange | Make a temporary address change for a subscription
 [**usersUuidSubscriptionsSubsnoCancelPut**](UsersApi.md#usersUuidSubscriptionsSubsnoCancelPut) | **PUT** /users/{uuid}/subscriptions/{subsno}/cancel | Cancels user subscription
+[**usersUuidSubscriptionsSubsnoPausePatch**](UsersApi.md#usersUuidSubscriptionsSubsnoPausePatch) | **PATCH** /users/{uuid}/subscriptions/{subsno}/pause | Edit pause duration
 [**usersUuidSubscriptionsSubsnoPausePost**](UsersApi.md#usersUuidSubscriptionsSubsnoPausePost) | **POST** /users/{uuid}/subscriptions/{subsno}/pause | Pause users subscription
 [**usersUuidSubscriptionsSubsnoReclamationPost**](UsersApi.md#usersUuidSubscriptionsSubsnoReclamationPost) | **POST** /users/{uuid}/subscriptions/{subsno}/reclamation | Create a new delivery reclamation for a subscription
 [**usersUuidSubscriptionsSubsnoReclamationsReclaimnoGet**](UsersApi.md#usersUuidSubscriptionsSubsnoReclamationsReclaimnoGet) | **GET** /users/{uuid}/subscriptions/{subsno}/reclamations/{reclaimno} | Get a delivery reclamation
@@ -702,6 +703,63 @@ Name | Type | Description  | Notes
  **uuid** | [**String**](.md)|  | 
  **subsno** | **Number**|  | 
  **body** | [**CancelSubscriptionReason**](CancelSubscriptionReason.md)|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
+ **authorization** | **String**|  | [optional] 
+
+### Return type
+
+[**Subscription**](Subscription.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8
+
+
+## usersUuidSubscriptionsSubsnoPausePatch
+
+> Subscription usersUuidSubscriptionsSubsnoPausePatch(uuid, subsno, body, opts)
+
+Edit pause duration
+
+Authorization header expects the following format ‘OAuth {token}’
+
+### Example
+
+```javascript
+var Persona = require('persona');
+
+var apiInstance = new Persona.UsersApi();
+var uuid = null; // String | 
+var subsno = 56; // Number | 
+var body = new Persona.SubscriptionPauseEdit(); // SubscriptionPauseEdit | 
+var opts = {
+  'authUser': null, // String | 
+  'authorization': "authorization_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.usersUuidSubscriptionsSubsnoPausePatch(uuid, subsno, body, opts, callback);
+```
+
+### Parameters
+
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**String**](.md)|  | 
+ **subsno** | **Number**|  | 
+ **body** | [**SubscriptionPauseEdit**](SubscriptionPauseEdit.md)|  | 
  **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
 
