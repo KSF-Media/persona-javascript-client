@@ -131,6 +131,7 @@ Class | Method | HTTP request | Description
 *Persona.UsersApi* | [**usersUuidPatch**](docs/UsersApi.md#usersUuidPatch) | **PATCH** /users/{uuid} | Update a user
 *Persona.UsersApi* | [**usersUuidPaymentsGet**](docs/UsersApi.md#usersUuidPaymentsGet) | **GET** /users/{uuid}/payments | Get user&#39;s subscriptions and payment events
 *Persona.UsersApi* | [**usersUuidSubscriptionsSubsnoAddressChangeDelete**](docs/UsersApi.md#usersUuidSubscriptionsSubsnoAddressChangeDelete) | **DELETE** /users/{uuid}/subscriptions/{subsno}/addressChange | Delete temporary address change for subscription
+*Persona.UsersApi* | [**usersUuidSubscriptionsSubsnoAddressChangePatch**](docs/UsersApi.md#usersUuidSubscriptionsSubsnoAddressChangePatch) | **PATCH** /users/{uuid}/subscriptions/{subsno}/addressChange | Edit temporary address change dates of a subscription
 *Persona.UsersApi* | [**usersUuidSubscriptionsSubsnoAddressChangePost**](docs/UsersApi.md#usersUuidSubscriptionsSubsnoAddressChangePost) | **POST** /users/{uuid}/subscriptions/{subsno}/addressChange | Make a temporary address change for a subscription
 *Persona.UsersApi* | [**usersUuidSubscriptionsSubsnoCancelPut**](docs/UsersApi.md#usersUuidSubscriptionsSubsnoCancelPut) | **PUT** /users/{uuid}/subscriptions/{subsno}/cancel | Cancels user subscription
 *Persona.UsersApi* | [**usersUuidSubscriptionsSubsnoPausePatch**](docs/UsersApi.md#usersUuidSubscriptionsSubsnoPausePatch) | **PATCH** /users/{uuid}/subscriptions/{subsno}/pause | Edit pause duration
@@ -144,7 +145,6 @@ Class | Method | HTTP request | Description
 
  - [Persona.ActiveDays](docs/ActiveDays.md)
  - [Persona.Address](docs/Address.md)
- - [Persona.Campaign](docs/Campaign.md)
  - [Persona.CancelSubscriptionReason](docs/CancelSubscriptionReason.md)
  - [Persona.CodeForTokenData](docs/CodeForTokenData.md)
  - [Persona.DeleteTempAddressChangeDates](docs/DeleteTempAddressChangeDates.md)
@@ -178,6 +178,7 @@ Class | Method | HTTP request | Description
  - [Persona.NewDeliveryReclamation](docs/NewDeliveryReclamation.md)
  - [Persona.NewTemporaryUser](docs/NewTemporaryUser.md)
  - [Persona.NewUser](docs/NewUser.md)
+ - [Persona.PackageCampaign](docs/PackageCampaign.md)
  - [Persona.PackageDescription](docs/PackageDescription.md)
  - [Persona.PackageOffer](docs/PackageOffer.md)
  - [Persona.Paper](docs/Paper.md)
@@ -192,6 +193,7 @@ Class | Method | HTTP request | Description
  - [Persona.SubscriptionPauseEdit](docs/SubscriptionPauseEdit.md)
  - [Persona.SubscriptionPayments](docs/SubscriptionPayments.md)
  - [Persona.TemporaryAddressChange](docs/TemporaryAddressChange.md)
+ - [Persona.TemporaryAddressChangeDates](docs/TemporaryAddressChangeDates.md)
  - [Persona.TokenResponse](docs/TokenResponse.md)
  - [Persona.UpdatePasswordData](docs/UpdatePasswordData.md)
  - [Persona.User](docs/User.md)

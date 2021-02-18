@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Campaign', 'model/PackageDescription', 'model/PackageOffer', 'model/Paper', 'model/Product'], factory);
+    define(['ApiClient', 'model/PackageCampaign', 'model/PackageDescription', 'model/PackageOffer', 'model/Paper', 'model/Product'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Campaign'), require('./PackageDescription'), require('./PackageOffer'), require('./Paper'), require('./Product'));
+    module.exports = factory(require('../ApiClient'), require('./PackageCampaign'), require('./PackageDescription'), require('./PackageOffer'), require('./Paper'), require('./Product'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.ModelPackage = factory(root.Persona.ApiClient, root.Persona.Campaign, root.Persona.PackageDescription, root.Persona.PackageOffer, root.Persona.Paper, root.Persona.Product);
+    root.Persona.ModelPackage = factory(root.Persona.ApiClient, root.Persona.PackageCampaign, root.Persona.PackageDescription, root.Persona.PackageOffer, root.Persona.Paper, root.Persona.Product);
   }
-}(this, function(ApiClient, Campaign, PackageDescription, PackageOffer, Paper, Product) {
+}(this, function(ApiClient, PackageCampaign, PackageDescription, PackageOffer, Paper, Product) {
   'use strict';
 
 
@@ -48,7 +48,7 @@
    * @param digitalOnly {Boolean} 
    * @param products {Array.<module:model/Product>} 
    * @param offers {Array.<module:model/PackageOffer>} 
-   * @param campaigns {Array.<module:model/Campaign>} 
+   * @param campaigns {Array.<module:model/PackageCampaign>} 
    */
   var exports = function(id, name, paper, digitalOnly, products, offers, campaigns) {
     var _this = this;
@@ -91,7 +91,7 @@
         obj['offers'] = ApiClient.convertToType(data['offers'], [PackageOffer]);
       }
       if (data.hasOwnProperty('campaigns')) {
-        obj['campaigns'] = ApiClient.convertToType(data['campaigns'], [Campaign]);
+        obj['campaigns'] = ApiClient.convertToType(data['campaigns'], [PackageCampaign]);
       }
       if (data.hasOwnProperty('nextDelivery')) {
         obj['nextDelivery'] = ApiClient.convertToType(data['nextDelivery'], 'Date');
@@ -128,7 +128,7 @@
    */
   exports.prototype['offers'] = undefined;
   /**
-   * @member {Array.<module:model/Campaign>} campaigns
+   * @member {Array.<module:model/PackageCampaign>} campaigns
    */
   exports.prototype['campaigns'] = undefined;
   /**

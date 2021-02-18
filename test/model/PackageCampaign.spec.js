@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.Campaign();
+    instance = new Persona.PackageCampaign();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,46 +49,46 @@
       object[property] = value;
   }
 
-  describe('Campaign', function() {
-    it('should create an instance of Campaign', function() {
-      // uncomment below and update the code to test Campaign
-      //var instance = new Persona.Campaign();
-      //expect(instance).to.be.a(Persona.Campaign);
+  describe('PackageCampaign', function() {
+    it('should create an instance of PackageCampaign', function() {
+      // uncomment below and update the code to test PackageCampaign
+      //var instance = new Persona.PackageCampaign();
+      //expect(instance).to.be.a(Persona.PackageCampaign);
     });
 
     it('should have the property no (base name: "no")', function() {
       // uncomment below and update the code to test the property no
-      //var instance = new Persona.Campaign();
+      //var instance = new Persona.PackageCampaign();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new Persona.Campaign();
+      //var instance = new Persona.PackageCampaign();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new Persona.Campaign();
+      //var instance = new Persona.PackageCampaign();
       //expect(instance).to.be();
     });
 
     it('should have the property priceEur (base name: "priceEur")', function() {
       // uncomment below and update the code to test the property priceEur
-      //var instance = new Persona.Campaign();
+      //var instance = new Persona.PackageCampaign();
       //expect(instance).to.be();
     });
 
     it('should have the property length (base name: "length")', function() {
       // uncomment below and update the code to test the property length
-      //var instance = new Persona.Campaign();
+      //var instance = new Persona.PackageCampaign();
       //expect(instance).to.be();
     });
 
     it('should have the property lengthUnit (base name: "lengthUnit")', function() {
       // uncomment below and update the code to test the property lengthUnit
-      //var instance = new Persona.Campaign();
+      //var instance = new Persona.PackageCampaign();
       //expect(instance).to.be();
     });
 

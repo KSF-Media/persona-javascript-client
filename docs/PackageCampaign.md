@@ -1,4 +1,4 @@
-# Persona.Campaign
+# Persona.PackageCampaign
 
 ## Properties
 

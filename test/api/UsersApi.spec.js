@@ -160,6 +160,16 @@
         done();
       });
     });
+    describe('usersUuidSubscriptionsSubsnoAddressChangePatch', function() {
+      it('should call usersUuidSubscriptionsSubsnoAddressChangePatch successfully', function(done) {
+        //uncomment below and update the code to test usersUuidSubscriptionsSubsnoAddressChangePatch
+        //instance.usersUuidSubscriptionsSubsnoAddressChangePatch(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('usersUuidSubscriptionsSubsnoAddressChangePost', function() {
       it('should call usersUuidSubscriptionsSubsnoAddressChangePost successfully', function(done) {
         //uncomment below and update the code to test usersUuidSubscriptionsSubsnoAddressChangePost

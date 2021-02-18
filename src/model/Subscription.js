@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Campaign', 'model/DeliveryAddress', 'model/ModelPackage', 'model/PausedSubscription', 'model/PendingAddressChange', 'model/SubscriptionDates'], factory);
+    define(['ApiClient', 'model/DeliveryAddress', 'model/ModelPackage', 'model/PackageCampaign', 'model/PausedSubscription', 'model/PendingAddressChange', 'model/SubscriptionDates'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Campaign'), require('./DeliveryAddress'), require('./ModelPackage'), require('./PausedSubscription'), require('./PendingAddressChange'), require('./SubscriptionDates'));
+    module.exports = factory(require('../ApiClient'), require('./DeliveryAddress'), require('./ModelPackage'), require('./PackageCampaign'), require('./PausedSubscription'), require('./PendingAddressChange'), require('./SubscriptionDates'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.Subscription = factory(root.Persona.ApiClient, root.Persona.Campaign, root.Persona.DeliveryAddress, root.Persona.ModelPackage, root.Persona.PausedSubscription, root.Persona.PendingAddressChange, root.Persona.SubscriptionDates);
+    root.Persona.Subscription = factory(root.Persona.ApiClient, root.Persona.DeliveryAddress, root.Persona.ModelPackage, root.Persona.PackageCampaign, root.Persona.PausedSubscription, root.Persona.PendingAddressChange, root.Persona.SubscriptionDates);
   }
-}(this, function(ApiClient, Campaign, DeliveryAddress, ModelPackage, PausedSubscription, PendingAddressChange, SubscriptionDates) {
+}(this, function(ApiClient, DeliveryAddress, ModelPackage, PackageCampaign, PausedSubscription, PendingAddressChange, SubscriptionDates) {
   'use strict';
 
 
@@ -107,7 +107,7 @@
         obj['extsubsexists'] = ApiClient.convertToType(data['extsubsexists'], 'Boolean');
       }
       if (data.hasOwnProperty('campaign')) {
-        obj['campaign'] = Campaign.constructFromObject(data['campaign']);
+        obj['campaign'] = PackageCampaign.constructFromObject(data['campaign']);
       }
       if (data.hasOwnProperty('paused')) {
         obj['paused'] = ApiClient.convertToType(data['paused'], [PausedSubscription]);
@@ -175,7 +175,7 @@
    */
   exports.prototype['extsubsexists'] = undefined;
   /**
-   * @member {module:model/Campaign} campaign
+   * @member {module:model/PackageCampaign} campaign
    */
   exports.prototype['campaign'] = undefined;
   /**

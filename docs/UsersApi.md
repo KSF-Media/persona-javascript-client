@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**usersUuidPatch**](UsersApi.md#usersUuidPatch) | **PATCH** /users/{uuid} | Update a user
 [**usersUuidPaymentsGet**](UsersApi.md#usersUuidPaymentsGet) | **GET** /users/{uuid}/payments | Get user&#39;s subscriptions and payment events
 [**usersUuidSubscriptionsSubsnoAddressChangeDelete**](UsersApi.md#usersUuidSubscriptionsSubsnoAddressChangeDelete) | **DELETE** /users/{uuid}/subscriptions/{subsno}/addressChange | Delete temporary address change for subscription
+[**usersUuidSubscriptionsSubsnoAddressChangePatch**](UsersApi.md#usersUuidSubscriptionsSubsnoAddressChangePatch) | **PATCH** /users/{uuid}/subscriptions/{subsno}/addressChange | Edit temporary address change dates of a subscription
 [**usersUuidSubscriptionsSubsnoAddressChangePost**](UsersApi.md#usersUuidSubscriptionsSubsnoAddressChangePost) | **POST** /users/{uuid}/subscriptions/{subsno}/addressChange | Make a temporary address change for a subscription
 [**usersUuidSubscriptionsSubsnoCancelPut**](UsersApi.md#usersUuidSubscriptionsSubsnoCancelPut) | **PUT** /users/{uuid}/subscriptions/{subsno}/cancel | Cancels user subscription
 [**usersUuidSubscriptionsSubsnoPausePatch**](UsersApi.md#usersUuidSubscriptionsSubsnoPausePatch) | **PATCH** /users/{uuid}/subscriptions/{subsno}/pause | Edit pause duration
@@ -589,6 +590,63 @@ Name | Type | Description  | Notes
  **uuid** | [**String**](.md)|  | 
  **subsno** | **Number**|  | 
  **body** | [**DeleteTempAddressChangeDates**](DeleteTempAddressChangeDates.md)|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
+ **authorization** | **String**|  | [optional] 
+
+### Return type
+
+[**Subscription**](Subscription.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8
+
+
+## usersUuidSubscriptionsSubsnoAddressChangePatch
+
+> Subscription usersUuidSubscriptionsSubsnoAddressChangePatch(uuid, subsno, body, opts)
+
+Edit temporary address change dates of a subscription
+
+Authorization header expects the following format ‘OAuth {token}’
+
+### Example
+
+```javascript
+var Persona = require('persona');
+
+var apiInstance = new Persona.UsersApi();
+var uuid = null; // String | 
+var subsno = 56; // Number | 
+var body = new Persona.TemporaryAddressChangeDates(); // TemporaryAddressChangeDates | 
+var opts = {
+  'authUser': null, // String | 
+  'authorization': "authorization_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.usersUuidSubscriptionsSubsnoAddressChangePatch(uuid, subsno, body, opts, callback);
+```
+
+### Parameters
+
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**String**](.md)|  | 
+ **subsno** | **Number**|  | 
+ **body** | [**TemporaryAddressChangeDates**](TemporaryAddressChangeDates.md)|  | 
  **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
 

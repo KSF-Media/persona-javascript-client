@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **_package** | [**ModelPackage**](ModelPackage.md) |  | 
 **dates** | [**SubscriptionDates**](SubscriptionDates.md) |  | 
 **extsubsexists** | **Boolean** |  | 
-**campaign** | [**Campaign**](Campaign.md) |  | [optional] 
+**campaign** | [**PackageCampaign**](PackageCampaign.md) |  | [optional] 
 **paused** | [**[PausedSubscription]**](PausedSubscription.md) |  | [optional] 
 **receiver** | **String** |  | [optional] 
 **deliveryAddress** | [**DeliveryAddress**](DeliveryAddress.md) |  | [optional] 
