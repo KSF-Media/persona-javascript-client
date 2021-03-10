@@ -49,8 +49,10 @@
    * @param products {Array.<module:model/Product>} 
    * @param offers {Array.<module:model/PackageOffer>} 
    * @param campaigns {Array.<module:model/PackageCampaign>} 
+   * @param canPause {Boolean} 
+   * @param canTempAddr {Boolean} 
    */
-  var exports = function(id, name, paper, digitalOnly, products, offers, campaigns) {
+  var exports = function(id, name, paper, digitalOnly, products, offers, campaigns, canPause, canTempAddr) {
     var _this = this;
 
     _this['id'] = id;
@@ -60,6 +62,8 @@
     _this['products'] = products;
     _this['offers'] = offers;
     _this['campaigns'] = campaigns;
+    _this['canPause'] = canPause;
+    _this['canTempAddr'] = canTempAddr;
   };
 
   /**
@@ -95,6 +99,12 @@
       }
       if (data.hasOwnProperty('nextDelivery')) {
         obj['nextDelivery'] = ApiClient.convertToType(data['nextDelivery'], 'Date');
+      }
+      if (data.hasOwnProperty('canPause')) {
+        obj['canPause'] = ApiClient.convertToType(data['canPause'], 'Boolean');
+      }
+      if (data.hasOwnProperty('canTempAddr')) {
+        obj['canTempAddr'] = ApiClient.convertToType(data['canTempAddr'], 'Boolean');
       }
       if (data.hasOwnProperty('description')) {
         obj['description'] = PackageDescription.constructFromObject(data['description']);
@@ -135,6 +145,14 @@
    * @member {Date} nextDelivery
    */
   exports.prototype['nextDelivery'] = undefined;
+  /**
+   * @member {Boolean} canPause
+   */
+  exports.prototype['canPause'] = undefined;
+  /**
+   * @member {Boolean} canTempAddr
+   */
+  exports.prototype['canTempAddr'] = undefined;
   /**
    * @member {module:model/PackageDescription} description
    */

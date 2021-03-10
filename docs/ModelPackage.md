@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **offers** | [**[PackageOffer]**](PackageOffer.md) |  | 
 **campaigns** | [**[PackageCampaign]**](PackageCampaign.md) |  | 
 **nextDelivery** | **Date** |  | [optional] 
+**canPause** | **Boolean** |  | 
+**canTempAddr** | **Boolean** |  | 
 **description** | [**PackageDescription**](PackageDescription.md) |  | [optional] 
 
 
