@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/DeliveryAddress', 'model/ModelPackage', 'model/PackageCampaign', 'model/PausedSubscription', 'model/PendingAddressChange', 'model/SubscriptionDates'], factory);
+    define(['ApiClient', 'model/DeliveryAddress', 'model/ModelPackage', 'model/PackageCampaign', 'model/PausedSubscription', 'model/PaymentMethodId', 'model/PendingAddressChange', 'model/SubscriptionDates'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./DeliveryAddress'), require('./ModelPackage'), require('./PackageCampaign'), require('./PausedSubscription'), require('./PendingAddressChange'), require('./SubscriptionDates'));
+    module.exports = factory(require('../ApiClient'), require('./DeliveryAddress'), require('./ModelPackage'), require('./PackageCampaign'), require('./PausedSubscription'), require('./PaymentMethodId'), require('./PendingAddressChange'), require('./SubscriptionDates'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.Subscription = factory(root.Persona.ApiClient, root.Persona.DeliveryAddress, root.Persona.ModelPackage, root.Persona.PackageCampaign, root.Persona.PausedSubscription, root.Persona.PendingAddressChange, root.Persona.SubscriptionDates);
+    root.Persona.Subscription = factory(root.Persona.ApiClient, root.Persona.DeliveryAddress, root.Persona.ModelPackage, root.Persona.PackageCampaign, root.Persona.PausedSubscription, root.Persona.PaymentMethodId, root.Persona.PendingAddressChange, root.Persona.SubscriptionDates);
   }
-}(this, function(ApiClient, DeliveryAddress, ModelPackage, PackageCampaign, PausedSubscription, PendingAddressChange, SubscriptionDates) {
+}(this, function(ApiClient, DeliveryAddress, ModelPackage, PackageCampaign, PausedSubscription, PaymentMethodId, PendingAddressChange, SubscriptionDates) {
   'use strict';
 
 
@@ -42,15 +42,15 @@
    * Constructs a new <code>Subscription</code>.
    * @alias module:model/Subscription
    * @class
-   * @param subsno {Number} 
-   * @param extno {Number} 
-   * @param cusno {Number} 
-   * @param paycusno {Number} 
-   * @param kind {String} 
-   * @param state {String} 
+   * @param subsno {Number} Subscription Id - primary key together with extno
+   * @param extno {Number} Subscription Extension Id - how many times a subscription has been extended
+   * @param cusno {Number} Customer getting the subscription
+   * @param paycusno {Number} Customer paying for the subscription
+   * @param kind {module:model/Subscription.KindEnum} Subscription kind - what kind of order is it
+   * @param state {module:model/Subscription.StateEnum} Current state of the Subscription
    * @param _package {module:model/ModelPackage} 
    * @param dates {module:model/SubscriptionDates} 
-   * @param extsubsexists {Boolean} 
+   * @param extsubsexists {Boolean} If the extension of this subscription exists
    */
   var exports = function(subsno, extno, cusno, paycusno, kind, state, _package, dates, extsubsexists) {
     var _this = this;
@@ -128,38 +128,45 @@
         obj['paymentMethod'] = ApiClient.convertToType(data['paymentMethod'], 'String');
       }
       if (data.hasOwnProperty('paymentMethodId')) {
-        obj['paymentMethodId'] = ApiClient.convertToType(data['paymentMethodId'], 'Number');
+        obj['paymentMethodId'] = PaymentMethodId.constructFromObject(data['paymentMethodId']);
       }
     }
     return obj;
   }
 
   /**
+   * Subscription Id - primary key together with extno
    * @member {Number} subsno
    */
   exports.prototype['subsno'] = undefined;
   /**
+   * Subscription Extension Id - how many times a subscription has been extended
    * @member {Number} extno
    */
   exports.prototype['extno'] = undefined;
   /**
+   * Customer getting the subscription
    * @member {Number} cusno
    */
   exports.prototype['cusno'] = undefined;
   /**
+   * Customer paying for the subscription
    * @member {Number} paycusno
    */
   exports.prototype['paycusno'] = undefined;
   /**
-   * @member {String} kind
+   * Subscription kind - what kind of order is it
+   * @member {module:model/Subscription.KindEnum} kind
    */
   exports.prototype['kind'] = undefined;
   /**
-   * @member {String} state
+   * Current state of the Subscription
+   * @member {module:model/Subscription.StateEnum} state
    */
   exports.prototype['state'] = undefined;
   /**
-   * @member {String} pricegroup
+   * Pricegroup of the Subscription
+   * @member {module:model/Subscription.PricegroupEnum} pricegroup
    */
   exports.prototype['pricegroup'] = undefined;
   /**
@@ -171,6 +178,7 @@
    */
   exports.prototype['dates'] = undefined;
   /**
+   * If the extension of this subscription exists
    * @member {Boolean} extsubsexists
    */
   exports.prototype['extsubsexists'] = undefined;
@@ -179,10 +187,12 @@
    */
   exports.prototype['campaign'] = undefined;
   /**
+   * Pause periods of this subscription
    * @member {Array.<module:model/PausedSubscription>} paused
    */
   exports.prototype['paused'] = undefined;
   /**
+   * The name of subscription receiver
    * @member {String} receiver
    */
   exports.prototype['receiver'] = undefined;
@@ -191,22 +201,198 @@
    */
   exports.prototype['deliveryAddress'] = undefined;
   /**
+   * Pending and ongoing temporary address changes
    * @member {Array.<module:model/PendingAddressChange>} pendingAddressChanges
    */
   exports.prototype['pendingAddressChanges'] = undefined;
   /**
+   * Order number of subscription
    * @member {String} orderNumber
    */
   exports.prototype['orderNumber'] = undefined;
   /**
-   * @member {String} paymentMethod
+   * Payment method of subscription
+   * @member {module:model/Subscription.PaymentMethodEnum} paymentMethod
    */
   exports.prototype['paymentMethod'] = undefined;
   /**
-   * @member {Number} paymentMethodId
+   * @member {module:model/PaymentMethodId} paymentMethodId
    */
   exports.prototype['paymentMethodId'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>kind</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.KindEnum = {
+    /**
+     * value: "StandingOrder"
+     * @const
+     */
+    "StandingOrder": "StandingOrder",
+    /**
+     * value: "TimeLimitedOrder"
+     * @const
+     */
+    "TimeLimitedOrder": "TimeLimitedOrder",
+    /**
+     * value: "NewsStandOrder"
+     * @const
+     */
+    "NewsStandOrder": "NewsStandOrder",
+    /**
+     * value: "FreeOrder"
+     * @const
+     */
+    "FreeOrder": "FreeOrder",
+    /**
+     * value: "Testing1"
+     * @const
+     */
+    "Testing1": "Testing1",
+    /**
+     * value: "Testing2"
+     * @const
+     */
+    "Testing2": "Testing2"  };
+
+  /**
+   * Allowed values for the <code>state</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.StateEnum = {
+    /**
+     * value: "Upcoming"
+     * @const
+     */
+    "Upcoming": "Upcoming",
+    /**
+     * value: "Active"
+     * @const
+     */
+    "Active": "Active",
+    /**
+     * value: "Paused"
+     * @const
+     */
+    "Paused": "Paused",
+    /**
+     * value: "Ended"
+     * @const
+     */
+    "Ended": "Ended",
+    /**
+     * value: "UnpaidAndCanceled"
+     * @const
+     */
+    "UnpaidAndCanceled": "UnpaidAndCanceled",
+    /**
+     * value: "Canceled"
+     * @const
+     */
+    "Canceled": "Canceled",
+    /**
+     * value: "CanceledWithLatePayment"
+     * @const
+     */
+    "CanceledWithLatePayment": "CanceledWithLatePayment",
+    /**
+     * value: "RestartedAfterLatePayment"
+     * @const
+     */
+    "RestartedAfterLatePayment": "RestartedAfterLatePayment",
+    /**
+     * value: "DeactivatedRecently"
+     * @const
+     */
+    "DeactivatedRecently": "DeactivatedRecently",
+    /**
+     * value: "Unknown"
+     * @const
+     */
+    "Unknown": "Unknown"  };
+
+  /**
+   * Allowed values for the <code>pricegroup</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.PricegroupEnum = {
+    /**
+     * value: "Normal"
+     * @const
+     */
+    "Normal": "Normal",
+    /**
+     * value: "Campaign"
+     * @const
+     */
+    "Campaign": "Campaign",
+    /**
+     * value: "Flex"
+     * @const
+     */
+    "Flex": "Flex",
+    /**
+     * value: "Company"
+     * @const
+     */
+    "Company": "Company",
+    /**
+     * value: "CompanyFlex"
+     * @const
+     */
+    "CompanyFlex": "CompanyFlex",
+    /**
+     * value: "Student"
+     * @const
+     */
+    "Student": "Student",
+    /**
+     * value: "HBL365Discount"
+     * @const
+     */
+    "HBL365Discount": "HBL365Discount"  };
+
+  /**
+   * Allowed values for the <code>paymentMethod</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.PaymentMethodEnum = {
+    /**
+     * value: "PaperInvoice"
+     * @const
+     */
+    "PaperInvoice": "PaperInvoice",
+    /**
+     * value: "CreditCard"
+     * @const
+     */
+    "CreditCard": "CreditCard",
+    /**
+     * value: "NetBank"
+     * @const
+     */
+    "NetBank": "NetBank",
+    /**
+     * value: "ElectronicInvoice"
+     * @const
+     */
+    "ElectronicInvoice": "ElectronicInvoice",
+    /**
+     * value: "DirectPayment"
+     * @const
+     */
+    "DirectPayment": "DirectPayment",
+    /**
+     * value: "UnknownPaymentMethod"
+     * @const
+     */
+    "UnknownPaymentMethod": "UnknownPaymentMethod"  };
 
 
   return exports;

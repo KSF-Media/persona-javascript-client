@@ -40,10 +40,11 @@
 
   /**
    * Constructs a new <code>Address</code>.
+   * Postal address for shipping the papers.
    * @alias module:model/Address
    * @class
-   * @param countryCode {String} 
-   * @param streetAddress {String} 
+   * @param countryCode {String} Country code
+   * @param streetAddress {String} Street address, containing all details
    */
   var exports = function(countryCode, streetAddress) {
     var _this = this;
@@ -91,34 +92,42 @@
   }
 
   /**
+   * Country code
    * @member {String} countryCode
    */
   exports.prototype['countryCode'] = undefined;
   /**
+   * Zip code
    * @member {String} zipCode
    */
   exports.prototype['zipCode'] = undefined;
   /**
+   * City
    * @member {String} city
    */
   exports.prototype['city'] = undefined;
   /**
+   * Street address, containing all details
    * @member {String} streetAddress
    */
   exports.prototype['streetAddress'] = undefined;
   /**
+   * Street name
    * @member {String} streetName
    */
   exports.prototype['streetName'] = undefined;
   /**
+   * House number
    * @member {String} houseNo
    */
   exports.prototype['houseNo'] = undefined;
   /**
+   * Staircase letter
    * @member {String} staircase
    */
   exports.prototype['staircase'] = undefined;
   /**
+   * Apartment number
    * @member {String} apartment
    */
   exports.prototype['apartment'] = undefined;

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**invno** | **Number** |  | 
+**invno** | **Number** | Payment invoice ID | 
 **_date** | **Date** |  | 
 **dueDate** | **Date** |  | 
 **expenses** | **Number** |  | 
@@ -16,6 +16,52 @@ Name | Type | Description | Notes
 **state** | **String** |  | 
 **discPercent** | **Number** |  | [optional] 
 **discAmount** | **Number** |  | [optional] 
-**reference** | **String** |  | [optional] 
+**reference** | **String** | Reference number | [optional] 
+
+
+
+## Enum: TypeEnum
+
+
+* `NormalState` (value: `"NormalState"`)
+
+* `DirectDebit` (value: `"DirectDebit"`)
+
+* `Reminder1` (value: `"Reminder1"`)
+
+* `Reminder2` (value: `"Reminder2"`)
+
+* `ReservedPaymentType1` (value: `"ReservedPaymentType1"`)
+
+* `Nonpayment` (value: `"Nonpayment"`)
+
+* `ReservedPaymentType2` (value: `"ReservedPaymentType2"`)
+
+* `Reimbursement` (value: `"Reimbursement"`)
+
+
+
+
+
+## Enum: StateEnum
+
+
+* `PaymentOpen` (value: `"PaymentOpen"`)
+
+* `PartiallyPaid` (value: `"PartiallyPaid"`)
+
+* `Paid` (value: `"Paid"`)
+
+* `Reminded` (value: `"Reminded"`)
+
+* `Foreclosure` (value: `"Foreclosure"`)
+
+* `ReservedPaymentState` (value: `"ReservedPaymentState"`)
+
+* `Reimbursed` (value: `"Reimbursed"`)
+
+* `CreditLoss` (value: `"CreditLoss"`)
+
+
 
 

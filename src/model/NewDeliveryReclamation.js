@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/DeliveryReclamationClaim'], factory);
+    define(['ApiClient', 'model/ClaimType'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./DeliveryReclamationClaim'));
+    module.exports = factory(require('../ApiClient'), require('./ClaimType'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.NewDeliveryReclamation = factory(root.Persona.ApiClient, root.Persona.DeliveryReclamationClaim);
+    root.Persona.NewDeliveryReclamation = factory(root.Persona.ApiClient, root.Persona.ClaimType);
   }
-}(this, function(ApiClient, DeliveryReclamationClaim) {
+}(this, function(ApiClient, ClaimType) {
   'use strict';
 
 
@@ -43,7 +43,7 @@
    * @alias module:model/NewDeliveryReclamation
    * @class
    * @param publicationDate {Date} 
-   * @param claim {module:model/DeliveryReclamationClaim} 
+   * @param claim {module:model/ClaimType} 
    */
   var exports = function(publicationDate, claim) {
     var _this = this;
@@ -66,7 +66,7 @@
         obj['publicationDate'] = ApiClient.convertToType(data['publicationDate'], 'Date');
       }
       if (data.hasOwnProperty('claim')) {
-        obj['claim'] = DeliveryReclamationClaim.constructFromObject(data['claim']);
+        obj['claim'] = ClaimType.constructFromObject(data['claim']);
       }
     }
     return obj;
@@ -77,7 +77,7 @@
    */
   exports.prototype['publicationDate'] = undefined;
   /**
-   * @member {module:model/DeliveryReclamationClaim} claim
+   * @member {module:model/ClaimType} claim
    */
   exports.prototype['claim'] = undefined;
 

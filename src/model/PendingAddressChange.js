@@ -44,7 +44,7 @@
    * @class
    * @param address {module:model/DeliveryAddress} 
    * @param startDate {Date} 
-   * @param type {String} 
+   * @param type {module:model/PendingAddressChange.TypeEnum} Type of address change
    */
   var exports = function(address, startDate, type) {
     var _this = this;
@@ -93,10 +93,28 @@
    */
   exports.prototype['endDate'] = undefined;
   /**
-   * @member {String} type
+   * Type of address change
+   * @member {module:model/PendingAddressChange.TypeEnum} type
    */
   exports.prototype['type'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.TypeEnum = {
+    /**
+     * value: "Definitive"
+     * @const
+     */
+    "Definitive": "Definitive",
+    /**
+     * value: "Temporary"
+     * @const
+     */
+    "Temporary": "Temporary"  };
 
 
   return exports;

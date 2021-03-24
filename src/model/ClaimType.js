@@ -25,14 +25,14 @@
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.DeliveryReclamationClaim = factory(root.Persona.ApiClient);
+    root.Persona.ClaimType = factory(root.Persona.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
 
   /**
-   * Enum class DeliveryReclamationClaim.
+   * Enum class ClaimType.
    * @enum {}
    * @readonly
    */
@@ -49,9 +49,9 @@
     "NewDelivery": "NewDelivery"  };
 
   /**
-   * Returns a <code>DeliveryReclamationClaim</code> enum value from a Javascript object name.
+   * Returns a <code>ClaimType</code> enum value from a Javascript object name.
    * @param {Object} data The plain JavaScript object containing the name of the enum value.
-   * @return {module:model/DeliveryReclamationClaim} The enum <code>DeliveryReclamationClaim</code> value.
+   * @return {module:model/ClaimType} The enum <code>ClaimType</code> value.
    */
   exports.constructFromObject = function(object) {
     return object;

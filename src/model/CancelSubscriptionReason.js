@@ -40,9 +40,10 @@
 
   /**
    * Constructs a new <code>CancelSubscriptionReason</code>.
+   * Cancel reason
    * @alias module:model/CancelSubscriptionReason
    * @class
-   * @param reason {String} 
+   * @param reason {module:model/CancelSubscriptionReason.ReasonEnum} Cancel reason code
    */
   var exports = function(reason) {
     var _this = this;
@@ -71,14 +72,63 @@
   }
 
   /**
-   * @member {String} reason
+   * Cancel reason code
+   * @member {module:model/CancelSubscriptionReason.ReasonEnum} reason
    */
   exports.prototype['reason'] = undefined;
   /**
+   * Cancel reason explanation
    * @member {String} notes
    */
   exports.prototype['notes'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>reason</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.ReasonEnum = {
+    /**
+     * value: "Price"
+     * @const
+     */
+    "Price": "Price",
+    /**
+     * value: "Distribution"
+     * @const
+     */
+    "Distribution": "Distribution",
+    /**
+     * value: "Content"
+     * @const
+     */
+    "Content": "Content",
+    /**
+     * value: "OldAge"
+     * @const
+     */
+    "OldAge": "OldAge",
+    /**
+     * value: "Deceased"
+     * @const
+     */
+    "Deceased": "Deceased",
+    /**
+     * value: "Digital"
+     * @const
+     */
+    "Digital": "Digital",
+    /**
+     * value: "Other"
+     * @const
+     */
+    "Other": "Other",
+    /**
+     * value: "ChangeProduct"
+     * @const
+     */
+    "ChangeProduct": "ChangeProduct"  };
 
 
   return exports;

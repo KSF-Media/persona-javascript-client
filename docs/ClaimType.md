@@ -1,4 +1,4 @@
-# Persona.DeliveryReclamationClaim
+# Persona.ClaimType
 
 ## Enum
 

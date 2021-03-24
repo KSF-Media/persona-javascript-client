@@ -48,11 +48,11 @@
       object[property] = value;
   }
 
-  describe('DeliveryReclamationClaim', function() {
-    it('should create an instance of DeliveryReclamationClaim', function() {
-      // uncomment below and update the code to test DeliveryReclamationClaim
-      //var instance = new Persona.DeliveryReclamationClaim();
-      //expect(instance).to.be.a(Persona.DeliveryReclamationClaim);
+  describe('ClaimType', function() {
+    it('should create an instance of ClaimType', function() {
+      // uncomment below and update the code to test ClaimType
+      //var instance = new Persona.ClaimType();
+      //expect(instance).to.be.a(Persona.ClaimType);
     });
 
   });

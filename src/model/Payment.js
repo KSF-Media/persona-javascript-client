@@ -42,7 +42,7 @@
    * Constructs a new <code>Payment</code>.
    * @alias module:model/Payment
    * @class
-   * @param invno {Number} 
+   * @param invno {Number} Payment invoice ID
    * @param _date {Date} 
    * @param dueDate {Date} 
    * @param expenses {Number} 
@@ -50,8 +50,8 @@
    * @param vat {Number} 
    * @param amount {Number} 
    * @param openAmount {Number} 
-   * @param type {String} 
-   * @param state {String} 
+   * @param type {module:model/Payment.TypeEnum} 
+   * @param state {module:model/Payment.StateEnum} 
    */
   var exports = function(invno, _date, dueDate, expenses, interest, vat, amount, openAmount, type, state) {
     var _this = this;
@@ -122,6 +122,7 @@
   }
 
   /**
+   * Payment invoice ID
    * @member {Number} invno
    */
   exports.prototype['invno'] = undefined;
@@ -134,46 +135,150 @@
    */
   exports.prototype['dueDate'] = undefined;
   /**
+   * 
    * @member {Number} expenses
    */
   exports.prototype['expenses'] = undefined;
   /**
+   * 
    * @member {Number} interest
    */
   exports.prototype['interest'] = undefined;
   /**
+   * 
    * @member {Number} vat
    */
   exports.prototype['vat'] = undefined;
   /**
+   * 
    * @member {Number} amount
    */
   exports.prototype['amount'] = undefined;
   /**
+   * 
    * @member {Number} openAmount
    */
   exports.prototype['openAmount'] = undefined;
   /**
-   * @member {String} type
+   * 
+   * @member {module:model/Payment.TypeEnum} type
    */
   exports.prototype['type'] = undefined;
   /**
-   * @member {String} state
+   * 
+   * @member {module:model/Payment.StateEnum} state
    */
   exports.prototype['state'] = undefined;
   /**
+   * 
    * @member {Number} discPercent
    */
   exports.prototype['discPercent'] = undefined;
   /**
+   * 
    * @member {Number} discAmount
    */
   exports.prototype['discAmount'] = undefined;
   /**
+   * Reference number
    * @member {String} reference
    */
   exports.prototype['reference'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>type</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.TypeEnum = {
+    /**
+     * value: "NormalState"
+     * @const
+     */
+    "NormalState": "NormalState",
+    /**
+     * value: "DirectDebit"
+     * @const
+     */
+    "DirectDebit": "DirectDebit",
+    /**
+     * value: "Reminder1"
+     * @const
+     */
+    "Reminder1": "Reminder1",
+    /**
+     * value: "Reminder2"
+     * @const
+     */
+    "Reminder2": "Reminder2",
+    /**
+     * value: "ReservedPaymentType1"
+     * @const
+     */
+    "ReservedPaymentType1": "ReservedPaymentType1",
+    /**
+     * value: "Nonpayment"
+     * @const
+     */
+    "Nonpayment": "Nonpayment",
+    /**
+     * value: "ReservedPaymentType2"
+     * @const
+     */
+    "ReservedPaymentType2": "ReservedPaymentType2",
+    /**
+     * value: "Reimbursement"
+     * @const
+     */
+    "Reimbursement": "Reimbursement"  };
+
+  /**
+   * Allowed values for the <code>state</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.StateEnum = {
+    /**
+     * value: "PaymentOpen"
+     * @const
+     */
+    "PaymentOpen": "PaymentOpen",
+    /**
+     * value: "PartiallyPaid"
+     * @const
+     */
+    "PartiallyPaid": "PartiallyPaid",
+    /**
+     * value: "Paid"
+     * @const
+     */
+    "Paid": "Paid",
+    /**
+     * value: "Reminded"
+     * @const
+     */
+    "Reminded": "Reminded",
+    /**
+     * value: "Foreclosure"
+     * @const
+     */
+    "Foreclosure": "Foreclosure",
+    /**
+     * value: "ReservedPaymentState"
+     * @const
+     */
+    "ReservedPaymentState": "ReservedPaymentState",
+    /**
+     * value: "Reimbursed"
+     * @const
+     */
+    "Reimbursed": "Reimbursed",
+    /**
+     * value: "CreditLoss"
+     * @const
+     */
+    "CreditLoss": "CreditLoss"  };
 
 
   return exports;

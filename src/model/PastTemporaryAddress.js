@@ -40,11 +40,12 @@
 
   /**
    * Constructs a new <code>PastTemporaryAddress</code>.
+   * Data for previously used temporary addresses
    * @alias module:model/PastTemporaryAddress
    * @class
-   * @param countryCode {String} 
-   * @param zipcode {String} 
-   * @param street {String} 
+   * @param countryCode {String} Country code
+   * @param zipcode {String} Zip code
+   * @param street {String} Street
    */
   var exports = function(countryCode, zipcode, street) {
     var _this = this;
@@ -84,22 +85,27 @@
   }
 
   /**
+   * Country code
    * @member {String} countryCode
    */
   exports.prototype['countryCode'] = undefined;
   /**
+   * Zip code
    * @member {String} zipcode
    */
   exports.prototype['zipcode'] = undefined;
   /**
+   * City
    * @member {String} cityName
    */
   exports.prototype['cityName'] = undefined;
   /**
+   * Street
    * @member {String} street
    */
   exports.prototype['street'] = undefined;
   /**
+   * Temporary name (c/o)
    * @member {String} temporaryName
    */
   exports.prototype['temporaryName'] = undefined;

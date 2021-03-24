@@ -40,14 +40,15 @@
 
   /**
    * Constructs a new <code>DeliveryReclamation</code>.
+   * Data for a delivery reclamation.
    * @alias module:model/DeliveryReclamation
    * @class
-   * @param _number {Number} 
-   * @param customerNumber {Number} 
-   * @param subscriptionNumber {Number} 
+   * @param _number {Number} The reclamation identifier
+   * @param customerNumber {Number} The identifier of the customer that made reclamation
+   * @param subscriptionNumber {Number} The identifier of the subscription for which reclamation was made
    * @param _date {Date} 
    * @param publicationDate {Date} 
-   * @param claim {String} 
+   * @param claim {module:model/DeliveryReclamation.ClaimEnum} The type of claim for the reclamation
    */
   var exports = function(_number, customerNumber, subscriptionNumber, _date, publicationDate, claim) {
     var _this = this;
@@ -93,14 +94,17 @@
   }
 
   /**
+   * The reclamation identifier
    * @member {Number} number
    */
   exports.prototype['number'] = undefined;
   /**
+   * The identifier of the customer that made reclamation
    * @member {Number} customerNumber
    */
   exports.prototype['customerNumber'] = undefined;
   /**
+   * The identifier of the subscription for which reclamation was made
    * @member {Number} subscriptionNumber
    */
   exports.prototype['subscriptionNumber'] = undefined;
@@ -113,10 +117,28 @@
    */
   exports.prototype['publicationDate'] = undefined;
   /**
-   * @member {String} claim
+   * The type of claim for the reclamation
+   * @member {module:model/DeliveryReclamation.ClaimEnum} claim
    */
   exports.prototype['claim'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>claim</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.ClaimEnum = {
+    /**
+     * value: "Extension"
+     * @const
+     */
+    "Extension": "Extension",
+    /**
+     * value: "NewDelivery"
+     * @const
+     */
+    "NewDelivery": "NewDelivery"  };
 
 
   return exports;

@@ -40,6 +40,7 @@
 
   /**
    * Constructs a new <code>TemporaryAddressChangeDates</code>.
+   * Data for changing a temporary address change.
    * @alias module:model/TemporaryAddressChangeDates
    * @class
    * @param oldStartDate {Date} 

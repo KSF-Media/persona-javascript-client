@@ -77,18 +77,22 @@
   }
 
   /**
+   * Street address, containing all details
    * @member {String} streetAddress
    */
   exports.prototype['streetAddress'] = undefined;
   /**
+   * 
    * @member {String} zipcode
    */
   exports.prototype['zipcode'] = undefined;
   /**
+   * 
    * @member {String} city
    */
   exports.prototype['city'] = undefined;
   /**
+   * Temporary name (or c/o) of delivery address
    * @member {String} temporaryName
    */
   exports.prototype['temporaryName'] = undefined;

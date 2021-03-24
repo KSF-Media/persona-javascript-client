@@ -42,11 +42,11 @@
    * Constructs a new <code>SubscriptionPayments</code>.
    * @alias module:model/SubscriptionPayments
    * @class
-   * @param subsno {Number} 
-   * @param name {String} 
+   * @param subsno {Number} Product subsno
+   * @param name {String} Package name
    * @param startDate {Date} 
    * @param lastDate {Date} 
-   * @param payments {Array.<module:model/Payment>} 
+   * @param payments {Array.<module:model/Payment>} Payments
    */
   var exports = function(subsno, name, startDate, lastDate, payments) {
     var _this = this;
@@ -88,10 +88,12 @@
   }
 
   /**
+   * Product subsno
    * @member {Number} subsno
    */
   exports.prototype['subsno'] = undefined;
   /**
+   * Package name
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
@@ -104,6 +106,7 @@
    */
   exports.prototype['lastDate'] = undefined;
   /**
+   * Payments
    * @member {Array.<module:model/Payment>} payments
    */
   exports.prototype['payments'] = undefined;

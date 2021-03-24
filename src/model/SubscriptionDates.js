@@ -89,10 +89,12 @@
   }
 
   /**
+   * Length of Subscription in months
    * @member {Number} lenMonths
    */
   exports.prototype['lenMonths'] = undefined;
   /**
+   * Additional days (on top of months) for Subscription duration
    * @member {Number} lenDays
    */
   exports.prototype['lenDays'] = undefined;

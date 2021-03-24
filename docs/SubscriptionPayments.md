@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**subsno** | **Number** |  | 
-**name** | **String** |  | 
+**subsno** | **Number** | Product subsno | 
+**name** | **String** | Package name | 
 **startDate** | **Date** |  | 
 **lastDate** | **Date** |  | 
-**payments** | [**[Payment]**](Payment.md) |  | 
+**payments** | [**[Payment]**](Payment.md) | Payments | 
 
 
