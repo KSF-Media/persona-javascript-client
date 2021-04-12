@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ClaimType'], factory);
+    define(['ApiClient', 'model/PaperCode'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ClaimType'));
+    module.exports = factory(require('../ApiClient'), require('./PaperCode'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.NewDeliveryReclamation = factory(root.Persona.ApiClient, root.Persona.ClaimType);
+    root.Persona.NewDeliveryReclamation = factory(root.Persona.ApiClient, root.Persona.PaperCode);
   }
-}(this, function(ApiClient, ClaimType) {
+}(this, function(ApiClient, PaperCode) {
   'use strict';
 
 
@@ -40,10 +40,11 @@
 
   /**
    * Constructs a new <code>NewDeliveryReclamation</code>.
+   * Data for a delivery reclamation creation.
    * @alias module:model/NewDeliveryReclamation
    * @class
    * @param publicationDate {Date} 
-   * @param claim {module:model/ClaimType} 
+   * @param claim {module:model/NewDeliveryReclamation.ClaimEnum} The type of claim for the reclamation
    */
   var exports = function(publicationDate, claim) {
     var _this = this;
@@ -62,25 +63,50 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('paper')) {
+        obj['paper'] = PaperCode.constructFromObject(data['paper']);
+      }
       if (data.hasOwnProperty('publicationDate')) {
         obj['publicationDate'] = ApiClient.convertToType(data['publicationDate'], 'Date');
       }
       if (data.hasOwnProperty('claim')) {
-        obj['claim'] = ClaimType.constructFromObject(data['claim']);
+        obj['claim'] = ApiClient.convertToType(data['claim'], 'String');
       }
     }
     return obj;
   }
 
   /**
+   * @member {module:model/PaperCode} paper
+   */
+  exports.prototype['paper'] = undefined;
+  /**
    * @member {Date} publicationDate
    */
   exports.prototype['publicationDate'] = undefined;
   /**
-   * @member {module:model/ClaimType} claim
+   * The type of claim for the reclamation
+   * @member {module:model/NewDeliveryReclamation.ClaimEnum} claim
    */
   exports.prototype['claim'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>claim</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.ClaimEnum = {
+    /**
+     * value: "Extension"
+     * @const
+     */
+    "Extension": "Extension",
+    /**
+     * value: "NewDelivery"
+     * @const
+     */
+    "NewDelivery": "NewDelivery"  };
 
 
   return exports;

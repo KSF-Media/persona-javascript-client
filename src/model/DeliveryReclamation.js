@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/PaperCode'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./PaperCode'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.DeliveryReclamation = factory(root.Persona.ApiClient);
+    root.Persona.DeliveryReclamation = factory(root.Persona.ApiClient, root.Persona.PaperCode);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, PaperCode) {
   'use strict';
 
 
@@ -83,6 +83,9 @@
       if (data.hasOwnProperty('date')) {
         obj['date'] = ApiClient.convertToType(data['date'], 'Date');
       }
+      if (data.hasOwnProperty('paper')) {
+        obj['paper'] = PaperCode.constructFromObject(data['paper']);
+      }
       if (data.hasOwnProperty('publicationDate')) {
         obj['publicationDate'] = ApiClient.convertToType(data['publicationDate'], 'Date');
       }
@@ -112,6 +115,10 @@
    * @member {Date} date
    */
   exports.prototype['date'] = undefined;
+  /**
+   * @member {module:model/PaperCode} paper
+   */
+  exports.prototype['paper'] = undefined;
   /**
    * @member {Date} publicationDate
    */

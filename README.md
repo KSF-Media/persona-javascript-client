@@ -146,7 +146,6 @@ Class | Method | HTTP request | Description
  - [Persona.ActiveDays](docs/ActiveDays.md)
  - [Persona.Address](docs/Address.md)
  - [Persona.CancelSubscriptionReason](docs/CancelSubscriptionReason.md)
- - [Persona.ClaimType](docs/ClaimType.md)
  - [Persona.CodeForTokenData](docs/CodeForTokenData.md)
  - [Persona.DeleteTempAddressChangeDates](docs/DeleteTempAddressChangeDates.md)
  - [Persona.DeliveryAddress](docs/DeliveryAddress.md)

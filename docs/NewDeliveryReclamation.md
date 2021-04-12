@@ -4,7 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**paper** | [**PaperCode**](PaperCode.md) |  | [optional] 
 **publicationDate** | **Date** |  | 
-**claim** | [**ClaimType**](ClaimType.md) |  | 
+**claim** | **String** | The type of claim for the reclamation | 
+
+
+
+## Enum: ClaimEnum
+
+
+* `Extension` (value: `"Extension"`)
+
+* `NewDelivery` (value: `"NewDelivery"`)
+
+
 
 
