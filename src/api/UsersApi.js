@@ -100,6 +100,7 @@
 
     /**
      * Search for users
+     * deprecated
      * @param {String} query 
      * @param {Object} opts Optional parameters
      * @param {String} opts.authUser 

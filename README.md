@@ -112,7 +112,7 @@ Class | Method | HTTP request | Description
 *Persona.AccountApi* | [**accountCodeForTokenPost**](docs/AccountApi.md#accountCodeForTokenPost) | **POST** /account/codeForToken | Get a password reset token
 *Persona.AccountApi* | [**accountForgotPassPost**](docs/AccountApi.md#accountForgotPassPost) | **POST** /account/forgotPass | Forgot Password
 *Persona.AccountApi* | [**accountResetForgottenPasswordPost**](docs/AccountApi.md#accountResetForgottenPasswordPost) | **POST** /account/resetForgottenPassword | Reset a forgotten password with a token
-*Persona.AdminApi* | [**adminUuidGet**](docs/AdminApi.md#adminUuidGet) | **GET** /admin/{uuid} | Get user by admin credentials.
+*Persona.AdminApi* | [**adminSearchPost**](docs/AdminApi.md#adminSearchPost) | **POST** /admin/search | Search for users
 *Persona.EntitlementsApi* | [**entitlementsAllowPost**](docs/EntitlementsApi.md#entitlementsAllowPost) | **POST** /entitlements/allow | 
 *Persona.EntitlementsApi* | [**entitlementsAllowUuidPost**](docs/EntitlementsApi.md#entitlementsAllowUuidPost) | **POST** /entitlements/allow/{uuid} | Grant product access to a customer
 *Persona.EntitlementsApi* | [**entitlementsGet**](docs/EntitlementsApi.md#entitlementsGet) | **GET** /entitlements | List all entitlements
@@ -152,6 +152,7 @@ Class | Method | HTTP request | Description
  - [Persona.DeliveryReclamation](docs/DeliveryReclamation.md)
  - [Persona.DescriptionFrequency](docs/DescriptionFrequency.md)
  - [Persona.EntitlementAccess](docs/EntitlementAccess.md)
+ - [Persona.FaroUser](docs/FaroUser.md)
  - [Persona.ForgotPasswordData](docs/ForgotPasswordData.md)
  - [Persona.GdprConsent](docs/GdprConsent.md)
  - [Persona.InlineResponse400](docs/InlineResponse400.md)
@@ -168,6 +169,7 @@ Class | Method | HTTP request | Description
  - [Persona.InlineResponse415UnsupportedMediaType](docs/InlineResponse415UnsupportedMediaType.md)
  - [Persona.InlineResponse500](docs/InlineResponse500.md)
  - [Persona.InlineResponse500InternalServerError](docs/InlineResponse500InternalServerError.md)
+ - [Persona.JanrainUser](docs/JanrainUser.md)
  - [Persona.LegalConsent](docs/LegalConsent.md)
  - [Persona.LoginData](docs/LoginData.md)
  - [Persona.LoginDataSSO](docs/LoginDataSSO.md)
@@ -186,6 +188,8 @@ Class | Method | HTTP request | Description
  - [Persona.Payment](docs/Payment.md)
  - [Persona.PendingAddressChange](docs/PendingAddressChange.md)
  - [Persona.Product](docs/Product.md)
+ - [Persona.SearchQuery](docs/SearchQuery.md)
+ - [Persona.SearchResult](docs/SearchResult.md)
  - [Persona.Subscription](docs/Subscription.md)
  - [Persona.SubscriptionDates](docs/SubscriptionDates.md)
  - [Persona.SubscriptionPauseDates](docs/SubscriptionPauseDates.md)

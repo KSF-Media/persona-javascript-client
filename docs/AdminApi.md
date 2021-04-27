@@ -4,17 +4,15 @@ All URIs are relative to *http://http:/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**adminUuidGet**](AdminApi.md#adminUuidGet) | **GET** /admin/{uuid} | Get user by admin credentials.
+[**adminSearchPost**](AdminApi.md#adminSearchPost) | **POST** /admin/search | Search for users
 
 
 
-## adminUuidGet
+## adminSearchPost
 
-> User adminUuidGet(uuid, opts)
+> [SearchResult] adminSearchPost(body, opts)
 
-Get user by admin credentials.
-
-Authorization header expects the following format ‘OAuth {token}’
+Search for users
 
 ### Example
 
@@ -22,11 +20,10 @@ Authorization header expects the following format ‘OAuth {token}’
 var Persona = require('persona');
 
 var apiInstance = new Persona.AdminApi();
-var uuid = null; // String | 
+var body = new Persona.SearchQuery(); // SearchQuery | 
 var opts = {
   'authUser': null, // String | 
-  'authorization': "authorization_example", // String | 
-  'cacheControl': "cacheControl_example" // String | 
+  'authorization': "authorization_example" // String | 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -35,7 +32,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.adminUuidGet(uuid, opts, callback);
+apiInstance.adminSearchPost(body, opts, callback);
 ```
 
 ### Parameters
@@ -44,14 +41,13 @@ apiInstance.adminUuidGet(uuid, opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | [**String**](.md)|  | 
+ **body** | [**SearchQuery**](SearchQuery.md)|  | 
  **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
- **cacheControl** | **String**|  | [optional] 
 
 ### Return type
 
-[**User**](User.md)
+[**[SearchResult]**](SearchResult.md)
 
 ### Authorization
 
@@ -59,6 +55,6 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json;charset=utf-8
 - **Accept**: application/json;charset=utf-8
 

@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/User'], factory);
+    define(['ApiClient', 'model/InlineResponse400', 'model/InlineResponse415', 'model/SearchQuery', 'model/SearchResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/User'));
+    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/SearchQuery'), require('../model/SearchResult'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.AdminApi = factory(root.Persona.ApiClient, root.Persona.User);
+    root.Persona.AdminApi = factory(root.Persona.ApiClient, root.Persona.InlineResponse400, root.Persona.InlineResponse415, root.Persona.SearchQuery, root.Persona.SearchResult);
   }
-}(this, function(ApiClient, User) {
+}(this, function(ApiClient, InlineResponse400, InlineResponse415, SearchQuery, SearchResult) {
   'use strict';
 
   /**
@@ -48,34 +48,31 @@
 
 
     /**
-     * Callback function to receive the result of the adminUuidGet operation.
-     * @callback module:api/AdminApi~adminUuidGetCallback
+     * Callback function to receive the result of the adminSearchPost operation.
+     * @callback module:api/AdminApi~adminSearchPostCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/User} data The data returned by the service call.
+     * @param {Array.<module:model/SearchResult>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Get user by admin credentials.
-     * Authorization header expects the following format ‘OAuth {token}’
-     * @param {String} uuid 
+     * Search for users
+     * @param {module:model/SearchQuery} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.authUser 
      * @param {String} opts.authorization 
-     * @param {String} opts.cacheControl 
-     * @param {module:api/AdminApi~adminUuidGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/User}
+     * @param {module:api/AdminApi~adminSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SearchResult>}
      */
-    this.adminUuidGet = function(uuid, opts, callback) {
+    this.adminSearchPost = function(body, opts, callback) {
       opts = opts || {};
-      var postBody = null;
-      // verify the required parameter 'uuid' is set
-      if (uuid === undefined || uuid === null) {
-        throw new Error("Missing the required parameter 'uuid' when calling adminUuidGet");
+      var postBody = body;
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling adminSearchPost");
       }
 
       var pathParams = {
-        'uuid': uuid
       };
       var queryParams = {
       };
@@ -83,18 +80,17 @@
       };
       var headerParams = {
         'AuthUser': opts['authUser'],
-        'Authorization': opts['authorization'],
-        'Cache-Control': opts['cacheControl']
+        'Authorization': opts['authorization']
       };
       var formParams = {
       };
 
       var authNames = [];
-      var contentTypes = [];
+      var contentTypes = ['application/json;charset=utf-8'];
       var accepts = ['application/json;charset=utf-8'];
-      var returnType = User;
+      var returnType = [SearchResult];
       return this.apiClient.callApi(
-        '/admin/{uuid}', 'GET',
+        '/admin/search', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

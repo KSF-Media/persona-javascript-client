@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.AdminApi();
+    instance = new Persona.SearchResult();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,17 +49,25 @@
       object[property] = value;
   }
 
-  describe('AdminApi', function() {
-    describe('adminSearchPost', function() {
-      it('should call adminSearchPost successfully', function(done) {
-        //uncomment below and update the code to test adminSearchPost
-        //instance.adminSearchPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('SearchResult', function() {
+    it('should create an instance of SearchResult', function() {
+      // uncomment below and update the code to test SearchResult
+      //var instance = new Persona.SearchResult();
+      //expect(instance).to.be.a(Persona.SearchResult);
     });
+
+    it('should have the property janrain (base name: "janrain")', function() {
+      // uncomment below and update the code to test the property janrain
+      //var instance = new Persona.SearchResult();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property faro (base name: "faro")', function() {
+      // uncomment below and update the code to test the property faro
+      //var instance = new Persona.SearchResult();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
