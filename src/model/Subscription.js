@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/DeliveryAddress', 'model/ModelPackage', 'model/PackageCampaign', 'model/PausedSubscription', 'model/PaymentMethodId', 'model/PendingAddressChange', 'model/SubscriptionDates'], factory);
+    define(['ApiClient', 'model/DeliveryAddress', 'model/ModelPackage', 'model/PackageCampaign', 'model/PausedSubscription', 'model/PendingAddressChange', 'model/SubscriptionDates'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./DeliveryAddress'), require('./ModelPackage'), require('./PackageCampaign'), require('./PausedSubscription'), require('./PaymentMethodId'), require('./PendingAddressChange'), require('./SubscriptionDates'));
+    module.exports = factory(require('../ApiClient'), require('./DeliveryAddress'), require('./ModelPackage'), require('./PackageCampaign'), require('./PausedSubscription'), require('./PendingAddressChange'), require('./SubscriptionDates'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.Subscription = factory(root.Persona.ApiClient, root.Persona.DeliveryAddress, root.Persona.ModelPackage, root.Persona.PackageCampaign, root.Persona.PausedSubscription, root.Persona.PaymentMethodId, root.Persona.PendingAddressChange, root.Persona.SubscriptionDates);
+    root.Persona.Subscription = factory(root.Persona.ApiClient, root.Persona.DeliveryAddress, root.Persona.ModelPackage, root.Persona.PackageCampaign, root.Persona.PausedSubscription, root.Persona.PendingAddressChange, root.Persona.SubscriptionDates);
   }
-}(this, function(ApiClient, DeliveryAddress, ModelPackage, PackageCampaign, PausedSubscription, PaymentMethodId, PendingAddressChange, SubscriptionDates) {
+}(this, function(ApiClient, DeliveryAddress, ModelPackage, PackageCampaign, PausedSubscription, PendingAddressChange, SubscriptionDates) {
   'use strict';
 
 
@@ -128,7 +128,7 @@
         obj['paymentMethod'] = ApiClient.convertToType(data['paymentMethod'], 'String');
       }
       if (data.hasOwnProperty('paymentMethodId')) {
-        obj['paymentMethodId'] = PaymentMethodId.constructFromObject(data['paymentMethodId']);
+        obj['paymentMethodId'] = ApiClient.convertToType(data['paymentMethodId'], 'Number');
       }
     }
     return obj;
@@ -216,7 +216,7 @@
    */
   exports.prototype['paymentMethod'] = undefined;
   /**
-   * @member {module:model/PaymentMethodId} paymentMethodId
+   * @member {Number} paymentMethodId
    */
   exports.prototype['paymentMethodId'] = undefined;
 

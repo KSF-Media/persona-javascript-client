@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **pendingAddressChanges** | [**[PendingAddressChange]**](PendingAddressChange.md) | Pending and ongoing temporary address changes | [optional] 
 **orderNumber** | **String** | Order number of subscription | [optional] 
 **paymentMethod** | **String** | Payment method of subscription | [optional] 
-**paymentMethodId** | [**PaymentMethodId**](PaymentMethodId.md) |  | [optional] 
+**paymentMethodId** | **Number** |  | [optional] 
 
 
 
