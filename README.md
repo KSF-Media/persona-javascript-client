@@ -120,6 +120,7 @@ Class | Method | HTTP request | Description
 *Persona.LoginApi* | [**loginSomePost**](docs/LoginApi.md#loginSomePost) | **POST** /login/some | Login with social media
 *Persona.LoginApi* | [**loginSsoPost**](docs/LoginApi.md#loginSsoPost) | **POST** /login/sso | Login with the AccessToken given by the SSO auth
 *Persona.LoginApi* | [**loginUuidDelete**](docs/LoginApi.md#loginUuidDelete) | **DELETE** /login/{uuid} | Logout
+*Persona.UsersApi* | [**usersAdminPost**](docs/UsersApi.md#usersAdminPost) | **POST** /users/admin | Create a new user with admin options.
 *Persona.UsersApi* | [**usersPost**](docs/UsersApi.md#usersPost) | **POST** /users | Create a new user.
 *Persona.UsersApi* | [**usersSearchGet**](docs/UsersApi.md#usersSearchGet) | **GET** /users/search | Search for users
 *Persona.UsersApi* | [**usersTemporaryPost**](docs/UsersApi.md#usersTemporaryPost) | **POST** /users/temporary | Create a new user with email.
@@ -145,6 +146,7 @@ Class | Method | HTTP request | Description
 
  - [Persona.ActiveDays](docs/ActiveDays.md)
  - [Persona.Address](docs/Address.md)
+ - [Persona.AdminNewUser](docs/AdminNewUser.md)
  - [Persona.CancelSubscriptionReason](docs/CancelSubscriptionReason.md)
  - [Persona.CodeForTokenData](docs/CodeForTokenData.md)
  - [Persona.DeleteTempAddressChangeDates](docs/DeleteTempAddressChangeDates.md)
