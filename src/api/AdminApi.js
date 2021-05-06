@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse400', 'model/InlineResponse415', 'model/SearchQuery', 'model/SearchResult'], factory);
+    define(['ApiClient', 'model/AdminNewUser', 'model/InlineResponse400', 'model/InlineResponse415', 'model/LoginResponse', 'model/SearchQuery', 'model/SearchResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/SearchQuery'), require('../model/SearchResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/AdminNewUser'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/LoginResponse'), require('../model/SearchQuery'), require('../model/SearchResult'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.AdminApi = factory(root.Persona.ApiClient, root.Persona.InlineResponse400, root.Persona.InlineResponse415, root.Persona.SearchQuery, root.Persona.SearchResult);
+    root.Persona.AdminApi = factory(root.Persona.ApiClient, root.Persona.AdminNewUser, root.Persona.InlineResponse400, root.Persona.InlineResponse415, root.Persona.LoginResponse, root.Persona.SearchQuery, root.Persona.SearchResult);
   }
-}(this, function(ApiClient, InlineResponse400, InlineResponse415, SearchQuery, SearchResult) {
+}(this, function(ApiClient, AdminNewUser, InlineResponse400, InlineResponse415, LoginResponse, SearchQuery, SearchResult) {
   'use strict';
 
   /**
@@ -91,6 +91,55 @@
       var returnType = [SearchResult];
       return this.apiClient.callApi(
         '/admin/search', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the adminUserPost operation.
+     * @callback module:api/AdminApi~adminUserPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/LoginResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a new user with admin options.
+     * @param {module:model/AdminNewUser} body 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
+     * @param {String} opts.authorization 
+     * @param {module:api/AdminApi~adminUserPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/LoginResponse}
+     */
+    this.adminUserPost = function(body, opts, callback) {
+      opts = opts || {};
+      var postBody = body;
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling adminUserPost");
+      }
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'AuthUser': opts['authUser'],
+        'Authorization': opts['authorization']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json;charset=utf-8'];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = LoginResponse;
+      return this.apiClient.callApi(
+        '/admin/user', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

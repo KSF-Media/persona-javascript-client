@@ -50,16 +50,6 @@
   }
 
   describe('UsersApi', function() {
-    describe('usersAdminPost', function() {
-      it('should call usersAdminPost successfully', function(done) {
-        //uncomment below and update the code to test usersAdminPost
-        //instance.usersAdminPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('usersPost', function() {
       it('should call usersPost successfully', function(done) {
         //uncomment below and update the code to test usersPost

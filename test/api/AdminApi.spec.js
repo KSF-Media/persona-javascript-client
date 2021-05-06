@@ -60,6 +60,16 @@
         done();
       });
     });
+    describe('adminUserPost', function() {
+      it('should call adminUserPost successfully', function(done) {
+        //uncomment below and update the code to test adminUserPost
+        //instance.adminUserPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));
