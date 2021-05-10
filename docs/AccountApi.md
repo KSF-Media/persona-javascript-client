@@ -4,62 +4,16 @@ All URIs are relative to *http://http:/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**accountCodeForTokenPost**](AccountApi.md#accountCodeForTokenPost) | **POST** /account/codeForToken | Get a password reset token
-[**accountForgotPassPost**](AccountApi.md#accountForgotPassPost) | **POST** /account/forgotPass | Forgot Password
-[**accountResetForgottenPasswordPost**](AccountApi.md#accountResetForgottenPasswordPost) | **POST** /account/resetForgottenPassword | Reset a forgotten password with a token
+[**accountPasswordForgotPost**](AccountApi.md#accountPasswordForgotPost) | **POST** /account/password/forgot | Request password reset link
+[**accountPasswordResetPost**](AccountApi.md#accountPasswordResetPost) | **POST** /account/password/reset | Reset a forgotten password with a token
 
 
 
-## accountCodeForTokenPost
+## accountPasswordForgotPost
 
-> TokenResponse accountCodeForTokenPost(body)
+> [Object] accountPasswordForgotPost(body)
 
-Get a password reset token
-
-### Example
-
-```javascript
-var Persona = require('persona');
-
-var apiInstance = new Persona.AccountApi();
-var body = new Persona.CodeForTokenData(); // CodeForTokenData | 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.accountCodeForTokenPost(body, callback);
-```
-
-### Parameters
-
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**CodeForTokenData**](CodeForTokenData.md)|  | 
-
-### Return type
-
-[**TokenResponse**](TokenResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json;charset=utf-8
-- **Accept**: application/json;charset=utf-8
-
-
-## accountForgotPassPost
-
-> [Object] accountForgotPassPost(body)
-
-Forgot Password
+Request password reset link
 
 ### Example
 
@@ -75,7 +29,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountForgotPassPost(body, callback);
+apiInstance.accountPasswordForgotPost(body, callback);
 ```
 
 ### Parameters
@@ -100,9 +54,9 @@ No authorization required
 - **Accept**: application/json;charset=utf-8
 
 
-## accountResetForgottenPasswordPost
+## accountPasswordResetPost
 
-> [Object] accountResetForgottenPasswordPost(body)
+> [Object] accountPasswordResetPost(body)
 
 Reset a forgotten password with a token
 
@@ -120,7 +74,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.accountResetForgottenPasswordPost(body, callback);
+apiInstance.accountPasswordResetPost(body, callback);
 ```
 
 ### Parameters

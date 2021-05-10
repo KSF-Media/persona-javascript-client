@@ -90,7 +90,7 @@ var Persona = require('persona');
 
 
 var api = new Persona.AccountApi()
-var body = new Persona.CodeForTokenData(); // {CodeForTokenData} 
+var body = new Persona.ForgotPasswordData(); // {ForgotPasswordData} 
 
 var callback = function(error, data, response) {
   if (error) {
@@ -99,7 +99,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.accountCodeForTokenPost(body, callback);
+api.accountPasswordForgotPost(body, callback);
 
 ```
 
@@ -109,9 +109,8 @@ All URIs are relative to *http://http:/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*Persona.AccountApi* | [**accountCodeForTokenPost**](docs/AccountApi.md#accountCodeForTokenPost) | **POST** /account/codeForToken | Get a password reset token
-*Persona.AccountApi* | [**accountForgotPassPost**](docs/AccountApi.md#accountForgotPassPost) | **POST** /account/forgotPass | Forgot Password
-*Persona.AccountApi* | [**accountResetForgottenPasswordPost**](docs/AccountApi.md#accountResetForgottenPasswordPost) | **POST** /account/resetForgottenPassword | Reset a forgotten password with a token
+*Persona.AccountApi* | [**accountPasswordForgotPost**](docs/AccountApi.md#accountPasswordForgotPost) | **POST** /account/password/forgot | Request password reset link
+*Persona.AccountApi* | [**accountPasswordResetPost**](docs/AccountApi.md#accountPasswordResetPost) | **POST** /account/password/reset | Reset a forgotten password with a token
 *Persona.AdminApi* | [**adminSearchPost**](docs/AdminApi.md#adminSearchPost) | **POST** /admin/search | Search for users
 *Persona.AdminApi* | [**adminUserPost**](docs/AdminApi.md#adminUserPost) | **POST** /admin/user | Create a new user with admin options.
 *Persona.EntitlementsApi* | [**entitlementsAllowPost**](docs/EntitlementsApi.md#entitlementsAllowPost) | **POST** /entitlements/allow | 
@@ -148,7 +147,6 @@ Class | Method | HTTP request | Description
  - [Persona.Address](docs/Address.md)
  - [Persona.AdminNewUser](docs/AdminNewUser.md)
  - [Persona.CancelSubscriptionReason](docs/CancelSubscriptionReason.md)
- - [Persona.CodeForTokenData](docs/CodeForTokenData.md)
  - [Persona.DeleteTempAddressChangeDates](docs/DeleteTempAddressChangeDates.md)
  - [Persona.DeliveryAddress](docs/DeliveryAddress.md)
  - [Persona.DeliveryReclamation](docs/DeliveryReclamation.md)
@@ -199,7 +197,6 @@ Class | Method | HTTP request | Description
  - [Persona.SubscriptionPayments](docs/SubscriptionPayments.md)
  - [Persona.TemporaryAddressChange](docs/TemporaryAddressChange.md)
  - [Persona.TemporaryAddressChangeDates](docs/TemporaryAddressChangeDates.md)
- - [Persona.TokenResponse](docs/TokenResponse.md)
  - [Persona.UpdatePasswordData](docs/UpdatePasswordData.md)
  - [Persona.User](docs/User.md)
  - [Persona.UserUpdate](docs/UserUpdate.md)

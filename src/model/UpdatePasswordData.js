@@ -43,14 +43,14 @@
    * @alias module:model/UpdatePasswordData
    * @class
    * @param password {String} 
-   * @param passwordConfirm {String} 
+   * @param confirmPassword {String} 
    * @param token {String} 
    */
-  var exports = function(password, passwordConfirm, token) {
+  var exports = function(password, confirmPassword, token) {
     var _this = this;
 
     _this['password'] = password;
-    _this['password_confirm'] = passwordConfirm;
+    _this['confirmPassword'] = confirmPassword;
     _this['token'] = token;
   };
 
@@ -67,8 +67,8 @@
       if (data.hasOwnProperty('password')) {
         obj['password'] = ApiClient.convertToType(data['password'], 'String');
       }
-      if (data.hasOwnProperty('password_confirm')) {
-        obj['password_confirm'] = ApiClient.convertToType(data['password_confirm'], 'String');
+      if (data.hasOwnProperty('confirmPassword')) {
+        obj['confirmPassword'] = ApiClient.convertToType(data['confirmPassword'], 'String');
       }
       if (data.hasOwnProperty('token')) {
         obj['token'] = ApiClient.convertToType(data['token'], 'String');
@@ -82,9 +82,9 @@
    */
   exports.prototype['password'] = undefined;
   /**
-   * @member {String} password_confirm
+   * @member {String} confirmPassword
    */
-  exports.prototype['password_confirm'] = undefined;
+  exports.prototype['confirmPassword'] = undefined;
   /**
    * @member {String} token
    */

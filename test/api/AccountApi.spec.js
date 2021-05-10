@@ -50,30 +50,20 @@
   }
 
   describe('AccountApi', function() {
-    describe('accountCodeForTokenPost', function() {
-      it('should call accountCodeForTokenPost successfully', function(done) {
-        //uncomment below and update the code to test accountCodeForTokenPost
-        //instance.accountCodeForTokenPost(function(error) {
+    describe('accountPasswordForgotPost', function() {
+      it('should call accountPasswordForgotPost successfully', function(done) {
+        //uncomment below and update the code to test accountPasswordForgotPost
+        //instance.accountPasswordForgotPost(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('accountForgotPassPost', function() {
-      it('should call accountForgotPassPost successfully', function(done) {
-        //uncomment below and update the code to test accountForgotPassPost
-        //instance.accountForgotPassPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('accountResetForgottenPasswordPost', function() {
-      it('should call accountResetForgottenPasswordPost successfully', function(done) {
-        //uncomment below and update the code to test accountResetForgottenPasswordPost
-        //instance.accountResetForgottenPasswordPost(function(error) {
+    describe('accountPasswordResetPost', function() {
+      it('should call accountPasswordResetPost successfully', function(done) {
+        //uncomment below and update the code to test accountPasswordResetPost
+        //instance.accountPasswordResetPost(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

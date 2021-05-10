@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CodeForTokenData', 'model/ForgotPasswordData', 'model/InlineResponse400', 'model/InlineResponse415', 'model/TokenResponse', 'model/UpdatePasswordData'], factory);
+    define(['ApiClient', 'model/ForgotPasswordData', 'model/InlineResponse400', 'model/InlineResponse415', 'model/UpdatePasswordData'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CodeForTokenData'), require('../model/ForgotPasswordData'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/TokenResponse'), require('../model/UpdatePasswordData'));
+    module.exports = factory(require('../ApiClient'), require('../model/ForgotPasswordData'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/UpdatePasswordData'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.AccountApi = factory(root.Persona.ApiClient, root.Persona.CodeForTokenData, root.Persona.ForgotPasswordData, root.Persona.InlineResponse400, root.Persona.InlineResponse415, root.Persona.TokenResponse, root.Persona.UpdatePasswordData);
+    root.Persona.AccountApi = factory(root.Persona.ApiClient, root.Persona.ForgotPasswordData, root.Persona.InlineResponse400, root.Persona.InlineResponse415, root.Persona.UpdatePasswordData);
   }
-}(this, function(ApiClient, CodeForTokenData, ForgotPasswordData, InlineResponse400, InlineResponse415, TokenResponse, UpdatePasswordData) {
+}(this, function(ApiClient, ForgotPasswordData, InlineResponse400, InlineResponse415, UpdatePasswordData) {
   'use strict';
 
   /**
@@ -48,67 +48,24 @@
 
 
     /**
-     * Callback function to receive the result of the accountCodeForTokenPost operation.
-     * @callback module:api/AccountApi~accountCodeForTokenPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TokenResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get a password reset token
-     * @param {module:model/CodeForTokenData} body 
-     * @param {module:api/AccountApi~accountCodeForTokenPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TokenResponse}
-     */
-    this.accountCodeForTokenPost = function(body, callback) {
-      var postBody = body;
-      // verify the required parameter 'body' is set
-      if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling accountCodeForTokenPost");
-      }
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json;charset=utf-8'];
-      var accepts = ['application/json;charset=utf-8'];
-      var returnType = TokenResponse;
-      return this.apiClient.callApi(
-        '/account/codeForToken', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the accountForgotPassPost operation.
-     * @callback module:api/AccountApi~accountForgotPassPostCallback
+     * Callback function to receive the result of the accountPasswordForgotPost operation.
+     * @callback module:api/AccountApi~accountPasswordForgotPostCallback
      * @param {String} error Error message, if any.
      * @param {Array.<Object>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Forgot Password
+     * Request password reset link
      * @param {module:model/ForgotPasswordData} body 
-     * @param {module:api/AccountApi~accountForgotPassPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AccountApi~accountPasswordForgotPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<Object>}
      */
-    this.accountForgotPassPost = function(body, callback) {
+    this.accountPasswordForgotPost = function(body, callback) {
       var postBody = body;
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling accountForgotPassPost");
+        throw new Error("Missing the required parameter 'body' when calling accountPasswordForgotPost");
       }
 
       var pathParams = {
@@ -127,15 +84,15 @@
       var accepts = ['application/json;charset=utf-8'];
       var returnType = [Object];
       return this.apiClient.callApi(
-        '/account/forgotPass', 'POST',
+        '/account/password/forgot', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
 
     /**
-     * Callback function to receive the result of the accountResetForgottenPasswordPost operation.
-     * @callback module:api/AccountApi~accountResetForgottenPasswordPostCallback
+     * Callback function to receive the result of the accountPasswordResetPost operation.
+     * @callback module:api/AccountApi~accountPasswordResetPostCallback
      * @param {String} error Error message, if any.
      * @param {Array.<Object>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -144,14 +101,14 @@
     /**
      * Reset a forgotten password with a token
      * @param {module:model/UpdatePasswordData} body 
-     * @param {module:api/AccountApi~accountResetForgottenPasswordPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AccountApi~accountPasswordResetPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<Object>}
      */
-    this.accountResetForgottenPasswordPost = function(body, callback) {
+    this.accountPasswordResetPost = function(body, callback) {
       var postBody = body;
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling accountResetForgottenPasswordPost");
+        throw new Error("Missing the required parameter 'body' when calling accountPasswordResetPost");
       }
 
       var pathParams = {
@@ -170,7 +127,7 @@
       var accepts = ['application/json;charset=utf-8'];
       var returnType = [Object];
       return this.apiClient.callApi(
-        '/account/resetForgottenPassword', 'POST',
+        '/account/password/reset', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -62,8 +62,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property passwordConfirm (base name: "password_confirm")', function() {
-      // uncomment below and update the code to test the property passwordConfirm
+    it('should have the property confirmPassword (base name: "confirmPassword")', function() {
+      // uncomment below and update the code to test the property confirmPassword
       //var instance = new Persona.UpdatePasswordData();
       //expect(instance).to.be();
     });
