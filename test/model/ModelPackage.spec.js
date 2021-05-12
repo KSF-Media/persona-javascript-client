@@ -68,8 +68,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property description (base name: "description")', function() {
-      // uncomment below and update the code to test the property description
+    it('should have the property info (base name: "info")', function() {
+      // uncomment below and update the code to test the property info
       //var instance = new Persona.ModelPackage();
       //expect(instance).to.be();
     });

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | Package identifier | 
 **name** | **String** | Package name | 
-**description** | **[String]** | Package description | 
+**info** | **[String]** | Package description | 
 **paper** | [**Paper**](Paper.md) |  | 
 **digitalOnly** | **Boolean** | All products in this package are digital | 
 **products** | [**[Product]**](Product.md) | The Products contained in a package | 

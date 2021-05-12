@@ -44,7 +44,7 @@
    * @class
    * @param id {String} Package identifier
    * @param name {String} Package name
-   * @param description {Array.<String>} Package description
+   * @param info {Array.<String>} Package description
    * @param paper {module:model/Paper} 
    * @param digitalOnly {Boolean} All products in this package are digital
    * @param products {Array.<module:model/Product>} The Products contained in a package
@@ -53,12 +53,12 @@
    * @param canPause {Boolean} Does the package allow delivery pauses
    * @param canTempAddr {Boolean} Does the package allow temporary address changes
    */
-  var exports = function(id, name, description, paper, digitalOnly, products, offers, campaigns, canPause, canTempAddr) {
+  var exports = function(id, name, info, paper, digitalOnly, products, offers, campaigns, canPause, canTempAddr) {
     var _this = this;
 
     _this['id'] = id;
     _this['name'] = name;
-    _this['description'] = description;
+    _this['info'] = info;
     _this['paper'] = paper;
     _this['digitalOnly'] = digitalOnly;
     _this['products'] = products;
@@ -84,8 +84,8 @@
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
       }
-      if (data.hasOwnProperty('description')) {
-        obj['description'] = ApiClient.convertToType(data['description'], ['String']);
+      if (data.hasOwnProperty('info')) {
+        obj['info'] = ApiClient.convertToType(data['info'], ['String']);
       }
       if (data.hasOwnProperty('paper')) {
         obj['paper'] = Paper.constructFromObject(data['paper']);
@@ -127,9 +127,9 @@
   exports.prototype['name'] = undefined;
   /**
    * Package description
-   * @member {Array.<String>} description
+   * @member {Array.<String>} info
    */
-  exports.prototype['description'] = undefined;
+  exports.prototype['info'] = undefined;
   /**
    * @member {module:model/Paper} paper
    */
