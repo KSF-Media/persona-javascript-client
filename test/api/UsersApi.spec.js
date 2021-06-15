@@ -60,16 +60,6 @@
         done();
       });
     });
-    describe('usersSearchGet', function() {
-      it('should call usersSearchGet successfully', function(done) {
-        //uncomment below and update the code to test usersSearchGet
-        //instance.usersSearchGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('usersTemporaryPost', function() {
       it('should call usersTemporaryPost successfully', function(done) {
         //uncomment below and update the code to test usersTemporaryPost

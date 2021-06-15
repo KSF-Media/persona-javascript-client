@@ -73,6 +73,9 @@
       if (data.hasOwnProperty('pendingAddressChanges')) {
         obj['pendingAddressChanges'] = ApiClient.convertToType(data['pendingAddressChanges'], [Object]);
       }
+      if (data.hasOwnProperty('updateCusno')) {
+        obj['updateCusno'] = ApiClient.convertToType(data['updateCusno'], 'Number');
+      }
     }
     return obj;
   }
@@ -97,6 +100,10 @@
    * @member {Array.<Object>} pendingAddressChanges
    */
   exports.prototype['pendingAddressChanges'] = undefined;
+  /**
+   * @member {Number} updateCusno
+   */
+  exports.prototype['updateCusno'] = undefined;
 
 
 

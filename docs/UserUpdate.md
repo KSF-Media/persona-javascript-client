@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **address** | [**UserUpdateAddress**](UserUpdateAddress.md) |  | [optional] 
 **email** | **String** |  | [optional] 
 **pendingAddressChanges** | **[Object]** |  | [optional] 
+**updateCusno** | **Number** |  | [optional] 
 
 

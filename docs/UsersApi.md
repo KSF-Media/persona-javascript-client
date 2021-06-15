@@ -5,7 +5,6 @@ All URIs are relative to *http://http:/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**usersPost**](UsersApi.md#usersPost) | **POST** /users | Create a new user.
-[**usersSearchGet**](UsersApi.md#usersSearchGet) | **GET** /users/search | Search for users
 [**usersTemporaryPost**](UsersApi.md#usersTemporaryPost) | **POST** /users/temporary | Create a new user with email.
 [**usersUuidEntitlementGet**](UsersApi.md#usersUuidEntitlementGet) | **GET** /users/{uuid}/entitlement | Get users entitlements.
 [**usersUuidGdprPut**](UsersApi.md#usersUuidGdprPut) | **PUT** /users/{uuid}/gdpr | Updates the GDPR consent settings for a given user.
@@ -68,59 +67,6 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json;charset=utf-8
-- **Accept**: application/json;charset=utf-8
-
-
-## usersSearchGet
-
-> [User] usersSearchGet(query, opts)
-
-Search for users
-
-deprecated
-
-### Example
-
-```javascript
-var Persona = require('persona');
-
-var apiInstance = new Persona.UsersApi();
-var query = "query_example"; // String | 
-var opts = {
-  'authUser': null, // String | 
-  'authorization': "authorization_example" // String | 
-};
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.usersSearchGet(query, opts, callback);
-```
-
-### Parameters
-
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **query** | **String**|  | 
- **authUser** | [**String**](.md)|  | [optional] 
- **authorization** | **String**|  | [optional] 
-
-### Return type
-
-[**[User]**](User.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
 - **Accept**: application/json;charset=utf-8
 
 

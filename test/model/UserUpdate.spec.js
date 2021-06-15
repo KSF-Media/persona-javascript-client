@@ -86,6 +86,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property updateCusno (base name: "updateCusno")', function() {
+      // uncomment below and update the code to test the property updateCusno
+      //var instance = new Persona.UserUpdate();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -121,7 +121,6 @@ Class | Method | HTTP request | Description
 *Persona.LoginApi* | [**loginSsoPost**](docs/LoginApi.md#loginSsoPost) | **POST** /login/sso | Login with the AccessToken given by the SSO auth
 *Persona.LoginApi* | [**loginUuidDelete**](docs/LoginApi.md#loginUuidDelete) | **DELETE** /login/{uuid} | Logout
 *Persona.UsersApi* | [**usersPost**](docs/UsersApi.md#usersPost) | **POST** /users | Create a new user.
-*Persona.UsersApi* | [**usersSearchGet**](docs/UsersApi.md#usersSearchGet) | **GET** /users/search | Search for users
 *Persona.UsersApi* | [**usersTemporaryPost**](docs/UsersApi.md#usersTemporaryPost) | **POST** /users/temporary | Create a new user with email.
 *Persona.UsersApi* | [**usersUuidEntitlementGet**](docs/UsersApi.md#usersUuidEntitlementGet) | **GET** /users/{uuid}/entitlement | Get users entitlements.
 *Persona.UsersApi* | [**usersUuidGdprPut**](docs/UsersApi.md#usersUuidGdprPut) | **PUT** /users/{uuid}/gdpr | Updates the GDPR consent settings for a given user.
