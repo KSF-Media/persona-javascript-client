@@ -374,11 +374,6 @@
      */
     "CreditCard": "CreditCard",
     /**
-     * value: "Email"
-     * @const
-     */
-    "Email": "Email",
-    /**
      * value: "NetBank"
      * @const
      */

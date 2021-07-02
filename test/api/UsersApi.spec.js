@@ -110,6 +110,26 @@
         done();
       });
     });
+    describe('usersUuidNewslettersGet', function() {
+      it('should call usersUuidNewslettersGet successfully', function(done) {
+        //uncomment below and update the code to test usersUuidNewslettersGet
+        //instance.usersUuidNewslettersGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('usersUuidNewslettersPut', function() {
+      it('should call usersUuidNewslettersPut successfully', function(done) {
+        //uncomment below and update the code to test usersUuidNewslettersPut
+        //instance.usersUuidNewslettersPut(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('usersUuidPasswordPut', function() {
       it('should call usersUuidPasswordPut successfully', function(done) {
         //uncomment below and update the code to test usersUuidPasswordPut

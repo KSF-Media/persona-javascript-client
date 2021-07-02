@@ -126,6 +126,8 @@ Class | Method | HTTP request | Description
 *Persona.UsersApi* | [**usersUuidGdprPut**](docs/UsersApi.md#usersUuidGdprPut) | **PUT** /users/{uuid}/gdpr | Updates the GDPR consent settings for a given user.
 *Persona.UsersApi* | [**usersUuidGet**](docs/UsersApi.md#usersUuidGet) | **GET** /users/{uuid} | Get user by UUID.
 *Persona.UsersApi* | [**usersUuidLegalPut**](docs/UsersApi.md#usersUuidLegalPut) | **PUT** /users/{uuid}/legal | Updates the legal consent settings for a given user.
+*Persona.UsersApi* | [**usersUuidNewslettersGet**](docs/UsersApi.md#usersUuidNewslettersGet) | **GET** /users/{uuid}/newsletters | Get newsletter subscriptions
+*Persona.UsersApi* | [**usersUuidNewslettersPut**](docs/UsersApi.md#usersUuidNewslettersPut) | **PUT** /users/{uuid}/newsletters | Update newsletter subscriptions
 *Persona.UsersApi* | [**usersUuidPasswordPut**](docs/UsersApi.md#usersUuidPasswordPut) | **PUT** /users/{uuid}/password | Set / Change user password
 *Persona.UsersApi* | [**usersUuidPatch**](docs/UsersApi.md#usersUuidPatch) | **PATCH** /users/{uuid} | Update a user
 *Persona.UsersApi* | [**usersUuidPaymentsGet**](docs/UsersApi.md#usersUuidPaymentsGet) | **GET** /users/{uuid}/payments | Get user&#39;s subscriptions and payment events
@@ -177,6 +179,7 @@ Class | Method | HTTP request | Description
  - [Persona.NewDeliveryReclamation](docs/NewDeliveryReclamation.md)
  - [Persona.NewTemporaryUser](docs/NewTemporaryUser.md)
  - [Persona.NewUser](docs/NewUser.md)
+ - [Persona.NewsletterSubscriptions](docs/NewsletterSubscriptions.md)
  - [Persona.PackageCampaign](docs/PackageCampaign.md)
  - [Persona.PackageOffer](docs/PackageOffer.md)
  - [Persona.Paper](docs/Paper.md)
