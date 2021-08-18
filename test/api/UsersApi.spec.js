@@ -160,6 +160,16 @@
         done();
       });
     });
+    describe('usersUuidScopeGet', function() {
+      it('should call usersUuidScopeGet successfully', function(done) {
+        //uncomment below and update the code to test usersUuidScopeGet
+        //instance.usersUuidScopeGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('usersUuidSubscriptionsSubsnoAddressChangeDelete', function() {
       it('should call usersUuidSubscriptionsSubsnoAddressChangeDelete successfully', function(done) {
         //uncomment below and update the code to test usersUuidSubscriptionsSubsnoAddressChangeDelete

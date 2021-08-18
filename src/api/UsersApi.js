@@ -622,6 +622,56 @@
     }
 
     /**
+     * Callback function to receive the result of the usersUuidScopeGet operation.
+     * @callback module:api/UsersApi~usersUuidScopeGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Check if user has valid token for a scope
+     * Authorization header expects the following format ‘OAuth {token}’
+     * @param {String} uuid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
+     * @param {module:model/String} opts.scope 
+     * @param {module:api/UsersApi~usersUuidScopeGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.usersUuidScopeGet = function(uuid, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'uuid' is set
+      if (uuid === undefined || uuid === null) {
+        throw new Error("Missing the required parameter 'uuid' when calling usersUuidScopeGet");
+      }
+
+      var pathParams = {
+        'uuid': uuid
+      };
+      var queryParams = {
+        'scope': opts['scope'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'Authorization': opts['authorization']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = [];
+      var returnType = null;
+      return this.apiClient.callApi(
+        '/users/{uuid}/scope', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the usersUuidSubscriptionsSubsnoAddressChangeDelete operation.
      * @callback module:api/UsersApi~usersUuidSubscriptionsSubsnoAddressChangeDeleteCallback
      * @param {String} error Error message, if any.
