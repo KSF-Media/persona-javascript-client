@@ -99,6 +99,8 @@ Name | Type | Description | Notes
 
 * `CreditCard` (value: `"CreditCard"`)
 
+* `Email` (value: `"Email"`)
+
 * `NetBank` (value: `"NetBank"`)
 
 * `ElectronicInvoice` (value: `"ElectronicInvoice"`)
