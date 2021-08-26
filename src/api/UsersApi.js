@@ -625,7 +625,7 @@
      * Callback function to receive the result of the usersUuidScopeGet operation.
      * @callback module:api/UsersApi~usersUuidScopeGetCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Number} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -637,6 +637,7 @@
      * @param {String} opts.authorization 
      * @param {module:model/String} opts.scope 
      * @param {module:api/UsersApi~usersUuidScopeGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Number}
      */
     this.usersUuidScopeGet = function(uuid, opts, callback) {
       opts = opts || {};
@@ -662,8 +663,8 @@
 
       var authNames = [];
       var contentTypes = [];
-      var accepts = [];
-      var returnType = null;
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = 'Number';
       return this.apiClient.callApi(
         '/users/{uuid}/scope', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,

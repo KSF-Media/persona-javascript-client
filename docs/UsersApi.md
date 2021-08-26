@@ -611,7 +611,7 @@ No authorization required
 
 ## usersUuidScopeGet
 
-> usersUuidScopeGet(uuid, opts)
+> Number usersUuidScopeGet(uuid, opts)
 
 Check if user has valid token for a scope
 
@@ -632,7 +632,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
 apiInstance.usersUuidScopeGet(uuid, opts, callback);
@@ -650,7 +650,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Number**
 
 ### Authorization
 
@@ -659,7 +659,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json;charset=utf-8
 
 
 ## usersUuidSubscriptionsSubsnoAddressChangeDelete
