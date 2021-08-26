@@ -24,7 +24,7 @@ Method | HTTP request | Description
 [**usersUuidSubscriptionsSubsnoPausePost**](UsersApi.md#usersUuidSubscriptionsSubsnoPausePost) | **POST** /users/{uuid}/subscriptions/{subsno}/pause | Pause users subscription
 [**usersUuidSubscriptionsSubsnoReclamationPost**](UsersApi.md#usersUuidSubscriptionsSubsnoReclamationPost) | **POST** /users/{uuid}/subscriptions/{subsno}/reclamation | Create a new delivery reclamation for a subscription
 [**usersUuidSubscriptionsSubsnoReclamationsReclaimnoGet**](UsersApi.md#usersUuidSubscriptionsSubsnoReclamationsReclaimnoGet) | **GET** /users/{uuid}/subscriptions/{subsno}/reclamations/{reclaimno} | Get a delivery reclamation
-[**usersUuidSubscriptionsSubsnoUnpausePost**](UsersApi.md#usersUuidSubscriptionsSubsnoUnpausePost) | **POST** /users/{uuid}/subscriptions/{subsno}/unpause | Pause users subscription
+[**usersUuidSubscriptionsSubsnoUnpausePost**](UsersApi.md#usersUuidSubscriptionsSubsnoUnpausePost) | **POST** /users/{uuid}/subscriptions/{subsno}/unpause | Unpause users subscription
 
 
 
@@ -1122,7 +1122,7 @@ No authorization required
 
 > Subscription usersUuidSubscriptionsSubsnoUnpausePost(uuid, subsno, opts)
 
-Pause users subscription
+Unpause users subscription
 
 Authorization header expects the following format ‘OAuth {token}’
 
@@ -1136,7 +1136,9 @@ var uuid = null; // String |
 var subsno = 56; // Number | 
 var opts = {
   'authUser': null, // String | 
-  'authorization': "authorization_example" // String | 
+  'authorization': "authorization_example", // String | 
+  'startDate': new Date("2013-10-20"), // Date | 
+  'endDate': new Date("2013-10-20") // Date | 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -1158,6 +1160,8 @@ Name | Type | Description  | Notes
  **subsno** | **Number**|  | 
  **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
+ **startDate** | **Date**|  | [optional] 
+ **endDate** | **Date**|  | [optional] 
 
 ### Return type
 

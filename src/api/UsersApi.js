@@ -1178,13 +1178,15 @@
      */
 
     /**
-     * Pause users subscription
+     * Unpause users subscription
      * Authorization header expects the following format ‘OAuth {token}’
      * @param {String} uuid 
      * @param {Number} subsno 
      * @param {Object} opts Optional parameters
      * @param {String} opts.authUser 
      * @param {String} opts.authorization 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
      * @param {module:api/UsersApi~usersUuidSubscriptionsSubsnoUnpausePostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Subscription}
      */
@@ -1205,6 +1207,8 @@
         'subsno': subsno
       };
       var queryParams = {
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
       };
       var collectionQueryParams = {
       };
