@@ -80,6 +80,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property phone (base name: "phone")', function() {
+      // uncomment below and update the code to test the property phone
+      //var instance = new Persona.User();
+      //expect(instance).to.be();
+    });
+
     it('should have the property address (base name: "address")', function() {
       // uncomment below and update the code to test the property address
       //var instance = new Persona.User();

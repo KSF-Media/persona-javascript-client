@@ -86,6 +86,9 @@
       if (data.hasOwnProperty('lastName')) {
         obj['lastName'] = ApiClient.convertToType(data['lastName'], 'String');
       }
+      if (data.hasOwnProperty('phone')) {
+        obj['phone'] = ApiClient.convertToType(data['phone'], 'String');
+      }
       if (data.hasOwnProperty('address')) {
         obj['address'] = Address.constructFromObject(data['address']);
       }
@@ -130,6 +133,10 @@
    * @member {String} lastName
    */
   exports.prototype['lastName'] = undefined;
+  /**
+   * @member {String} phone
+   */
+  exports.prototype['phone'] = undefined;
   /**
    * @member {module:model/Address} address
    */

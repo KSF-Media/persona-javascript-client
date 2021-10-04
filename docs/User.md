@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **email** | **String** |  | 
 **firstName** | **String** |  | [optional] 
 **lastName** | **String** |  | [optional] 
+**phone** | **String** |  | [optional] 
 **address** | [**Address**](Address.md) |  | [optional] 
 **cusno** | **Number** |  | 
 **subs** | [**[Subscription]**](Subscription.md) |  | 

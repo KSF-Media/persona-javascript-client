@@ -70,6 +70,9 @@
       if (data.hasOwnProperty('email')) {
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
       }
+      if (data.hasOwnProperty('phone')) {
+        obj['phone'] = ApiClient.convertToType(data['phone'], 'String');
+      }
       if (data.hasOwnProperty('pendingAddressChanges')) {
         obj['pendingAddressChanges'] = ApiClient.convertToType(data['pendingAddressChanges'], [Object]);
       }
@@ -96,6 +99,10 @@
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
+  /**
+   * @member {String} phone
+   */
+  exports.prototype['phone'] = undefined;
   /**
    * @member {Array.<Object>} pendingAddressChanges
    */
