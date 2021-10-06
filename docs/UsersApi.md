@@ -611,7 +611,7 @@ No authorization required
 
 ## usersUuidScopeGet
 
-> Number usersUuidScopeGet(uuid, opts)
+> Number usersUuidScopeGet(uuid, scope, opts)
 
 Check if user has valid token for a scope
 
@@ -624,9 +624,9 @@ var Persona = require('persona');
 
 var apiInstance = new Persona.UsersApi();
 var uuid = null; // String | 
+var scope = "scope_example"; // String | 
 var opts = {
-  'authorization': "authorization_example", // String | 
-  'scope': "scope_example" // String | 
+  'authorization': "authorization_example" // String | 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -635,7 +635,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.usersUuidScopeGet(uuid, opts, callback);
+apiInstance.usersUuidScopeGet(uuid, scope, opts, callback);
 ```
 
 ### Parameters
@@ -645,8 +645,8 @@ apiInstance.usersUuidScopeGet(uuid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**String**](.md)|  | 
+ **scope** | **String**|  | 
  **authorization** | **String**|  | [optional] 
- **scope** | **String**|  | [optional] 
 
 ### Return type
 

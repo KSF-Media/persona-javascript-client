@@ -633,25 +633,29 @@
      * Check if user has valid token for a scope
      * Authorization header expects the following format ‘OAuth {token}’
      * @param {String} uuid 
+     * @param {module:model/String} scope 
      * @param {Object} opts Optional parameters
      * @param {String} opts.authorization 
-     * @param {module:model/String} opts.scope 
      * @param {module:api/UsersApi~usersUuidScopeGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Number}
      */
-    this.usersUuidScopeGet = function(uuid, opts, callback) {
+    this.usersUuidScopeGet = function(uuid, scope, opts, callback) {
       opts = opts || {};
       var postBody = null;
       // verify the required parameter 'uuid' is set
       if (uuid === undefined || uuid === null) {
         throw new Error("Missing the required parameter 'uuid' when calling usersUuidScopeGet");
       }
+      // verify the required parameter 'scope' is set
+      if (scope === undefined || scope === null) {
+        throw new Error("Missing the required parameter 'scope' when calling usersUuidScopeGet");
+      }
 
       var pathParams = {
         'uuid': uuid
       };
       var queryParams = {
-        'scope': opts['scope'],
+        'scope': scope,
       };
       var collectionQueryParams = {
       };
