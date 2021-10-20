@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **invno** | **Number** | Payment invoice ID | 
-**_date** | **Date** |  | 
-**dueDate** | **Date** |  | 
+**_date** | **Date** |  | [optional] 
+**dueDate** | **Date** |  | [optional] 
 **expenses** | **Number** |  | 
 **interest** | **Number** |  | 
 **vat** | **Number** |  | 

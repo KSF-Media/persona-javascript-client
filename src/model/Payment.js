@@ -43,8 +43,6 @@
    * @alias module:model/Payment
    * @class
    * @param invno {Number} Payment invoice ID
-   * @param _date {Date} 
-   * @param dueDate {Date} 
    * @param expenses {Number} 
    * @param interest {Number} 
    * @param vat {Number} 
@@ -53,12 +51,10 @@
    * @param type {module:model/Payment.TypeEnum} 
    * @param state {module:model/Payment.StateEnum} 
    */
-  var exports = function(invno, _date, dueDate, expenses, interest, vat, amount, openAmount, type, state) {
+  var exports = function(invno, expenses, interest, vat, amount, openAmount, type, state) {
     var _this = this;
 
     _this['invno'] = invno;
-    _this['date'] = _date;
-    _this['dueDate'] = dueDate;
     _this['expenses'] = expenses;
     _this['interest'] = interest;
     _this['vat'] = vat;
