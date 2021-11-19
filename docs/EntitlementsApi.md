@@ -4,10 +4,60 @@ All URIs are relative to *http://http:/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**entitlementsAllowGet**](EntitlementsApi.md#entitlementsAllowGet) | **GET** /entitlements/allow | Check if global entitlements are enabled
 [**entitlementsAllowPost**](EntitlementsApi.md#entitlementsAllowPost) | **POST** /entitlements/allow | 
 [**entitlementsAllowUuidPost**](EntitlementsApi.md#entitlementsAllowUuidPost) | **POST** /entitlements/allow/{uuid} | Grant product access to a customer
 [**entitlementsGet**](EntitlementsApi.md#entitlementsGet) | **GET** /entitlements | List all entitlements
 
+
+
+## entitlementsAllowGet
+
+> String entitlementsAllowGet(opts)
+
+Check if global entitlements are enabled
+
+### Example
+
+```javascript
+var Persona = require('persona');
+
+var apiInstance = new Persona.EntitlementsApi();
+var opts = {
+  'authUser': null, // String | 
+  'authorization': "authorization_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.entitlementsAllowGet(opts, callback);
+```
+
+### Parameters
+
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authUser** | [**String**](.md)|  | [optional] 
+ **authorization** | **String**|  | [optional] 
+
+### Return type
+
+**String**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json;charset=utf-8
 
 
 ## entitlementsAllowPost

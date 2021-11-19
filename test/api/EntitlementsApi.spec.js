@@ -50,6 +50,16 @@
   }
 
   describe('EntitlementsApi', function() {
+    describe('entitlementsAllowGet', function() {
+      it('should call entitlementsAllowGet successfully', function(done) {
+        //uncomment below and update the code to test entitlementsAllowGet
+        //instance.entitlementsAllowGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('entitlementsAllowPost', function() {
       it('should call entitlementsAllowPost successfully', function(done) {
         //uncomment below and update the code to test entitlementsAllowPost

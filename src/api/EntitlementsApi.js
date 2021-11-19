@@ -48,6 +48,50 @@
 
 
     /**
+     * Callback function to receive the result of the entitlementsAllowGet operation.
+     * @callback module:api/EntitlementsApi~entitlementsAllowGetCallback
+     * @param {String} error Error message, if any.
+     * @param {String} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Check if global entitlements are enabled
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
+     * @param {String} opts.authorization 
+     * @param {module:api/EntitlementsApi~entitlementsAllowGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link String}
+     */
+    this.entitlementsAllowGet = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'AuthUser': opts['authUser'],
+        'Authorization': opts['authorization']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = 'String';
+      return this.apiClient.callApi(
+        '/entitlements/allow', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the entitlementsAllowPost operation.
      * @callback module:api/EntitlementsApi~entitlementsAllowPostCallback
      * @param {String} error Error message, if any.
