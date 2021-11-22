@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## entitlementsAllowGet
 
-> String entitlementsAllowGet(opts)
+> [String] entitlementsAllowGet(opts)
 
 Check if global entitlements are enabled
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+**[String]**
 
 ### Authorization
 
