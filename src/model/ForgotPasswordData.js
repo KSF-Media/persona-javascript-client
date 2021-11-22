@@ -63,6 +63,9 @@
       if (data.hasOwnProperty('email')) {
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
       }
+      if (data.hasOwnProperty('redir')) {
+        obj['redir'] = ApiClient.convertToType(data['redir'], 'Boolean');
+      }
     }
     return obj;
   }
@@ -71,6 +74,10 @@
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
+  /**
+   * @member {Boolean} redir
+   */
+  exports.prototype['redir'] = undefined;
 
 
 

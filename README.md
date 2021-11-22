@@ -90,7 +90,10 @@ var Persona = require('persona');
 
 
 var api = new Persona.AccountApi()
-var body = new Persona.ForgotPasswordData(); // {ForgotPasswordData} 
+var email = "email_example"; // {String} 
+var opts = {
+  'redir': true // {Boolean} 
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -99,7 +102,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.accountPasswordForgotPost(body, callback);
+api.accountPasswordForgotGet(email, opts, callback);
 
 ```
 
@@ -109,6 +112,7 @@ All URIs are relative to *http://http:/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*Persona.AccountApi* | [**accountPasswordForgotGet**](docs/AccountApi.md#accountPasswordForgotGet) | **GET** /account/password/forgot | Request password reset link
 *Persona.AccountApi* | [**accountPasswordForgotPost**](docs/AccountApi.md#accountPasswordForgotPost) | **POST** /account/password/forgot | Request password reset link
 *Persona.AccountApi* | [**accountPasswordResetPost**](docs/AccountApi.md#accountPasswordResetPost) | **POST** /account/password/reset | Reset a forgotten password with a token
 *Persona.AdminApi* | [**adminSearchPost**](docs/AdminApi.md#adminSearchPost) | **POST** /admin/search | Search for users

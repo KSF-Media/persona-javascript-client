@@ -50,6 +50,16 @@
   }
 
   describe('AccountApi', function() {
+    describe('accountPasswordForgotGet', function() {
+      it('should call accountPasswordForgotGet successfully', function(done) {
+        //uncomment below and update the code to test accountPasswordForgotGet
+        //instance.accountPasswordForgotGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('accountPasswordForgotPost', function() {
       it('should call accountPasswordForgotPost successfully', function(done) {
         //uncomment below and update the code to test accountPasswordForgotPost

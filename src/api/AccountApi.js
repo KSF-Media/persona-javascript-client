@@ -48,6 +48,54 @@
 
 
     /**
+     * Callback function to receive the result of the accountPasswordForgotGet operation.
+     * @callback module:api/AccountApi~accountPasswordForgotGetCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Request password reset link
+     * @param {String} email 
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.redir 
+     * @param {module:api/AccountApi~accountPasswordForgotGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<Object>}
+     */
+    this.accountPasswordForgotGet = function(email, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'email' is set
+      if (email === undefined || email === null) {
+        throw new Error("Missing the required parameter 'email' when calling accountPasswordForgotGet");
+      }
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'email': email,
+        'redir': opts['redir'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = [Object];
+      return this.apiClient.callApi(
+        '/account/password/forgot', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the accountPasswordForgotPost operation.
      * @callback module:api/AccountApi~accountPasswordForgotPostCallback
      * @param {String} error Error message, if any.

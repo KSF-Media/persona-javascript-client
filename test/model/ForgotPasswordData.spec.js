@@ -62,6 +62,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property redir (base name: "redir")', function() {
+      // uncomment below and update the code to test the property redir
+      //var instance = new Persona.ForgotPasswordData();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
