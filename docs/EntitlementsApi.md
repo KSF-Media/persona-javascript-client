@@ -25,7 +25,9 @@ var Persona = require('persona');
 var apiInstance = new Persona.EntitlementsApi();
 var opts = {
   'authUser': null, // String | 
-  'authorization': "authorization_example" // String | 
+  'authorization': "authorization_example", // String | 
+  'ip': "ip_example", // String | 
+  'paper': "paper_example" // String | 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -45,6 +47,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
+ **ip** | **String**|  | [optional] 
+ **paper** | **String**|  | [optional] 
 
 ### Return type
 

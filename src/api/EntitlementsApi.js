@@ -60,6 +60,8 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.authUser 
      * @param {String} opts.authorization 
+     * @param {String} opts.ip 
+     * @param {module:model/String} opts.paper 
      * @param {module:api/EntitlementsApi~entitlementsAllowGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<String>}
      */
@@ -70,6 +72,8 @@
       var pathParams = {
       };
       var queryParams = {
+        'ip': opts['ip'],
+        'paper': opts['paper'],
       };
       var collectionQueryParams = {
       };
