@@ -68,6 +68,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property sleepType (base name: "sleepType")', function() {
+      // uncomment below and update the code to test the property sleepType
+      //var instance = new Persona.PausedSubscription();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

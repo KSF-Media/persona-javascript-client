@@ -44,12 +44,14 @@
    * @class
    * @param startDate {Date} 
    * @param endDate {Date} 
+   * @param sleepType {module:model/PausedSubscription.SleepTypeEnum} Type of subscription pause
    */
-  var exports = function(startDate, endDate) {
+  var exports = function(startDate, endDate, sleepType) {
     var _this = this;
 
     _this['startDate'] = startDate;
     _this['endDate'] = endDate;
+    _this['sleepType'] = sleepType;
   };
 
   /**
@@ -68,6 +70,9 @@
       if (data.hasOwnProperty('endDate')) {
         obj['endDate'] = ApiClient.convertToType(data['endDate'], 'Date');
       }
+      if (data.hasOwnProperty('sleepType')) {
+        obj['sleepType'] = ApiClient.convertToType(data['sleepType'], 'String');
+      }
     }
     return obj;
   }
@@ -80,7 +85,34 @@
    * @member {Date} endDate
    */
   exports.prototype['endDate'] = undefined;
+  /**
+   * Type of subscription pause
+   * @member {module:model/PausedSubscription.SleepTypeEnum} sleepType
+   */
+  exports.prototype['sleepType'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>sleepType</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.SleepTypeEnum = {
+    /**
+     * value: "Pause"
+     * @const
+     */
+    "Pause": "Pause",
+    /**
+     * value: "Rebate"
+     * @const
+     */
+    "Rebate": "Rebate",
+    /**
+     * value: "UnknownSleepType"
+     * @const
+     */
+    "UnknownSleepType": "UnknownSleepType"  };
 
 
   return exports;
