@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.EntitlementAccess();
+    instance = new Persona.PersistedEntitlementAccess();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,28 +49,34 @@
       object[property] = value;
   }
 
-  describe('EntitlementAccess', function() {
-    it('should create an instance of EntitlementAccess', function() {
-      // uncomment below and update the code to test EntitlementAccess
-      //var instance = new Persona.EntitlementAccess();
-      //expect(instance).to.be.a(Persona.EntitlementAccess);
+  describe('PersistedEntitlementAccess', function() {
+    it('should create an instance of PersistedEntitlementAccess', function() {
+      // uncomment below and update the code to test PersistedEntitlementAccess
+      //var instance = new Persona.PersistedEntitlementAccess();
+      //expect(instance).to.be.a(Persona.PersistedEntitlementAccess);
+    });
+
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new Persona.PersistedEntitlementAccess();
+      //expect(instance).to.be();
     });
 
     it('should have the property startAt (base name: "startAt")', function() {
       // uncomment below and update the code to test the property startAt
-      //var instance = new Persona.EntitlementAccess();
+      //var instance = new Persona.PersistedEntitlementAccess();
       //expect(instance).to.be();
     });
 
     it('should have the property endAt (base name: "endAt")', function() {
       // uncomment below and update the code to test the property endAt
-      //var instance = new Persona.EntitlementAccess();
+      //var instance = new Persona.PersistedEntitlementAccess();
       //expect(instance).to.be();
     });
 
     it('should have the property onlyToProducts (base name: "onlyToProducts")', function() {
       // uncomment below and update the code to test the property onlyToProducts
-      //var instance = new Persona.EntitlementAccess();
+      //var instance = new Persona.PersistedEntitlementAccess();
       //expect(instance).to.be();
     });
 

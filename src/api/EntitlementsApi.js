@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/EntitlementAccess', 'model/InlineResponse400', 'model/InlineResponse415'], factory);
+    define(['ApiClient', 'model/EntitlementAccess', 'model/InlineResponse400', 'model/InlineResponse415', 'model/PersistedEntitlementAccess'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/EntitlementAccess'), require('../model/InlineResponse400'), require('../model/InlineResponse415'));
+    module.exports = factory(require('../ApiClient'), require('../model/EntitlementAccess'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/PersistedEntitlementAccess'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.EntitlementsApi = factory(root.Persona.ApiClient, root.Persona.EntitlementAccess, root.Persona.InlineResponse400, root.Persona.InlineResponse415);
+    root.Persona.EntitlementsApi = factory(root.Persona.ApiClient, root.Persona.EntitlementAccess, root.Persona.InlineResponse400, root.Persona.InlineResponse415, root.Persona.PersistedEntitlementAccess);
   }
-}(this, function(ApiClient, EntitlementAccess, InlineResponse400, InlineResponse415) {
+}(this, function(ApiClient, EntitlementAccess, InlineResponse400, InlineResponse415, PersistedEntitlementAccess) {
   'use strict';
 
   /**
@@ -48,10 +48,59 @@
 
 
     /**
+     * Callback function to receive the result of the entitlementsAllowDelete operation.
+     * @callback module:api/EntitlementsApi~entitlementsAllowDeleteCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Remove an entitlement
+     * @param {Number} body 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
+     * @param {String} opts.authorization 
+     * @param {module:api/EntitlementsApi~entitlementsAllowDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<Object>}
+     */
+    this.entitlementsAllowDelete = function(body, opts, callback) {
+      opts = opts || {};
+      var postBody = body;
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling entitlementsAllowDelete");
+      }
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'AuthUser': opts['authUser'],
+        'Authorization': opts['authorization']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json;charset=utf-8'];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = [Object];
+      return this.apiClient.callApi(
+        '/entitlements/allow', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the entitlementsAllowGet operation.
      * @callback module:api/EntitlementsApi~entitlementsAllowGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<String>} data The data returned by the service call.
+     * @param {Array.<module:model/PersistedEntitlementAccess>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -63,7 +112,7 @@
      * @param {String} opts.ip 
      * @param {module:model/String} opts.paper 
      * @param {module:api/EntitlementsApi~entitlementsAllowGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<String>}
+     * data is of type: {@link Array.<module:model/PersistedEntitlementAccess>}
      */
     this.entitlementsAllowGet = function(opts, callback) {
       opts = opts || {};
@@ -87,7 +136,7 @@
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json;charset=utf-8'];
-      var returnType = ['String'];
+      var returnType = [PersistedEntitlementAccess];
       return this.apiClient.callApi(
         '/entitlements/allow', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
@@ -104,6 +153,7 @@
      */
 
     /**
+     * Add an entitlement for all users
      * @param {module:model/EntitlementAccess} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.authUser 

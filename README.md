@@ -117,8 +117,9 @@ Class | Method | HTTP request | Description
 *Persona.AccountApi* | [**accountPasswordResetPost**](docs/AccountApi.md#accountPasswordResetPost) | **POST** /account/password/reset | Reset a forgotten password with a token
 *Persona.AdminApi* | [**adminSearchPost**](docs/AdminApi.md#adminSearchPost) | **POST** /admin/search | Search for users
 *Persona.AdminApi* | [**adminUserPost**](docs/AdminApi.md#adminUserPost) | **POST** /admin/user | Create a new user with admin options.
+*Persona.EntitlementsApi* | [**entitlementsAllowDelete**](docs/EntitlementsApi.md#entitlementsAllowDelete) | **DELETE** /entitlements/allow | Remove an entitlement
 *Persona.EntitlementsApi* | [**entitlementsAllowGet**](docs/EntitlementsApi.md#entitlementsAllowGet) | **GET** /entitlements/allow | Check if global entitlements are enabled
-*Persona.EntitlementsApi* | [**entitlementsAllowPost**](docs/EntitlementsApi.md#entitlementsAllowPost) | **POST** /entitlements/allow | 
+*Persona.EntitlementsApi* | [**entitlementsAllowPost**](docs/EntitlementsApi.md#entitlementsAllowPost) | **POST** /entitlements/allow | Add an entitlement for all users
 *Persona.EntitlementsApi* | [**entitlementsAllowUuidPost**](docs/EntitlementsApi.md#entitlementsAllowUuidPost) | **POST** /entitlements/allow/{uuid} | Grant product access to a customer
 *Persona.EntitlementsApi* | [**entitlementsGet**](docs/EntitlementsApi.md#entitlementsGet) | **GET** /entitlements | List all entitlements
 *Persona.LoginApi* | [**loginPost**](docs/LoginApi.md#loginPost) | **POST** /login | Login with email and password
@@ -193,6 +194,7 @@ Class | Method | HTTP request | Description
  - [Persona.PausedSubscription](docs/PausedSubscription.md)
  - [Persona.Payment](docs/Payment.md)
  - [Persona.PendingAddressChange](docs/PendingAddressChange.md)
+ - [Persona.PersistedEntitlementAccess](docs/PersistedEntitlementAccess.md)
  - [Persona.Product](docs/Product.md)
  - [Persona.SearchQuery](docs/SearchQuery.md)
  - [Persona.SearchResult](docs/SearchResult.md)

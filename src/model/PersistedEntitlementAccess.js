@@ -25,7 +25,7 @@
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.EntitlementAccess = factory(root.Persona.ApiClient);
+    root.Persona.PersistedEntitlementAccess = factory(root.Persona.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -33,14 +33,14 @@
 
 
   /**
-   * The EntitlementAccess model module.
-   * @module model/EntitlementAccess
+   * The PersistedEntitlementAccess model module.
+   * @module model/PersistedEntitlementAccess
    * @version 1.3.0
    */
 
   /**
-   * Constructs a new <code>EntitlementAccess</code>.
-   * @alias module:model/EntitlementAccess
+   * Constructs a new <code>PersistedEntitlementAccess</code>.
+   * @alias module:model/PersistedEntitlementAccess
    * @class
    * @param startAt {String} 
    * @param endAt {String} 
@@ -53,15 +53,18 @@
   };
 
   /**
-   * Constructs a <code>EntitlementAccess</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PersistedEntitlementAccess</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/EntitlementAccess} obj Optional instance to populate.
-   * @return {module:model/EntitlementAccess} The populated <code>EntitlementAccess</code> instance.
+   * @param {module:model/PersistedEntitlementAccess} obj Optional instance to populate.
+   * @return {module:model/PersistedEntitlementAccess} The populated <code>PersistedEntitlementAccess</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
+      }
       if (data.hasOwnProperty('startAt')) {
         obj['startAt'] = ApiClient.convertToType(data['startAt'], 'String');
       }
@@ -75,6 +78,10 @@
     return obj;
   }
 
+  /**
+   * @member {Number} id
+   */
+  exports.prototype['id'] = undefined;
   /**
    * @member {String} startAt
    */
