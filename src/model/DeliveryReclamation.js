@@ -48,7 +48,7 @@
    * @param subscriptionNumber {Number} The identifier of the subscription for which reclamation was made
    * @param _date {Date} 
    * @param publicationDate {Date} 
-   * @param claim {module:model/DeliveryReclamation.ClaimEnum} The type of claim for the reclamation
+   * @param claim {module:model/DeliveryReclamation.ClaimEnum} 
    */
   var exports = function(_number, customerNumber, subscriptionNumber, _date, publicationDate, claim) {
     var _this = this;
@@ -124,7 +124,6 @@
    */
   exports.prototype['publicationDate'] = undefined;
   /**
-   * The type of claim for the reclamation
    * @member {module:model/DeliveryReclamation.ClaimEnum} claim
    */
   exports.prototype['claim'] = undefined;

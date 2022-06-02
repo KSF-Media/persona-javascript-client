@@ -211,7 +211,6 @@
    */
   exports.prototype['orderNumber'] = undefined;
   /**
-   * Payment method of subscription
    * @member {module:model/Subscription.PaymentMethodEnum} paymentMethod
    */
   exports.prototype['paymentMethod'] = undefined;

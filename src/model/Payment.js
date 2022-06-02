@@ -156,12 +156,10 @@
    */
   exports.prototype['openAmount'] = undefined;
   /**
-   * 
    * @member {module:model/Payment.TypeEnum} type
    */
   exports.prototype['type'] = undefined;
   /**
-   * 
    * @member {module:model/Payment.StateEnum} state
    */
   exports.prototype['state'] = undefined;

@@ -44,7 +44,7 @@
    * @alias module:model/NewDeliveryReclamation
    * @class
    * @param publicationDate {Date} 
-   * @param claim {module:model/NewDeliveryReclamation.ClaimEnum} The type of claim for the reclamation
+   * @param claim {module:model/NewDeliveryReclamation.ClaimEnum} 
    */
   var exports = function(publicationDate, claim) {
     var _this = this;
@@ -85,7 +85,6 @@
    */
   exports.prototype['publicationDate'] = undefined;
   /**
-   * The type of claim for the reclamation
    * @member {module:model/NewDeliveryReclamation.ClaimEnum} claim
    */
   exports.prototype['claim'] = undefined;

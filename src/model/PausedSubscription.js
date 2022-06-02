@@ -44,7 +44,7 @@
    * @class
    * @param startDate {Date} 
    * @param endDate {Date} 
-   * @param sleepType {module:model/PausedSubscription.SleepTypeEnum} Type of subscription pause
+   * @param sleepType {module:model/PausedSubscription.SleepTypeEnum} 
    */
   var exports = function(startDate, endDate, sleepType) {
     var _this = this;
@@ -86,7 +86,6 @@
    */
   exports.prototype['endDate'] = undefined;
   /**
-   * Type of subscription pause
    * @member {module:model/PausedSubscription.SleepTypeEnum} sleepType
    */
   exports.prototype['sleepType'] = undefined;
@@ -99,20 +98,55 @@
    */
   exports.SleepTypeEnum = {
     /**
-     * value: "Pause"
+     * value: "Upcoming"
      * @const
      */
-    "Pause": "Pause",
+    "Upcoming": "Upcoming",
     /**
-     * value: "Rebate"
+     * value: "Active"
      * @const
      */
-    "Rebate": "Rebate",
+    "Active": "Active",
     /**
-     * value: "UnknownSleepType"
+     * value: "Paused"
      * @const
      */
-    "UnknownSleepType": "UnknownSleepType"  };
+    "Paused": "Paused",
+    /**
+     * value: "Ended"
+     * @const
+     */
+    "Ended": "Ended",
+    /**
+     * value: "UnpaidAndCanceled"
+     * @const
+     */
+    "UnpaidAndCanceled": "UnpaidAndCanceled",
+    /**
+     * value: "Canceled"
+     * @const
+     */
+    "Canceled": "Canceled",
+    /**
+     * value: "CanceledWithLatePayment"
+     * @const
+     */
+    "CanceledWithLatePayment": "CanceledWithLatePayment",
+    /**
+     * value: "RestartedAfterLatePayment"
+     * @const
+     */
+    "RestartedAfterLatePayment": "RestartedAfterLatePayment",
+    /**
+     * value: "DeactivatedRecently"
+     * @const
+     */
+    "DeactivatedRecently": "DeactivatedRecently",
+    /**
+     * value: "Unknown"
+     * @const
+     */
+    "Unknown": "Unknown"  };
 
 
   return exports;

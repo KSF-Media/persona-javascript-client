@@ -6,18 +6,32 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **startDate** | **Date** |  | 
 **endDate** | **Date** |  | 
-**sleepType** | **String** | Type of subscription pause | 
+**sleepType** | **String** |  | 
 
 
 
 ## Enum: SleepTypeEnum
 
 
-* `Pause` (value: `"Pause"`)
+* `Upcoming` (value: `"Upcoming"`)
 
-* `Rebate` (value: `"Rebate"`)
+* `Active` (value: `"Active"`)
 
-* `UnknownSleepType` (value: `"UnknownSleepType"`)
+* `Paused` (value: `"Paused"`)
+
+* `Ended` (value: `"Ended"`)
+
+* `UnpaidAndCanceled` (value: `"UnpaidAndCanceled"`)
+
+* `Canceled` (value: `"Canceled"`)
+
+* `CanceledWithLatePayment` (value: `"CanceledWithLatePayment"`)
+
+* `RestartedAfterLatePayment` (value: `"RestartedAfterLatePayment"`)
+
+* `DeactivatedRecently` (value: `"DeactivatedRecently"`)
+
+* `Unknown` (value: `"Unknown"`)
 
 
 

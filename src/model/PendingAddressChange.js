@@ -44,7 +44,7 @@
    * @class
    * @param address {module:model/DeliveryAddress} 
    * @param startDate {Date} 
-   * @param type {module:model/PendingAddressChange.TypeEnum} Type of address change
+   * @param type {module:model/PendingAddressChange.TypeEnum} 
    */
   var exports = function(address, startDate, type) {
     var _this = this;
@@ -93,7 +93,6 @@
    */
   exports.prototype['endDate'] = undefined;
   /**
-   * Type of address change
    * @member {module:model/PendingAddressChange.TypeEnum} type
    */
   exports.prototype['type'] = undefined;

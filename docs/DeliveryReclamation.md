@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **_date** | **Date** |  | 
 **paper** | **String** |  | [optional] 
 **publicationDate** | **Date** |  | 
-**claim** | **String** | The type of claim for the reclamation | 
+**claim** | **String** |  | 
 
 
 

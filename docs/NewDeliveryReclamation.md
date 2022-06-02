@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **paper** | **String** |  | [optional] 
 **publicationDate** | **Date** |  | 
-**claim** | **String** | The type of claim for the reclamation | 
+**claim** | **String** |  | 
 
 
 
