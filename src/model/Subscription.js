@@ -46,8 +46,8 @@
    * @param extno {Number} Subscription Extension Id - how many times a subscription has been extended
    * @param cusno {Number} Customer getting the subscription
    * @param paycusno {Number} Customer paying for the subscription
-   * @param kind {module:model/Subscription.KindEnum} Subscription kind - what kind of order is it
-   * @param state {module:model/Subscription.StateEnum} Current state of the Subscription
+   * @param kind {module:model/Subscription.KindEnum} 
+   * @param state {module:model/Subscription.StateEnum} 
    * @param _package {module:model/ModelPackage} 
    * @param dates {module:model/SubscriptionDates} 
    * @param extsubsexists {Boolean} If the extension of this subscription exists
@@ -155,17 +155,14 @@
    */
   exports.prototype['paycusno'] = undefined;
   /**
-   * Subscription kind - what kind of order is it
    * @member {module:model/Subscription.KindEnum} kind
    */
   exports.prototype['kind'] = undefined;
   /**
-   * Current state of the Subscription
    * @member {module:model/Subscription.StateEnum} state
    */
   exports.prototype['state'] = undefined;
   /**
-   * Pricegroup of the Subscription
    * @member {module:model/Subscription.PricegroupEnum} pricegroup
    */
   exports.prototype['pricegroup'] = undefined;

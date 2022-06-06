@@ -8,9 +8,9 @@ Name | Type | Description | Notes
 **extno** | **Number** | Subscription Extension Id - how many times a subscription has been extended | 
 **cusno** | **Number** | Customer getting the subscription | 
 **paycusno** | **Number** | Customer paying for the subscription | 
-**kind** | **String** | Subscription kind - what kind of order is it | 
-**state** | **String** | Current state of the Subscription | 
-**pricegroup** | **String** | Pricegroup of the Subscription | [optional] 
+**kind** | **String** |  | 
+**state** | **String** |  | 
+**pricegroup** | **String** |  | [optional] 
 **_package** | [**ModelPackage**](ModelPackage.md) |  | 
 **dates** | [**SubscriptionDates**](SubscriptionDates.md) |  | 
 **extsubsexists** | **Boolean** | If the extension of this subscription exists | 

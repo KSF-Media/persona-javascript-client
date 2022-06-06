@@ -98,55 +98,20 @@
    */
   exports.SleepTypeEnum = {
     /**
-     * value: "Upcoming"
+     * value: "Pause"
      * @const
      */
-    "Upcoming": "Upcoming",
+    "Pause": "Pause",
     /**
-     * value: "Active"
+     * value: "Rebate"
      * @const
      */
-    "Active": "Active",
+    "Rebate": "Rebate",
     /**
-     * value: "Paused"
+     * value: "UnknownSleepType"
      * @const
      */
-    "Paused": "Paused",
-    /**
-     * value: "Ended"
-     * @const
-     */
-    "Ended": "Ended",
-    /**
-     * value: "UnpaidAndCanceled"
-     * @const
-     */
-    "UnpaidAndCanceled": "UnpaidAndCanceled",
-    /**
-     * value: "Canceled"
-     * @const
-     */
-    "Canceled": "Canceled",
-    /**
-     * value: "CanceledWithLatePayment"
-     * @const
-     */
-    "CanceledWithLatePayment": "CanceledWithLatePayment",
-    /**
-     * value: "RestartedAfterLatePayment"
-     * @const
-     */
-    "RestartedAfterLatePayment": "RestartedAfterLatePayment",
-    /**
-     * value: "DeactivatedRecently"
-     * @const
-     */
-    "DeactivatedRecently": "DeactivatedRecently",
-    /**
-     * value: "Unknown"
-     * @const
-     */
-    "Unknown": "Unknown"  };
+    "UnknownSleepType": "UnknownSleepType"  };
 
 
   return exports;

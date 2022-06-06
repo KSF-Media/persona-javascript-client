@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**reason** | **String** | Cancel reason code | 
+**reason** | **String** |  | 
 **notes** | **String** | Cancel reason explanation | [optional] 
 
 

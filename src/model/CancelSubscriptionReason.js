@@ -43,7 +43,7 @@
    * Cancel reason
    * @alias module:model/CancelSubscriptionReason
    * @class
-   * @param reason {module:model/CancelSubscriptionReason.ReasonEnum} Cancel reason code
+   * @param reason {module:model/CancelSubscriptionReason.ReasonEnum} 
    */
   var exports = function(reason) {
     var _this = this;
@@ -72,7 +72,6 @@
   }
 
   /**
-   * Cancel reason code
    * @member {module:model/CancelSubscriptionReason.ReasonEnum} reason
    */
   exports.prototype['reason'] = undefined;

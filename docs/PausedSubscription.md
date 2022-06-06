@@ -13,25 +13,11 @@ Name | Type | Description | Notes
 ## Enum: SleepTypeEnum
 
 
-* `Upcoming` (value: `"Upcoming"`)
+* `Pause` (value: `"Pause"`)
 
-* `Active` (value: `"Active"`)
+* `Rebate` (value: `"Rebate"`)
 
-* `Paused` (value: `"Paused"`)
-
-* `Ended` (value: `"Ended"`)
-
-* `UnpaidAndCanceled` (value: `"UnpaidAndCanceled"`)
-
-* `Canceled` (value: `"Canceled"`)
-
-* `CanceledWithLatePayment` (value: `"CanceledWithLatePayment"`)
-
-* `RestartedAfterLatePayment` (value: `"RestartedAfterLatePayment"`)
-
-* `DeactivatedRecently` (value: `"DeactivatedRecently"`)
-
-* `Unknown` (value: `"Unknown"`)
+* `UnknownSleepType` (value: `"UnknownSleepType"`)
 
 
 
