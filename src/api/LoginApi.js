@@ -48,6 +48,51 @@
 
 
     /**
+     * Callback function to receive the result of the loginIpGet operation.
+     * @callback module:api/LoginApi~loginIpGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/LoginResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Login with IP
+     * Returns auth & token for customers with IP based entitlement
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.xRealIP 
+     * @param {module:model/String} opts.paper 
+     * @param {module:api/LoginApi~loginIpGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/LoginResponse}
+     */
+    this.loginIpGet = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'paper': opts['paper'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'X-Real-IP': opts['xRealIP']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = LoginResponse;
+      return this.apiClient.callApi(
+        '/login/ip', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the loginPost operation.
      * @callback module:api/LoginApi~loginPostCallback
      * @param {String} error Error message, if any.

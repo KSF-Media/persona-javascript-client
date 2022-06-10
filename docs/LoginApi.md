@@ -4,11 +4,63 @@ All URIs are relative to *http://http:/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**loginIpGet**](LoginApi.md#loginIpGet) | **GET** /login/ip | Login with IP
 [**loginPost**](LoginApi.md#loginPost) | **POST** /login | Login with email and password
 [**loginSomePost**](LoginApi.md#loginSomePost) | **POST** /login/some | Login with social media
 [**loginSsoPost**](LoginApi.md#loginSsoPost) | **POST** /login/sso | Login with the AccessToken given by the SSO auth
 [**loginUuidDelete**](LoginApi.md#loginUuidDelete) | **DELETE** /login/{uuid} | Logout
 
+
+
+## loginIpGet
+
+> LoginResponse loginIpGet(opts)
+
+Login with IP
+
+Returns auth &amp; token for customers with IP based entitlement
+
+### Example
+
+```javascript
+var Persona = require('persona');
+
+var apiInstance = new Persona.LoginApi();
+var opts = {
+  'xRealIP': "xRealIP_example", // String | 
+  'paper': "paper_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.loginIpGet(opts, callback);
+```
+
+### Parameters
+
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xRealIP** | **String**|  | [optional] 
+ **paper** | **String**|  | [optional] 
+
+### Return type
+
+[**LoginResponse**](LoginResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json;charset=utf-8
 
 
 ## loginPost

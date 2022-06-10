@@ -50,6 +50,16 @@
   }
 
   describe('LoginApi', function() {
+    describe('loginIpGet', function() {
+      it('should call loginIpGet successfully', function(done) {
+        //uncomment below and update the code to test loginIpGet
+        //instance.loginIpGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('loginPost', function() {
       it('should call loginPost successfully', function(done) {
         //uncomment below and update the code to test loginPost
