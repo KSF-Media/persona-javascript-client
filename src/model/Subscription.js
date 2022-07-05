@@ -130,6 +130,9 @@
       if (data.hasOwnProperty('paymentMethodId')) {
         obj['paymentMethodId'] = ApiClient.convertToType(data['paymentMethodId'], 'Number');
       }
+      if (data.hasOwnProperty('deliveryTroubleEnd')) {
+        obj['deliveryTroubleEnd'] = ApiClient.convertToType(data['deliveryTroubleEnd'], 'String');
+      }
     }
     return obj;
   }
@@ -215,6 +218,10 @@
    * @member {Number} paymentMethodId
    */
   exports.prototype['paymentMethodId'] = undefined;
+  /**
+   * @member {String} deliveryTroubleEnd
+   */
+  exports.prototype['deliveryTroubleEnd'] = undefined;
 
 
   /**

@@ -164,6 +164,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property deliveryTroubleEnd (base name: "deliveryTroubleEnd")', function() {
+      // uncomment below and update the code to test the property deliveryTroubleEnd
+      //var instance = new Persona.Subscription();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
