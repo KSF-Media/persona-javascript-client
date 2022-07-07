@@ -131,7 +131,7 @@
         obj['paymentMethodId'] = ApiClient.convertToType(data['paymentMethodId'], 'Number');
       }
       if (data.hasOwnProperty('deliveryTroubleEnd')) {
-        obj['deliveryTroubleEnd'] = ApiClient.convertToType(data['deliveryTroubleEnd'], 'String');
+        obj['deliveryTroubleEnd'] = ApiClient.convertToType(data['deliveryTroubleEnd'], 'Date');
       }
     }
     return obj;
@@ -219,7 +219,7 @@
    */
   exports.prototype['paymentMethodId'] = undefined;
   /**
-   * @member {String} deliveryTroubleEnd
+   * @member {Date} deliveryTroubleEnd
    */
   exports.prototype['deliveryTroubleEnd'] = undefined;
 

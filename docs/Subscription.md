@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **orderNumber** | **String** | Order number of subscription | [optional] 
 **paymentMethod** | **String** |  | [optional] 
 **paymentMethodId** | **Number** |  | [optional] 
-**deliveryTroubleEnd** | **String** |  | [optional] 
+**deliveryTroubleEnd** | **Date** |  | [optional] 
 
 
 
