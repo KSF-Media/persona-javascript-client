@@ -72,6 +72,9 @@
       if (data.hasOwnProperty('claim')) {
         obj['claim'] = ApiClient.convertToType(data['claim'], 'String');
       }
+      if (data.hasOwnProperty('doorCode')) {
+        obj['doorCode'] = ApiClient.convertToType(data['doorCode'], 'String');
+      }
     }
     return obj;
   }
@@ -88,6 +91,11 @@
    * @member {module:model/NewDeliveryReclamation.ClaimEnum} claim
    */
   exports.prototype['claim'] = undefined;
+  /**
+   * Door code for possible redelivery
+   * @member {String} doorCode
+   */
+  exports.prototype['doorCode'] = undefined;
 
 
   /**

@@ -74,6 +74,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property doorCode (base name: "doorCode")', function() {
+      // uncomment below and update the code to test the property doorCode
+      //var instance = new Persona.NewDeliveryReclamation();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

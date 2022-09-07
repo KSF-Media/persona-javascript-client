@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **paper** | **String** |  | [optional] 
 **publicationDate** | **Date** |  | 
 **claim** | **String** |  | 
+**doorCode** | **String** | Door code for redelivery | [optional] 
 
 
 
