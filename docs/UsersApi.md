@@ -340,7 +340,7 @@ No authorization required
 
 ## usersUuidNewslettersGet
 
-> NewsletterSubscriptions usersUuidNewslettersGet(uuid, opts)
+> [Newsletter] usersUuidNewslettersGet(uuid, opts)
 
 Get newsletter subscriptions
 
@@ -379,7 +379,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**NewsletterSubscriptions**](NewsletterSubscriptions.md)
+[**[Newsletter]**](Newsletter.md)
 
 ### Authorization
 
@@ -393,7 +393,7 @@ No authorization required
 
 ## usersUuidNewslettersPut
 
-> NewsletterSubscriptions usersUuidNewslettersPut(uuid, body, opts)
+> [Newsletter] usersUuidNewslettersPut(uuid, body, opts)
 
 Update newsletter subscriptions
 
@@ -406,7 +406,7 @@ var Persona = require('persona');
 
 var apiInstance = new Persona.UsersApi();
 var uuid = null; // String | 
-var body = new Persona.NewsletterSubscriptions(); // NewsletterSubscriptions | 
+var body = [new Persona.Newsletter()]; // [Newsletter] | 
 var opts = {
   'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
@@ -428,13 +428,13 @@ apiInstance.usersUuidNewslettersPut(uuid, body, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**String**](.md)|  | 
- **body** | [**NewsletterSubscriptions**](NewsletterSubscriptions.md)|  | 
+ **body** | [**[Newsletter]**](Array.md)|  | 
  **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
 
 ### Return type
 
-[**NewsletterSubscriptions**](NewsletterSubscriptions.md)
+[**[Newsletter]**](Newsletter.md)
 
 ### Authorization
 

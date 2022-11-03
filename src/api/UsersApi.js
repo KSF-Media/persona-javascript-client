@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CancelSubscriptionReason', 'model/DeleteTempAddressChangeDates', 'model/DeliveryReclamation', 'model/GdprConsent', 'model/InlineResponse400', 'model/InlineResponse415', 'model/LegalConsent', 'model/LoginResponse', 'model/NewDeliveryReclamation', 'model/NewTemporaryUser', 'model/NewUser', 'model/NewsletterSubscriptions', 'model/Subscription', 'model/SubscriptionPauseDates', 'model/SubscriptionPauseEdit', 'model/SubscriptionPayments', 'model/TemporaryAddressChange', 'model/TemporaryAddressChangeDates', 'model/User', 'model/UserUpdate', 'model/UserUpdatePassword'], factory);
+    define(['ApiClient', 'model/CancelSubscriptionReason', 'model/DeleteTempAddressChangeDates', 'model/DeliveryReclamation', 'model/GdprConsent', 'model/InlineResponse400', 'model/InlineResponse415', 'model/LegalConsent', 'model/LoginResponse', 'model/NewDeliveryReclamation', 'model/NewTemporaryUser', 'model/NewUser', 'model/Newsletter', 'model/Subscription', 'model/SubscriptionPauseDates', 'model/SubscriptionPauseEdit', 'model/SubscriptionPayments', 'model/TemporaryAddressChange', 'model/TemporaryAddressChangeDates', 'model/User', 'model/UserUpdate', 'model/UserUpdatePassword'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CancelSubscriptionReason'), require('../model/DeleteTempAddressChangeDates'), require('../model/DeliveryReclamation'), require('../model/GdprConsent'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/LegalConsent'), require('../model/LoginResponse'), require('../model/NewDeliveryReclamation'), require('../model/NewTemporaryUser'), require('../model/NewUser'), require('../model/NewsletterSubscriptions'), require('../model/Subscription'), require('../model/SubscriptionPauseDates'), require('../model/SubscriptionPauseEdit'), require('../model/SubscriptionPayments'), require('../model/TemporaryAddressChange'), require('../model/TemporaryAddressChangeDates'), require('../model/User'), require('../model/UserUpdate'), require('../model/UserUpdatePassword'));
+    module.exports = factory(require('../ApiClient'), require('../model/CancelSubscriptionReason'), require('../model/DeleteTempAddressChangeDates'), require('../model/DeliveryReclamation'), require('../model/GdprConsent'), require('../model/InlineResponse400'), require('../model/InlineResponse415'), require('../model/LegalConsent'), require('../model/LoginResponse'), require('../model/NewDeliveryReclamation'), require('../model/NewTemporaryUser'), require('../model/NewUser'), require('../model/Newsletter'), require('../model/Subscription'), require('../model/SubscriptionPauseDates'), require('../model/SubscriptionPauseEdit'), require('../model/SubscriptionPayments'), require('../model/TemporaryAddressChange'), require('../model/TemporaryAddressChangeDates'), require('../model/User'), require('../model/UserUpdate'), require('../model/UserUpdatePassword'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.UsersApi = factory(root.Persona.ApiClient, root.Persona.CancelSubscriptionReason, root.Persona.DeleteTempAddressChangeDates, root.Persona.DeliveryReclamation, root.Persona.GdprConsent, root.Persona.InlineResponse400, root.Persona.InlineResponse415, root.Persona.LegalConsent, root.Persona.LoginResponse, root.Persona.NewDeliveryReclamation, root.Persona.NewTemporaryUser, root.Persona.NewUser, root.Persona.NewsletterSubscriptions, root.Persona.Subscription, root.Persona.SubscriptionPauseDates, root.Persona.SubscriptionPauseEdit, root.Persona.SubscriptionPayments, root.Persona.TemporaryAddressChange, root.Persona.TemporaryAddressChangeDates, root.Persona.User, root.Persona.UserUpdate, root.Persona.UserUpdatePassword);
+    root.Persona.UsersApi = factory(root.Persona.ApiClient, root.Persona.CancelSubscriptionReason, root.Persona.DeleteTempAddressChangeDates, root.Persona.DeliveryReclamation, root.Persona.GdprConsent, root.Persona.InlineResponse400, root.Persona.InlineResponse415, root.Persona.LegalConsent, root.Persona.LoginResponse, root.Persona.NewDeliveryReclamation, root.Persona.NewTemporaryUser, root.Persona.NewUser, root.Persona.Newsletter, root.Persona.Subscription, root.Persona.SubscriptionPauseDates, root.Persona.SubscriptionPauseEdit, root.Persona.SubscriptionPayments, root.Persona.TemporaryAddressChange, root.Persona.TemporaryAddressChangeDates, root.Persona.User, root.Persona.UserUpdate, root.Persona.UserUpdatePassword);
   }
-}(this, function(ApiClient, CancelSubscriptionReason, DeleteTempAddressChangeDates, DeliveryReclamation, GdprConsent, InlineResponse400, InlineResponse415, LegalConsent, LoginResponse, NewDeliveryReclamation, NewTemporaryUser, NewUser, NewsletterSubscriptions, Subscription, SubscriptionPauseDates, SubscriptionPauseEdit, SubscriptionPayments, TemporaryAddressChange, TemporaryAddressChangeDates, User, UserUpdate, UserUpdatePassword) {
+}(this, function(ApiClient, CancelSubscriptionReason, DeleteTempAddressChangeDates, DeliveryReclamation, GdprConsent, InlineResponse400, InlineResponse415, LegalConsent, LoginResponse, NewDeliveryReclamation, NewTemporaryUser, NewUser, Newsletter, Subscription, SubscriptionPauseDates, SubscriptionPauseEdit, SubscriptionPayments, TemporaryAddressChange, TemporaryAddressChangeDates, User, UserUpdate, UserUpdatePassword) {
   'use strict';
 
   /**
@@ -355,7 +355,7 @@
      * Callback function to receive the result of the usersUuidNewslettersGet operation.
      * @callback module:api/UsersApi~usersUuidNewslettersGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/NewsletterSubscriptions} data The data returned by the service call.
+     * @param {Array.<module:model/Newsletter>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -367,7 +367,7 @@
      * @param {String} opts.authUser 
      * @param {String} opts.authorization 
      * @param {module:api/UsersApi~usersUuidNewslettersGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/NewsletterSubscriptions}
+     * data is of type: {@link Array.<module:model/Newsletter>}
      */
     this.usersUuidNewslettersGet = function(uuid, opts, callback) {
       opts = opts || {};
@@ -394,7 +394,7 @@
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json;charset=utf-8'];
-      var returnType = NewsletterSubscriptions;
+      var returnType = [Newsletter];
       return this.apiClient.callApi(
         '/users/{uuid}/newsletters', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
@@ -406,7 +406,7 @@
      * Callback function to receive the result of the usersUuidNewslettersPut operation.
      * @callback module:api/UsersApi~usersUuidNewslettersPutCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/NewsletterSubscriptions} data The data returned by the service call.
+     * @param {Array.<module:model/Newsletter>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -414,12 +414,12 @@
      * Update newsletter subscriptions
      * Get list of newsletter subscriptions from mailchimp
      * @param {String} uuid 
-     * @param {module:model/NewsletterSubscriptions} body 
+     * @param {Array.<Newsletter>} body 
      * @param {Object} opts Optional parameters
      * @param {String} opts.authUser 
      * @param {String} opts.authorization 
      * @param {module:api/UsersApi~usersUuidNewslettersPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/NewsletterSubscriptions}
+     * data is of type: {@link Array.<module:model/Newsletter>}
      */
     this.usersUuidNewslettersPut = function(uuid, body, opts, callback) {
       opts = opts || {};
@@ -450,7 +450,7 @@
       var authNames = [];
       var contentTypes = ['application/json;charset=utf-8'];
       var accepts = ['application/json;charset=utf-8'];
-      var returnType = NewsletterSubscriptions;
+      var returnType = [Newsletter];
       return this.apiClient.callApi(
         '/users/{uuid}/newsletters', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,

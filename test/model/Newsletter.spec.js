@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Persona.NewsletterSubscriptions();
+    instance = new Persona.Newsletter();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,28 +49,28 @@
       object[property] = value;
   }
 
-  describe('NewsletterSubscriptions', function() {
-    it('should create an instance of NewsletterSubscriptions', function() {
-      // uncomment below and update the code to test NewsletterSubscriptions
-      //var instance = new Persona.NewsletterSubscriptions();
-      //expect(instance).to.be.a(Persona.NewsletterSubscriptions);
+  describe('Newsletter', function() {
+    it('should create an instance of Newsletter', function() {
+      // uncomment below and update the code to test Newsletter
+      //var instance = new Persona.Newsletter();
+      //expect(instance).to.be.a(Persona.Newsletter);
     });
 
-    it('should have the property norden (base name: "norden")', function() {
-      // uncomment below and update the code to test the property norden
-      //var instance = new Persona.NewsletterSubscriptions();
+    it('should have the property listId (base name: "listId")', function() {
+      // uncomment below and update the code to test the property listId
+      //var instance = new Persona.Newsletter();
       //expect(instance).to.be();
     });
 
-    it('should have the property daily (base name: "daily")', function() {
-      // uncomment below and update the code to test the property daily
-      //var instance = new Persona.NewsletterSubscriptions();
+    it('should have the property paper (base name: "paper")', function() {
+      // uncomment below and update the code to test the property paper
+      //var instance = new Persona.Newsletter();
       //expect(instance).to.be();
     });
 
-    it('should have the property kultur (base name: "kultur")', function() {
-      // uncomment below and update the code to test the property kultur
-      //var instance = new Persona.NewsletterSubscriptions();
+    it('should have the property subscriptions (base name: "subscriptions")', function() {
+      // uncomment below and update the code to test the property subscriptions
+      //var instance = new Persona.Newsletter();
       //expect(instance).to.be();
     });
 
