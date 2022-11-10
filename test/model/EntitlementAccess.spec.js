@@ -74,6 +74,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property byPackageId (base name: "byPackageId")', function() {
+      // uncomment below and update the code to test the property byPackageId
+      //var instance = new Persona.EntitlementAccess();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

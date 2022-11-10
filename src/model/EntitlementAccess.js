@@ -71,6 +71,9 @@
       if (data.hasOwnProperty('onlyToProducts')) {
         obj['onlyToProducts'] = ApiClient.convertToType(data['onlyToProducts'], ['String']);
       }
+      if (data.hasOwnProperty('byPackageId')) {
+        obj['byPackageId'] = ApiClient.convertToType(data['byPackageId'], 'String');
+      }
     }
     return obj;
   }
@@ -87,6 +90,10 @@
    * @member {Array.<String>} onlyToProducts
    */
   exports.prototype['onlyToProducts'] = undefined;
+  /**
+   * @member {String} byPackageId
+   */
+  exports.prototype['byPackageId'] = undefined;
 
 
 
