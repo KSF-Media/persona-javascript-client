@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**entitlementsAllowPost**](EntitlementsApi.md#entitlementsAllowPost) | **POST** /entitlements/allow | Add an entitlement for all users
 [**entitlementsAllowUuidPost**](EntitlementsApi.md#entitlementsAllowUuidPost) | **POST** /entitlements/allow/{uuid} | Grant product access to a customer
 [**entitlementsGet**](EntitlementsApi.md#entitlementsGet) | **GET** /entitlements | List all entitlements
+[**entitlementsGlobalGet**](EntitlementsApi.md#entitlementsGlobalGet) | **GET** /entitlements/global | Lists all past and future global entitlements
 
 
 
@@ -249,6 +250,55 @@ This endpoint does not need any parameter.
 ### Return type
 
 **{String: [String]}**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json;charset=utf-8
+
+
+## entitlementsGlobalGet
+
+> [PersistedEntitlementAccess] entitlementsGlobalGet(opts)
+
+Lists all past and future global entitlements
+
+### Example
+
+```javascript
+var Persona = require('persona');
+
+var apiInstance = new Persona.EntitlementsApi();
+var opts = {
+  'authUser': null, // String | 
+  'authorization': "authorization_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.entitlementsGlobalGet(opts, callback);
+```
+
+### Parameters
+
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authUser** | [**String**](.md)|  | [optional] 
+ **authorization** | **String**|  | [optional] 
+
+### Return type
+
+[**[PersistedEntitlementAccess]**](PersistedEntitlementAccess.md)
 
 ### Authorization
 

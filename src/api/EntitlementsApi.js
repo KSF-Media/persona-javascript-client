@@ -285,6 +285,50 @@
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
+
+    /**
+     * Callback function to receive the result of the entitlementsGlobalGet operation.
+     * @callback module:api/EntitlementsApi~entitlementsGlobalGetCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/PersistedEntitlementAccess>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Lists all past and future global entitlements
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
+     * @param {String} opts.authorization 
+     * @param {module:api/EntitlementsApi~entitlementsGlobalGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/PersistedEntitlementAccess>}
+     */
+    this.entitlementsGlobalGet = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'AuthUser': opts['authUser'],
+        'Authorization': opts['authorization']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = [PersistedEntitlementAccess];
+      return this.apiClient.callApi(
+        '/entitlements/global', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
   };
 
   return exports;

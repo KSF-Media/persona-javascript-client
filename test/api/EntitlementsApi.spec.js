@@ -100,6 +100,16 @@
         done();
       });
     });
+    describe('entitlementsGlobalGet', function() {
+      it('should call entitlementsGlobalGet successfully', function(done) {
+        //uncomment below and update the code to test entitlementsGlobalGet
+        //instance.entitlementsGlobalGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));
