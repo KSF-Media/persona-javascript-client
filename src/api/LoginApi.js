@@ -58,25 +58,31 @@
     /**
      * Login with IP
      * Returns auth & token for customers with IP based entitlement
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.xRealIP 
-     * @param {module:model/String} opts.paper 
+     * @param {String} xRealIP 
+     * @param {module:model/String} paper 
      * @param {module:api/LoginApi~loginIpGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/LoginResponse}
      */
-    this.loginIpGet = function(opts, callback) {
-      opts = opts || {};
+    this.loginIpGet = function(xRealIP, paper, callback) {
       var postBody = null;
+      // verify the required parameter 'xRealIP' is set
+      if (xRealIP === undefined || xRealIP === null) {
+        throw new Error("Missing the required parameter 'xRealIP' when calling loginIpGet");
+      }
+      // verify the required parameter 'paper' is set
+      if (paper === undefined || paper === null) {
+        throw new Error("Missing the required parameter 'paper' when calling loginIpGet");
+      }
 
       var pathParams = {
       };
       var queryParams = {
-        'paper': opts['paper'],
+        'paper': paper,
       };
       var collectionQueryParams = {
       };
       var headerParams = {
-        'X-Real-IP': opts['xRealIP']
+        'X-Real-IP': xRealIP
       };
       var formParams = {
       };

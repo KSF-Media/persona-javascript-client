@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## loginIpGet
 
-> LoginResponse loginIpGet(opts)
+> LoginResponse loginIpGet(xRealIP, paper)
 
 Login with IP
 
@@ -26,10 +26,8 @@ Returns auth &amp; token for customers with IP based entitlement
 var Persona = require('persona');
 
 var apiInstance = new Persona.LoginApi();
-var opts = {
-  'xRealIP': "xRealIP_example", // String | 
-  'paper': "paper_example" // String | 
-};
+var xRealIP = "xRealIP_example"; // String | 
+var paper = "paper_example"; // String | 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -37,7 +35,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.loginIpGet(opts, callback);
+apiInstance.loginIpGet(xRealIP, paper, callback);
 ```
 
 ### Parameters
@@ -46,8 +44,8 @@ apiInstance.loginIpGet(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xRealIP** | **String**|  | [optional] 
- **paper** | **String**|  | [optional] 
+ **xRealIP** | **String**|  | 
+ **paper** | **String**|  | 
 
 ### Return type
 
