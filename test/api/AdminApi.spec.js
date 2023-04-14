@@ -60,6 +60,16 @@
         done();
       });
     });
+    describe('adminTransferPassiveSubscribersListidPost', function() {
+      it('should call adminTransferPassiveSubscribersListidPost successfully', function(done) {
+        //uncomment below and update the code to test adminTransferPassiveSubscribersListidPost
+        //instance.adminTransferPassiveSubscribersListidPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('adminUserPost', function() {
       it('should call adminUserPost successfully', function(done) {
         //uncomment below and update the code to test adminUserPost

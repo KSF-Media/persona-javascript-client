@@ -97,6 +97,56 @@
     }
 
     /**
+     * Callback function to receive the result of the adminTransferPassiveSubscribersListidPost operation.
+     * @callback module:api/AdminApi~adminTransferPassiveSubscribersListidPostCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Transfers passive customers from Kayak to Mailchimp
+     * Passive subscribers/members/customers are users who don't have active entitlements and haven't opted out from email marketing. For the given list (audience) ID, this endpoint transfers the list of passive subscribers from Kayak to Mailchimp (via Faro).
+     * @param {String} listid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
+     * @param {String} opts.authorization 
+     * @param {module:api/AdminApi~adminTransferPassiveSubscribersListidPostCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.adminTransferPassiveSubscribersListidPost = function(listid, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'listid' is set
+      if (listid === undefined || listid === null) {
+        throw new Error("Missing the required parameter 'listid' when calling adminTransferPassiveSubscribersListidPost");
+      }
+
+      var pathParams = {
+        'listid': listid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'AuthUser': opts['authUser'],
+        'Authorization': opts['authorization']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = [];
+      var returnType = null;
+      return this.apiClient.callApi(
+        '/admin/transfer-passive-subscribers/{listid}', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the adminUserPost operation.
      * @callback module:api/AdminApi~adminUserPostCallback
      * @param {String} error Error message, if any.

@@ -108,6 +108,8 @@ Name | Type | Description | Notes
 
 * `DirectPayment` (value: `"DirectPayment"`)
 
+* `Klarna` (value: `"Klarna"`)
+
 * `UnknownPaymentMethod` (value: `"UnknownPaymentMethod"`)
 
 

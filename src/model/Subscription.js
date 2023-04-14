@@ -397,6 +397,11 @@
      */
     "DirectPayment": "DirectPayment",
     /**
+     * value: "Klarna"
+     * @const
+     */
+    "Klarna": "Klarna",
+    /**
      * value: "UnknownPaymentMethod"
      * @const
      */
