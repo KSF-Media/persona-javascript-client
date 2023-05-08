@@ -100,7 +100,7 @@
      * Callback function to receive the result of the adminTransferPassiveSubscribersListidPost operation.
      * @callback module:api/AdminApi~adminTransferPassiveSubscribersListidPostCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -112,6 +112,7 @@
      * @param {String} opts.authUser 
      * @param {String} opts.authorization 
      * @param {module:api/AdminApi~adminTransferPassiveSubscribersListidPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
      */
     this.adminTransferPassiveSubscribersListidPost = function(listid, opts, callback) {
       opts = opts || {};
@@ -137,8 +138,8 @@
 
       var authNames = [];
       var contentTypes = [];
-      var accepts = [];
-      var returnType = null;
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = Object;
       return this.apiClient.callApi(
         '/admin/transfer-passive-subscribers/{listid}', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,

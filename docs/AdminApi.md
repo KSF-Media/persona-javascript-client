@@ -63,7 +63,7 @@ No authorization required
 
 ## adminTransferPassiveSubscribersListidPost
 
-> adminTransferPassiveSubscribersListidPost(listid, opts)
+> Object adminTransferPassiveSubscribersListidPost(listid, opts)
 
 Transfers passive customers from Kayak to Mailchimp
 
@@ -84,7 +84,7 @@ var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 };
 apiInstance.adminTransferPassiveSubscribersListidPost(listid, opts, callback);
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+**Object**
 
 ### Authorization
 
@@ -111,7 +111,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json;charset=utf-8
 
 
 ## adminUserPost
