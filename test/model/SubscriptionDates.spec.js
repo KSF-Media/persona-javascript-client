@@ -56,14 +56,14 @@
       //expect(instance).to.be.a(Persona.SubscriptionDates);
     });
 
-    it('should have the property lenMonths (base name: "lenMonths")', function() {
-      // uncomment below and update the code to test the property lenMonths
+    it('should have the property lenDays (base name: "lenDays")', function() {
+      // uncomment below and update the code to test the property lenDays
       //var instance = new Persona.SubscriptionDates();
       //expect(instance).to.be();
     });
 
-    it('should have the property lenDays (base name: "lenDays")', function() {
-      // uncomment below and update the code to test the property lenDays
+    it('should have the property lenMonths (base name: "lenMonths")', function() {
+      // uncomment below and update the code to test the property lenMonths
       //var instance = new Persona.SubscriptionDates();
       //expect(instance).to.be();
     });

@@ -60,11 +60,11 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('lenMonths')) {
-        obj['lenMonths'] = ApiClient.convertToType(data['lenMonths'], 'Number');
-      }
       if (data.hasOwnProperty('lenDays')) {
         obj['lenDays'] = ApiClient.convertToType(data['lenDays'], 'Number');
+      }
+      if (data.hasOwnProperty('lenMonths')) {
+        obj['lenMonths'] = ApiClient.convertToType(data['lenMonths'], 'Number');
       }
       if (data.hasOwnProperty('start')) {
         obj['start'] = ApiClient.convertToType(data['start'], 'Date');
@@ -89,15 +89,15 @@
   }
 
   /**
-   * Length of Subscription in months
-   * @member {Number} lenMonths
-   */
-  exports.prototype['lenMonths'] = undefined;
-  /**
    * Additional days (on top of months) for Subscription duration
    * @member {Number} lenDays
    */
   exports.prototype['lenDays'] = undefined;
+  /**
+   * Length of Subscription in months
+   * @member {Number} lenMonths
+   */
+  exports.prototype['lenMonths'] = undefined;
   /**
    * @member {Date} start
    */

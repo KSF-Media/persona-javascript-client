@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**lenMonths** | **Number** | Length of Subscription in months | [optional] 
 **lenDays** | **Number** | Additional days (on top of months) for Subscription duration | [optional] 
+**lenMonths** | **Number** | Length of Subscription in months | [optional] 
 **start** | **Date** |  | 
 **end** | **Date** |  | [optional] 
 **unpaidBreak** | **Date** |  | [optional] 
