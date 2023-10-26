@@ -50,36 +50,6 @@
   }
 
   describe('AdminApi', function() {
-    describe('adminFreePassDelete', function() {
-      it('should call adminFreePassDelete successfully', function(done) {
-        //uncomment below and update the code to test adminFreePassDelete
-        //instance.adminFreePassDelete(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('adminFreePassPost', function() {
-      it('should call adminFreePassPost successfully', function(done) {
-        //uncomment below and update the code to test adminFreePassPost
-        //instance.adminFreePassPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('adminFreePassesGet', function() {
-      it('should call adminFreePassesGet successfully', function(done) {
-        //uncomment below and update the code to test adminFreePassesGet
-        //instance.adminFreePassesGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('adminSearchPost', function() {
       it('should call adminSearchPost successfully', function(done) {
         //uncomment below and update the code to test adminSearchPost

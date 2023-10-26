@@ -8,7 +8,6 @@ Method | HTTP request | Description
 [**entitlementsAllowGet**](EntitlementsApi.md#entitlementsAllowGet) | **GET** /entitlements/allow | Check if global entitlements are enabled
 [**entitlementsAllowPost**](EntitlementsApi.md#entitlementsAllowPost) | **POST** /entitlements/allow | Add an entitlement for all users
 [**entitlementsAllowUuidPost**](EntitlementsApi.md#entitlementsAllowUuidPost) | **POST** /entitlements/allow/{uuid} | Grant product access to a customer
-[**entitlementsFreePassGet**](EntitlementsApi.md#entitlementsFreePassGet) | **GET** /entitlements/free-pass | Verify given free pass hash
 [**entitlementsGet**](EntitlementsApi.md#entitlementsGet) | **GET** /entitlements | List all entitlements
 [**entitlementsGlobalGet**](EntitlementsApi.md#entitlementsGlobalGet) | **GET** /entitlements/global | Lists all past and future global entitlements
 
@@ -219,57 +218,6 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json;charset=utf-8
-- **Accept**: application/json;charset=utf-8
-
-
-## entitlementsFreePassGet
-
-> Boolean entitlementsFreePassGet(opts)
-
-Verify given free pass hash
-
-### Example
-
-```javascript
-var Persona = require('persona');
-
-var apiInstance = new Persona.EntitlementsApi();
-var opts = {
-  'authUser': null, // String | 
-  'authorization': "authorization_example", // String | 
-  'freePassHash': "freePassHash_example" // String | 
-};
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.entitlementsFreePassGet(opts, callback);
-```
-
-### Parameters
-
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authUser** | [**String**](.md)|  | [optional] 
- **authorization** | **String**|  | [optional] 
- **freePassHash** | **String**|  | [optional] 
-
-### Return type
-
-**Boolean**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
 - **Accept**: application/json;charset=utf-8
 
 
