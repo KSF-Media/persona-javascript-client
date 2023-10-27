@@ -85,6 +85,43 @@
     }
 
     /**
+     * Callback function to receive the result of the identificationLoginMonitorGet operation.
+     * @callback module:api/IdentificationApi~identificationLoginMonitorGetCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get token for off band response login flow monitor
+     * @param {module:api/IdentificationApi~identificationLoginMonitorGetCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.identificationLoginMonitorGet = function(callback) {
+      var postBody = null;
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = [];
+      var returnType = null;
+      return this.apiClient.callApi(
+        '/identification/login/monitor', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the identificationLoginReturnGet operation.
      * @callback module:api/IdentificationApi~identificationLoginReturnGetCallback
      * @param {String} error Error message, if any.

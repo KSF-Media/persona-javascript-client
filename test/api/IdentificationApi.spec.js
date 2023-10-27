@@ -60,6 +60,16 @@
         done();
       });
     });
+    describe('identificationLoginMonitorGet', function() {
+      it('should call identificationLoginMonitorGet successfully', function(done) {
+        //uncomment below and update the code to test identificationLoginMonitorGet
+        //instance.identificationLoginMonitorGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('identificationLoginReturnGet', function() {
       it('should call identificationLoginReturnGet successfully', function(done) {
         //uncomment below and update the code to test identificationLoginReturnGet
