@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## identificationLoginGet
 
-> identificationLoginGet()
+> identificationLoginGet(opts)
 
 Authenticate with OpenID Connect
 
@@ -23,6 +23,9 @@ Authenticate with OpenID Connect
 var Persona = require('persona');
 
 var apiInstance = new Persona.IdentificationApi();
+var opts = {
+  'monitor': "monitor_example" // String | 
+};
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -30,12 +33,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.identificationLoginGet(callback);
+apiInstance.identificationLoginGet(opts, callback);
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **monitor** | **String**|  | [optional] 
 
 ### Return type
 

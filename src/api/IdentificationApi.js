@@ -57,14 +57,18 @@
 
     /**
      * Authenticate with OpenID Connect
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.monitor 
      * @param {module:api/IdentificationApi~identificationLoginGetCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.identificationLoginGet = function(callback) {
+    this.identificationLoginGet = function(opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       var pathParams = {
       };
       var queryParams = {
+        'monitor': opts['monitor'],
       };
       var collectionQueryParams = {
       };
