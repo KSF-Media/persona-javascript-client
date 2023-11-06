@@ -249,6 +249,52 @@
     }
 
     /**
+     * Callback function to receive the result of the entitlementsFreePassGet operation.
+     * @callback module:api/EntitlementsApi~entitlementsFreePassGetCallback
+     * @param {String} error Error message, if any.
+     * @param {Boolean} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Verify given free pass hash
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
+     * @param {String} opts.authorization 
+     * @param {String} opts.freePassHash 
+     * @param {module:api/EntitlementsApi~entitlementsFreePassGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Boolean}
+     */
+    this.entitlementsFreePassGet = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'freePassHash': opts['freePassHash'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'AuthUser': opts['authUser'],
+        'Authorization': opts['authorization']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = 'Boolean';
+      return this.apiClient.callApi(
+        '/entitlements/free-pass', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the entitlementsGet operation.
      * @callback module:api/EntitlementsApi~entitlementsGetCallback
      * @param {String} error Error message, if any.

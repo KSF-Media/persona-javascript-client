@@ -115,6 +115,9 @@ Class | Method | HTTP request | Description
 *Persona.AccountApi* | [**accountPasswordForgotGet**](docs/AccountApi.md#accountPasswordForgotGet) | **GET** /account/password/forgot | Request password reset link
 *Persona.AccountApi* | [**accountPasswordForgotPost**](docs/AccountApi.md#accountPasswordForgotPost) | **POST** /account/password/forgot | Request password reset link
 *Persona.AccountApi* | [**accountPasswordResetPost**](docs/AccountApi.md#accountPasswordResetPost) | **POST** /account/password/reset | Reset a forgotten password with a token
+*Persona.AdminApi* | [**adminFreePassDelete**](docs/AdminApi.md#adminFreePassDelete) | **DELETE** /admin/free-pass | Revokes an existing free pass
+*Persona.AdminApi* | [**adminFreePassPost**](docs/AdminApi.md#adminFreePassPost) | **POST** /admin/free-pass | Creates a free pass to an article
+*Persona.AdminApi* | [**adminFreePassesGet**](docs/AdminApi.md#adminFreePassesGet) | **GET** /admin/free-passes | Lists all free passes
 *Persona.AdminApi* | [**adminSearchPost**](docs/AdminApi.md#adminSearchPost) | **POST** /admin/search | Search for users
 *Persona.AdminApi* | [**adminTransferPassiveSubscribersListidPost**](docs/AdminApi.md#adminTransferPassiveSubscribersListidPost) | **POST** /admin/transfer-passive-subscribers/{listid} | Transfers passive customers from Kayak to Mailchimp
 *Persona.AdminApi* | [**adminUserPost**](docs/AdminApi.md#adminUserPost) | **POST** /admin/user | Create a new user with admin options.
@@ -122,6 +125,7 @@ Class | Method | HTTP request | Description
 *Persona.EntitlementsApi* | [**entitlementsAllowGet**](docs/EntitlementsApi.md#entitlementsAllowGet) | **GET** /entitlements/allow | Check if global entitlements are enabled
 *Persona.EntitlementsApi* | [**entitlementsAllowPost**](docs/EntitlementsApi.md#entitlementsAllowPost) | **POST** /entitlements/allow | Add an entitlement for all users
 *Persona.EntitlementsApi* | [**entitlementsAllowUuidPost**](docs/EntitlementsApi.md#entitlementsAllowUuidPost) | **POST** /entitlements/allow/{uuid} | Grant product access to a customer
+*Persona.EntitlementsApi* | [**entitlementsFreePassGet**](docs/EntitlementsApi.md#entitlementsFreePassGet) | **GET** /entitlements/free-pass | Verify given free pass hash
 *Persona.EntitlementsApi* | [**entitlementsGet**](docs/EntitlementsApi.md#entitlementsGet) | **GET** /entitlements | List all entitlements
 *Persona.EntitlementsApi* | [**entitlementsGlobalGet**](docs/EntitlementsApi.md#entitlementsGlobalGet) | **GET** /entitlements/global | Lists all past and future global entitlements
 *Persona.IdentificationApi* | [**identificationLoginGet**](docs/IdentificationApi.md#identificationLoginGet) | **GET** /identification/login | Authenticate with OpenID Connect
@@ -168,6 +172,8 @@ Class | Method | HTTP request | Description
  - [Persona.EntitlementAccess](docs/EntitlementAccess.md)
  - [Persona.FaroUser](docs/FaroUser.md)
  - [Persona.ForgotPasswordData](docs/ForgotPasswordData.md)
+ - [Persona.FreePass](docs/FreePass.md)
+ - [Persona.FreePassInput](docs/FreePassInput.md)
  - [Persona.GdprConsent](docs/GdprConsent.md)
  - [Persona.InlineResponse400](docs/InlineResponse400.md)
  - [Persona.InlineResponse400InvalidRequestBody](docs/InlineResponse400InvalidRequestBody.md)
