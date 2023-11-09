@@ -97,8 +97,8 @@
     }
 
     /**
-     * Callback function to receive the result of the adminFreePassPost operation.
-     * @callback module:api/AdminApi~adminFreePassPostCallback
+     * Callback function to receive the result of the adminFreePassPut operation.
+     * @callback module:api/AdminApi~adminFreePassPutCallback
      * @param {String} error Error message, if any.
      * @param {String} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -111,15 +111,15 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.authUser 
      * @param {String} opts.authorization 
-     * @param {module:api/AdminApi~adminFreePassPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/AdminApi~adminFreePassPutCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */
-    this.adminFreePassPost = function(body, opts, callback) {
+    this.adminFreePassPut = function(body, opts, callback) {
       opts = opts || {};
       var postBody = body;
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling adminFreePassPost");
+        throw new Error("Missing the required parameter 'body' when calling adminFreePassPut");
       }
 
       var pathParams = {
@@ -140,7 +140,7 @@
       var accepts = ['application/json;charset=utf-8'];
       var returnType = 'String';
       return this.apiClient.callApi(
-        '/admin/free-pass', 'POST',
+        '/admin/free-pass', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -5,7 +5,7 @@ All URIs are relative to *http://http:/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**adminFreePassDelete**](AdminApi.md#adminFreePassDelete) | **DELETE** /admin/free-pass | Revokes an existing free pass
-[**adminFreePassPost**](AdminApi.md#adminFreePassPost) | **POST** /admin/free-pass | Creates a free pass to an article
+[**adminFreePassPut**](AdminApi.md#adminFreePassPut) | **PUT** /admin/free-pass | Creates a free pass to an article
 [**adminFreePassesGet**](AdminApi.md#adminFreePassesGet) | **GET** /admin/free-passes | Lists all free passes
 [**adminSearchPost**](AdminApi.md#adminSearchPost) | **POST** /admin/search | Search for users
 [**adminTransferPassiveSubscribersListidPost**](AdminApi.md#adminTransferPassiveSubscribersListidPost) | **POST** /admin/transfer-passive-subscribers/{listid} | Transfers passive customers from Kayak to Mailchimp
@@ -66,9 +66,9 @@ No authorization required
 - **Accept**: Not defined
 
 
-## adminFreePassPost
+## adminFreePassPut
 
-> String adminFreePassPost(body, opts)
+> String adminFreePassPut(body, opts)
 
 Creates a free pass to an article
 
@@ -92,7 +92,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.adminFreePassPost(body, opts, callback);
+apiInstance.adminFreePassPut(body, opts, callback);
 ```
 
 ### Parameters

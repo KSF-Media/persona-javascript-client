@@ -60,10 +60,10 @@
         done();
       });
     });
-    describe('adminFreePassPost', function() {
-      it('should call adminFreePassPost successfully', function(done) {
-        //uncomment below and update the code to test adminFreePassPost
-        //instance.adminFreePassPost(function(error) {
+    describe('adminFreePassPut', function() {
+      it('should call adminFreePassPut successfully', function(done) {
+        //uncomment below and update the code to test adminFreePassPut
+        //instance.adminFreePassPut(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
