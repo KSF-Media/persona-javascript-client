@@ -80,24 +80,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property middleName (base name: "middleName")', function() {
-      // uncomment below and update the code to test the property middleName
-      //var instance = new Persona.JanrainUser();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property consent (base name: "consent")', function() {
-      // uncomment below and update the code to test the property consent
-      //var instance = new Persona.JanrainUser();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property legal (base name: "legal")', function() {
-      // uncomment below and update the code to test the property legal
-      //var instance = new Persona.JanrainUser();
-      //expect(instance).to.be();
-    });
-
     it('should have the property cusno (base name: "cusno")', function() {
       // uncomment below and update the code to test the property cusno
       //var instance = new Persona.JanrainUser();

@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InlineResponse400', 'model/InlineResponse403', 'model/InlineResponse4031', 'model/InlineResponse4032', 'model/InlineResponse415', 'model/InlineResponse500', 'model/LoginData', 'model/LoginDataSSO', 'model/LoginDataSoMe', 'model/LoginResponse'], factory);
+    define(['ApiClient', 'model/InlineResponse400', 'model/InlineResponse403', 'model/InlineResponse4031', 'model/InlineResponse415', 'model/InlineResponse500', 'model/LoginData', 'model/LoginDataSSO', 'model/LoginResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse400'), require('../model/InlineResponse403'), require('../model/InlineResponse4031'), require('../model/InlineResponse4032'), require('../model/InlineResponse415'), require('../model/InlineResponse500'), require('../model/LoginData'), require('../model/LoginDataSSO'), require('../model/LoginDataSoMe'), require('../model/LoginResponse'));
+    module.exports = factory(require('../ApiClient'), require('../model/InlineResponse400'), require('../model/InlineResponse403'), require('../model/InlineResponse4031'), require('../model/InlineResponse415'), require('../model/InlineResponse500'), require('../model/LoginData'), require('../model/LoginDataSSO'), require('../model/LoginResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.LoginApi = factory(root.Persona.ApiClient, root.Persona.InlineResponse400, root.Persona.InlineResponse403, root.Persona.InlineResponse4031, root.Persona.InlineResponse4032, root.Persona.InlineResponse415, root.Persona.InlineResponse500, root.Persona.LoginData, root.Persona.LoginDataSSO, root.Persona.LoginDataSoMe, root.Persona.LoginResponse);
+    root.Persona.LoginApi = factory(root.Persona.ApiClient, root.Persona.InlineResponse400, root.Persona.InlineResponse403, root.Persona.InlineResponse4031, root.Persona.InlineResponse415, root.Persona.InlineResponse500, root.Persona.LoginData, root.Persona.LoginDataSSO, root.Persona.LoginResponse);
   }
-}(this, function(ApiClient, InlineResponse400, InlineResponse403, InlineResponse4031, InlineResponse4032, InlineResponse415, InlineResponse500, LoginData, LoginDataSSO, LoginDataSoMe, LoginResponse) {
+}(this, function(ApiClient, InlineResponse400, InlineResponse403, InlineResponse4031, InlineResponse415, InlineResponse500, LoginData, LoginDataSSO, LoginResponse) {
   'use strict';
 
   /**
@@ -142,49 +142,6 @@
     }
 
     /**
-     * Callback function to receive the result of the loginSomePost operation.
-     * @callback module:api/LoginApi~loginSomePostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/LoginResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Login with social media
-     * @param {module:model/LoginDataSoMe} body 
-     * @param {module:api/LoginApi~loginSomePostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LoginResponse}
-     */
-    this.loginSomePost = function(body, callback) {
-      var postBody = body;
-      // verify the required parameter 'body' is set
-      if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling loginSomePost");
-      }
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json;charset=utf-8'];
-      var accepts = ['application/json;charset=utf-8'];
-      var returnType = LoginResponse;
-      return this.apiClient.callApi(
-        '/login/some', 'POST',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the loginSsoPost operation.
      * @callback module:api/LoginApi~loginSsoPostCallback
      * @param {String} error Error message, if any.
@@ -193,7 +150,7 @@
      */
 
     /**
-     * Login with the AccessToken given by the SSO auth
+     * Disabled. Always returns 403.
      * @param {module:model/LoginDataSSO} body 
      * @param {module:api/LoginApi~loginSsoPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/LoginResponse}

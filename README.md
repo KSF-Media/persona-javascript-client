@@ -89,20 +89,21 @@ Please follow the [installation](#installation) instruction and execute the foll
 var Persona = require('persona');
 
 
-var api = new Persona.AccountApi()
-var email = "email_example"; // {String} 
+var api = new Persona.AdminApi()
+var body = "body_example"; // {String} 
 var opts = {
-  'redir': true // {Boolean} 
+  'authUser': null, // {String} 
+  'authorization': "authorization_example" // {String} 
 };
 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 };
-api.accountPasswordForgotGet(email, opts, callback);
+api.adminFreePassDelete(body, opts, callback);
 
 ```
 
@@ -112,9 +113,6 @@ All URIs are relative to *http://http:/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*Persona.AccountApi* | [**accountPasswordForgotGet**](docs/AccountApi.md#accountPasswordForgotGet) | **GET** /account/password/forgot | Request password reset link
-*Persona.AccountApi* | [**accountPasswordForgotPost**](docs/AccountApi.md#accountPasswordForgotPost) | **POST** /account/password/forgot | Request password reset link
-*Persona.AccountApi* | [**accountPasswordResetPost**](docs/AccountApi.md#accountPasswordResetPost) | **POST** /account/password/reset | Reset a forgotten password with a token
 *Persona.AdminApi* | [**adminFreePassDelete**](docs/AdminApi.md#adminFreePassDelete) | **DELETE** /admin/free-pass | Revokes an existing free pass
 *Persona.AdminApi* | [**adminFreePassPut**](docs/AdminApi.md#adminFreePassPut) | **PUT** /admin/free-pass | Creates a free pass to an article
 *Persona.AdminApi* | [**adminFreePassesGet**](docs/AdminApi.md#adminFreePassesGet) | **GET** /admin/free-passes | Lists all free passes
@@ -134,8 +132,7 @@ Class | Method | HTTP request | Description
 *Persona.IdentificationApi* | [**identificationUserStampUuidPost**](docs/IdentificationApi.md#identificationUserStampUuidPost) | **POST** /identification/user/stamp/{uuid} | Query when the strong identification was last updated
 *Persona.LoginApi* | [**loginIpGet**](docs/LoginApi.md#loginIpGet) | **GET** /login/ip | Login with IP
 *Persona.LoginApi* | [**loginPost**](docs/LoginApi.md#loginPost) | **POST** /login | Login with email and password
-*Persona.LoginApi* | [**loginSomePost**](docs/LoginApi.md#loginSomePost) | **POST** /login/some | Login with social media
-*Persona.LoginApi* | [**loginSsoPost**](docs/LoginApi.md#loginSsoPost) | **POST** /login/sso | Login with the AccessToken given by the SSO auth
+*Persona.LoginApi* | [**loginSsoPost**](docs/LoginApi.md#loginSsoPost) | **POST** /login/sso | Disabled. Always returns 403.
 *Persona.LoginApi* | [**loginUuidDelete**](docs/LoginApi.md#loginUuidDelete) | **DELETE** /login/{uuid} | Logout
 *Persona.UsersApi* | [**usersPost**](docs/UsersApi.md#usersPost) | **POST** /users | Create a new user.
 *Persona.UsersApi* | [**usersTemporaryPost**](docs/UsersApi.md#usersTemporaryPost) | **POST** /users/temporary | Create a new user with email.
@@ -171,7 +168,6 @@ Class | Method | HTTP request | Description
  - [Persona.DeliveryReclamation](docs/DeliveryReclamation.md)
  - [Persona.EntitlementAccess](docs/EntitlementAccess.md)
  - [Persona.FaroUser](docs/FaroUser.md)
- - [Persona.ForgotPasswordData](docs/ForgotPasswordData.md)
  - [Persona.FreePass](docs/FreePass.md)
  - [Persona.FreePassInput](docs/FreePassInput.md)
  - [Persona.GdprConsent](docs/GdprConsent.md)
@@ -180,10 +176,6 @@ Class | Method | HTTP request | Description
  - [Persona.InlineResponse403](docs/InlineResponse403.md)
  - [Persona.InlineResponse4031](docs/InlineResponse4031.md)
  - [Persona.InlineResponse4031AccessTokenExpired](docs/InlineResponse4031AccessTokenExpired.md)
- - [Persona.InlineResponse4032](docs/InlineResponse4032.md)
- - [Persona.InlineResponse4032EmailAddressInUse](docs/InlineResponse4032EmailAddressInUse.md)
- - [Persona.InlineResponse4032EmailNotAuthorized](docs/InlineResponse4032EmailNotAuthorized.md)
- - [Persona.InlineResponse4032OauthFailed](docs/InlineResponse4032OauthFailed.md)
  - [Persona.InlineResponse403InvalidCredentials](docs/InlineResponse403InvalidCredentials.md)
  - [Persona.InlineResponse415](docs/InlineResponse415.md)
  - [Persona.InlineResponse415UnsupportedMediaType](docs/InlineResponse415UnsupportedMediaType.md)
@@ -193,7 +185,6 @@ Class | Method | HTTP request | Description
  - [Persona.LegalConsent](docs/LegalConsent.md)
  - [Persona.LoginData](docs/LoginData.md)
  - [Persona.LoginDataSSO](docs/LoginDataSSO.md)
- - [Persona.LoginDataSoMe](docs/LoginDataSoMe.md)
  - [Persona.LoginResponse](docs/LoginResponse.md)
  - [Persona.ModelPackage](docs/ModelPackage.md)
  - [Persona.NewDeliveryReclamation](docs/NewDeliveryReclamation.md)
@@ -219,7 +210,6 @@ Class | Method | HTTP request | Description
  - [Persona.SubscriptionPayments](docs/SubscriptionPayments.md)
  - [Persona.TemporaryAddressChange](docs/TemporaryAddressChange.md)
  - [Persona.TemporaryAddressChangeDates](docs/TemporaryAddressChangeDates.md)
- - [Persona.UpdatePasswordData](docs/UpdatePasswordData.md)
  - [Persona.User](docs/User.md)
  - [Persona.UserUpdate](docs/UserUpdate.md)
  - [Persona.UserUpdateAddress](docs/UserUpdateAddress.md)

@@ -62,12 +62,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property ssoCode (base name: "ssoCode")', function() {
-      // uncomment below and update the code to test the property ssoCode
-      //var instance = new Persona.LoginResponse();
-      //expect(instance).to.be();
-    });
-
     it('should have the property uuid (base name: "uuid")', function() {
       // uncomment below and update the code to test the property uuid
       //var instance = new Persona.LoginResponse();

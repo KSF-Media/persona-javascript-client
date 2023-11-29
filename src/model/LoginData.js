@@ -68,9 +68,6 @@
       if (data.hasOwnProperty('password')) {
         obj['password'] = ApiClient.convertToType(data['password'], 'String');
       }
-      if (data.hasOwnProperty('mergeToken')) {
-        obj['mergeToken'] = ApiClient.convertToType(data['mergeToken'], 'String');
-      }
     }
     return obj;
   }
@@ -83,10 +80,6 @@
    * @member {String} password
    */
   exports.prototype['password'] = undefined;
-  /**
-   * @member {String} mergeToken
-   */
-  exports.prototype['mergeToken'] = undefined;
 
 
 

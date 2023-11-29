@@ -68,12 +68,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property mergeToken (base name: "mergeToken")', function() {
-      // uncomment below and update the code to test the property mergeToken
-      //var instance = new Persona.LoginData();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

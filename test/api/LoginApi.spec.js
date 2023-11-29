@@ -70,16 +70,6 @@
         done();
       });
     });
-    describe('loginSomePost', function() {
-      it('should call loginSomePost successfully', function(done) {
-        //uncomment below and update the code to test loginSomePost
-        //instance.loginSomePost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('loginSsoPost', function() {
       it('should call loginSsoPost successfully', function(done) {
         //uncomment below and update the code to test loginSsoPost

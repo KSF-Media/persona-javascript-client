@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/GdprConsent', 'model/LegalConsent'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./GdprConsent'), require('./LegalConsent'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.Persona) {
       root.Persona = {};
     }
-    root.Persona.JanrainUser = factory(root.Persona.ApiClient, root.Persona.GdprConsent, root.Persona.LegalConsent);
+    root.Persona.JanrainUser = factory(root.Persona.ApiClient);
   }
-}(this, function(ApiClient, GdprConsent, LegalConsent) {
+}(this, function(ApiClient) {
   'use strict';
 
 
@@ -43,15 +43,11 @@
    * @alias module:model/JanrainUser
    * @class
    * @param uuid {String} 
-   * @param consent {Array.<module:model/GdprConsent>} 
-   * @param legal {Array.<module:model/LegalConsent>} 
    */
-  var exports = function(uuid, consent, legal) {
+  var exports = function(uuid) {
     var _this = this;
 
     _this['uuid'] = uuid;
-    _this['consent'] = consent;
-    _this['legal'] = legal;
   };
 
   /**
@@ -75,15 +71,6 @@
       }
       if (data.hasOwnProperty('lastName')) {
         obj['lastName'] = ApiClient.convertToType(data['lastName'], 'String');
-      }
-      if (data.hasOwnProperty('middleName')) {
-        obj['middleName'] = ApiClient.convertToType(data['middleName'], 'String');
-      }
-      if (data.hasOwnProperty('consent')) {
-        obj['consent'] = ApiClient.convertToType(data['consent'], [GdprConsent]);
-      }
-      if (data.hasOwnProperty('legal')) {
-        obj['legal'] = ApiClient.convertToType(data['legal'], [LegalConsent]);
       }
       if (data.hasOwnProperty('cusno')) {
         obj['cusno'] = ApiClient.convertToType(data['cusno'], 'String');
@@ -111,18 +98,6 @@
    * @member {String} lastName
    */
   exports.prototype['lastName'] = undefined;
-  /**
-   * @member {String} middleName
-   */
-  exports.prototype['middleName'] = undefined;
-  /**
-   * @member {Array.<module:model/GdprConsent>} consent
-   */
-  exports.prototype['consent'] = undefined;
-  /**
-   * @member {Array.<module:model/LegalConsent>} legal
-   */
-  exports.prototype['legal'] = undefined;
   /**
    * @member {String} cusno
    */

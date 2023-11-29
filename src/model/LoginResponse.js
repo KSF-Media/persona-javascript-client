@@ -67,9 +67,6 @@
       if (data.hasOwnProperty('token')) {
         obj['token'] = ApiClient.convertToType(data['token'], 'String');
       }
-      if (data.hasOwnProperty('ssoCode')) {
-        obj['ssoCode'] = ApiClient.convertToType(data['ssoCode'], 'String');
-      }
       if (data.hasOwnProperty('uuid')) {
         obj['uuid'] = ApiClient.convertToType(data['uuid'], 'String');
       }
@@ -84,10 +81,6 @@
    * @member {String} token
    */
   exports.prototype['token'] = undefined;
-  /**
-   * @member {String} ssoCode
-   */
-  exports.prototype['ssoCode'] = undefined;
   /**
    * @member {String} uuid
    */
