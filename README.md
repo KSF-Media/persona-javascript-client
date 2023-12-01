@@ -89,12 +89,8 @@ Please follow the [installation](#installation) instruction and execute the foll
 var Persona = require('persona');
 
 
-var api = new Persona.AdminApi()
+var api = new Persona.AccountApi()
 var body = "body_example"; // {String} 
-var opts = {
-  'authUser': null, // {String} 
-  'authorization': "authorization_example" // {String} 
-};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -103,7 +99,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.adminFreePassDelete(body, opts, callback);
+api.accountPasswordCheckTokenPost(body, callback);
 
 ```
 
@@ -113,6 +109,9 @@ All URIs are relative to *http://http:/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*Persona.AccountApi* | [**accountPasswordCheckTokenPost**](docs/AccountApi.md#accountPasswordCheckTokenPost) | **POST** /account/password/check-token | Validate password reset token
+*Persona.AccountApi* | [**accountPasswordForgotPost**](docs/AccountApi.md#accountPasswordForgotPost) | **POST** /account/password/forgot | Request password reset link
+*Persona.AccountApi* | [**accountPasswordResetPost**](docs/AccountApi.md#accountPasswordResetPost) | **POST** /account/password/reset | Reset a forgotten password with a token
 *Persona.AdminApi* | [**adminFreePassDelete**](docs/AdminApi.md#adminFreePassDelete) | **DELETE** /admin/free-pass | Revokes an existing free pass
 *Persona.AdminApi* | [**adminFreePassPut**](docs/AdminApi.md#adminFreePassPut) | **PUT** /admin/free-pass | Creates a free pass to an article
 *Persona.AdminApi* | [**adminFreePassesGet**](docs/AdminApi.md#adminFreePassesGet) | **GET** /admin/free-passes | Lists all free passes
@@ -168,6 +167,7 @@ Class | Method | HTTP request | Description
  - [Persona.DeliveryReclamation](docs/DeliveryReclamation.md)
  - [Persona.EntitlementAccess](docs/EntitlementAccess.md)
  - [Persona.FaroUser](docs/FaroUser.md)
+ - [Persona.ForgotPasswordData](docs/ForgotPasswordData.md)
  - [Persona.FreePass](docs/FreePass.md)
  - [Persona.FreePassInput](docs/FreePassInput.md)
  - [Persona.GdprConsent](docs/GdprConsent.md)
@@ -210,6 +210,7 @@ Class | Method | HTTP request | Description
  - [Persona.SubscriptionPayments](docs/SubscriptionPayments.md)
  - [Persona.TemporaryAddressChange](docs/TemporaryAddressChange.md)
  - [Persona.TemporaryAddressChangeDates](docs/TemporaryAddressChangeDates.md)
+ - [Persona.UpdatePasswordData](docs/UpdatePasswordData.md)
  - [Persona.User](docs/User.md)
  - [Persona.UserUpdate](docs/UserUpdate.md)
  - [Persona.UserUpdateAddress](docs/UserUpdateAddress.md)
