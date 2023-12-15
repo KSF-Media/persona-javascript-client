@@ -143,7 +143,7 @@
 
     /**
      * Reset a forgotten password with a token
-     * The final step of the forgotten password reset procedure performs password reset with a token obtained from the email message sent by the POST /password/forgot endpoint and the new password and its confirmation.
+     * The final step of the forgotten password reset procedure performs password reset with a token obtained from the email message sent by the POST /password/forgot endpoint and the new password and its confirmation. If @password@ or @confirmPassword@ are missing, then this endpoint performs a mere token validation like the @/password/check-token@ endpoint.
      * @param {module:model/UpdatePasswordData} body 
      * @param {module:api/AccountApi~accountPasswordResetPostCallback} callback The callback function, accepting three arguments: error, data, response
      */

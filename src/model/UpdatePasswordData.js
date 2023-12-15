@@ -42,15 +42,11 @@
    * Constructs a new <code>UpdatePasswordData</code>.
    * @alias module:model/UpdatePasswordData
    * @class
-   * @param password {String} 
-   * @param confirmPassword {String} 
    * @param token {String} 
    */
-  var exports = function(password, confirmPassword, token) {
+  var exports = function(token) {
     var _this = this;
 
-    _this['password'] = password;
-    _this['confirmPassword'] = confirmPassword;
     _this['token'] = token;
   };
 

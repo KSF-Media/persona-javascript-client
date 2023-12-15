@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**password** | **String** |  | 
-**confirmPassword** | **String** |  | 
+**password** | **String** |  | [optional] 
+**confirmPassword** | **String** |  | [optional] 
 **token** | **String** |  | 
 
 
