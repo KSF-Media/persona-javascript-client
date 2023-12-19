@@ -95,6 +95,9 @@
       if (data.hasOwnProperty('doorCode')) {
         obj['doorCode'] = ApiClient.convertToType(data['doorCode'], 'String');
       }
+      if (data.hasOwnProperty('reason')) {
+        obj['reason'] = ApiClient.convertToType(data['reason'], 'String');
+      }
     }
     return obj;
   }
@@ -135,6 +138,10 @@
    * @member {String} doorCode
    */
   exports.prototype['doorCode'] = undefined;
+  /**
+   * @member {module:model/DeliveryReclamation.ReasonEnum} reason
+   */
+  exports.prototype['reason'] = undefined;
 
 
   /**
@@ -153,6 +160,33 @@
      * @const
      */
     "NewDelivery": "NewDelivery"  };
+
+  /**
+   * Allowed values for the <code>reason</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.ReasonEnum = {
+    /**
+     * value: "MissingDelivery"
+     * @const
+     */
+    "MissingDelivery": "MissingDelivery",
+    /**
+     * value: "WrongPaper"
+     * @const
+     */
+    "WrongPaper": "WrongPaper",
+    /**
+     * value: "DamagedPaper"
+     * @const
+     */
+    "DamagedPaper": "DamagedPaper",
+    /**
+     * value: "OlderReclamation"
+     * @const
+     */
+    "OlderReclamation": "OlderReclamation"  };
 
 
   return exports;

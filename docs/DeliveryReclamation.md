@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **publicationDate** | **Date** |  | 
 **claim** | **String** |  | 
 **doorCode** | **String** | Door code for redelivery | [optional] 
+**reason** | **String** |  | [optional] 
 
 
 
@@ -21,6 +22,21 @@ Name | Type | Description | Notes
 * `Extension` (value: `"Extension"`)
 
 * `NewDelivery` (value: `"NewDelivery"`)
+
+
+
+
+
+## Enum: ReasonEnum
+
+
+* `MissingDelivery` (value: `"MissingDelivery"`)
+
+* `WrongPaper` (value: `"WrongPaper"`)
+
+* `DamagedPaper` (value: `"DamagedPaper"`)
+
+* `OlderReclamation` (value: `"OlderReclamation"`)
 
 
 

@@ -80,6 +80,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property reason (base name: "reason")', function() {
+      // uncomment below and update the code to test the property reason
+      //var instance = new Persona.NewDeliveryReclamation();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
