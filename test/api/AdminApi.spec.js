@@ -110,6 +110,16 @@
         done();
       });
     });
+    describe('adminUserUuidDelete', function() {
+      it('should call adminUserUuidDelete successfully', function(done) {
+        //uncomment below and update the code to test adminUserUuidDelete
+        //instance.adminUserUuidDelete(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

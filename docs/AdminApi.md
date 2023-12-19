@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**adminSearchPost**](AdminApi.md#adminSearchPost) | **POST** /admin/search | Search for users
 [**adminTransferPassiveSubscribersListidPost**](AdminApi.md#adminTransferPassiveSubscribersListidPost) | **POST** /admin/transfer-passive-subscribers/{listid} | Transfers passive customers from Kayak to Mailchimp
 [**adminUserPost**](AdminApi.md#adminUserPost) | **POST** /admin/user | Create a new user with admin options.
+[**adminUserUuidDelete**](AdminApi.md#adminUserUuidDelete) | **DELETE** /admin/user/{uuid} | Delete user
 
 
 
@@ -323,4 +324,55 @@ No authorization required
 
 - **Content-Type**: application/json;charset=utf-8
 - **Accept**: application/json;charset=utf-8
+
+
+## adminUserUuidDelete
+
+> adminUserUuidDelete(uuid, opts)
+
+Delete user
+
+### Example
+
+```javascript
+var Persona = require('persona');
+
+var apiInstance = new Persona.AdminApi();
+var uuid = null; // String | 
+var opts = {
+  'authUser': null, // String | 
+  'authorization': "authorization_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.adminUserUuidDelete(uuid, opts, callback);
+```
+
+### Parameters
+
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**String**](.md)|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
+ **authorization** | **String**|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 

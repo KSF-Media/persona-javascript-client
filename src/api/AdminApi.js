@@ -339,6 +339,55 @@
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
+
+    /**
+     * Callback function to receive the result of the adminUserUuidDelete operation.
+     * @callback module:api/AdminApi~adminUserUuidDeleteCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete user
+     * @param {String} uuid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
+     * @param {String} opts.authorization 
+     * @param {module:api/AdminApi~adminUserUuidDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.adminUserUuidDelete = function(uuid, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'uuid' is set
+      if (uuid === undefined || uuid === null) {
+        throw new Error("Missing the required parameter 'uuid' when calling adminUserUuidDelete");
+      }
+
+      var pathParams = {
+        'uuid': uuid
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'AuthUser': opts['authUser'],
+        'Authorization': opts['authorization']
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = [];
+      var returnType = null;
+      return this.apiClient.callApi(
+        '/admin/user/{uuid}', 'DELETE',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
   };
 
   return exports;

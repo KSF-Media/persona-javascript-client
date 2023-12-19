@@ -118,6 +118,7 @@ Class | Method | HTTP request | Description
 *Persona.AdminApi* | [**adminSearchPost**](docs/AdminApi.md#adminSearchPost) | **POST** /admin/search | Search for users
 *Persona.AdminApi* | [**adminTransferPassiveSubscribersListidPost**](docs/AdminApi.md#adminTransferPassiveSubscribersListidPost) | **POST** /admin/transfer-passive-subscribers/{listid} | Transfers passive customers from Kayak to Mailchimp
 *Persona.AdminApi* | [**adminUserPost**](docs/AdminApi.md#adminUserPost) | **POST** /admin/user | Create a new user with admin options.
+*Persona.AdminApi* | [**adminUserUuidDelete**](docs/AdminApi.md#adminUserUuidDelete) | **DELETE** /admin/user/{uuid} | Delete user
 *Persona.EntitlementsApi* | [**entitlementsAllowDelete**](docs/EntitlementsApi.md#entitlementsAllowDelete) | **DELETE** /entitlements/allow | Remove an entitlement
 *Persona.EntitlementsApi* | [**entitlementsAllowGet**](docs/EntitlementsApi.md#entitlementsAllowGet) | **GET** /entitlements/allow | Check if global entitlements are enabled
 *Persona.EntitlementsApi* | [**entitlementsAllowPost**](docs/EntitlementsApi.md#entitlementsAllowPost) | **POST** /entitlements/allow | Add an entitlement for all users
